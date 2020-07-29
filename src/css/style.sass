@@ -3,16 +3,104 @@
  * Copyright © 2020 Sebastian P. All Rights Reserved
  *
  * ====================================================================================================================*/
-
+@import color.sass
+@import timeline.sass
+@import line.sass
+/* ====================================================================================================================
+ *
+ * sebastian.github.io - default
+ *
+ * ====================================================================================================================*/
 /* ====================================================================================================================
  *
  * sebastian.github.io - Main
  *
  * ====================================================================================================================*/
-$font-stack:    Helvetica, sans-serif
-$primary-color: #333
+.contact
+  padding: 0
+  margin: 0
+  div
+    margin-bottom: 0.5rem
+    > div:first-child
+      text-align: right
+      padding: 0.5rem 1rem 0.5rem 0.5rem
+      i
+        font-size: 2rem
+    > div:last-child
+      text-align: left
+      padding: 0.6rem 1rem
+      a
+        color: $primary-text
+.hobbies
+  div
+    padding: 0.5rem 0 0.5rem 0
+    font-size: 1.5rem
+  i
+    width: 3.8rem
+    height: 3.5rem
+  span
+    font-size: 1rem
 
-body
-  font: 100% $font-stack
-  color: $primary-color
+.p-3-5
+  padding: 1rem 2rem 1rem 1.1rem !important
+  font-size: 1.7rem
+.right-title
+  span
+    background-color: $primary-dark-bg !important
+    color: $primary-text
+    text-align: left
+  i
+    text-align: right
+.skills
+  font-size: 1.1rem
+  >div>div
+    padding: 1.5rem 0 1.5rem
+  >div:nth-child(2n)
+    >div:first-child
+      background-color: $primary-dark-bg
+      color: $primary-text
+    >div:last-child
+      background-color: $primary-bg
+      color: $primary-text
+  >div:nth-child(2n+1)
+    >div:first-child
+      background-color: $primary-bg
+      color: $primary-text
+    >div:last-child
+      background-color: $primary-dark-bg
+      color: $primary-text
 
+.primary-text
+  color: $primary-text
+.primary-bg
+  background-color: $primary-bg
+  color: $primary-text
+  a
+    color: $primary-text
+.primary-dark-text
+  color: $primary-dark-text
+.primary-dark-bg
+  background-color: $primary-dark-bg
+  color: $primary-dark-text
+.primary-light-text
+  color: $primary-light-text
+.primary-light-bg
+  background-color: $primary-light-bg
+  color: $primary-light-text
+.secondary-text
+  color: $secondary-text
+.secondary-bg
+  background-color: $secondary-bg
+  color: $secondary-text
+  a
+    color: $secondary-text
+.secondary-dark-text
+  color: $secondary-dark-text
+.secondary-dark-bg
+  background-color: $secondary-dark-bg
+  color: $secondary-dark-text
+.secondary-light-text
+  color: $secondary-light-text
+.secondary-light-bg
+  background-color: $secondary-light-bg
+  color: $secondary-light-text
