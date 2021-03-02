@@ -4,14 +4,297 @@
  * * Copyright © 2020 Sebastian P. All Rights Reserved
  * *
  * * ====================================================================================================================*/
+/* ==================================================================================================================
+ * *
+ * * poetter-sebastian.github.io - color
+ * *
+ * * ==================================================================================================================*/
+/* ==================================================================================================================
+ * *
+ * * poetter-sebastian.github.io - timeline
+ * *
+ * * ==================================================================================================================*/
+@media (min-width: 1200px) {
+  .timeline {
+    margin-left: 5rem;
+  }
+  .timeline:before, .timeline:after {
+    content: "";
+    background: #ffc107;
+    width: 5px;
+    height: 60px;
+    position: absolute;
+    z-index: 2;
+    margin: 0 0 0 -1px;
+  }
+  .timeline:after {
+    height: 90px;
+    margin: -80px 0 0 -1px;
+  }
+  .timeline > li {
+    border: 2px solid;
+    border-color: #343a40 !important;
+    margin: 0 0 -2px 0;
+    padding: 30px;
+    counter-increment: li;
+    position: relative;
+    width: 42rem;
+  }
+  .timeline > li:nth-child(odd):before, .timeline > li:nth-child(even):before {
+    content: counter(li);
+    display: flex;
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
+    -ms-flex-align: center !important;
+    align-items: center !important;
+    position: absolute;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: #343a40;
+    color: white;
+    font-weight: bold;
+    z-index: 3;
+  }
+  .timeline > li:nth-child(odd):before {
+    right: 100%;
+    margin-right: -25px;
+  }
+  .timeline > li:nth-child(even):before {
+    left: 100%;
+    margin-left: -25px;
+  }
+  .timeline > li:nth-child(odd) {
+    border-right: none;
+    border-left: 2px solid;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-right: 30px;
+    padding-right: 0;
+  }
+  .timeline > li:nth-child(even) {
+    border-left: none;
+    border-right: 2px solid;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-left: 30px;
+    padding-left: 0;
+    text-align: right;
+  }
+  .timeline > li:first-child {
+    border-top: none;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .timeline > li:last-child {
+    border-bottom: none;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+/* ==================================================================================================================
+ * *
+ * * poetter-sebastian.github.io - 
+ * *
+ * * ==================================================================================================================*/
+@media (min-width: 1200px) {
+  .line {
+    position: relative;
+    /*Line*/
+    /*Circle*/
+    /*Content*/
+  }
+  .line > li::before {
+    content: "";
+    position: absolute;
+    width: 3px;
+    background-color: #343a40;
+    top: 0;
+    bottom: 0;
+    left: -20px;
+  }
+  .line > li::after {
+    text-align: center;
+    font-weight: bold;
+    padding-top: 13px;
+    z-index: 10;
+    content: counter(item);
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    color: white;
+    background-color: #343a40;
+    border-radius: 50%;
+    top: 0;
+    left: -43px;
+  }
+  .line > li {
+    counter-increment: item;
+    padding: 10px 10px;
+    margin-left: 2.5rem;
+    min-height: 70px;
+    position: relative;
+    background-color: transparent;
+    list-style: none;
+  }
+  .line > li:nth-last-child(1)::before {
+    width: 0;
+  }
+}
+/* ====================================================================================================================
+ * *
+ * * sebastian.github.io - default
+ * *
+ * * ====================================================================================================================*/
 /* ====================================================================================================================
  * *
  * * sebastian.github.io - Main
  * *
  * * ====================================================================================================================*/
-body {
-  font: 100% Helvetica, sans-serif;
-  color: #333;
+.contact {
+  padding: 0;
+  margin: 0;
+}
+.contact div {
+  margin-bottom: 0.5rem;
+}
+.contact div > div:first-child {
+  text-align: right;
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
+}
+.contact div > div:first-child i {
+  font-size: 2rem;
+}
+.contact div > div:last-child {
+  text-align: left;
+  padding: 0.6rem 1rem;
+}
+.contact div > div:last-child a {
+  color: white;
+}
+
+.hobbies div {
+  padding: 0.5rem 0 0.5rem 0;
+  font-size: 1.5rem;
+}
+.hobbies i {
+  width: 3.8rem;
+  height: 3.5rem;
+}
+.hobbies span {
+  font-size: 1rem;
+}
+
+.p-3-5 {
+  padding: 1rem 2rem 1rem 1.1rem !important;
+  font-size: 1.7rem;
+}
+
+.right-title span {
+  background-color: #343a40 !important;
+  color: white;
+  text-align: left;
+}
+.right-title i {
+  text-align: right;
+}
+
+.skills {
+  font-size: 1.1rem;
+}
+.skills > div > div {
+  padding: 1.5rem 0.5rem 1.5rem 0.5rem !important;
+}
+.skills > div:nth-child(2n) > div:first-child {
+  background-color: #343a40;
+  color: white;
+}
+.skills > div:nth-child(2n) > div:last-child {
+  background-color: #17a2b8;
+  color: white;
+}
+.skills > div:nth-child(2n+1) > div:first-child {
+  background-color: #17a2b8;
+  color: white;
+}
+.skills > div:nth-child(2n+1) > div:last-child {
+  background-color: #343a40;
+  color: white;
+}
+
+.primary-text {
+  color: white;
+}
+
+.primary-bg {
+  background-color: #17a2b8;
+  color: white;
+}
+.primary-bg a {
+  color: white;
+}
+
+.primary-dark-text {
+  color: white;
+}
+
+.primary-dark-bg {
+  background-color: #343a40;
+  color: white;
+}
+
+.primary-light-text {
+  color: #343a40;
+}
+
+.primary-light-bg {
+  background-color: white;
+  color: #343a40;
+}
+
+.secondary-text {
+  color: #343a40;
+}
+
+.secondary-bg {
+  background-color: #ffc107;
+  color: #343a40;
+}
+.secondary-bg a {
+  color: #343a40;
+}
+
+.secondary-dark-text {
+  color: white;
+}
+
+.secondary-dark-bg {
+  background-color: #343a40;
+  color: white;
+}
+
+.secondary-light-text {
+  color: white;
+}
+
+.secondary-light-bg {
+  background-color: white;
+  color: white;
+}
+
+.card {
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  width: 10rem;
+  min-height: 200px;
+  margin: 20px 0 24px 0;
+}
+.card img {
+  width: 100%;
+}
+.card .card-body {
+  padding: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
