@@ -3,12 +3,32 @@
  * poetter-sebastian.github.io - timeline
  *
  * ==================================================================================================================*/
-@media (min-width: 1200px)
+.lul
+  list-style: none
+  padding-left: 1.5em
+.lur
+  list-style: none
+  padding-right: 1.5em
+
+.t-list-r
+  display: none
+.t-list-l
+  display: inline-block
+  margin-left: -15px
+.mt-c
+  margin-top: 1rem
+@media (min-width: 1300px)
+  .mt-c
+    margin: 0
+  .t-list-r
+    display: inline-block
+  .t-list-l
+    display: none
   .timeline
     margin-left: 5rem
     &:before, &:after
       content: ""
-      background: #ffc107
+      background: $secondary-bg
       width: 5px
       height: 60px
       position: absolute
@@ -20,7 +40,7 @@
       margin: -80px 0 0 -1px
     >li
       border: 2px solid
-      border-color: $primary-dark-bg !important
+      border-color: $secondary-text !important
       margin: 0 0 -2px 0
       padding: 30px
       counter-increment: li
@@ -39,8 +59,8 @@
         border-radius: 50%
         height: 50px
         width: 50px
-        background-color: $primary-dark-bg
-        color: white
+        background-color: $secondary-dark-bg
+        color: $secondary-dark-text
         font-weight: bold
         z-index: 3
 

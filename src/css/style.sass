@@ -16,7 +16,21 @@
  * sebastian.github.io - Main
  *
  * ====================================================================================================================*/
-.contact
+.lang-select
+  position: absolute
+  top: 0
+  left: 0
+  img
+    height: 45px
+#leftSide
+  background-color: $primary-bg
+  color: $primary-text
+  a
+    color: $primary-text
+    text-decoration: underline
+    &:hover
+      color: $secondary-bg
+#contact
   padding: 0
   margin: 0
   div
@@ -31,6 +45,7 @@
       padding: 0.6rem 1rem
       a
         color: $primary-text
+  @media (min-width: 1300px)
 .hobbies
   div
     padding: 0.5rem 0 0.5rem 0
@@ -44,21 +59,24 @@
 .p-3-5
   padding: 1rem 2rem 1rem 1.1rem !important
   font-size: 1.7rem
+.p-3-4
+  padding: 1rem 2rem 1rem 0.9rem !important
+  font-size: 1.7rem
 .right-title
   span
-    background-color: $primary-dark-bg !important
-    color: $primary-text
+    background-color: $secondary-dark-bg !important
+    color: $secondary-dark-text
     text-align: left
   i
     text-align: right
-.skills
+#skills
   font-size: 1.1rem
   >div>div
     padding: 1.5rem 0.5rem 1.5rem 0.5rem !important
   >div:nth-child(2n)
     >div:first-child
       background-color: $primary-dark-bg
-      color: $primary-text
+      color: $primary-dark-text
     >div:last-child
       background-color: $primary-bg
       color: $primary-text
@@ -68,7 +86,11 @@
       color: $primary-text
     >div:last-child
       background-color: $primary-dark-bg
-      color: $primary-text
+      color: $primary-dark-text
+
+#commissions
+  a
+    text-decoration: none !important
 
 .footer
   margin-top: 5vh
@@ -97,6 +119,9 @@
   color: $secondary-text
   a
     color: $secondary-text
+    text-decoration: underline
+    &:hover
+      color: $primary-bg
 .secondary-dark-text
   color: $secondary-dark-text
 .secondary-dark-bg
@@ -108,13 +133,17 @@
   background-color: $secondary-light-bg
   color: $secondary-light-text
 .card
-  display: inline-block
   background-color: transparent
   border: none
-  width: 10rem
-  min-height: 200px
+  min-height: 150px
   margin: 20px 0 24px 0
   img
     width: 100%
-  .card-body
-    padding: 1rem
+    object-fit: scale-down
+    height: 6rem
+.image
+  max-width: 200px
+
+@media (max-width: 575px)
+  .offset-xs-4
+    margin-left: 33.333333%
