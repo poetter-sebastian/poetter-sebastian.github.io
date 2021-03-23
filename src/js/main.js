@@ -33,8 +33,8 @@ let langJson = {
         "footer-policy":"PRIVACY POLICY",
         "footer-library":"USED LIBRARIES",
         "profile-title":"PROFILE",
-        "profile-begin":"My name is Sebastian Poetter. I'm an university student and attending a master degree for computational science. I can quickly get focused on new things and learn very quickly.",
-        "profile-other":"I'm not only good at in computer science, but am also interested in other topics, namely biology, chemistry and physics Bionics and Bioinformatics are a passion of mine.",
+        "profile-begin":"My name is Sebastian Pötter. I am a student at the University of Applied Sciences (HTWK) in Leipzig and currently studying for a Master's degree in computer science, with a focus on Ki and software development. I can quickly familiarise myself with new projects and am constantly learning more.",
+        "profile-other":"Not only computer science is one of my interests, but also other subjects such as biology, chemistry, physics and electrical engineering.",
         "education-title":"EDUCATION",
         "education-secondary-title":"Secondary school (Realschule)",
         "education-secondary-text":"I graduated secondary school in 2014. In Germany the Secondary school is called Realschule and leads to either apprenticeships or on my case to higher education comparable to high schools. Here I started getting interested in Computer and started building simple websites as a hobby.",
@@ -96,15 +96,15 @@ let langJson = {
         "footer-policy":"Datenschutzerklärung",
         "footer-library":"Benutze Frameworks",
         "profile-title":"Profil",
-        "profile-begin":"Mein Name ist Sebastian Pötter. Ich bin ein Student, welcher im Moment seinen Master in Informatik macht. Ich kann mich schnell auf neue Dinge einstellen und lerne stetig neues.",
-        "profile-other":"Ich bin nicht nur gut in der Informatik, sondern interessiere mich auch für andere Themen, wie Biologie, Chemie und Physik. Bionik und Bioinformatik gefällt mir auch.",
+        "profile-begin":"Mein Name ist Sebastian Pötter. Ich bin Studierender an der Hochschule für Technik, Wirtschaft und Kultur in Leipzig und aktuell im Masterstudiengang Informatik, Schwerpunkt: Ki und Software-Entwicklung. Ich kann mich schnell in neue Projekte einarbeiten und lerne stetig mehr dazu.",
+        "profile-other":"Nicht nur Informatik gehört zu meinen Interessen, sondern auch andere Themen, wie Biologie, Chemie, Physik und Elektrotechnik.",
         "education-title":"Bildungsweg",
         "education-secondary-title":"Realschule",
-        "education-secondary-text":"2014 habe ich meinen Realschulabschluss gemacht. Danach entschied ich mich, das Abitur nachzuholen. In der Realschulzeit fing ich an, mich für Computer zu interessieren und begann, einfache Webseiten zu erstellen.",
+        "education-secondary-text":"2014 habe ich meinen Realschulabschluss gemacht. Danach entschied ich mich, noch das Abitur zu versuchen. In der Realschulzeit fing ich an, mich für Computer zu interessieren und begann, einfache Webseiten zu erstellen.",
         "education-high-title":"Gymnasium",
-        "education-high-text":"Ich habe 2017 meine Fachhochschulreife mit Schwerpunkt auf Informatik gemacht. Während dieser Zeit habe ich an einigen einfachen Projekten gearbeitet und freie Website-Designs erstellt. Hier fing ich an, mit der 3D-Engine Unity zu arbeiten und erstellte einige kleinere 3D-Anwendungen.",
+        "education-high-text":"Ich habe 2017 mein Abitur mit Schwerpunkt auf Informatik absolviert. Während dieser Zeit habe ich an einigen einfachen Projekten gearbeitet und freie Website-Designs erstellt. Hier fing ich an, mit der 3D-Engine Unity zu arbeiten und erstellte einige kleinere 3D-Anwendungen.",
         "education-bachelor-title":"Universität: Bachelor of Science",
-        "education-bachelor-text":"Seit 2017 studiere ich Informatik mit Schwerpunkt auf Softwaretechnik und Programmiertechniken. Ich wurde viel besser im Programmieren, Algorithm Engineering und Softwareplanung. Nach dem Kurs 'Grundlagen der mobilen Robotik' habe ich angefangen, mit Arduino- und Raspberry-Pi-Boards zu experimentieren, um Hardware z.B. eine Wetterstation für meinen Home-Sever zu bauen.",
+        "education-bachelor-text":"2017 habe ich meinen Bachelor in Informatik mit Schwerpunkt auf Softwaretechnik und Programmiertechniken erreicht. Ich wurde viel besser im Programmieren, Algorithm Engineering und Softwareplanung. Nach dem Kurs 'Grundlagen der mobilen Robotik' habe ich angefangen, mit Arduino- und Raspberry-Pi-Boards zu experimentieren, um Hardware z.B. eine Wetterstation für meinen Home-Sever zu bauen.",
         "education-bachelor-subjects":"Einige meiner Fächer waren",
         "education-bachelor-subject-ads":"Algorithmen und Datenstrukturen",
         "education-bachelor-math":"Mathematik für Informatiker",
@@ -114,7 +114,7 @@ let langJson = {
         "education-bachelor-ai":"Prinzipien der künstlichen Intelligenz",
         "education-bachelor-mr":"Prinzipien der Mobilen-Robotik",
         "education-master-title":"Universität: Master of Science (angestrebt für 2022)",
-        "education-master-text":"Ich möchte die Fähigkeiten, die ich gelernt habe, vertiefen und verbessern. Also dachte ich, dass der Master-Abschluss der beste Weg dafür ist.",
+        "education-master-text":"Ich wollte die Fähigkeiten, die ich gelernt habe, vertiefen und verbessern. Also dachte ich mir, dass der Master Studiengang hierfür der beste Weg ist.",
         "education-master-subjects":"Ein paar meiner gewählten Fächer",
         "education-master-3d":"3D-Erfassung, -Design und -Dynamik",
         "education-master-alg":"Algorithmenentwicklung",
@@ -159,11 +159,11 @@ let langJson = {
         "footer-policy":"POLITIQUE DE PROTECTION DE LA VIE PRIVÉE",
         "footer-library":"BIBLIOTHÈQUES UTILISÉES",
         "profile-title":"PROFIL",
-        "profile-begin":"Je m'appelle Sebastian Pötter. Je suis étudiant à l'université et je suis en master de sciences informatiques. Je peux rapidement me concentrer sur de nouvelles choses et apprendre très vite.",
-        "profile-other":"Je ne suis pas seulement doué en informatique, mais je m'intéresse aussi à d'autres sujets, à savoir la biologie, la chimie et la physique La bionique et la bioinformatique sont une de mes passions.",
+        "profile-begin":"Je m'appelle Sebastian Pötter. Je suis étudiant à l'université des sciences appliquées (HTWK) de Leipzig et je prépare actuellement un master en informatique, avec une spécialisation en Ki et en développement de logiciels. Je peux me familiariser rapidement avec de nouveaux projets et j'en apprends toujours plus.",
+        "profile-other":"Je ne m'intéresse pas seulement à l'informatique, mais aussi à d'autres matières comme la biologie, la chimie, la physique et le génie électrique.",
         "education-title":"ÉDUCATION",
         "education-secondary-title":"L'école secondaire (Realschule)",
-        "education-secondary-text":"J'ai obtenu mon diplôme d'études secondaires en 2014. En Allemagne, l'école secondaire s'appelle Realschule et mène soit à un apprentissage, soit, dans mon cas, à un enseignement supérieur comparable aux lycées. C'est là que j'ai commencé à m'intéresser à l'informatique et que j'ai commencé à construire des sites web simples comme passe-temps.",
+        "education-secondary-text":"En 2017, j'ai obtenu mon diplôme de bachelor en informatique avec une spécialisation en ingénierie logicielle et en techniques de programmation. En Allemagne, l'école secondaire s'appelle Realschule et mène soit à un apprentissage, soit, dans mon cas, à un enseignement supérieur comparable aux lycées. C'est là que j'ai commencé à m'intéresser à l'informatique et que j'ai commencé à construire des sites web simples comme passe-temps.",
         "education-high-title":"Lycée (Abitur)",
         "education-high-text":"J'ai passé mon diplôme d'entrée à l'enseignement supérieur avec spécialisation en informatique en 2017. Pendant cette période, j'ai travaillé sur des projets simples et j'ai conçu des sites web gratuits. J'ai commencé à travailler avec le moteur de développement de jeux Unity et j'ai fait quelques petites applications 3D.",
         "education-bachelor-title":"Université : Licence en sciences",
@@ -217,6 +217,7 @@ function chanceLang(lang) {
         default:
             return;
     }
+    document.documentElement.lang = lang;
     $.each(langElements, function(index, value) {
         let currentObj = value.getAttribute('data-i18n');
         value.innerHTML = langJson[lang][currentObj];
