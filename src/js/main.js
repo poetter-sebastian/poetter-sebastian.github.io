@@ -1,6 +1,6 @@
 $(document).ready(function() {
     if(bl !== 'en'){
-        chanceLang(bl);
+        changeLang(bl);
     }
 });
 
@@ -206,7 +206,7 @@ function logElements() {
     });
 }
 
-function chanceLang(lang) {
+function changeLang(lang) {
     switch (lang) {
         case "en":
             break;
