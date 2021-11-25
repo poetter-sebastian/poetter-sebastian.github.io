@@ -367,10 +367,10 @@
 }
 
 .card {
-  background-color: transparent;
-  border: none;
-  min-height: 150px;
-  margin: 20px 0 24px 0;
+  background-color: transparent !important;
+  border: none !important;
+  min-height: 150px !important;
+  margin: 20px 0 24px 0 !important;
 }
 .card img {
   width: 100%;
