@@ -2,6 +2,7 @@ $(document).ready(function() {
     if(bl !== 'en'){
         changeLang(bl);
     }
+    $('.year').innerText = new Date().getFullYear();
 });
 
 let langJson = {
@@ -27,8 +28,15 @@ let langJson = {
         "skills-gfx":"Image editing e.g. with ",
         "skills-3d":"Animations e.g. with ",
         "skills-web":"Knowledge of ",
-        "skills-team":"Teamleading and Project organisation",
+        "skills-team":"Team leading and Project organisation",
         "skills-circuit":"Knowledge of electrical engineering e.g. with <a href=\"https://www.arduino.cc/\" target=\"_blank\" rel=\"noreferrer\">Arduino</a> and <a href=\"https://wordpress.com/\" target=\"_blank\" rel=\"noreferrer\">Raspberry Pi</a>",
+        "projects-title":"Projects",
+        "projects-fan":"Raspberry Pi fan control",
+        "projects-notes":"Notes App (PWA)",
+        "projects-prio":"Concurrent priority list",
+        "projects-weather":"Weather station (IoT)",
+        "projects-yolo":"Neural network",
+        "projects-table":"Timetable creator",
         "footer-title":"IMPRINT",
         "footer-copyright":"BY SEBASTIAN POETTER",
         "footer-policy":"PRIVACY POLICY",
@@ -38,7 +46,7 @@ let langJson = {
         "profile-other":"I am interested in a variety of topics in the field of computer science. But not only computers belong to my interests, but also other topics such as biology, chemistry, physics and electrical engineering.",
         "education-title":"EDUCATION",
         "education-secondary-title":"Secondary school (Realschule)",
-        "education-secondary-text":"I graduated secondary school in 2014. In Germany the Secondary school is called Realschule and leads to either apprenticeships or on my case to higher education comparable to high schools. Here I started getting interested in Computer and started building simple websites as a hobby.",
+        "education-secondary-text":"I graduated from secondary school in 2014. In Germany the Secondary school is called Realschule and leads to either apprenticeships or on my case to higher education comparable to high schools. Here I started getting interested in Computer and started building simple websites as a hobby.",
         "education-high-title":"High School (Abitur)",
         "education-high-text":"I made my higher education entrance qualification with focus on computer science in 2017. During this time I worked on some simple projects and made free website designs. Here I started to work with the game-development engine Unity and made some smaller 3D-applications.",
         "education-bachelor-title":"University: Bachelor of Science",
@@ -73,8 +81,10 @@ let langJson = {
         "experience-aktiv":"Created a website for the company <a href=\"https://www.aktiv-oase.de/\" rel=\"noreferrer\" target=\"_blank\">EB Gesundheitsstudio GmbH</a> - 2021",
         "experience-sanit":"Revised the homepage of <a href=\"https://san-rosenau.de/Start.html\" rel=\"noreferrer\" target=\"_blank\">Sanitätshaus Rosenau GmbH</a> - 2021",
         "experience-saxony":"Commission of an award-page for <a href=\"https://www.games-innovation-award-saxony.de/\" rel=\"noreferrer\" target=\"_blank\">Games innovation award saxony</a> - 2021",
-        "experience-overall":"Six years of work experience - 2015 until now",
+        "experience-ovrlab": "Improvement of <a href=\"https://www.lefx.de/\" rel=\"noreferrer\" target=\"_blank\">LeFx</a>, <a href=\"https://www.vrbits.de/\" rel=\"noreferrer\" target=\"_blank\">VrBits</a> and <a href=\"https://www.Ovrlab.de/\" rel=\"noreferrer\" target=\"_blank\">Ovrlab</a> - 2022",
+        "experience-overall":"Seven years of work experience - 2015 until now",
         "commissions-title":"WHO COMMISSIONED ME",
+        "modal-close": "Close",
     },
     "de": {
         "page-title":"Homepage von Sebastian Pötter",
@@ -100,6 +110,13 @@ let langJson = {
         "skills-web":"Kenntnisse von ",
         "skills-team":"Teamleitung und Projektmanagement",
         "skills-circuit":"Kenntnisse in der Elektrotechnik z.B. mit <a href=\"https://www.arduino.cc/\" target=\"_blank\" rel=\"noreferrer\">Arduino</a> und <a href=\"https://wordpress.com/\" target=\"_blank\" rel=\"noreferrer\">Raspberry Pi</a>",
+        "projects-title":"Projekte",
+        "projects-fan":"Lüftertreiber",
+        "projects-notes":"Notizen App (PWA)",
+        "projects-prio":"Prioritätswarteschlange",
+        "projects-weather":"Wetterstation (IoT)",
+        "projects-yolo":"Neuronales Netzwerk",
+        "projects-table":"Stundenplan Kalkulation",
         "footer-title":"Impressum",
         "footer-copyright":"Erstellt von Sebastian Pötter",
         "footer-policy":"Datenschutzerklärung",
@@ -144,8 +161,10 @@ let langJson = {
         "experience-aktiv":"Erstellung einer Website für das Unternehmen <a href=\"https://www.aktiv-oase.de/\" rel=\"noreferrer\" target=\"_blank\">EB Gesundheitsstudio GmbH</a> - 2021",
         "experience-sanit":"Überarbeitung der Homepage der <a href=\"https://san-rosenau.de/Start.html\" rel=\"noreferrer\" target=\"_blank\">Sanitätshaus Rosenau GmbH</a> - 2021",
         "experience-saxony":"Beauftragen zum erstellen einer Preisseite des <a href=\"https://www.games-innovation-award-saxony.de/\" rel=\"noreferrer\" target=\"_blank\">Games innovation award saxony</a> - 2021",
-        "experience-overall":"Sechs Jahre Berufserfahrung - 2015 bis jetzt",
+        "experience-ovrlab": "Überarbeitung der Seiten <a href=\"https://www.lefx.de/\" rel=\"noreferrer\" target=\"_blank\">LeFx</a>, <a href=\"https://www.vrbits.de/\" rel=\"noreferrer\" target=\"_blank\">VrBits</a> und <a href=\"https://www.Ovrlab.de/\" rel=\"noreferrer\" target=\"_blank\">Ovrlab</a> - 2022",
+        "experience-overall":"Sieben Jahre Berufserfahrung - 2015 bis jetzt",
         "commissions-title":"Referenzen",
+        "modal-close": "Schließen",
     },
     "fr": {
         "page-title":"Curriculum-vitae de Sebastian Pötter",
@@ -171,6 +190,13 @@ let langJson = {
         "skills-web":"Connaissance de ",
         "skills-team":"Direction d'équipe et organisation du projet",
         "skills-circuit":"Connaissance de l'ingénierie électrique, par exemple avec <a href=\"https://www.arduino.cc/\" rel=\"noreferrer\" target=\"_blank\">Arduino</a> et <a href=\"https://wordpress.com/\" rel=\"noreferrer\" target=\"_blank\">Raspberry Pi</a>",
+        "projects-title":"Projets",
+        "projects-fan" : "Pilote de ventilateur",
+        "projects-notes" : "Application de prise de notes (PWA)",
+        "projects-prio" : "File d'attente prioritaire",
+        "projects-weather" : "Station météo (IoT)",
+        "projects-yolo" : "Réseau neuronal",
+        "projects-table" : "Calcul de l'emploi du temps",
         "footer-title":"IMPRESSION",
         "footer-copyright":"par SEBASTIAN PÖTTER",
         "footer-policy":"POLITIQUE DE PROTECTION DE LA VIE PRIVÉE",
@@ -215,8 +241,10 @@ let langJson = {
         "experience-aktiv":"Création d'un site web pour l'entreprise <a href=\"https://www.aktiv-oase.de/\" rel=\"noreferrer\" target=\"_blank\">EB Gesundheitsstudio GmbH</a> - 2021",
         "experience-sanit":"Révision de la page d'accueil de <a href=\"https://san-rosenau.de/Start.html\" rel=\"noreferrer\" target=\"_blank\">Sanitätshaus Rosenau GmbH</a> - 2021",
         "experience-saxony":"Commission pour la création d'une page de récompense du <a href=\"https://www.games-innovation-award-saxony.de/\" rel=\"noreferrer\" target=\"_blank\">Games innovation award saxony</a> - 2021",
-        "experience-overall":"Six ans d'expérience professionnelle - de 2015 à aujourd'hui",
+        "experience-ovrlab": "Révision des pages <a href=\"https://www.lefx.de/\" rel=\"noreferrer\" target=\"_blank\">LeFx</a>, <a href=\"https://www.vrbits.de/\" rel=\"noreferrer\" target=\"_blank\">VrBits</a> et <a href=\"https://www.Ovrlab.de/\" rel=\"noreferrer\" target=\"_blank\">Ovrlab</a> - 2022",
+        "experience-overall":"Sept ans d'expérience professionnelle - de 2015 à aujourd'hui",
         "commissions-title":"QUI M'A COMMANDÉ",
+        "modal-close" : "fermer",
     }
 };
 
