@@ -5,7 +5,7 @@ self.addEventListener('install', function(event) {
                 '/',
                 '/index.html',
                 '/src/css/style.min.css',
-                '/src/js/sw.js',
+                '/sw.js',
                 '/src/js/pwa.js',
                 '/src/js/main.js',
                 '/src/img/de.webp',

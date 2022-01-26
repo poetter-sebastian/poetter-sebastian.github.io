@@ -9,6 +9,45 @@
  * * poetter-sebastian.github.io - color
  * *
  * * ==================================================================================================================*/
+body {
+  --primary-bg: #2e6d6a;
+  --primary-text: #ffeff7;
+  --primary-dark-text: #ffeff7;
+  --primary-dark-bg: #0c3c3a;
+  --primary-light-text: #0c3c3a;
+  --primary-light-bg: #ffeff7;
+  --secondary-bg: #fff2f4;
+  --secondary-text: #0c3c3a;
+  --secondary-dark-text: #ffeff7;
+  --secondary-dark-bg: #0c3c3a;
+  --secondary-light-text: #ffeff7;
+  --secondary-light-bg: #ffeff7;
+}
+
+body.dark-theme {
+  --primary-bg: #441f34;
+  --primary-text: #c4d3e1;
+  --primary-dark-text: #adbac7;
+  --primary-dark-bg: #381428;
+  --primary-light-text: #0c3c3a;
+  --primary-light-bg: #2e6d6a;
+  --secondary-bg: #1c2128;
+  --secondary-text: #adbac7;
+  --secondary-dark-text: #f8f8f8;
+  --secondary-dark-bg: #313d4f;
+  --secondary-light-text: #347d39;
+  --secondary-light-bg: #4d243b;
+}
+body.dark-theme .card-img-top {
+  filter: brightness(1.4);
+}
+body.dark-theme a:hover {
+  color: var(--secondary-dark-text) !important;
+}
+body.dark-theme a:hover span {
+  color: var(--secondary-dark-text) !important;
+}
+
 /* ==================================================================================================================
  * *
  * * poetter-sebastian.github.io - timeline
@@ -55,7 +94,7 @@
   }
   .timeline:before, .timeline:after {
     content: "";
-    background: #fff2f4;
+    background: var(--secondary-bg);
     width: 5px;
     height: 60px;
     position: absolute;
@@ -68,7 +107,7 @@
   }
   .timeline > li {
     border: 2px solid;
-    border-color: #0c3c3a !important;
+    border-color: var(--secondary-text) !important;
     margin: 0 0 -2px 0;
     padding: 30px;
     counter-increment: li;
@@ -86,8 +125,8 @@
     border-radius: 50%;
     height: 50px;
     width: 50px;
-    background-color: #0c3c3a;
-    color: #ffeff7;
+    background-color: var(--secondary-dark-bg);
+    color: var(--secondary-dark-text);
     font-weight: bold;
     z-index: 3;
   }
@@ -129,7 +168,7 @@
 }
 /* ==================================================================================================================
  * *
- * * poetter-sebastian.github.io - 
+ * * poetter-sebastian.github.io - line style
  * *
  * * ==================================================================================================================*/
 .line {
@@ -143,7 +182,7 @@
   content: "";
   position: absolute;
   width: 3px;
-  background-color: #0c3c3a;
+  background-color: var(--secondary-dark-bg);
   top: 0;
   bottom: 0;
   left: -20px;
@@ -157,8 +196,8 @@
   position: absolute;
   width: 50px;
   height: 50px;
-  color: #ffeff7;
-  background-color: #0c3c3a;
+  color: var(--primary-dark-text);
+  background-color: var(--secondary-dark-bg);
   border-radius: 50%;
   top: 0;
   left: -43px;
@@ -192,6 +231,7 @@
  * *
  * * ====================================================================================================================*/
 .lang-select {
+  width: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -208,15 +248,15 @@
 }
 
 #leftSide {
-  background-color: #2e6d6a;
-  color: #ffeff7;
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
 }
 #leftSide a {
-  color: #ffeff7;
+  color: var(--primary-text);
   text-decoration: underline;
 }
 #leftSide a:hover {
-  color: #fff2f4;
+  color: var(--secondary-bg);
 }
 
 #contact {
@@ -238,7 +278,7 @@
   padding: 0.6rem 1rem;
 }
 #contact div > div:last-child a {
-  color: #ffeff7;
+  color: var(--primary-text);
 }
 .hobbies div {
   padding: 0.5rem 0 0.5rem 0;
@@ -263,8 +303,8 @@
 }
 
 .right-title span {
-  background-color: #0c3c3a !important;
-  color: #ffeff7;
+  background-color: var(--secondary-dark-bg) !important;
+  color: var(--secondary-dark-text);
   text-align: left;
 }
 .right-title i {
@@ -278,20 +318,20 @@
   padding: 1.5rem 0.5rem 1.5rem 0.5rem !important;
 }
 #skills > div:nth-child(2n) > div:first-child {
-  background-color: #0c3c3a;
-  color: #ffeff7;
+  background-color: var(--primary-dark-bg);
+  color: var(--primary-dark-text);
 }
 #skills > div:nth-child(2n) > div:last-child {
-  background-color: #2e6d6a;
-  color: #ffeff7;
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
 }
 #skills > div:nth-child(2n+1) > div:first-child {
-  background-color: #2e6d6a;
-  color: #ffeff7;
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
 }
 #skills > div:nth-child(2n+1) > div:last-child {
-  background-color: #0c3c3a;
-  color: #ffeff7;
+  background-color: var(--primary-dark-bg);
+  color: var(--primary-dark-text);
 }
 
 #projects {
@@ -305,7 +345,7 @@
   padding: 0.5rem 0 0.5rem 1rem;
 }
 #projects div > div:last-child a {
-  color: #ffeff7;
+  color: var(--primary-text);
 }
 #projects div > div:first-child {
   padding: 0.6rem 1rem;
@@ -319,67 +359,67 @@
 }
 
 .primary-text {
-  color: #ffeff7;
+  color: var(--primary-text);
 }
 
 .primary-bg {
-  background-color: #2e6d6a;
-  color: #ffeff7;
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
 }
 .primary-bg a {
-  color: #ffeff7;
+  color: var(--primary-text);
 }
 
 .primary-dark-text {
-  color: #ffeff7;
+  color: var(--primary-dark-text);
 }
 
 .primary-dark-bg {
-  background-color: #0c3c3a;
-  color: #ffeff7;
+  background-color: var(--primary-dark-bg);
+  color: var(--primary-dark-text);
 }
 
 .primary-light-text {
-  color: #0c3c3a;
+  color: var(--primary-light-text);
 }
 
 .primary-light-bg {
-  background-color: #ffeff7;
-  color: #0c3c3a;
+  background-color: var(--primary-light-bg);
+  color: var(--primary-light-text);
 }
 
 .secondary-text {
-  color: #0c3c3a;
+  color: var(--secondary-text);
 }
 
 .secondary-bg {
-  background-color: #fff2f4;
-  color: #0c3c3a;
+  background-color: var(--secondary-bg);
+  color: var(--secondary-text);
 }
 .secondary-bg a {
-  color: #0c3c3a;
+  color: var(--secondary-text);
   text-decoration: underline;
 }
 .secondary-bg a:hover {
-  color: #2e6d6a;
+  color: var(--primary-bg);
 }
 
 .secondary-dark-text {
-  color: #ffeff7;
+  color: var(--secondary-dark-text);
 }
 
 .secondary-dark-bg {
-  background-color: #0c3c3a;
-  color: #ffeff7;
+  background-color: var(--secondary-dark-bg);
+  color: var(--secondary-dark-text);
 }
 
 .secondary-light-text {
-  color: #ffeff7;
+  color: var(--secondary-light-text);
 }
 
 .secondary-light-bg {
-  background-color: #ffeff7;
-  color: #ffeff7;
+  background-color: var(--secondary-light-bg);
+  color: var(--secondary-light-text);
 }
 
 .card {

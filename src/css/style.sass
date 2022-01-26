@@ -17,6 +17,7 @@
  *
  * ====================================================================================================================*/
 .lang-select
+  width: 100%
   position: absolute
   top: 0
   left: 0
@@ -28,13 +29,13 @@
       height: 72px
       width: 72px
 #leftSide
-  background-color: $primary-bg
-  color: $primary-text
+  background-color: var(--primary-bg)
+  color: var(--primary-text)
   a
-    color: $primary-text
+    color: var(--primary-text)
     text-decoration: underline
     &:hover
-      color: $secondary-bg
+      color: var(--secondary-bg)
 #contact
   padding: 0
   margin: 0
@@ -49,7 +50,7 @@
       text-align: left
       padding: 0.6rem 1rem
       a
-        color: $primary-text
+        color: var(--primary-text)
   @media (min-width: 1300px)
 .hobbies
   div
@@ -69,8 +70,8 @@
   font-size: 1.7rem
 .right-title
   span
-    background-color: $secondary-dark-bg !important
-    color: $secondary-dark-text
+    background-color: var(--secondary-dark-bg) !important
+    color: var(--secondary-dark-text)
     text-align: left
   i
     text-align: right
@@ -80,18 +81,18 @@
     padding: 1.5rem 0.5rem 1.5rem 0.5rem !important
   >div:nth-child(2n)
     >div:first-child
-      background-color: $primary-dark-bg
-      color: $primary-dark-text
+      background-color: var(--primary-dark-bg)
+      color: var(--primary-dark-text)
     >div:last-child
-      background-color: $primary-bg
-      color: $primary-text
+      background-color: var(--primary-bg)
+      color: var(--primary-text)
   >div:nth-child(2n+1)
     >div:first-child
-      background-color: $primary-bg
-      color: $primary-text
+      background-color: var(--primary-bg)
+      color: var(--primary-text)
     >div:last-child
-      background-color: $primary-dark-bg
-      color: $primary-dark-text
+      background-color: var(--primary-dark-bg)
+      color: var(--primary-dark-text)
 #projects
   padding: 0
   margin: 0
@@ -100,7 +101,7 @@
     > div:last-child
       padding: 0.5rem 0 0.5rem 1rem
       a
-        color: $primary-text
+        color: var(--primary-text)
     > div:first-child
       padding: 0.6rem 1rem
       i
@@ -111,42 +112,42 @@
     text-decoration: none !important
 
 .primary-text
-  color: $primary-text
+  color: var(--primary-text)
 .primary-bg
-  background-color: $primary-bg
-  color: $primary-text
+  background-color: var(--primary-bg)
+  color: var(--primary-text)
   a
-    color: $primary-text
+    color: var(--primary-text)
 .primary-dark-text
-  color: $primary-dark-text
+  color: var(--primary-dark-text)
 .primary-dark-bg
-  background-color: $primary-dark-bg
-  color: $primary-dark-text
+  background-color: var(--primary-dark-bg)
+  color: var(--primary-dark-text)
 .primary-light-text
-  color: $primary-light-text
+  color: var(--primary-light-text)
 .primary-light-bg
-  background-color: $primary-light-bg
-  color: $primary-light-text
+  background-color: var(--primary-light-bg)
+  color: var(--primary-light-text)
 .secondary-text
-  color: $secondary-text
+  color: var(--secondary-text)
 .secondary-bg
-  background-color: $secondary-bg
-  color: $secondary-text
+  background-color: var(--secondary-bg)
+  color: var(--secondary-text)
   a
-    color: $secondary-text
+    color: var(--secondary-text)
     text-decoration: underline
     &:hover
-      color: $primary-bg
+      color: var(--primary-bg)
 .secondary-dark-text
-  color: $secondary-dark-text
+  color: var(--secondary-dark-text)
 .secondary-dark-bg
-  background-color: $secondary-dark-bg
-  color: $secondary-dark-text
+  background-color: var(--secondary-dark-bg)
+  color: var(--secondary-dark-text)
 .secondary-light-text
-  color: $secondary-light-text
+  color: var(--secondary-light-text)
 .secondary-light-bg
-  background-color: $secondary-light-bg
-  color: $secondary-light-text
+  background-color: var(--secondary-light-bg)
+  color: var(--secondary-light-text)
 .card
   background-color: transparent !important
   border: none !important

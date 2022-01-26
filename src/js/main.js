@@ -2,7 +2,37 @@ $(document).ready(function() {
     if(bl !== 'en'){
         changeLang(bl);
     }
-    $('.year').innerText = new Date().getFullYear();
+    $('.year').each(function() {
+        this.innerText = new Date().getFullYear();
+    });
+
+    const btn = document.querySelector(".btn-toggle");
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const currentTheme = localStorage.getItem("theme") ?? undefined;
+
+
+    if ((prefersDarkScheme && currentTheme === undefined) || currentTheme === "dark") {
+        document.body.classList.add("dark-theme");
+    } else if (currentTheme === "light") {
+        document.body.classList.add("light-theme");
+    }
+
+    btn.addEventListener("click", function () {
+        document.body.classList.toggle("dark-theme");
+        document.body.classList.toggle("light-theme");
+        let theme
+        if (prefersDarkScheme) {
+            theme = document.body.classList.contains("light-theme")
+                ? "light"
+                : "dark";
+        } else {
+            theme = document.body.classList.contains("dark-theme")
+                ? "dark"
+                : "light";
+        }
+        localStorage.setItem("theme", theme);
+
+    });
 });
 
 let langJson = {

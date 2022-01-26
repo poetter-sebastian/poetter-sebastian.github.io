@@ -80,7 +80,7 @@
                         "name": "Realschule - Realschulabschluss"
                     },
                     "recognizedBy": {
-                        "@type": "CollegeOrUniversity",
+                        "@type": "MiddleSchool",
                         "name": "46. Oberschule Dresden",
                         "sameAs": "https://www.46-oberschule-dresden.de/"
                     }
@@ -95,7 +95,7 @@
                         "name": "Abitur"
                     },
                     "recognizedBy": {
-                        "@type": "CollegeOrUniversity",
+                        "@type": "HighSchool",
                         "name": "Berufliches Schulzentrum für Technik und Wirtschaft Dresden",
                         "sameAs": "https://www.bszet.de/"
                     }
@@ -201,6 +201,34 @@
                             "endDate": "2021-12"
                         }
                     }
+                },
+                {
+                    "@type": "Organization",
+                    "name": "Ovrlab GmbH",
+                    "sameAs": "https://ovrlab.de/",
+                    "employee": {
+                        "@type": "Person",
+                        "hasOccupation": {
+                            "@type": "EmployeeRole",
+                            "roleName": "Web developer",
+                            "startDate": "2022-01",
+                            "endDate": "2022-03"
+                        }
+                    }
+                },
+                {
+                    "@type": "Organization",
+                    "name": "VrBits GmbH",
+                    "sameAs": "https://www.vrbits.de/",
+                    "employee": {
+                        "@type": "Person",
+                        "hasOccupation": {
+                            "@type": "EmployeeRole",
+                            "roleName": "Web developer",
+                            "startDate": "2022-01",
+                            "endDate": "2022-03"
+                        }
+                    }
                 }
             ]
         }
@@ -242,6 +270,7 @@
                     <a href="#" onclick="changeLang('de')"><img src="src/img/de.webp" alt="DE"></a>
                     <a href="#" onclick="changeLang('en')"><img src="src/img/en.webp" alt="EN"></a>
                     <a href="#" onclick="changeLang('fr')"><img src="src/img/fr.webp" alt="FR"></a>
+                    <a href="#" class="btn-toggle offset-2"><i class="fas fa-adjust"></i></a>
                 </div>
                 <div class="mx-auto mt-4 primary-text text-center">
                     <img src="src/img/avatar.webp" title="Sebastian P. - FULL STACK DEVELOPER" alt="picture from www.w3schools.com " class="rounded-circle image">
@@ -358,38 +387,38 @@
                     </div>
                     <div id="projects">
                         <div class="row g-0">
-                            <div class="col-sm-6 col-9 text-end"><i class="fas fa-fan"></i></div>
-                            <div class="col-md-6 col-sm-6 col-3 primary-dark-bg">
+                            <div class="col-sm-6 col-6 text-end"><i class="fas fa-fan"></i></div>
+                            <div class="col-md-6 col-sm-6 col-6 primary-dark-bg">
                                 <a href="https://github.com/poetter-sebastian/pi-fan-controll"><span data-i18n="projects-fan">Raspberry Pi fan control</span></a>
                             </div>
                         </div>
                         <div class="row g-0">
-                            <div class="col-sm-6 col-9 text-end"><i class="fas fa-mobile-alt"></i></div>
-                            <div class="col-md-6 col-sm-6 col-3 primary-dark-bg">
+                            <div class="col-sm-6 col-6 text-end"><i class="fas fa-mobile-alt"></i></div>
+                            <div class="col-md-6 col-sm-6 col-6 primary-dark-bg">
                                 <a data-i18n="projects-notes" href="https://github.com/poetter-sebastian/Notes">Notes App (PWA)</a>
                             </div>
                         </div>
                         <div class="row g-0">
-                            <div class="col-sm-6 col-9 text-end"><i class="fas fa-list-ol"></i></div>
-                            <div class="col-md-6 col-sm-6 col-3 primary-dark-bg">
+                            <div class="col-sm-6 col-6 text-end"><i class="fas fa-list-ol"></i></div>
+                            <div class="col-md-6 col-sm-6 col-6 primary-dark-bg">
                                 <a data-i18n="projects-prio" href="https://github.com/poetter-sebastian/concurrent-priority-list">Concurrent priority list</a>
                             </div>
                         </div>
                         <div class="row g-0">
-                            <div class="col-sm-6 col-9 text-end"><i class="fas fa-cloud-sun"></i></div>
-                            <div class="col-md-6 col-sm-6 col-3 primary-dark-bg">
-                                <a data-i18n="projects-weather" href="https://github.com/">Weather station (IoT)</a>
+                            <div class="col-sm-6 col-6 text-end"><i class="fas fa-cloud-sun"></i></div>
+                            <div class="col-md-6 col-sm-6 col-6 primary-dark-bg">
+                                <a data-i18n="projects-weather" href="https://github.com/poetter-sebastian/solar-weatherstation">Weather station (IoT)</a>
                             </div>
                         </div>
                         <div class="row g-0">
-                            <div class="col-sm-6 col-9 text-end"><i class="fas fa-robot"></i></div>
-                            <div class="col-md-6 col-sm-6 col-3 primary-dark-bg">
+                            <div class="col-sm-6 col-6 text-end"><i class="fas fa-robot"></i></div>
+                            <div class="col-md-6 col-sm-6 col-6 primary-dark-bg">
                                 <a data-i18n="projects-yolo" href="https://gitlab.imn.htwk-leipzig.de/spoetter/team-classification">Neural network</a>
                             </div>
                         </div>
                         <div class="row g-0">
-                            <div class="col-sm-6 col-9 text-end"><i class="far fa-calendar-alt"></i></div>
-                            <div class="col-md-6 col-sm-6 col-3 primary-dark-bg">
+                            <div class="col-sm-6 col-6 text-end"><i class="far fa-calendar-alt"></i></div>
+                            <div class="col-md-6 col-sm-6 col-6 primary-dark-bg">
                                 <a data-i18n="projects-table" href="https://gitlab.imn.htwk-leipzig.de/spoetter/bachelor-task">Timetable creator</a>
                             </div>
                         </div>
@@ -400,7 +429,7 @@
                         <h2 data-i18n="footer-title" class="text-uppercase font-weight-bold text-center">Imprint</h2>
                     </div>
                     <div class="pt-4 pb-3 primary-dark-bg">
-                        <p class="text-uppercase font-weight-bold text-center"><i class="fas fa-copyright"></i> 2019-<span class="year">2021</span> <span data-i18n="footer-copyright">by Sebastian Poetter</span></p>
+                        <p class="text-uppercase font-weight-bold text-center"><i class="fas fa-copyright"></i> 2019-<span class="year">2022</span> <span data-i18n="footer-copyright">by Sebastian Poetter</span></p>
                     </div>
                     <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">
                         <div class="pt-4 pb-3">
@@ -617,7 +646,7 @@
                         <span class="col-md-8 text-md-start text-center ps-md-4 pt-4 pb-3" data-i18n="footer-title">Imprint</span>
                     </h1>
                     <div class="pt-4 pb-3">
-                        <p class="text-uppercase font-weight-bold text-center"><i class="fas fa-copyright"></i> 2019-<span class="year">2021</span> <span data-i18n="footer-copyright">by Sebastian Poetter</span></p>
+                        <p class="text-uppercase font-weight-bold text-center"><i class="fas fa-copyright"></i> 2019-<span class="year">2022</span> <span data-i18n="footer-copyright">by Sebastian Poetter</span></p>
                     </div>
                     <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">
                         <div class="pt-4 pb-3 primary-dark-bg">
