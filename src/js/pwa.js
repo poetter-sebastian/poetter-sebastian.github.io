@@ -5,7 +5,9 @@ window.addEventListener('beforeinstallprompt', (event) => {
     // Stash the event so it can be triggered later.
     window.deferredPrompt = event;
     // Remove the 'hidden' class from the install button container.
-    divInstall.classList.toggle('hidden', false);
+    if (typeof divInstall != "undefined") {
+        divInstall.classList.toggle('hidden', false);
+    }
 });
 
 // register service worker
