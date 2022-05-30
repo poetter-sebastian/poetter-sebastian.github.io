@@ -193,7 +193,7 @@ let langJson = {
         "experience-saxony":"Beauftragen zum erstellen einer Preisseite des <a href=\"https://www.games-innovation-award-saxony.de/\" rel=\"noreferrer\" target=\"_blank\">Games innovation award saxony</a> - 2021",
         "experience-ovrlab": "Überarbeitung der Seiten <a href=\"https://www.lefx.de/\" rel=\"noreferrer\" target=\"_blank\">LeFx</a>, <a href=\"https://www.vrbits.de/\" rel=\"noreferrer\" target=\"_blank\">VrBits</a> und <a href=\"https://www.Ovrlab.de/\" rel=\"noreferrer\" target=\"_blank\">Ovrlab</a> - 2022",
         "experience-overall":"Sieben Jahre Berufserfahrung - 2015 bis jetzt",
-        "commissions-title":"Referenzen",
+        "commissions-title":"Auftraggeber",
         "modal-close": "Schließen",
     },
     "fr": {

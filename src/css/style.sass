@@ -6,6 +6,7 @@
 @import color.sass
 @import timeline.sass
 @import line.sass
+@import darkmode.sass
 /* ====================================================================================================================
  *
  * sebastian.github.io - default
@@ -17,152 +18,152 @@
  *
  * ====================================================================================================================*/
 .lang-select
-  width: 100%
-  position: absolute
-  top: 0
-  left: 0
-  img
-    height: 45px
-    width: 45px
-  @media (max-width: 575px)
+    width: 100%
+    position: absolute
+    top: 0
+    left: 0
     img
-      height: 72px
-      width: 72px
+        height: 45px
+        width: 45px
+    @media (max-width: 575px)
+        img
+            height: 72px
+            width: 72px
 #leftSide
-  background-color: var(--primary-bg)
-  color: var(--primary-text)
-  a
+    background-color: var(--primary-bg)
     color: var(--primary-text)
-    text-decoration: underline
-    &:hover
-      color: var(--secondary-bg)
-#contact
-  padding: 0
-  margin: 0
-  div
-    margin-bottom: 0.5rem
-    > div:first-child
-      text-align: right
-      padding: 0.5rem 1rem 0.5rem 0.5rem
-      i
-        font-size: 2rem
-    > div:last-child
-      text-align: left
-      padding: 0.6rem 1rem
-      a
+    a
         color: var(--primary-text)
-  @media (min-width: 1300px)
+        text-decoration: underline
+        &:hover
+            color: var(--secondary-bg)
+#contact
+    padding: 0
+    margin: 0
+    div
+        margin-bottom: 0.5rem
+        > div:first-child
+            text-align: right
+            padding: 0.5rem 1rem 0.5rem 0.5rem
+            i
+                font-size: 2rem
+        > div:last-child
+            text-align: left
+            padding: 0.6rem 1rem
+            a
+                color: var(--primary-text)
+    @media (min-width: 1300px)
 .hobbies
-  div
-    padding: 0.5rem 0 0.5rem 0
-    font-size: 1.5rem
-  i
-    width: 3.8rem
-    height: 3.5rem
-  span
-    font-size: 1rem
+    div
+        padding: 0.5rem 0 0.5rem 0
+        font-size: 1.5rem
+    i
+        width: 3.8rem
+        height: 3.5rem
+    span
+        font-size: 1rem
 
 .p-3-5
-  padding: 1rem 2rem 1rem 1.1rem !important
-  font-size: 1.7rem
+    padding: 1rem 2rem 1rem 1.1rem !important
+    font-size: 1.7rem
 .p-3-4
-  padding: 1rem 2rem 1rem 0.9rem !important
-  font-size: 1.7rem
+    padding: 1rem 2rem 1rem 0.9rem !important
+    font-size: 1.7rem
 .right-title
-  span
-    background-color: var(--secondary-dark-bg) !important
-    color: var(--secondary-dark-text)
-    text-align: left
-  i
+    span
+        background-color: var(--secondary-dark-bg) !important
+        color: var(--secondary-dark-text)
+        text-align: left
+    i
     text-align: right
 #skills
-  font-size: 1.1rem
-  >div>div
-    padding: 1.5rem 0.5rem 1.5rem 0.5rem !important
-  >div:nth-child(2n)
-    >div:first-child
-      background-color: var(--primary-dark-bg)
-      color: var(--primary-dark-text)
-    >div:last-child
-      background-color: var(--primary-bg)
-      color: var(--primary-text)
-  >div:nth-child(2n+1)
-    >div:first-child
-      background-color: var(--primary-bg)
-      color: var(--primary-text)
-    >div:last-child
-      background-color: var(--primary-dark-bg)
-      color: var(--primary-dark-text)
+    font-size: 1.1rem
+    >div>div
+        padding: 1.5rem 0.5rem 1.5rem 0.5rem !important
+    >div:nth-child(2n)
+        >div:first-child
+            background-color: var(--primary-dark-bg)
+            color: var(--primary-dark-text)
+        >div:last-child
+            background-color: var(--primary-bg)
+            color: var(--primary-text)
+    >div:nth-child(2n+1)
+        >div:first-child
+            background-color: var(--primary-bg)
+            color: var(--primary-text)
+        >div:last-child
+            background-color: var(--primary-dark-bg)
+            color: var(--primary-dark-text)
 #projects
-  padding: 0
-  margin: 0
-  div
-    margin-bottom: 0.5rem
-    > div:last-child
-      padding: 0.5rem 0 0.5rem 1rem
-      a
-        color: var(--primary-text)
-    > div:first-child
-      padding: 0.6rem 1rem
-      i
-        font-size: 1.3rem
+    padding: 0
+    margin: 0
+    div
+        margin-bottom: 0.5rem
+        > div:last-child
+            padding: 0.5rem 0 0.5rem 1rem
+            a
+                color: var(--primary-text)
+        > div:first-child
+            padding: 0.6rem 1rem
+            i
+                font-size: 1.3rem
 
 #commissions
-  a
-    text-decoration: none !important
+    a
+        text-decoration: none !important
 
 .primary-text
-  color: var(--primary-text)
-.primary-bg
-  background-color: var(--primary-bg)
-  color: var(--primary-text)
-  a
     color: var(--primary-text)
+.primary-bg
+    background-color: var(--primary-bg)
+    color: var(--primary-text)
+    a
+        color: var(--primary-text)
 .primary-dark-text
-  color: var(--primary-dark-text)
+    color: var(--primary-dark-text)
 .primary-dark-bg
-  background-color: var(--primary-dark-bg)
-  color: var(--primary-dark-text)
+    background-color: var(--primary-dark-bg)
+    color: var(--primary-dark-text)
 .primary-light-text
-  color: var(--primary-light-text)
+    color: var(--primary-light-text)
 .primary-light-bg
-  background-color: var(--primary-light-bg)
-  color: var(--primary-light-text)
+    background-color: var(--primary-light-bg)
+    color: var(--primary-light-text)
 .secondary-text
-  color: var(--secondary-text)
-.secondary-bg
-  background-color: var(--secondary-bg)
-  color: var(--secondary-text)
-  a
     color: var(--secondary-text)
-    text-decoration: underline
-    &:hover
-      color: var(--primary-bg)
+.secondary-bg
+    background-color: var(--secondary-bg)
+    color: var(--secondary-text)
+    a
+        color: var(--secondary-text)
+        text-decoration: underline
+        &:hover
+            color: var(--primary-bg)
 .secondary-dark-text
-  color: var(--secondary-dark-text)
+    color: var(--secondary-dark-text)
 .secondary-dark-bg
-  background-color: var(--secondary-dark-bg)
-  color: var(--secondary-dark-text)
+    background-color: var(--secondary-dark-bg)
+    color: var(--secondary-dark-text)
 .secondary-light-text
-  color: var(--secondary-light-text)
+    color: var(--secondary-light-text)
 .secondary-light-bg
-  background-color: var(--secondary-light-bg)
-  color: var(--secondary-light-text)
+    background-color: var(--secondary-light-bg)
+    color: var(--secondary-light-text)
 .card
-  background-color: transparent !important
-  border: none !important
-  min-height: 150px !important
-  margin: 20px 0 24px 0 !important
-  img
-    width: 100%
-    object-fit: scale-down
-    height: 6rem
+    background-color: transparent !important
+    border: none !important
+    min-height: 150px !important
+    margin: 20px 0 24px 0 !important
+    img
+        width: 100%
+        object-fit: scale-down
+        height: 6rem
 .image
-  width: 200px
-  height: 200px
+    width: 200px
+    height: 200px
 
 @media (max-width: 575px)
-  .offset-xs-4
-    margin-left: 33.333333%
+    .offset-xs-4
+        margin-left: 33.333333%
 .font-smaller
-  font-size: 1.35rem
+    font-size: 1.35rem

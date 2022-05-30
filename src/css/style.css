@@ -11,6 +11,7 @@
  * * ==================================================================================================================*/
 body {
   --primary-bg: #2e6d6a;
+  --primary-bg-transpararent: #0c3c3a0a;
   --primary-text: #ffeff7;
   --primary-dark-text: #ffeff7;
   --primary-dark-bg: #0c3c3a;
@@ -26,6 +27,7 @@ body {
 
 body.dark-theme {
   --primary-bg: #441f34;
+  --primary-bg-transpararent: #38142840;
   --primary-text: #c4d3e1;
   --primary-dark-text: #adbac7;
   --primary-dark-bg: #381428;
@@ -37,15 +39,6 @@ body.dark-theme {
   --secondary-dark-bg: #313d4f;
   --secondary-light-text: #347d39;
   --secondary-light-bg: #4d243b;
-}
-body.dark-theme .card-img-top {
-  filter: brightness(1.4);
-}
-body.dark-theme a:hover {
-  color: var(--secondary-dark-text) !important;
-}
-body.dark-theme a:hover span {
-  color: var(--secondary-dark-text) !important;
 }
 
 /* ==================================================================================================================
@@ -220,6 +213,21 @@ body.dark-theme a:hover span {
   width: 0;
 }
 
+/* ==================================================================================================================
+ * *
+ * * poetter-sebastian.github.io - dark mode
+ * *
+ * * ==================================================================================================================*/
+body.dark-theme .card-img-top {
+  filter: brightness(1.1);
+}
+body.dark-theme a:hover {
+  color: var(--secondary-dark-text) !important;
+}
+body.dark-theme a:hover span {
+  color: var(--secondary-dark-text) !important;
+}
+
 /* ====================================================================================================================
  * *
  * * sebastian.github.io - default
@@ -302,15 +310,14 @@ body.dark-theme a:hover span {
   font-size: 1.7rem;
 }
 
+.right-title {
+  text-align: right;
+}
 .right-title span {
   background-color: var(--secondary-dark-bg) !important;
   color: var(--secondary-dark-text);
   text-align: left;
 }
-.right-title i {
-  text-align: right;
-}
-
 #skills {
   font-size: 1.1rem;
 }
