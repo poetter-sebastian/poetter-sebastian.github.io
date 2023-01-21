@@ -174,7 +174,7 @@ let langJson = {
         "education-bachelor-ai":"Prinzipien der künstlichen Intelligenz",
         "education-bachelor-mr":"Prinzipien der Mobilen-Robotik",
         "education-bachelor-th":"Meine Bachelorarbeit: <a href=\"https://nbn-resolving.org/urn:nbn:de:bsz:l189-qucosa2-753784\" rel=\"noreferrer\" target=\"_blank\">Algorithmisch Unterstützte Terminplanung</a>",
-        "education-master-title":"Universität: Master of Science 2023)",
+        "education-master-title":"Universität: Master of Science 2023",
         "education-master-text":"Ich wollte die Fähigkeiten, die ich gelernt habe, vertiefen und verbessern. Also dachte ich mir, dass der Master Studiengang hierfür der beste Weg ist.",
         "education-master-subjects":"Ein paar meiner gewählten Fächer",
         "education-master-3d":"3D-Erfassung, -Design und -Dynamik",
