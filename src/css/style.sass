@@ -12,6 +12,8 @@
  * sebastian.github.io - default
  *
  * ====================================================================================================================*/
+body
+    hyphens: auto
 /* ====================================================================================================================
  *
  * sebastian.github.io - Main
@@ -75,23 +77,24 @@
         color: var(--secondary-dark-text)
         text-align: left
     i
-    text-align: right
+        text-align: right
 #skills
     font-size: 1.1rem
-    >div>div
-        padding: 1.5rem 0.5rem 1.5rem 0.5rem !important
-    >div:nth-child(2n)
-        >div:first-child
+    >div
+        padding: 1.5rem 1.5rem 1.5rem 1.5rem !important
+    @media (min-width: 992px)
+        >div:nth-child(4n)
             background-color: var(--primary-dark-bg)
             color: var(--primary-dark-text)
-        >div:last-child
-            background-color: var(--primary-bg)
-            color: var(--primary-text)
-    >div:nth-child(2n+1)
-        >div:first-child
-            background-color: var(--primary-bg)
-            color: var(--primary-text)
-        >div:last-child
+        >div:nth-child(4n-3)
+            background-color: var(--primary-dark-bg)
+            color: var(--primary-dark-text)
+    @media (max-width: 576px)
+        >div:nth-child(2n)
+            background-color: var(--primary-dark-bg)
+            color: var(--primary-dark-text)
+    @media (min-width: 768px) and (max-width: 992px)
+        >div:nth-child(2n)
             background-color: var(--primary-dark-bg)
             color: var(--primary-dark-text)
 #projects

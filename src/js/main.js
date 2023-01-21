@@ -10,7 +10,6 @@ $(document).ready(function() {
     const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
     const currentTheme = localStorage.getItem("theme") ?? undefined;
 
-
     if ((prefersDarkScheme && currentTheme === undefined) || currentTheme === "dark") {
         document.body.classList.add("dark-theme");
     } else if (currentTheme === "light") {
@@ -31,7 +30,6 @@ $(document).ready(function() {
                 : "light";
         }
         localStorage.setItem("theme", theme);
-
     });
 });
 
@@ -42,7 +40,7 @@ let langJson = {
         "owner-job-name":"FULL STACK DEVELOPER",
         "contact-title":"CONTACT",
         "contact-email":"<span class=\"d-none\"><a href=\"mailto:email@domain.com\"></a>email@domain.com</span>\n" +
-            "<a href=\"&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#112;&#111;&#101;&#116;&#116;&#101;&#114;&#45;%73%65%62%61%73%74%69%61%6E%40%67%6D%78%2E%64%65\">Send me a mail</a>",
+            "<a href=\"&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x73;&#x65;&#x62;&#x61;&#x73;&#x74;&#x69;&#x61;&#x6e;&#x2e;&#x70;&#x6f;&#x65;&#x74;&#x74;&#x65;&#x72;%2D%64%65%76%40%67%6D%78%2E%64%65%20\">Send me a mail</a>",
         "contact-github":"Find me on Github",
         "contact-linkedin":"Find me on LinkedIn",
         "hobbies-title":"HOBBIES",
@@ -67,6 +65,8 @@ let langJson = {
         "projects-weather":"Weather station (IoT)",
         "projects-yolo":"Neural network",
         "projects-table":"Timetable creator",
+        "projects-satellite":"Satellite movement visualisation",
+        "projects-master":"Simulation of an ecosystem",
         "footer-title":"IMPRINT",
         "footer-copyright":"BY SEBASTIAN POETTER",
         "footer-policy":"PRIVACY POLICY",
@@ -101,6 +101,7 @@ let langJson = {
         "education-master-ivra":"Innovative computer architectures",
         "education-master-cry":"Cryptography",
         "education-master-oagr":"Object and gesture recognition",
+        "education-master-th":"My master thesis: <a href=\"https://github.com/poetter-sebastian/Simulation\" rel=\"noreferrer\" target=\"_blank\">Development of an environmental simulation in Unity</a>",
         "experience-title":"EXPERIENCE",
         "experience-small-com":"Multiple commissions of one-page-websites for smaller companies - 2014-2017",
         "experience-landing-page":"Commission of a landing-page for a company in Dresden - 2017",
@@ -111,8 +112,9 @@ let langJson = {
         "experience-aktiv":"Created a website for the company <a href=\"https://www.aktiv-oase.de/\" rel=\"noreferrer\" target=\"_blank\">EB Gesundheitsstudio GmbH</a> - 2021",
         "experience-sanit":"Revised the homepage of <a href=\"https://san-rosenau.de/Start.html\" rel=\"noreferrer\" target=\"_blank\">Sanitätshaus Rosenau GmbH</a> - 2021",
         "experience-saxony":"Commission of an award-page for <a href=\"https://www.games-innovation-award-saxony.de/\" rel=\"noreferrer\" target=\"_blank\">Games innovation award saxony</a> - 2021",
-        "experience-ovrlab": "Improvement of <a href=\"https://www.lefx.de/\" rel=\"noreferrer\" target=\"_blank\">LeFx</a>, <a href=\"https://www.vrbits.de/\" rel=\"noreferrer\" target=\"_blank\">VrBits</a> and <a href=\"https://www.Ovrlab.de/\" rel=\"noreferrer\" target=\"_blank\">Ovrlab</a> - 2022",
-        "experience-overall":"Seven years of work experience - 2015 until now",
+        "experience-ovrlab":"Improvement of <a href=\"https://www.lefx.de/\" rel=\"noreferrer\" target=\"_blank\">LeFx</a>, <a href=\"https://www.vrbits.de/\" rel=\"noreferrer\" target=\"_blank\">VrBits</a> and <a href=\"https://www.Ovrlab.de/\" rel=\"noreferrer\" target=\"_blank\">Ovrlab</a> - 2022",
+        "experience-up-lefx":"Design upgrade of <a href=\"https://www.lefx.de/\" rel=\"noreferrer\" target=\"_blank\">LeFx</a> - 2023",
+        "experience-overall":"Eight years of work experience - 2015 until now",
         "commissions-title":"WHO COMMISSIONED ME",
         "modal-close": "Close",
     },
@@ -122,7 +124,7 @@ let langJson = {
         "owner-job-name":"FULL STACK DEVELOPER",
         "contact-title":"Kontakt",
         "contact-email":"<span class=\"d-none\"><a href=\"mailto:email@domain.com\"></a>email@domain.com</span>\n" +
-            "<a href=\"&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#112;&#111;&#101;&#116;&#116;&#101;&#114;&#45;%73%65%62%61%73%74%69%61%6E%40%67%6D%78%2E%64%65\">Senden Sie mir eine E-Mail</a>",
+            "<a href=\"&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x73;&#x65;&#x62;&#x61;&#x73;&#x74;&#x69;&#x61;&#x6e;&#x2e;&#x70;&#x6f;&#x65;&#x74;&#x74;&#x65;&#x72;%2D%64%65%76%40%67%6D%78%2E%64%65%20\">Senden Sie mir eine E-Mail</a>",
         "contact-github":"Meine Github-Seite",
         "contact-linkedin":"LinkedIn",
         "hobbies-title":"Hobbys",
@@ -147,6 +149,8 @@ let langJson = {
         "projects-weather":"Wetterstation (IoT)",
         "projects-yolo":"Neuronales Netzwerk",
         "projects-table":"Stundenplan Kalkulation",
+        "projects-satellite":"Visualising von Satellitenbewegungen",
+        "projects-master":"Simulation eines Ökosystems",
         "footer-title":"Impressum",
         "footer-copyright":"Erstellt von Sebastian Pötter",
         "footer-policy":"Datenschutzerklärung",
@@ -181,6 +185,7 @@ let langJson = {
         "education-master-ivra":"Innovative Rechnerarchitekturen",
         "education-master-cry":" Kryptologie",
         "education-master-oagr":"Objekt- und Gestenerkennung",
+        "education-master-th":"Mein Masterarbeitsthema: <a href=\"https://github.com/poetter-sebastian/Simulation\" rel=\"noreferrer\" target=\"_blank\">Entwicklung einer Umweltsimulation in Unity</a>",
         "experience-title":"Erfahrung",
         "experience-small-com":"Beauftragungen von kleineren One-Page-Webseiten für Unternehmen - 2014-2017",
         "experience-landing-page":"Erstellung einer Webseite für ein Unternehmen in Dresden - 2017",
@@ -190,9 +195,10 @@ let langJson = {
         "experience-lefx":"Überarbeitung und Aktualisierung der Wordpress-Website der <a href=\"https://www.lefx.de/\" rel=\"noreferrer\">LeFx GmbH</a> - 2020-2021",
         "experience-aktiv":"Erstellung einer Website für das Unternehmen <a href=\"https://www.aktiv-oase.de/\" rel=\"noreferrer\" target=\"_blank\">EB Gesundheitsstudio GmbH</a> - 2021",
         "experience-sanit":"Überarbeitung der Homepage der <a href=\"https://san-rosenau.de/Start.html\" rel=\"noreferrer\" target=\"_blank\">Sanitätshaus Rosenau GmbH</a> - 2021",
-        "experience-saxony":"Beauftragen zum erstellen einer Preisseite des <a href=\"https://www.games-innovation-award-saxony.de/\" rel=\"noreferrer\" target=\"_blank\">Games innovation award saxony</a> - 2021",
+        "experience-saxony":"Beauftragen zum Erstellen einer Preisseite des <a href=\"https://www.games-innovation-award-saxony.de/\" rel=\"noreferrer\" target=\"_blank\">Games innovation award saxony</a> - 2021",
         "experience-ovrlab": "Überarbeitung der Seiten <a href=\"https://www.lefx.de/\" rel=\"noreferrer\" target=\"_blank\">LeFx</a>, <a href=\"https://www.vrbits.de/\" rel=\"noreferrer\" target=\"_blank\">VrBits</a> und <a href=\"https://www.Ovrlab.de/\" rel=\"noreferrer\" target=\"_blank\">Ovrlab</a> - 2022",
-        "experience-overall":"Sieben Jahre Berufserfahrung - 2015 bis jetzt",
+        "experience-up-lefx":"Update des Designs der Webseite <a href=\"https://www.lefx.de/\" rel=\"noreferrer\" target=\"_blank\">LeFx</a> - 2023",
+        "experience-overall":"Acht Jahre Berufserfahrung - 2015 bis jetzt",
         "commissions-title":"Auftraggeber",
         "modal-close": "Schließen",
     },
@@ -202,7 +208,7 @@ let langJson = {
         "owner-job-name":"Développeur de pile complète",
         "contact-title":"Données de contact",
         "contact-email":"<span class=\"d-none\"><a href=\"mailto:email@domain.com\"></a>email@domain.com</span>\n" +
-            "<a href=\"&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#112;&#111;&#101;&#116;&#116;&#101;&#114;&#45;%73%65%62%61%73%74%69%61%6E%40%67%6D%78%2E%64%65\">Envoyez-moi un e-mail</a>",
+            "<a href=\"&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x73;&#x65;&#x62;&#x61;&#x73;&#x74;&#x69;&#x61;&#x6e;&#x2e;&#x70;&#x6f;&#x65;&#x74;&#x74;&#x65;&#x72;%2D%64%65%76%40%67%6D%78%2E%64%65%20\">Envoyez-moi un e-mail</a>",
         "contact-github":"Retrouvez-moi sur Github",
         "contact-linkedin":"LinkedIn",
         "hobbies-title":"hobbies",
@@ -227,6 +233,8 @@ let langJson = {
         "projects-weather" : "Station météo (IoT)",
         "projects-yolo" : "Réseau neuronal",
         "projects-table" : "Calcul de l'emploi du temps",
+        "projects-satellite":"Visualisation des mouvements des satellitesn",
+        "projects-master":"Simulation d'un écosystème",
         "footer-title":"IMPRESSION",
         "footer-copyright":"par SEBASTIAN PÖTTER",
         "footer-policy":"POLITIQUE DE PROTECTION DE LA VIE PRIVÉE",
@@ -261,6 +269,7 @@ let langJson = {
         "education-master-ivra":"Architectures informatiques innovantes",
         "education-master-cry":" Cryptologie",
         "education-master-oagr":"Reconnaissance d'objets et de gestes",
+        "education-master-th":"Mon sujet de thèse de master: <a href=\"https://github.com/poetter-sebastian/Simulation\" rel=\"noreferrer\" target=\"_blank\">Développement d'une simulation environnementale en Unity</a>",
         "experience-title":"EXPÉRIENCE",
         "experience-small-com":"Commissions multiples de sites web d'une page pour les petites entreprises - 2014-2017",
         "experience-landing-page":"Commande d'une page d'atterrissage pour une entreprise à Dresden - 2017",
@@ -272,7 +281,8 @@ let langJson = {
         "experience-sanit":"Révision de la page d'accueil de <a href=\"https://san-rosenau.de/Start.html\" rel=\"noreferrer\" target=\"_blank\">Sanitätshaus Rosenau GmbH</a> - 2021",
         "experience-saxony":"Commission pour la création d'une page de récompense du <a href=\"https://www.games-innovation-award-saxony.de/\" rel=\"noreferrer\" target=\"_blank\">Games innovation award saxony</a> - 2021",
         "experience-ovrlab": "Révision des pages <a href=\"https://www.lefx.de/\" rel=\"noreferrer\" target=\"_blank\">LeFx</a>, <a href=\"https://www.vrbits.de/\" rel=\"noreferrer\" target=\"_blank\">VrBits</a> et <a href=\"https://www.Ovrlab.de/\" rel=\"noreferrer\" target=\"_blank\">Ovrlab</a> - 2022",
-        "experience-overall":"Sept ans d'expérience professionnelle - de 2015 à aujourd'hui",
+        "experience-up-lefx":"Mise à jour de la conception du site <a href=\"https://www.lefx.de/\" rel=\"noreferrer\" target=\"_blank\">LeFx</a> - 2023",
+        "experience-overall":"Huit ans d'expérience professionnelle - de 2015 à aujourd'hui",
         "commissions-title":"QUI M'A COMMANDÉ",
         "modal-close" : "fermer",
     }
@@ -302,6 +312,10 @@ function changeLang(lang) {
     document.documentElement.lang = lang;
     $.each(langElements, function(index, value) {
         let currentObj = value.getAttribute('data-i18n');
-        value.innerHTML = langJson[lang][currentObj];
+        if(typeof langJson[lang][currentObj] !== 'undefined') {
+            value.innerHTML = langJson[lang][currentObj];
+        } else {
+            console.log('"' + currentObj + '" in language json not found!')
+        }
     });
 }
