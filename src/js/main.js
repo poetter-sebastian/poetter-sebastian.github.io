@@ -1,4 +1,13 @@
+const prefersDarkScheme= window.matchMedia("(prefers-color-scheme: dark)").matches;
+const currentTheme = localStorage.getItem("theme") ?? undefined;
+
+let langElements;
+
 $(document).ready(function() {
+    generateProjects(bl);
+
+    langElements = $('[data-i18n]');
+
     if(bl !== 'en'){
         changeLang(bl);
     }
@@ -6,31 +15,12 @@ $(document).ready(function() {
         this.innerText = new Date().getFullYear();
     });
 
-    const btn = document.querySelector(".btn-toggle");
-    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const currentTheme = localStorage.getItem("theme") ?? undefined;
-
     if ((prefersDarkScheme && currentTheme === undefined) || currentTheme === "dark") {
         document.body.classList.add("dark-theme");
+        $('#darkMode').prop( "checked", true);
     } else if (currentTheme === "light") {
         document.body.classList.add("light-theme");
     }
-
-    btn.addEventListener("click", function () {
-        document.body.classList.toggle("dark-theme");
-        document.body.classList.toggle("light-theme");
-        let theme
-        if (prefersDarkScheme) {
-            theme = document.body.classList.contains("light-theme")
-                ? "light"
-                : "dark";
-        } else {
-            theme = document.body.classList.contains("dark-theme")
-                ? "dark"
-                : "light";
-        }
-        localStorage.setItem("theme", theme);
-    });
 });
 
 let langJson = {
@@ -72,8 +62,9 @@ let langJson = {
         "footer-policy":"PRIVACY POLICY",
         "footer-library":"USED LIBRARIES",
         "profile-title":"PROFILE",
-        "profile-begin":"My name is Sebastian Pötter. I am a student at the University of Applied Sciences in Leipzig and currently in the master's program in computer science with a focus on artificial intelligence and software development. I can quickly familiarize myself with new projects and like to solve hard problems.",
-        "profile-other":"I am interested in a variety of topics in the field of computer science. But not only computers belong to my interests, but also other topics such as biology, chemistry, physics and electrical engineering.",
+        "profile-begin":"My name is Sebastian Pötter. I recently completed my master's degree in computer science and now have the title Master of Science. I can quickly get to grips with new projects and enjoy solving tough problems.",
+        "profile-other":"I am interested in a wide range of topics in the field of computer science, such as web development, app development and server applications. However, computers are not my only interest, but also other areas such as biology, chemistry, physics and electrical engineering.",
+
         "education-title":"EDUCATION",
         "education-secondary-title":"Secondary school (Realschule)",
         "education-secondary-text":"I graduated from secondary school in 2014. In Germany the Secondary school is called Realschule and leads to either apprenticeships or on my case to higher education comparable to high schools. Here I started getting interested in Computer and started building simple websites as a hobby.",
@@ -101,6 +92,7 @@ let langJson = {
         "education-master-ivra":"Innovative computer architectures",
         "education-master-cry":"Cryptography",
         "education-master-oagr":"Object and gesture recognition",
+
         "education-master-th":"My master thesis: <a href=\"https://github.com/poetter-sebastian/Simulation\" rel=\"noreferrer\" target=\"_blank\">Development of an environmental simulation in Unity</a>",
         "experience-title":"EXPERIENCE",
         "experience-small-com":"Multiple commissions of one-page-websites for smaller companies - 2014-2017",
@@ -116,6 +108,31 @@ let langJson = {
         "experience-up-lefx":"Design upgrade of <a href=\"https://www.lefx.de/\" rel=\"noreferrer\" target=\"_blank\">LeFx</a> - 2023",
         "experience-overall":"Eight years of work experience - 2015 until now",
         "commissions-title":"WHO COMMISSIONED ME",
+
+        "project-rasp-name":"Raspberry Pi fan control",
+        "project-rasp-desc":"",
+
+        "project-note-name":"Notes App (PWA)",
+        "project-note-desc":"",
+
+        "project-priority-name":"Concurrent priority list",
+        "project-priority-desc":"",
+
+        "project-weather-name":"Weather station (IoT)",
+        "project-weather-desc":"",
+
+        "project-yolo-name":"YoloV5 Neural network",
+        "project-yolo-desc":"",
+
+        "project-sat-name":"Satellite movement visualisation",
+        "project-sat-desc":"",
+
+        "project-time-name":"Timetable creator",
+        "project-time-desc":"",
+
+        "project-simulation-name":"Simulation of an ecosystem",
+        "project-simulation-desc":"",
+
         "modal-close": "Close",
     },
     "de": {
@@ -143,21 +160,38 @@ let langJson = {
         "skills-team":"Teamleitung und Projektmanagement",
         "skills-circuit":"Kenntnisse in der Elektrotechnik z.B. mit <a href=\"https://www.arduino.cc/\" target=\"_blank\" rel=\"noreferrer\">Arduino</a> und <a href=\"https://wordpress.com/\" target=\"_blank\" rel=\"noreferrer\">Raspberry Pi</a>",
         "projects-title":"Projekte",
-        "projects-fan":"Lüftertreiber",
-        "projects-notes":"Notizen App (PWA)",
-        "projects-prio":"Prioritätswarteschlange",
-        "projects-weather":"Wetterstation (IoT)",
-        "projects-yolo":"Neuronales Netzwerk",
-        "projects-table":"Stundenplan Kalkulation",
-        "projects-satellite":"Visualising von Satellitenbewegungen",
-        "projects-master":"Simulation eines Ökosystems",
+
+        "project-rasp-name":"Raspberry Pi Lüftertreiber",
+        "project-rasp-desc":"",
+
+        "project-note-name":"Notizen App (PWA)",
+        "project-note-desc":"",
+
+        "project-priority-name":"Prioritätswarteschlange",
+        "project-priority-desc":"",
+
+        "project-weather-name":"Wetterstation (IoT)",
+        "project-weather-desc":"",
+
+        "project-yolo-name":"YoloV5 Neuronales Netzwerk",
+        "project-yolo-desc":"",
+
+        "project-sat-name":"Visualising von Satellitenbewegungen",
+        "project-sat-desc":"",
+
+        "project-time-name":"Stundenplan Generierung",
+        "project-time-desc":"",
+
+        "project-simulation-name":"Simulation eines Ökosystems",
+        "project-simulation-desc":"",
+
         "footer-title":"Impressum",
         "footer-copyright":"Erstellt von Sebastian Pötter",
         "footer-policy":"Datenschutzerklärung",
         "footer-library":"Benutze Frameworks",
         "profile-title":"Profil",
-        "profile-begin":"Mein Name ist Sebastian Pötter. Ich bin Student an der Hochschule für Technik, Wirtschaft und Kultur in Leipzig und aktuell im Masterstudiengang Informatik mit Schwerpunkt in künstlicher Intelligenz und Software-Entwicklung. Ich kann mich schnell in neue Projekte einarbeiten und löse gern hartnäckige Probleme.",
-        "profile-other":"Dabei interessiere ich mich für eine vielzahl an Themen im Informatik Bereich. Aber Nicht nur Computer gehören zu meinen Interessen, sondern auch andere Themen, wie Biologie, Chemie, Physik und Elektrotechnik.",
+        "profile-begin":"Mein Name ist Sebastian Pötter. Ich habe kürzlich meinen Master in Informatik abgeschlossen und habe jetzt den Titel Master of Science. Ich kann mich schnell in neue Projekte einarbeiten und löse gern hartnäckige Probleme.",
+        "profile-other":"Dabei interessiere ich mich für eine vielzahl an Themen im Informatik Bereich, wie Webentwicklung, App-Entwicklung und Serveranwendungen. Aber Nicht nur Computer gehören zu meinen Interessen, sondern auch andere Themen, wie Biologie, Chemie, Physik und Elektrotechnik.",
         "education-title":"Bildungsweg",
         "education-secondary-title":"Realschule",
         "education-secondary-text":"2014 habe ich meinen Realschulabschluss gemacht. Danach entschied ich mich, noch das Abitur zu versuchen. In der Realschulzeit fing ich an, mich für Computer zu interessieren und begann, einfache Webseiten zu erstellen.",
@@ -173,9 +207,9 @@ let langJson = {
         "education-bachelor-afl":"Automaten und formale Sprachen",
         "education-bachelor-ai":"Prinzipien der künstlichen Intelligenz",
         "education-bachelor-mr":"Prinzipien der Mobilen-Robotik",
-        "education-bachelor-th":"Meine Bachelorarbeit: <a href=\"https://nbn-resolving.org/urn:nbn:de:bsz:l189-qucosa2-753784\" rel=\"noreferrer\" target=\"_blank\">Algorithmisch Unterstützte Terminplanung</a>",
+        "education-bachelor-th":"Meine Bachelorarbeit: <a href=\"https://nbn-resolving.org/urn:nbn:de:bsz:l189-qucosa2-753784\" rel=\"noreferrer\" target=\"_blank\">Algorithmisch unterstützte Terminplanung</a>",
         "education-master-title":"Universität: Master of Science - 2023",
-        "education-master-text":"Ich wollte die Fähigkeiten, die ich gelernt habe, vertiefen und verbessern. Also dachte ich mir, dass der Master Studiengang hierfür der beste Weg ist.",
+        "education-master-text":"Ich wollte die Fähigkeiten aus dem Studium vertiefen und verbessern. Hierfür ist der Masterstudiengang der beste Weg",
         "education-master-subjects":"Ein paar meiner gewählten Fächer",
         "education-master-3d":"3D-Erfassung, -Design und -Dynamik",
         "education-master-alg":"Algorithmenentwicklung",
@@ -185,9 +219,9 @@ let langJson = {
         "education-master-ivra":"Innovative Rechnerarchitekturen",
         "education-master-cry":" Kryptologie",
         "education-master-oagr":"Objekt- und Gestenerkennung",
-        "education-master-th":"Mein Masterarbeitsthema: <a href=\"https://github.com/poetter-sebastian/Simulation\" rel=\"noreferrer\" target=\"_blank\">Entwicklung einer Umweltsimulation in Unity</a>",
+        "education-master-th":"Meine Masterarbeit: <a href=\"https://github.com/poetter-sebastian/Simulation\" rel=\"noreferrer\" target=\"_blank\">Entwicklung einer Umweltsimulation in Unity</a>",
         "experience-title":"Erfahrung",
-        "experience-small-com":"Beauftragungen von kleineren One-Page-Webseiten für Unternehmen - 2014-2017",
+        "experience-small-com":"Beauftragungen von kleineren One-Page-Webseiten für Unternehmen wie IKD-Training - 2014-2017",
         "experience-landing-page":"Erstellung einer Webseite für ein Unternehmen in Dresden - 2017",
         "experience-profesco":"Beauftragung einer Wordpress-Seite für die <a href=\"https://www.profesco.de/\" rel=\"noreferrer\">Profesco GmbH</a> (Erstellung und Wartung) - 2019-2021",
         "experience-internship":"12 Wochen Praktikum bei <a href=\"https://www.profesco.de/\" rel=\"noreferrer\">Profesco GmbH</a> in der IT-Abteilung - 2020",
@@ -227,20 +261,37 @@ let langJson = {
         "skills-team":"Direction d'équipe et organisation du projet",
         "skills-circuit":"Connaissance de l'ingénierie électrique, par exemple avec <a href=\"https://www.arduino.cc/\" rel=\"noreferrer\" target=\"_blank\">Arduino</a> et <a href=\"https://wordpress.com/\" rel=\"noreferrer\" target=\"_blank\">Raspberry Pi</a>",
         "projects-title":"Projets",
-        "projects-fan" : "Pilote de ventilateur",
-        "projects-notes" : "Application de prise de notes (PWA)",
-        "projects-prio" : "File d'attente prioritaire",
-        "projects-weather" : "Station météo (IoT)",
-        "projects-yolo" : "Réseau neuronal",
-        "projects-table" : "Calcul de l'emploi du temps",
-        "projects-satellite":"Visualisation des mouvements des satellitesn",
-        "projects-master":"Simulation d'un écosystème",
+
+        "project-rasp-name":"Raspberry Pi Pilote de ventilateur",
+        "project-rasp-desc":"",
+
+        "project-note-name":"Application de prise de notes (PWA)",
+        "project-note-desc":"",
+
+        "project-priority-name":"File d'attente prioritaire",
+        "project-priority-desc":"",
+
+        "project-weather-name":"Station météo (IoT)",
+        "project-weather-desc":"",
+
+        "project-yolo-name":"YoloV5 Réseau neuronal",
+        "project-yolo-desc":"",
+
+        "project-sat-name":"Visualisation des mouvements des satellitesn",
+        "project-sat-desc":"",
+
+        "project-time-name":"Calcul de l'emploi du temps",
+        "project-time-desc":"",
+
+        "project-simulation-name":"Simulation d'un écosystème",
+        "project-simulation-desc":"",
+
         "footer-title":"IMPRESSION",
         "footer-copyright":"par SEBASTIAN PÖTTER",
         "footer-policy":"POLITIQUE DE PROTECTION DE LA VIE PRIVÉE",
         "footer-library":"BIBLIOTHÈQUES UTILISÉES",
         "profile-title":"PROFIL",
-        "profile-begin":"Je m'appelle Sebastian Pötter. Je suis étudiant à l'université des sciences appliquées de Leipzig et je prépare actuellement un master en informatique avec une spécialisation en intelligence artificielle et en développement de logiciels. Je peux me familiariser rapidement avec de nouveaux projets et j'aime résoudre les problèmes récalcitrants.",
+        "profile-begin":"Je m'appelle Sebastian Pötter. J'ai récemment terminé mon master en informatique et j'ai maintenant le titre de Master of Science. Je peux m'adapter rapidement à de nouveaux projets et j'aime résoudre les problèmes persistants.",
         "profile-other":"Je suis intéressé par un large éventail de sujets dans le domaine de l'informatique. Cependant, l'informatique n'est pas mon seul centre d'intérêt, je m'intéresse également à d'autres sujets tels que la biologie, la chimie, la physique et l'électrotechnique.",
         "education-title":"ÉDUCATION",
         "education-secondary-title":"L'école secondaire (Realschule)",
@@ -271,7 +322,7 @@ let langJson = {
         "education-master-oagr":"Reconnaissance d'objets et de gestes",
         "education-master-th":"Mon sujet de thèse de master: <a href=\"https://github.com/poetter-sebastian/Simulation\" rel=\"noreferrer\" target=\"_blank\">Développement d'une simulation environnementale en Unity</a>",
         "experience-title":"EXPÉRIENCE",
-        "experience-small-com":"Commissions multiples de sites web d'une page pour les petites entreprises - 2014-2017",
+        "experience-small-com":"Commissions multiples de sites web d'une page pour les petites entreprises par exemple IKD-Training - 2014-2017",
         "experience-landing-page":"Commande d'une page d'atterrissage pour une entreprise à Dresden - 2017",
         "experience-profesco":"Commande d'un site wordpress-website pour la société Profesco GmbH (création et administration) - 2019",
         "experience-internship":"Stage de douze semaines chez Profesco GmbH dans le département informatique - 2020",
@@ -288,8 +339,168 @@ let langJson = {
     }
 };
 
-let langElements;
-langElements = $('[data-i18n]');
+let projectJson = {
+    "projects" : [
+        {
+            "name-i18n": "project-rasp-name",
+            "description-i18n": "project-rasp-desc",
+            "url": "https://github.com/poetter-sebastian/pi-fan-controll",
+            "icon": "fas fa-fan",
+            "tags": [
+                {
+                    "tag-i18n": ""
+                }
+            ],
+            "pictures" :
+            [
+                {
+                    "url" : "",
+                    "alt-i18n" : "",
+                }
+            ],
+        },
+        {
+            "name-i18n": "project-note-name",
+            "description-i18n": "project-note-desc",
+            "url": "https://github.com/poetter-sebastian/Notes",
+            "icon": "fas fa-mobile-alt",
+            "tags": [
+                {
+                    "tag-i18n": ""
+                }
+            ],
+            "pictures" :
+            [
+                {
+                    "url" : "",
+                    "alt-i18n" : "",
+                }
+            ],
+        },
+        {
+            "name-i18n": "project-priority-name",
+            "description-i18n": "project-priority-desc",
+            "url": "https://github.com/poetter-sebastian/concurrent-priority-list",
+            "icon": "fas fa-list-ol",
+            "tags": [
+                {
+                    "tag": ""
+                }
+            ],
+            "pictures" :
+            [
+                {
+                    "url" : "",
+                    "alt-i18n" : "",
+                }
+            ],
+        },
+        {
+            "name-i18n": "project-weather-name",
+            "description-i18n": "project-weather-desc",
+            "url": "https://github.com/poetter-sebastian/solar-weatherstation",
+            "icon": "fas fa-cloud-sun",
+            "tags": [
+                {
+                    "tag": ""
+                }
+            ],
+            "pictures" :
+            [
+                {
+                    "url" : "",
+                    "alt-i18n" : "",
+                }
+            ],
+        },
+        {
+            "name-i18n": "project-yolo-name",
+            "description-i18n": "project-yolo-desc",
+            "url": "https://github.com/poetter-sebastian/TeamFortress2-YoloV5",
+            "icon": "fas fa-robot",
+            "tags": [
+                {
+                    "tag": ""
+                }
+            ],
+            "pictures" :
+            [
+                {
+                    "url" : "",
+                    "alt-i18n" : "",
+                }
+            ],
+        },
+        {
+            "name-i18n": "project-sat-name",
+            "description-i18n": "project-sat-desc",
+            "url": "https://github.com/poetter-sebastian/WorldSatelite",
+            "icon": "fas fa-satellite",
+            "tags": [
+                {
+                    "tag": ""
+                }
+            ],
+            "pictures" :
+            [
+                {
+                    "url" : "",
+                    "alt-i18n" : "",
+                }
+            ],
+        },
+        {
+            "name-i18n": "project-time-name",
+            "description-i18n": "project-time-desc",
+            "url": "https://gitlab.imn.htwk-leipzig.de/spoetter/bachelor-task",
+            "icon": "far fa-calendar-alt",
+            "tags": [
+                {
+                    "tag": ""
+                }
+            ],
+            "pictures" :
+            [
+                {
+                    "url" : "",
+                    "alt-i18n" : "",
+                }
+            ],
+        },
+        {
+            "name-i18n": "project-simulation-name",
+            "description-i18n": "project-simulation-desc",
+            "url": "https://github.com/poetter-sebastian/Simulation",
+            "icon": "fas fa-leaf",
+            "tags": [
+                {
+                    "tag": ""
+                }
+            ],
+            "pictures" :
+            [
+                {
+                    "url" : "",
+                    "alt-i18n" : "",
+                }
+            ],
+        }
+    ]
+}
+
+function generateProjects(lang) {
+    let projectContainer = document.getElementById('projects');
+    $.each(projectJson['projects'], function(index, value) {
+        projectContainer.insertAdjacentHTML('beforeend',
+            '<div class="row g-0">\n' +
+            '<div class="col-xl-6 col-lg-3 col-sm-3 col-2 text-end"><i class="'+value['icon']+'"></i></div>\n' +
+            '<div class="col-xl-6 col-lg-9 col-sm-9 col-10 primary-dark-bg">\n' +
+            '<a href="' + value['url'] + '"><span class="project" data-i18n="' + value['name-i18n'] + '">' + langJson[lang][value['name-i18n']] + '</span></a>\n' +
+            '</div>\n' +
+            '</div>'
+        );
+    });
+}
 
 function logElements() {
     $.each(langElements, function(index, value) {
@@ -310,6 +521,7 @@ function changeLang(lang) {
             return;
     }
     document.documentElement.lang = lang;
+    bl = lang;
     $.each(langElements, function(index, value) {
         let currentObj = value.getAttribute('data-i18n');
         if(typeof langJson[lang][currentObj] !== 'undefined') {
@@ -318,4 +530,21 @@ function changeLang(lang) {
             console.log('"' + currentObj + '" in language json not found!')
         }
     });
+
+}
+
+function toggleMode() {
+    document.body.classList.toggle("dark-theme");
+    document.body.classList.toggle("light-theme");
+    let theme
+    if (prefersDarkScheme) {
+        theme = document.body.classList.contains("light-theme")
+            ? "light"
+            : "dark";
+    } else {
+        theme = document.body.classList.contains("dark-theme")
+            ? "dark"
+            : "light";
+    }
+    localStorage.setItem("theme", theme);
 }

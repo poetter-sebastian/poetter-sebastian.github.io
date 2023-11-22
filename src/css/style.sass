@@ -31,6 +31,8 @@ body
         img
             height: 72px
             width: 72px
+    a
+        margin: 0px 5px 0 5px
 #leftSide
     background-color: var(--primary-bg)
     color: var(--primary-text)
@@ -170,3 +172,21 @@ body
         margin-left: 33.333333%
 .font-smaller
     font-size: 1.35rem
+
+/* ====================================================================================================================
+ *
+ * sebastian.github.io - default
+ *
+ * ====================================================================================================================*/
+.form-check-input:checked
+    background-color: var(--primary-dark-bg) !important
+    border-color: var(--primary-dark-bg) !important
+.form-check-input:focus
+    border-color: var(--primary-dark-bg) !important
+    outline: 0
+    box-shadow: 0 0 0 .25rem var(--secondary-light-bg-trans) !important
+.form-switch .form-check-input:focus
+    --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23FC00CE'/%3e%3c/svg%3e") !important
+.form-switch .form-check-input:checked
+    background-position: right center
+    --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e")

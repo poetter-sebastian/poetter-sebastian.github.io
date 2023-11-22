@@ -23,6 +23,7 @@ body {
   --secondary-dark-bg: #0c3c3a;
   --secondary-light-text: #ffeff7;
   --secondary-light-bg: #ffeff7;
+  --secondary-light-bg-trans: rgba(255, 239, 247, 0.25);
 }
 
 body.dark-theme {
@@ -39,6 +40,7 @@ body.dark-theme {
   --secondary-dark-bg: #313d4f;
   --secondary-light-text: #347d39;
   --secondary-light-bg: #4d243b;
+  --secondary-light-bg-trans: rgba(77, 36, 59, 0.25);
 }
 
 /* ==================================================================================================================
@@ -255,6 +257,9 @@ body {
     width: 72px;
   }
 }
+.lang-select a {
+  margin: 0px 5px 0 5px;
+}
 
 #leftSide {
   background-color: var(--primary-bg);
@@ -461,6 +466,31 @@ body {
 }
 .font-smaller {
   font-size: 1.35rem;
+}
+
+/* ====================================================================================================================
+ * *
+ * * sebastian.github.io - default
+ * *
+ * * ====================================================================================================================*/
+.form-check-input:checked {
+  background-color: var(--primary-dark-bg) !important;
+  border-color: var(--primary-dark-bg) !important;
+}
+
+.form-check-input:focus {
+  border-color: var(--primary-dark-bg) !important;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem var(--secondary-light-bg-trans) !important;
+}
+
+.form-switch .form-check-input:focus {
+  --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23FC00CE'/%3e%3c/svg%3e") !important;
+}
+
+.form-switch .form-check-input:checked {
+  background-position: right center;
+  --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
 }
 
 /*# sourceMappingURL=style.css.map */

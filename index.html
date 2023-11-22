@@ -264,11 +264,16 @@
     <div class="container-fluid">
         <div class="row">
             <div id="leftSide" class="col-md-4 p-lg-0 ps-2 m-0">
-                <div class="lang-select">
+                <div class="lang-select d-flex">
                     <a href="#" onclick="changeLang('de')"><img src="src/img/de.webp" alt="DE" title="Deutsch"></a>
                     <a href="#" onclick="changeLang('en')"><img src="src/img/en.webp" alt="EN" title="English"></a>
                     <a href="#" onclick="changeLang('fr')"><img src="src/img/fr.webp" alt="FR" title="Français"></a>
-                    <a href="#" class="btn-toggle offset-2" title="Darkmode"><i class="fas fa-adjust"></i></a>
+                    <i class="fas fa-sun mt-1 offset-2"></i>
+                    <div class="form-check form-check-inline form-switch ms-2 me-1">
+                        <input class="form-check-input" type="checkbox" role="switch" id="darkMode" onchange="toggleMode()">
+                        <label class="form-check-label" for="darkMode"></label>
+                    </div>
+                    <i class="fas fa-moon mt-1"></i>
                 </div>
                 <div class="mx-auto mt-4 primary-text text-center">
                     <img src="src/img/avatar.webp" title="Sebastian P. - FULL STACK DEVELOPER" alt="picture from www.w3schools.com " class="rounded-circle image">
@@ -303,6 +308,104 @@
                         </div>
                     </div>
                     <div class="mt-4 mb-4">
+                        <h2 class="text-uppercase font-weight-bold" data-i18n="skills-title">Skills</h2>
+                    </div>
+                    <div id="skills" class="row">
+                        <div class="col-12 col-sm-6 col-md-12 col-lg-6">
+                            <i class="fas fa-keyboard"></i> <a href="https://learn.microsoft.com/cpp" target="_blank" rel="noreferrer">C++ (C)</a>, <a href="https://learn.microsoft.com/dotnet/csharp" target="_blank" rel="noreferrer">C# (.NETcore)</a>, <a href="https://openjdk.org" target="_blank" rel="noreferrer">Java 20</a>, <a href="https://www.python.org" target="_blank" rel="noreferrer">Python3</a>, <a href="https://www.haskell.org" target="_blank" rel="noreferrer">Haskell</a>, <a href="https://go.dev" target="_blank" rel="noreferrer">Go</a>, <a href="https://www.php.net" target="_blank" rel="noreferrer">PHP8.3</a>, SQL, NoSQL, <a href="https://www.rust-lang.org" target="_blank" rel="noreferrer">Rust</a>,
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-12 col-lg-6">
+                            <i class="fab fa-firefox-browser"></i> HTML5, CSS3, <a href="https://sass-lang.com" target="_blank" rel="noreferrer">SASS</a>, <a href="https://www.typescriptlang.org" target="_blank" rel="noreferrer">Typescript</a>, <a href="https://jquery.com" target="_blank" rel="noreferrer">Jquery 3.6</a>, <a href="https://getbootstrap.com" target="_blank" rel="noreferrer">Bootstrap 5</a>, <a href="https://webpack.js.org" target="_blank" rel="noreferrer">Webpack</a>, <a href="https://developer.mozilla.org/en-US/docs/Glossary/SEO" target="_blank" rel="noreferrer">SEO</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/Performance" target="_blank" rel="noreferrer">WPO</a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-12 col-lg-6">
+                            <i class="fas fa-paint-brush"></i> <span data-i18n="skills-gfx">Image editing e.g. with</span> <a href="https://www.gimp.org" target="_blank" rel="noreferrer">GIMP</a>, <a href="https://inkscape.org" target="_blank" rel="noreferrer">Inkscape</a>, <a href="https://www.adobe.com/products/photoshop.html" target="_blank" rel="noreferrer">Photoshop</a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-12 col-lg-6">
+                            <i class="fas fa-film"></i> <span data-i18n="skills-3d">Animations e.g. with</span> <a href="https://www.adobe.com/products/aftereffects.html" target="_blank" rel="noreferrer">After Effects</a>, <a href="https://www.vegascreativesoftware.com/int/vegas-pro" target="_blank" rel="noreferrer">Vegas Pro</a>, <a href="https://www.blender.org" target="_blank" rel="noreferrer">Blender</a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-12 col-lg-6">
+                            <i class="fas fa-file-alt"></i> <span data-i18n="skills-web">Knowledge of </span><a href="https://wordpress.com" target="_blank" rel="noreferrer">Wordpress</a> (<a href="https://wpbakery.com" target="_blank" rel="noreferrer">WP-Bakery</a>, <a href="https://elementor.com" target="_blank" rel="noreferrer">Elementor</a>), <a href="https://cakephp.org" target="_blank" rel="noreferrer">Cakephp 4</a>, <a href="https://nodejs.org" target="_blank" rel="noreferrer">Node.js</a>, <a href="https://angular.io" target="_blank" rel="noreferrer">Angular</a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-12 col-lg-6">
+                            <i class="fas fa-users"></i> <span data-i18n="skills-team">Team leading and project organisation</span>, <a href="https://www.scrum.org/resources/what-is-scrum" target="_blank" rel="noreferrer">SCRUM</a>, Kanban
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-12 col-lg-6">
+                            <i class="fas fa-cog"></i> <span data-i18n="skills-circuit">Knowledge of electrical engineering e.g. with <a href="https://www.arduino.cc" target="_blank" rel="noreferrer">Arduino</a> and <a href="https://www.raspberrypi.org" target="_blank" rel="noreferrer">Raspberry Pi</a></span>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-12 col-lg-6">
+                            <i class="fab fa-ubuntu"></i> Windows 7-11, Linux (<a href="https://linuxmint.com" target="_blank" rel="noreferrer">Linuxmint</a>), <a href="https://www.docker.com" target="_blank" rel="noreferrer">Docker</a>, <a href="https://www.portainer.io" target="_blank" rel="noreferrer">Portainer</a>, <a href="https://kubernetes.io" target="_blank" rel="noreferrer">Kubernetes</a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-12 col-lg-6">
+                            <i class="fab fa-unity"></i> <a href="https://unity.com" target="_blank" rel="noreferrer">Unity 2022</a>, <a href="https://www.unrealengine.com" target="_blank" rel="noreferrer">Unreal-Engine 5</a>, <a href="https://godotengine.org" target="_blank" rel="noreferrer">Godot-Engine 4</a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-12 col-lg-6">
+                            <i class="fas fa-users-cog me-1"></i> <a href="https://git-scm.com" target="_blank" rel="noreferrer">Git</a>, <a href="https://www.atlassian.com/software/jira" target="_blank" rel="noreferrer">Jira</a>, <a href="https://about.gitlab.com" target="_blank" rel="noreferrer">Gitlab CLI</a>, <a href="https://nvie.com/posts/a-successful-git-branching-model" target="_blank" rel="noreferrer">Git-Flow</a>, <a href="https://docs.gitlab.com/ee/topics/gitlab_flow.html" target="_blank" rel="noreferrer">Gitlab-Flow</a>, <a href="https://www.jetbrains.com/youtrack" target="_blank" rel="noreferrer">YouTrack</a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-12 col-lg-6">
+                            <i class="fas fa-project-diagram"></i> Machine learning, Transfer learning, <a href="https://github.com/ultralytics/ultralytics" target="_blank" rel="noreferrer">YoloV8</a>, <a href="https://stablediffusionweb.com/StableDiffusionXL" target="_blank" rel="noreferrer">Stable Diffusion</a>, <a href="https://pytorch.org" target="_blank" rel="noreferrer">Pytorch</a>, <a href="https://learn.microsoft.com/dotnet/machine-learning/" target="_blank" rel="noreferrer">ML.NET</a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-12 col-lg-6">
+
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="mt-4 mb-4">
+                            <h2 data-i18n="projects-title" class="text-uppercase font-weight-bold text-center">Projects</h2>
+                        </div>
+                        <div id="projects">
+                            <noscript>
+                                <div class="row g-0">
+                                    <div class="col-xl-6 col-lg-3 col-sm-3 col-2 text-end"><i class="fas fa-fan"></i></div>
+                                    <div class="col-xl-6 col-lg-9 col-sm-9 col-10 primary-dark-bg">
+                                        <a href="https://github.com/poetter-sebastian/pi-fan-controll"><span data-i18n="projects-fan">Raspberry Pi fan control</span></a>
+                                    </div>
+                                </div>
+                                <div class="row g-0">
+                                    <div class="col-xl-6 col-lg-3 col-sm-3 col-2 text-end"><i class="fas fa-mobile-alt"></i></div>
+                                    <div class="col-xl-6 col-lg-9 col-sm-9 col-10 primary-dark-bg">
+                                        <a data-i18n="projects-notes" href="https://github.com/poetter-sebastian/Notes">Notes App (PWA)</a>
+                                    </div>
+                                </div>
+                                <div class="row g-0">
+                                    <div class="col-xl-6 col-lg-3 col-sm-3 col-2 text-end"><i class="fas fa-list-ol"></i></div>
+                                    <div class="col-xl-6 col-lg-9 col-sm-9 col-10 primary-dark-bg">
+                                        <a data-i18n="projects-prio" href="https://github.com/poetter-sebastian/concurrent-priority-list">Concurrent priority list</a>
+                                    </div>
+                                </div>
+                                <div class="row g-0">
+                                    <div class="col-xl-6 col-lg-3 col-sm-3 col-2 text-end"><i class="fas fa-cloud-sun"></i></div>
+                                    <div class="col-xl-6 col-lg-9 col-sm-9 col-10 primary-dark-bg">
+                                        <a data-i18n="projects-weather" href="https://github.com/poetter-sebastian/solar-weatherstation">Weather station (IoT)</a>
+                                    </div>
+                                </div>
+                                <div class="row g-0">
+                                    <div class="col-xl-6 col-lg-3 col-sm-3 col-2 text-end"><i class="fas fa-robot"></i></div>
+                                    <div class="col-xl-6 col-lg-9 col-sm-9 col-10 primary-dark-bg">
+                                        <a data-i18n="projects-yolo" href="https://github.com/poetter-sebastian/TeamFortress2-YoloV5">YoloV5 Neural network</a>
+                                    </div>
+                                </div>
+                                <div class="row g-0">
+                                    <div class="col-xl-6 col-lg-3 col-sm-3 col-2 text-end"><i class="fas fa-satellite"></i></div>
+                                    <div class="col-xl-6 col-lg-9 col-sm-9 col-10 primary-dark-bg">
+                                        <a data-i18n="projects-satellite" href="https://github.com/poetter-sebastian/WorldSatelite">Satellite movement visualisation</a>
+                                    </div>
+                                </div>
+                                <div class="row g-0">
+                                    <div class="col-xl-6 col-lg-3 col-sm-3 col-2 text-end"><i class="far fa-calendar-alt"></i></div>
+                                    <div class="col-xl-6 col-lg-9 col-sm-9 col-10 primary-dark-bg">
+                                        <a data-i18n="projects-table" href="https://gitlab.imn.htwk-leipzig.de/spoetter/bachelor-task">Timetable creator</a>
+                                    </div>
+                                </div>
+                                <div class="row g-0">
+                                    <div class="col-xl-6 col-lg-3 col-sm-3 col-2 text-end"><i class="fas fa-leaf"></i></div>
+                                    <div class="col-xl-6 col-lg-9 col-sm-9 col-10 primary-dark-bg">
+                                        <a data-i18n="projects-master" href="https://github.com/poetter-sebastian/Simulation">Simulation of an ecosystem</a>
+                                    </div>
+                                </div>
+                            </noscript>
+                        </div>
+                    </div>
+                    <div class="mt-4 mb-4">
                         <h2 class="text-uppercase font-weight-bold" data-i18n="hobbies-title">Hobbies</h2>
                     </div>
                     <div class="ms-sm-3 text-start">
@@ -333,103 +436,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mt-4 mb-4">
-                        <h2 class="text-uppercase font-weight-bold" data-i18n="skills-title">Skills</h2>
-                    </div>
-                    <div id="skills" class="row">
-                        <div class="col-12 col-sm-6 col-md-12 col-lg-6">
-                            <i class="fas fa-keyboard"></i> C, C++, C# (.NETcore), Java 11, Python3, Haskell, Go, PHP8, SQL, NoSQL, Rust,
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-12 col-lg-6">
-                            <i class="fab fa-firefox-browser"></i> HTML5, CSS3, <a href="https://sass-lang.com/" target="_blank" rel="noreferrer">SASS</a>, <a href="https://www.typescriptlang.org" target="_blank" rel="noreferrer">Typescript</a>, <a href="https://jquery.com/" target="_blank" rel="noreferrer">Jquery 3.6</a>, <a href="https://getbootstrap.com/" target="_blank" rel="noreferrer">Bootstrap 5</a>, SEO, WPO
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-12 col-lg-6">
-                            <i class="fas fa-paint-brush"></i> <span data-i18n="skills-gfx">Image editing e.g. with</span> <a href="https://www.gimp.org/" target="_blank" rel="noreferrer">GIMP</a>, <a href="https://inkscape.org/" target="_blank" rel="noreferrer">Inkscape</a>, <a href="https://www.adobe.com/products/photoshop.html" target="_blank" rel="noreferrer">Photoshop</a>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-12 col-lg-6">
-                            <i class="fas fa-film"></i> <span data-i18n="skills-3d">Animations e.g. with</span> <a href="https://www.adobe.com/products/aftereffects.html" target="_blank" rel="noreferrer">After Effects</a>, <a href="https://www.vegascreativesoftware.com/int/vegas-pro/" target="_blank" rel="noreferrer">Vegas Pro</a>, <a href="https://www.blender.org/" target="_blank" rel="noreferrer">Blender</a>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-12 col-lg-6">
-                            <i class="fas fa-file-alt"></i> <span data-i18n="skills-web">Knowledge of </span><a href="https://wordpress.com/" target="_blank" rel="noreferrer">Wordpress</a> (<a href="https://wpbakery.com/" target="_blank" rel="noreferrer">WP-Bakery</a>, <a href="https://elementor.com/" target="_blank" rel="noreferrer">Elementor</a>), <a href="https://cakephp.org/" target="_blank" rel="noreferrer">Cakephp 4</a>, <a href="https://nodejs.org" target="_blank" rel="noreferrer">Node.js</a>, <a href="https://angular.io/" target="_blank" rel="noreferrer">Angular</a>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-12 col-lg-6">
-                            <i class="fas fa-users"></i> <span data-i18n="skills-team">Team leading and project organisation</span>, <a href="https://www.scrum.org/resources/what-is-scrum" target="_blank" rel="noreferrer">SCRUM</a>, Kanban
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-12 col-lg-6">
-                            <i class="fas fa-cog"></i> <span data-i18n="skills-circuit">Knowledge of electrical engineering e.g. with <a href="https://www.arduino.cc/" target="_blank" rel="noreferrer">Arduino</a> and <a href="https://www.raspberrypi.org/" target="_blank" rel="noreferrer">Raspberry Pi</a></span>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-12 col-lg-6">
-                            <i class="fab fa-ubuntu"></i> Windows 7-10, Linux (<a href="https://ubuntu.com/" target="_blank" rel="noreferrer">Ubuntu</a> 16.4-20.4), <a href="https://www.docker.com/" target="_blank" rel="noreferrer">Docker</a>, <a href="https://www.portainer.io/" target="_blank" rel="noreferrer">Portainer</a>, <a href="https://kubernetes.io/" target="_blank" rel="noreferrer">Kubernetes</a>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-12 col-lg-6">
-                            <i class="fab fa-unity"></i><a href="https://unity.com/" target="_blank" rel="noreferrer">Unity3D</a>, <a href="https://www.unrealengine.com" target="_blank" rel="noreferrer">Unreal-Engine</a>, <a href="https://godotengine.org/" target="_blank" rel="noreferrer">Godot-Engine</a>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-12 col-lg-6">
-                            <i class="fas fa-users-cog me-1"></i><a href="https://git-scm.com/" target="_blank" rel="noreferrer">Git</a>, <a href="https://www.atlassian.com/software/jira" target="_blank" rel="noreferrer">Jira</a>, <a href="https://about.gitlab.com/" target="_blank" rel="noreferrer">Gitlab CLI</a>, <a href="https://nvie.com/posts/a-successful-git-branching-model/" target="_blank" rel="noreferrer">Git-Flow</a>, <a href="https://docs.gitlab.com/ee/topics/gitlab_flow.html" target="_blank" rel="noreferrer">Gitlab-Flow</a>, <a href="https://www.jetbrains.com/youtrack/" target="_blank" rel="noreferrer">YouTrack</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="">
-                    <div class="mt-4 mb-4">
-                        <h2 data-i18n="projects-title" class="text-uppercase font-weight-bold text-center">Projects</h2>
-                    </div>
-                    <div id="projects">
-                        <div class="row g-0">
-                            <div class="col-xl-6 col-lg-3 col-sm-3 col-2 text-end"><i class="fas fa-fan"></i></div>
-                            <div class="col-xl-6 col-lg-9 col-sm-9 col-10 primary-dark-bg">
-                                <a href="https://github.com/poetter-sebastian/pi-fan-controll"><span data-i18n="projects-fan">Raspberry Pi fan control</span></a>
-                            </div>
-                        </div>
-                        <div class="row g-0">
-                            <div class="col-xl-6 col-lg-3 col-sm-3 col-2 text-end"><i class="fas fa-mobile-alt"></i></div>
-                            <div class="col-xl-6 col-lg-9 col-sm-9 col-10 primary-dark-bg">
-                                <a data-i18n="projects-notes" href="https://github.com/poetter-sebastian/Notes">Notes App (PWA)</a>
-                            </div>
-                        </div>
-                        <div class="row g-0">
-                            <div class="col-xl-6 col-lg-3 col-sm-3 col-2 text-end"><i class="fas fa-list-ol"></i></div>
-                            <div class="col-xl-6 col-lg-9 col-sm-9 col-10 primary-dark-bg">
-                                <a data-i18n="projects-prio" href="https://github.com/poetter-sebastian/concurrent-priority-list">Concurrent priority list</a>
-                            </div>
-                        </div>
-                        <div class="row g-0">
-                            <div class="col-xl-6 col-lg-3 col-sm-3 col-2 text-end"><i class="fas fa-cloud-sun"></i></div>
-                            <div class="col-xl-6 col-lg-9 col-sm-9 col-10 primary-dark-bg">
-                                <a data-i18n="projects-weather" href="https://github.com/poetter-sebastian/solar-weatherstation">Weather station (IoT)</a>
-                            </div>
-                        </div>
-                        <div class="row g-0">
-                            <div class="col-xl-6 col-lg-3 col-sm-3 col-2 text-end"><i class="fas fa-robot"></i></div>
-                            <div class="col-xl-6 col-lg-9 col-sm-9 col-10 primary-dark-bg">
-                                <a data-i18n="projects-yolo" href="https://github.com/poetter-sebastian/TeamFortress2-YoloV5">Neural network</a>
-                            </div>
-                        </div>
-                        <div class="row g-0">
-                            <div class="col-xl-6 col-lg-3 col-sm-3 col-2 text-end"><i class="far fa-calendar-alt"></i></div>
-                            <div class="col-xl-6 col-lg-9 col-sm-9 col-10 primary-dark-bg">
-                                <a data-i18n="projects-table" href="https://gitlab.imn.htwk-leipzig.de/spoetter/bachelor-task">Timetable creator</a>
-                            </div>
-                        </div>
-                        <div class="row g-0">
-                            <div class="col-xl-6 col-lg-3 col-sm-3 col-2 text-end"><i class="fas fa-satellite"></i></div>
-                            <div class="col-xl-6 col-lg-9 col-sm-9 col-10 primary-dark-bg">
-                                <a data-i18n="projects-satellite" href="https://github.com/poetter-sebastian/WorldSatelite">Satellite movement visualisation</a>
-                            </div>
-                        </div>
-                        <div class="row g-0">
-                            <div class="col-xl-6 col-lg-3 col-sm-3 col-2 text-end"><i class="fas fa-leaf"></i></div>
-                            <div class="col-xl-6 col-lg-9 col-sm-9 col-10 primary-dark-bg">
-                                <a data-i18n="projects-master" href="https://github.com/poetter-sebastian/Simulation">Simulation of an ecosystem</a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <div class="footer d-none d-md-block">
                     <div class="mt-4 mb-4">
                         <h2 data-i18n="footer-title" class="text-uppercase font-weight-bold text-center">Imprint</h2>
                     </div>
                     <div class="pt-4 pb-3 primary-dark-bg">
-                        <p class="text-uppercase font-weight-bold text-center"><i class="fas fa-copyright"></i> 2019-<span class="year">2022</span> <span data-i18n="footer-copyright">by Sebastian Poetter</span></p>
+                        <p class="text-uppercase font-weight-bold text-center"><i class="fas fa-copyright"></i> 2019-<span class="year">2023</span> <span data-i18n="footer-copyright">by Sebastian Poetter</span></p>
                     </div>
                     <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">
                         <div class="pt-4 pb-3">
@@ -451,13 +464,13 @@
                     </h1>
                     <div class="container">
                         <p data-i18n="profile-begin">
-                            My name is Sebastian Poetter.
-                            I'm an university student and attending a master degree for computer science.
-                            I can quickly get focused on new things and learn very quickly.
+                            My name is Sebastian Pötter. I recently completed my master's degree in computer science and
+                            now have the title Master of Science. I can quickly get to grips with new projects and enjoy
+                            solving tough problems.
                         </p>
                         <p data-i18n="profile-other">
-                            I'm not only good at in computer science, but am also interested in other topics, namely biology, chemistry and physics
-                            Bionics and Bioinformatics are a passion of mine.
+                            I am interested in a wide range of topics in the field of computer science, such as web development, app development and server applications.
+                            However, computers are not my only interest, but also other areas such as biology, chemistry, physics and electrical engineering.
                         </p>
                     </div>
                 </div>
@@ -686,15 +699,15 @@
     </div>
     <!-- slow css -->
     <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-          rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-          crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
     <!-- javascript -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script async src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"
+            async defer></script>
     <script async src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.6.0/umd/popper.min.js"
             integrity="sha512-BmM0/BQlqh02wuK5Gz9yrbe7VyIVwOzD1o40yi1IsTjriX/NGF37NyXHfmFzIlMmoSIBXgqDiG1VNU6kB5dBbA==" crossorigin="anonymous"></script>
     <script async src="src/js/main.min.js" defer></script>
@@ -795,7 +808,7 @@
                     <h3>Jquery</h3>
                     <p><a href="https://jquery.com" target="_blank" rel="noreferrer">jquery 3.6</a> - <a href="https://jquery.org/team/" target="_blank" rel="noreferrer">The jQuery Foundation</a> released under <a href="https://jquery.org/license/" target="_blank" rel="noreferrer">MIT license</a>.</p>
                     <h3>Bootstrap</h3>
-                    <p><a href="https://getbootstrap.com" target="_blank" rel="noreferrer">Bootstrap 5</a> - The Bootstrap Authors released under <a href="https://github.com/twbs/bootstrap/blob/v4-dev/LICENSE" target="_blank" rel="noreferrer">MIT license</a>.</p>
+                    <p><a href="https://getbootstrap.com" target="_blank" rel="noreferrer">Bootstrap 5.3</a> - The Bootstrap Authors released under <a href="https://github.com/twbs/bootstrap/blob/v4-dev/LICENSE" target="_blank" rel="noreferrer">MIT license</a>.</p>
                     <h3>Poppers js</h3>
                     <p><a href="https://popper.js.org/" target="_blank" rel="noreferrer">Popper-js</a> - Popper-Js released under <a href="https://github.com/popperjs/popper-core/blob/master/LICENSE.md" target="_blank" rel="noreferrer">MIT license</a>.</p>
                     <h3>Fontawesome 5</h3>
