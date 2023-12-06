@@ -23,7 +23,68 @@ $(document).ready(function() {
     }
 });
 
-let langJson = {
+function generateProjects(lang) {
+    let projectContainer = document.getElementById('projects');
+    $.each(projectJson['projects'], function(index, value) {
+        projectContainer.insertAdjacentHTML('beforeend',
+            '<div class="row g-0">\n' +
+            '<div class="col-xl-6 col-lg-3 col-sm-3 col-2 text-end"><i class="'+value['icon']+'"></i></div>\n' +
+            '<div class="col-xl-6 col-lg-9 col-sm-9 col-10 primary-dark-bg">\n' +
+            '<a href="' + value['url'] + '"><span class="project" data-i18n="' + value['name-i18n'] + '">' + langJson[lang][value['name-i18n']] + '</span></a>\n' +
+            '</div>\n' +
+            '</div>'
+        );
+    });
+}
+
+function logElements() {
+    $.each(langElements, function(index, value) {
+        console.log('"'+value.getAttribute('data-i18n')+ '":"'+value.innerText+'",');
+        //console.log('"'+value.getAttribute('data-i18n')+ '":"",');
+    });
+}
+
+function changeLang(lang) {
+    switch (lang) {
+        case "en":
+            break;
+        case "de":
+            break;
+        case "fr":
+            break;
+        default:
+            return;
+    }
+    document.documentElement.lang = lang;
+    bl = lang;
+    $.each(langElements, function(index, value) {
+        let currentObj = value.getAttribute('data-i18n');
+        if(typeof langJson[lang][currentObj] !== 'undefined') {
+            value.innerHTML = langJson[lang][currentObj];
+        } else {
+            console.log('"' + currentObj + '" in language json not found!')
+        }
+    });
+
+}
+
+function toggleMode() {
+    document.body.classList.toggle("dark-theme");
+    document.body.classList.toggle("light-theme");
+    let theme
+    if (prefersDarkScheme) {
+        theme = document.body.classList.contains("light-theme")
+            ? "light"
+            : "dark";
+    } else {
+        theme = document.body.classList.contains("dark-theme")
+            ? "dark"
+            : "light";
+    }
+    localStorage.setItem("theme", theme);
+}
+
+const langJson = {
     "en": {
         "page-title":"Curriculum-vitae of Sebastian Poetter",
         "owner-name":"SEBASTIAN POETTER",
@@ -339,7 +400,7 @@ let langJson = {
     }
 };
 
-let projectJson = {
+const projectJson = {
     "projects" : [
         {
             "name-i18n": "project-rasp-name",
@@ -352,12 +413,12 @@ let projectJson = {
                 }
             ],
             "pictures" :
-            [
-                {
-                    "url" : "",
-                    "alt-i18n" : "",
-                }
-            ],
+                [
+                    {
+                        "url" : "",
+                        "alt-i18n" : "",
+                    }
+                ],
         },
         {
             "name-i18n": "project-note-name",
@@ -370,12 +431,12 @@ let projectJson = {
                 }
             ],
             "pictures" :
-            [
-                {
-                    "url" : "",
-                    "alt-i18n" : "",
-                }
-            ],
+                [
+                    {
+                        "url" : "",
+                        "alt-i18n" : "",
+                    }
+                ],
         },
         {
             "name-i18n": "project-priority-name",
@@ -388,12 +449,12 @@ let projectJson = {
                 }
             ],
             "pictures" :
-            [
-                {
-                    "url" : "",
-                    "alt-i18n" : "",
-                }
-            ],
+                [
+                    {
+                        "url" : "",
+                        "alt-i18n" : "",
+                    }
+                ],
         },
         {
             "name-i18n": "project-weather-name",
@@ -406,12 +467,12 @@ let projectJson = {
                 }
             ],
             "pictures" :
-            [
-                {
-                    "url" : "",
-                    "alt-i18n" : "",
-                }
-            ],
+                [
+                    {
+                        "url" : "",
+                        "alt-i18n" : "",
+                    }
+                ],
         },
         {
             "name-i18n": "project-yolo-name",
@@ -424,12 +485,12 @@ let projectJson = {
                 }
             ],
             "pictures" :
-            [
-                {
-                    "url" : "",
-                    "alt-i18n" : "",
-                }
-            ],
+                [
+                    {
+                        "url" : "",
+                        "alt-i18n" : "",
+                    }
+                ],
         },
         {
             "name-i18n": "project-sat-name",
@@ -442,12 +503,12 @@ let projectJson = {
                 }
             ],
             "pictures" :
-            [
-                {
-                    "url" : "",
-                    "alt-i18n" : "",
-                }
-            ],
+                [
+                    {
+                        "url" : "",
+                        "alt-i18n" : "",
+                    }
+                ],
         },
         {
             "name-i18n": "project-time-name",
@@ -460,12 +521,12 @@ let projectJson = {
                 }
             ],
             "pictures" :
-            [
-                {
-                    "url" : "",
-                    "alt-i18n" : "",
-                }
-            ],
+                [
+                    {
+                        "url" : "",
+                        "alt-i18n" : "",
+                    }
+                ],
         },
         {
             "name-i18n": "project-simulation-name",
@@ -478,73 +539,12 @@ let projectJson = {
                 }
             ],
             "pictures" :
-            [
-                {
-                    "url" : "",
-                    "alt-i18n" : "",
-                }
-            ],
+                [
+                    {
+                        "url" : "",
+                        "alt-i18n" : "",
+                    }
+                ],
         }
     ]
-}
-
-function generateProjects(lang) {
-    let projectContainer = document.getElementById('projects');
-    $.each(projectJson['projects'], function(index, value) {
-        projectContainer.insertAdjacentHTML('beforeend',
-            '<div class="row g-0">\n' +
-            '<div class="col-xl-6 col-lg-3 col-sm-3 col-2 text-end"><i class="'+value['icon']+'"></i></div>\n' +
-            '<div class="col-xl-6 col-lg-9 col-sm-9 col-10 primary-dark-bg">\n' +
-            '<a href="' + value['url'] + '"><span class="project" data-i18n="' + value['name-i18n'] + '">' + langJson[lang][value['name-i18n']] + '</span></a>\n' +
-            '</div>\n' +
-            '</div>'
-        );
-    });
-}
-
-function logElements() {
-    $.each(langElements, function(index, value) {
-        console.log('"'+value.getAttribute('data-i18n')+ '":"'+value.innerText+'",');
-        //console.log('"'+value.getAttribute('data-i18n')+ '":"",');
-    });
-}
-
-function changeLang(lang) {
-    switch (lang) {
-        case "en":
-            break;
-        case "de":
-            break;
-        case "fr":
-            break;
-        default:
-            return;
-    }
-    document.documentElement.lang = lang;
-    bl = lang;
-    $.each(langElements, function(index, value) {
-        let currentObj = value.getAttribute('data-i18n');
-        if(typeof langJson[lang][currentObj] !== 'undefined') {
-            value.innerHTML = langJson[lang][currentObj];
-        } else {
-            console.log('"' + currentObj + '" in language json not found!')
-        }
-    });
-
-}
-
-function toggleMode() {
-    document.body.classList.toggle("dark-theme");
-    document.body.classList.toggle("light-theme");
-    let theme
-    if (prefersDarkScheme) {
-        theme = document.body.classList.contains("light-theme")
-            ? "light"
-            : "dark";
-    } else {
-        theme = document.body.classList.contains("dark-theme")
-            ? "dark"
-            : "light";
-    }
-    localStorage.setItem("theme", theme);
 }
