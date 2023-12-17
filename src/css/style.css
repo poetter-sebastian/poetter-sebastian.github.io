@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* ====================================================================================================================
  * *
- * * Copyright © 2020 Sebastian P. All Rights Reserved - 2022
+ * * Copyright © 2020 Sebastian P. All Rights Reserved - 2024
  * *
  * * ====================================================================================================================*/
 /* ==================================================================================================================
@@ -45,7 +45,7 @@ body.dark-theme {
 
 /* ==================================================================================================================
  * *
- * * poetter-sebastian.github.io - timeline - 2022
+ * * poetter-sebastian.github.io - timeline - 2024
  * *
  * * ==================================================================================================================*/
 .lul {
@@ -71,7 +71,7 @@ body.dark-theme {
   margin-top: 1rem;
 }
 
-@media (min-width: 1300px) {
+@media (min-width: 1450px) {
   .mt-c {
     margin: 0;
   }
@@ -160,7 +160,7 @@ body.dark-theme {
 }
 /* ==================================================================================================================
  * *
- * * poetter-sebastian.github.io - line style - 2022
+ * * poetter-sebastian.github.io - line style - 2024
  * *
  * * ==================================================================================================================*/
 .line {
@@ -214,11 +214,11 @@ body.dark-theme {
 
 /* ==================================================================================================================
  * *
- * * poetter-sebastian.github.io - dark mode - 2022
+ * * poetter-sebastian.github.io - dark mode - 2024
  * *
  * * ==================================================================================================================*/
 body.dark-theme .card-img-top {
-  filter: brightness(1.1);
+  filter: brightness(1.2) contrast(0.9);
 }
 body.dark-theme a:hover {
   color: var(--secondary-dark-text) !important;
@@ -234,6 +234,10 @@ body.dark-theme a:hover span {
  * * ====================================================================================================================*/
 body {
   hyphens: auto;
+}
+
+:root {
+  color-scheme: light dark;
 }
 
 /* ====================================================================================================================
@@ -258,11 +262,10 @@ body {
   }
 }
 .lang-select a {
-  margin: 0px 5px 0 5px;
+  margin: 0 5px 0 5px;
 }
 
 #leftSide {
-  background-color: var(--primary-bg);
   color: var(--primary-text);
 }
 #leftSide a {
@@ -326,12 +329,15 @@ body {
 }
 
 #skills {
+  margin-right: 0;
+  margin-left: 0;
+  width: 100%;
   font-size: 1.1rem;
 }
 #skills > div {
   padding: 1.5rem 1.5rem 1.5rem 1.5rem !important;
 }
-@media (min-width: 992px) {
+@media ((min-width: 576px) and (max-width: 767px)), (min-width: 992px) {
   #skills > div:nth-child(4n) {
     background-color: var(--primary-dark-bg);
     color: var(--primary-dark-text);
@@ -341,36 +347,33 @@ body {
     color: var(--primary-dark-text);
   }
 }
-@media (max-width: 576px) {
-  #skills > div:nth-child(2n) {
-    background-color: var(--primary-dark-bg);
-    color: var(--primary-dark-text);
-  }
-}
-@media (min-width: 768px) and (max-width: 992px) {
+@media (max-width: 575px), ((min-width: 768px) and (max-width: 991px)) {
   #skills > div:nth-child(2n) {
     background-color: var(--primary-dark-bg);
     color: var(--primary-dark-text);
   }
 }
 
-#projects {
+#projects, #services {
   padding: 0;
   margin: 0;
 }
-#projects div {
+#projects div, #services div {
   margin-bottom: 0.5rem;
 }
-#projects div > div:last-child {
-  padding: 0.5rem 0 0.5rem 1rem;
-}
-#projects div > div:last-child a {
-  color: var(--primary-text);
-}
-#projects div > div:first-child {
+#projects div > div:first-child, #services div > div:first-child {
   padding: 0.6rem 1rem;
 }
-#projects div > div:first-child i {
+#projects div > div:first-child i, #services div > div:first-child i {
+  font-size: 1.3rem;
+}
+#projects div > div:last-child, #services div > div:last-child {
+  padding: 0.5rem 0 0.5rem 1rem;
+}
+#projects div > div:last-child a, #services div > div:last-child a {
+  color: var(--primary-text);
+}
+#projects div > div:last-child i, #services div > div:last-child i {
   font-size: 1.3rem;
 }
 

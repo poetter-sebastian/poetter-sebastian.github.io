@@ -20,6 +20,10 @@ self.addEventListener('install', function(event) {
                 '/src/img/logo-rosenau.webp',
                 '/src/img/logo-velomotion.webp',
                 '/src/img/logo-vrbits.webp',
+                '/src/img/logo-anego-studios.webp',
+                '/src/img/logo-aktivoase.webp',
+                '/src/img/logo-velomotion.webp',
+                '/src/img/logo-adhoc.webp',
             ]);
         })
     );

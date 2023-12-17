@@ -1,4 +1,4 @@
-const prefersDarkScheme= window.matchMedia("(prefers-color-scheme: dark)").matches;
+const prefersDarkScheme= window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
 const currentTheme = localStorage.getItem("theme") ?? undefined;
 
 let langElements;
@@ -11,6 +11,7 @@ $(document).ready(function() {
     if(bl !== 'en'){
         changeLang(bl);
     }
+
     $('.year').each(function() {
         this.innerText = new Date().getFullYear();
     });
@@ -28,8 +29,8 @@ function generateProjects(lang) {
     $.each(projectJson['projects'], function(index, value) {
         projectContainer.insertAdjacentHTML('beforeend',
             '<div class="row g-0">\n' +
-            '<div class="col-xl-6 col-lg-3 col-sm-3 col-2 text-end"><i class="'+value['icon']+'"></i></div>\n' +
-            '<div class="col-xl-6 col-lg-9 col-sm-9 col-10 primary-dark-bg">\n' +
+            '<div class="col-xl-4 col-lg-3 col-sm-3 col-2 text-end"><i class="'+value['icon']+'"></i></div>\n' +
+            '<div class="col-xl-8 col-lg-9 col-sm-9 col-10 text-start primary-dark-bg">\n' +
             '<a href="' + value['url'] + '"><span class="project" data-i18n="' + value['name-i18n'] + '">' + langJson[lang][value['name-i18n']] + '</span></a>\n' +
             '</div>\n' +
             '</div>'
@@ -118,6 +119,12 @@ const langJson = {
         "projects-table":"Timetable creator",
         "projects-satellite":"Satellite movement visualisation",
         "projects-master":"Simulation of an ecosystem",
+
+        "services-web":"SEO and responsive optimized web-development",
+        "services-dev":"Server and client development",
+        "services-team":"Team leading and team analytics",
+        "services-digi":"Digitization of your business processes",
+
         "footer-title":"IMPRINT",
         "footer-copyright":"BY SEBASTIAN POETTER",
         "footer-policy":"PRIVACY POLICY",
@@ -153,6 +160,7 @@ const langJson = {
         "education-master-ivra":"Innovative computer architectures",
         "education-master-cry":"Cryptography",
         "education-master-oagr":"Object and gesture recognition",
+        "education-master-team":"Team management internship (SCRUM-team leader for an eight-person team)",
 
         "education-master-th":"My master thesis: <a href=\"https://github.com/poetter-sebastian/Simulation\" rel=\"noreferrer\" target=\"_blank\">Development of an environmental simulation in Unity</a>",
         "experience-title":"EXPERIENCE",
@@ -160,15 +168,16 @@ const langJson = {
         "experience-landing-page":"Commission of a landing-page for a company in Dresden - 2017",
         "experience-profesco":"Commission of a wordpress-website for the <a href=\"https://www.profesco.de\" rel=\"noreferrer\" target=\"_blank\">Profesco GmbH</a> (creation and administration) - 2019-2021",
         "experience-internship":"Twelve weeks internship at <a href=\"https://www.profesco.de\" rel=\"noreferrer\" target=\"_blank\">Profesco GmbH</a> in the IT department - 2020",
-        "experience-lefx":"Reworked and updated the wordpress website of the company <a href=\"https://www.LeFx.de\" rel=\"noreferrer\" target=\"_blank\">LeFx GmbH</a> - 2020-2021",
+        "experience-lefx":"Reworked and updated the WordPress website of the company <a href=\"https://www.LeFx.de\" rel=\"noreferrer\" target=\"_blank\">LeFx GmbH</a> - 2020-2021",
         "experience-velomotion":"Updated parts of <a href=\"https://www.velomotion.de/\" rel=\"noreferrer\" target=\"_blank\">Velomotion GmbH</a> - 2020",
         "experience-aktiv":"Created a website for the company <a href=\"https://www.aktiv-oase.de/\" rel=\"noreferrer\" target=\"_blank\">EB Gesundheitsstudio GmbH</a> - 2021",
         "experience-sanit":"Revised the homepage of <a href=\"https://san-rosenau.de/Start.html\" rel=\"noreferrer\" target=\"_blank\">Sanitätshaus Rosenau GmbH</a> - 2021",
+        "experience-team":"Team management internship (SCRUM-team leader for an eight-person team) - 2021-2022",
         "experience-saxony":"Commission of an award-page for <a href=\"https://www.games-innovation-award-saxony.de/\" rel=\"noreferrer\" target=\"_blank\">Games innovation award saxony</a> - 2021",
         "experience-ovrlab":"Improvement of <a href=\"https://www.lefx.de/\" rel=\"noreferrer\" target=\"_blank\">LeFx</a>, <a href=\"https://www.vrbits.de/\" rel=\"noreferrer\" target=\"_blank\">VrBits</a> and <a href=\"https://www.Ovrlab.de/\" rel=\"noreferrer\" target=\"_blank\">Ovrlab</a> - 2022",
         "experience-up-lefx":"Design upgrade of <a href=\"https://www.lefx.de/\" rel=\"noreferrer\" target=\"_blank\">LeFx</a> - 2023",
-        "experience-overall":"Eight years of work experience - 2015 until now",
-        "commissions-title":"WHO COMMISSIONED ME",
+        "experience-overall":"Nine years of work experience - 2015 until now",
+        "commissions-title":"WHO EMPLOYED/COMMISSIONED ME",
 
         "project-rasp-name":"Raspberry Pi fan control",
         "project-rasp-desc":"",
@@ -224,27 +233,25 @@ const langJson = {
 
         "project-rasp-name":"Raspberry Pi Lüftertreiber",
         "project-rasp-desc":"",
-
         "project-note-name":"Notizen App (PWA)",
         "project-note-desc":"",
-
         "project-priority-name":"Prioritätswarteschlange",
         "project-priority-desc":"",
-
         "project-weather-name":"Wetterstation (IoT)",
         "project-weather-desc":"",
-
         "project-yolo-name":"YoloV5 Neuronales Netzwerk",
         "project-yolo-desc":"",
-
         "project-sat-name":"Visualising von Satellitenbewegungen",
         "project-sat-desc":"",
-
         "project-time-name":"Stundenplan Generierung",
         "project-time-desc":"",
-
         "project-simulation-name":"Simulation eines Ökosystems",
         "project-simulation-desc":"",
+
+        "services-web":"SEO und responsive optimierte Webentwicklung",
+        "services-dev":"Server und Desktop Entwicklung",
+        "services-team":"Teamleitung und Teamberatung",
+        "services-digi":"Digitalisierung von Unternehmensprozessen",
 
         "footer-title":"Impressum",
         "footer-copyright":"Erstellt von Sebastian Pötter",
@@ -280,6 +287,7 @@ const langJson = {
         "education-master-ivra":"Innovative Rechnerarchitekturen",
         "education-master-cry":" Kryptologie",
         "education-master-oagr":"Objekt- und Gestenerkennung",
+        "education-master-team":"Team management Praktikum (SCRUM-Teamleiter für ein acht personen Team)",
         "education-master-th":"Meine Masterarbeit: <a href=\"https://github.com/poetter-sebastian/Simulation\" rel=\"noreferrer\" target=\"_blank\">Entwicklung einer Umweltsimulation in Unity</a>",
         "experience-title":"Erfahrung",
         "experience-small-com":"Beauftragungen von kleineren One-Page-Webseiten für Unternehmen wie IKD-Training - 2014-2017",
@@ -291,10 +299,11 @@ const langJson = {
         "experience-aktiv":"Erstellung einer Website für das Unternehmen <a href=\"https://www.aktiv-oase.de/\" rel=\"noreferrer\" target=\"_blank\">EB Gesundheitsstudio GmbH</a> - 2021",
         "experience-sanit":"Überarbeitung der Homepage der <a href=\"https://san-rosenau.de/Start.html\" rel=\"noreferrer\" target=\"_blank\">Sanitätshaus Rosenau GmbH</a> - 2021",
         "experience-saxony":"Beauftragen zum Erstellen einer Preisseite des <a href=\"https://www.games-innovation-award-saxony.de/\" rel=\"noreferrer\" target=\"_blank\">Games innovation award saxony</a> - 2021",
+        "experience-team":"Team management Praktikum (SCRUM-Teamleiter für ein acht personen Team) - 2021-2022",
         "experience-ovrlab": "Überarbeitung der Seiten <a href=\"https://www.lefx.de/\" rel=\"noreferrer\" target=\"_blank\">LeFx</a>, <a href=\"https://www.vrbits.de/\" rel=\"noreferrer\" target=\"_blank\">VrBits</a> und <a href=\"https://www.Ovrlab.de/\" rel=\"noreferrer\" target=\"_blank\">Ovrlab</a> - 2022",
         "experience-up-lefx":"Update des Designs der Webseite <a href=\"https://www.lefx.de/\" rel=\"noreferrer\" target=\"_blank\">LeFx</a> - 2023",
-        "experience-overall":"Acht Jahre Berufserfahrung - 2015 bis jetzt",
-        "commissions-title":"Auftraggeber",
+        "experience-overall":"Neun Jahre Berufserfahrung - 2015 bis jetzt",
+        "commissions-title":"Arbeits-/Auftragsgeber",
         "modal-close": "Schließen",
     },
     "fr": {
@@ -325,27 +334,25 @@ const langJson = {
 
         "project-rasp-name":"Raspberry Pi Pilote de ventilateur",
         "project-rasp-desc":"",
-
         "project-note-name":"Application de prise de notes (PWA)",
         "project-note-desc":"",
-
         "project-priority-name":"File d'attente prioritaire",
         "project-priority-desc":"",
-
         "project-weather-name":"Station météo (IoT)",
         "project-weather-desc":"",
-
         "project-yolo-name":"YoloV5 Réseau neuronal",
         "project-yolo-desc":"",
-
         "project-sat-name":"Visualisation des mouvements des satellitesn",
         "project-sat-desc":"",
-
         "project-time-name":"Calcul de l'emploi du temps",
         "project-time-desc":"",
-
         "project-simulation-name":"Simulation d'un écosystème",
         "project-simulation-desc":"",
+
+        "services-web":"SEO et développement web optimisé pour le responsive",
+        "services-dev":"Développement serveur et bureau",
+        "services-team":"Gestion et conseil d'équipe",
+        "services-digi":"Numérisation des processus d'entreprise",
 
         "footer-title":"IMPRESSION",
         "footer-copyright":"par SEBASTIAN PÖTTER",
@@ -381,6 +388,7 @@ const langJson = {
         "education-master-ivra":"Architectures informatiques innovantes",
         "education-master-cry":" Cryptologie",
         "education-master-oagr":"Reconnaissance d'objets et de gestes",
+        "education-master-team":"Stage en gestion d'équipe (chef d'équipe SCRUM pour une équipe de huit personnes)",
         "education-master-th":"Mon sujet de thèse de master: <a href=\"https://github.com/poetter-sebastian/Simulation\" rel=\"noreferrer\" target=\"_blank\">Développement d'une simulation environnementale en Unity</a>",
         "experience-title":"EXPÉRIENCE",
         "experience-small-com":"Commissions multiples de sites web d'une page pour les petites entreprises par exemple IKD-Training - 2014-2017",
@@ -391,11 +399,12 @@ const langJson = {
         "experience-velomotion":"Mise à jour des sites web de la société Velomotion GmbH - 2021",
         "experience-aktiv":"Création d'un site web pour l'entreprise <a href=\"https://www.aktiv-oase.de/\" rel=\"noreferrer\" target=\"_blank\">EB Gesundheitsstudio GmbH</a> - 2021",
         "experience-sanit":"Révision de la page d'accueil de <a href=\"https://san-rosenau.de/Start.html\" rel=\"noreferrer\" target=\"_blank\">Sanitätshaus Rosenau GmbH</a> - 2021",
+        "experience-team":"Stage en gestion d'équipe (chef d'équipe SCRUM pour une équipe de huit personnes) - 2021-2022",
         "experience-saxony":"Commission pour la création d'une page de récompense du <a href=\"https://www.games-innovation-award-saxony.de/\" rel=\"noreferrer\" target=\"_blank\">Games innovation award saxony</a> - 2021",
         "experience-ovrlab": "Révision des pages <a href=\"https://www.lefx.de/\" rel=\"noreferrer\" target=\"_blank\">LeFx</a>, <a href=\"https://www.vrbits.de/\" rel=\"noreferrer\" target=\"_blank\">VrBits</a> et <a href=\"https://www.Ovrlab.de/\" rel=\"noreferrer\" target=\"_blank\">Ovrlab</a> - 2022",
         "experience-up-lefx":"Mise à jour de la conception du site <a href=\"https://www.lefx.de/\" rel=\"noreferrer\" target=\"_blank\">LeFx</a> - 2023",
-        "experience-overall":"Huit ans d'expérience professionnelle - de 2015 à aujourd'hui",
-        "commissions-title":"QUI M'A COMMANDÉ",
+        "experience-overall":"Neuf ans d'expérience professionnelle - de 2015 à aujourd'hui",
+        "commissions-title":"Mandant et employeur",
         "modal-close" : "fermer",
     }
 };
@@ -538,13 +547,12 @@ const projectJson = {
                     "tag": ""
                 }
             ],
-            "pictures" :
-                [
-                    {
-                        "url" : "",
-                        "alt-i18n" : "",
-                    }
-                ],
+            "pictures" : [
+                {
+                    "url" : "",
+                    "alt-i18n" : "",
+                }
+            ],
         }
     ]
 }

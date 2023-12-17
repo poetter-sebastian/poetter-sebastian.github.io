@@ -1,6 +1,6 @@
 /* ====================================================================================================================
  *
- * Copyright © 2020 Sebastian P. All Rights Reserved - 2022
+ * Copyright © 2020 Sebastian P. All Rights Reserved - 2024
  *
  * ====================================================================================================================*/
 @import color.sass
@@ -14,6 +14,8 @@
  * ====================================================================================================================*/
 body
     hyphens: auto
+\:root
+    color-scheme: light dark
 /* ====================================================================================================================
  *
  * sebastian.github.io - Main
@@ -32,9 +34,8 @@ body
             height: 72px
             width: 72px
     a
-        margin: 0px 5px 0 5px
+        margin: 0 5px 0 5px
 #leftSide
-    background-color: var(--primary-bg)
     color: var(--primary-text)
     a
         color: var(--primary-text)
@@ -81,38 +82,38 @@ body
     i
         text-align: right
 #skills
+    margin-right: 0
+    margin-left: 0
+    width: 100%
     font-size: 1.1rem
     >div
         padding: 1.5rem 1.5rem 1.5rem 1.5rem !important
-    @media (min-width: 992px)
+    @media ((min-width: 576px) and (max-width: 767px)) , (min-width: 992px)
         >div:nth-child(4n)
             background-color: var(--primary-dark-bg)
             color: var(--primary-dark-text)
         >div:nth-child(4n-3)
             background-color: var(--primary-dark-bg)
             color: var(--primary-dark-text)
-    @media (max-width: 576px)
+    @media (max-width: 575px) , ((min-width: 768px) and (max-width: 991px))
         >div:nth-child(2n)
             background-color: var(--primary-dark-bg)
             color: var(--primary-dark-text)
-    @media (min-width: 768px) and (max-width: 992px)
-        >div:nth-child(2n)
-            background-color: var(--primary-dark-bg)
-            color: var(--primary-dark-text)
-#projects
+#projects, #services
     padding: 0
     margin: 0
     div
         margin-bottom: 0.5rem
-        > div:last-child
-            padding: 0.5rem 0 0.5rem 1rem
-            a
-                color: var(--primary-text)
         > div:first-child
             padding: 0.6rem 1rem
             i
                 font-size: 1.3rem
-
+        > div:last-child
+            padding: 0.5rem 0 0.5rem 1rem
+            a
+                color: var(--primary-text)
+            i
+                font-size: 1.3rem
 #commissions
     a
         text-decoration: none !important

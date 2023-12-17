@@ -13,6 +13,7 @@
     <link rel="icon" type="image/webp" href="src/img/logo.webp" title="Curriculum-vitae of Sebastian Poetter">
     <link rel="apple-touch-icon" type="image/webp" href="src/img/logo.webp" title="Curriculum-vitae of Sebastian Poetter">
     <meta name="keywords" content="Homepage, Sebastian Pötter, programming, 3d, full stack developing">
+    <meta name="color-scheme" content="dark light">
     <!-- PWA -->
     <link rel="manifest" href="/manifest.webmanifest">
     <meta name="theme-color" content="#2e6d6a">
@@ -51,7 +52,7 @@
             },
             "email": "&#x73;&#x65;&#x62;&#x61;&#x73;&#x74;&#x69;&#x61;&#x6e;&#x2e;&#x70;&#x6f;&#x65;&#x74;&#x74;&#x65;&#x72;%2D%64%65%76%40%67%6D%78%2E%64%65%20",
             "jobTitle": "Full stack developer",
-            "description": "I'm an university student and attending a master degree for computer science.",
+            "description": "I'm an master graduated Fullstack developer.",
             "contactPoint": [
                 {
                     "@type": "ContactPoint",
@@ -119,7 +120,7 @@
                     "@type": "EducationalOccupationalCredential",
                     "credentialCategory": "degree",
                     "educationalLevel": "Master of Science",
-                    "dateCreated": "2023-05",
+                    "dateCreated": "2023-07",
                     "about": {
                         "@type": "EducationalOccupationalProgram",
                         "name": "Computer Engineering"
@@ -143,6 +144,20 @@
                             "roleName": "Web developer",
                             "startDate": "2019-01",
                             "endDate": "2021-08"
+                        }
+                    }
+                },
+                {
+                    "@type": "Organization",
+                    "name": "Profesco",
+                    "sameAs": "https://www.profesco.de/",
+                    "employee": {
+                        "@type": "Person",
+                        "hasOccupation": {
+                            "@type": "EmployeeRole",
+                            "roleName": "Process digitization manager",
+                            "startDate": "2019-01",
+                            "endDate": "2023-09"
                         }
                     }
                 },
@@ -212,7 +227,7 @@
                             "@type": "EmployeeRole",
                             "roleName": "Web developer",
                             "startDate": "2022-01",
-                            "endDate": "2022-03"
+                            "endDate": "2023-07"
                         }
                     }
                 },
@@ -245,7 +260,7 @@
     <meta property="og:url" content="https://poetter-sebastian.github.io/">
     <meta property="og:site_name" content="Curriculum-vitae of Sebastian Poetter">
     <meta property="article:published_time" content="2020-10-17T010:10:10+01:00">
-    <meta property="article:modified_time" content="2021-03-21T10:10:10+01:00">
+    <meta property="article:modified_time" content="2023-12-15T10:10:10+01:00">
     <meta property="article:section" content="Article Section">
     <meta property="article:tag" content="Homepage, Sebastian Pötter, programming, 3d, full stack developing">
     <!-- Twitter -->
@@ -254,34 +269,43 @@
     <meta name="twitter:image" content="https://poetter-sebastian.github.io/src/img/logo.webp">
     <meta name="twitter:card" content="summary_image">
     <title data-i18n="page-title">Curriculum-vitae of Sebastian Poetter</title>
-    <!-- css -->
+    <!-- fast js -->
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+            integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    <script src="src/js/main.min.js"></script>
+    <!-- fast css -->
     <link rel="stylesheet" href="src/css/style.min.css">
     <script>
         let bl = (typeof window.navigator.language === undefined) ? window.navigator.language : window.navigator.language;
     </script>
+    <!-- no js -->
+    <noscript><style>.nojs { display:block !important; }</style></noscript>
 </head>
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div id="leftSide" class="col-md-4 p-lg-0 ps-2 m-0">
-                <div class="lang-select d-flex">
+            <div id="leftSide" class="col-md-4 primary-bg p-0 m-0">
+                <div class="lang-select d-flex align-items-center">
                     <a href="#" onclick="changeLang('de')"><img src="src/img/de.webp" alt="DE" title="Deutsch"></a>
                     <a href="#" onclick="changeLang('en')"><img src="src/img/en.webp" alt="EN" title="English"></a>
                     <a href="#" onclick="changeLang('fr')"><img src="src/img/fr.webp" alt="FR" title="Français"></a>
-                    <i class="fas fa-sun mt-1 offset-2"></i>
+                    <i class="fas fa-sun ms-2"></i>
                     <div class="form-check form-check-inline form-switch ms-2 me-1">
-                        <input class="form-check-input" type="checkbox" role="switch" id="darkMode" onchange="toggleMode()">
-                        <label class="form-check-label" for="darkMode"></label>
+                        <label class="form-check-label" for="darkMode">
+                            <input class="form-check-input" type="checkbox" role="switch" id="darkMode" onchange="toggleMode()" aria-label='Dark/Light-mode input'>
+                            <i class="fas fa-moon mt-1"></i>
+                        </label>
                     </div>
-                    <i class="fas fa-moon mt-1"></i>
                 </div>
-                <div class="mx-auto mt-4 primary-text text-center">
+                <div class="mx-auto mt-5 primary-text text-center mb-md-0 mb-sm-4">
                     <img src="src/img/avatar.webp" title="Sebastian P. - FULL STACK DEVELOPER" alt="picture from www.w3schools.com " class="rounded-circle image">
-                    <div class="mt-3">
+                    <div class="mt-4">
                         <h1 data-i18n="owner-name" class="text-uppercase">Sebastian Poetter</h1>
                     </div>
-                    <div class="mt-5 primary-dark-bg p-2">
+                    <div class="mt-4 primary-dark-bg p-2 d-flex align-items-center justify-content-center">
+                        <i class="fas fa-layer-group me-2"></i>
                         <h2 data-i18n="owner-job-name" class="text-uppercase font-italic">Full stack developer</h2>
+                        <i class="fas fa-laptop-code ms-2"></i>
                     </div>
                     <div class="mt-4 mb-4">
                         <h2 data-i18n="contact-title" class="text-uppercase font-weight-bold">Contact</h2>
@@ -312,10 +336,10 @@
                     </div>
                     <div id="skills" class="row">
                         <div class="col-12 col-sm-6 col-md-12 col-lg-6">
-                            <i class="fas fa-keyboard"></i> <a href="https://learn.microsoft.com/cpp" target="_blank" rel="noreferrer">C++ (C)</a>, <a href="https://learn.microsoft.com/dotnet/csharp" target="_blank" rel="noreferrer">C# (.NETcore)</a>, <a href="https://openjdk.org" target="_blank" rel="noreferrer">Java 20</a>, <a href="https://www.python.org" target="_blank" rel="noreferrer">Python3</a>, <a href="https://www.haskell.org" target="_blank" rel="noreferrer">Haskell</a>, <a href="https://go.dev" target="_blank" rel="noreferrer">Go</a>, <a href="https://www.php.net" target="_blank" rel="noreferrer">PHP8.3</a>, SQL, NoSQL, <a href="https://www.rust-lang.org" target="_blank" rel="noreferrer">Rust</a>,
+                            <i class="fas fa-keyboard"></i> <a href="https://learn.microsoft.com/cpp" target="_blank" rel="noreferrer">C++ (C)</a>, <a href="https://learn.microsoft.com/dotnet/csharp" target="_blank" rel="noreferrer">C# (.NETcore)</a>, <a href="https://openjdk.org" target="_blank" rel="noreferrer">Java 20</a>, <a href="https://www.python.org" target="_blank" rel="noreferrer">Python 3</a>, <a href="https://www.haskell.org" target="_blank" rel="noreferrer">Haskell</a>, <a href="https://go.dev" target="_blank" rel="noreferrer">Go 1.2</a>, <a href="https://www.php.net" target="_blank" rel="noreferrer">PHP 8.3</a>, SQL, NoSQL, <a href="https://www.rust-lang.org" target="_blank" rel="noreferrer">Rust</a>,
                         </div>
                         <div class="col-12 col-sm-6 col-md-12 col-lg-6">
-                            <i class="fab fa-firefox-browser"></i> HTML5, CSS3, <a href="https://sass-lang.com" target="_blank" rel="noreferrer">SASS</a>, <a href="https://www.typescriptlang.org" target="_blank" rel="noreferrer">Typescript</a>, <a href="https://jquery.com" target="_blank" rel="noreferrer">Jquery 3.6</a>, <a href="https://getbootstrap.com" target="_blank" rel="noreferrer">Bootstrap 5</a>, <a href="https://webpack.js.org" target="_blank" rel="noreferrer">Webpack</a>, <a href="https://developer.mozilla.org/en-US/docs/Glossary/SEO" target="_blank" rel="noreferrer">SEO</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/Performance" target="_blank" rel="noreferrer">WPO</a>
+                            <i class="fab fa-firefox-browser"></i> HTML 5, CSS 3, <a href="https://sass-lang.com" target="_blank" rel="noreferrer">SASS</a>, <a href="https://www.typescriptlang.org" target="_blank" rel="noreferrer">Typescript</a>, <a href="https://jquery.com" target="_blank" rel="noreferrer">Jquery 3.6</a>, <a href="https://getbootstrap.com" target="_blank" rel="noreferrer">Bootstrap 5</a>, <a href="https://webpack.js.org" target="_blank" rel="noreferrer">Webpack</a>, <a href="https://developer.mozilla.org/en-US/docs/Glossary/SEO" target="_blank" rel="noreferrer">SEO</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/Performance" target="_blank" rel="noreferrer">WPO</a>
                         </div>
                         <div class="col-12 col-sm-6 col-md-12 col-lg-6">
                             <i class="fas fa-paint-brush"></i> <span data-i18n="skills-gfx">Image editing e.g. with</span> <a href="https://www.gimp.org" target="_blank" rel="noreferrer">GIMP</a>, <a href="https://inkscape.org" target="_blank" rel="noreferrer">Inkscape</a>, <a href="https://www.adobe.com/products/photoshop.html" target="_blank" rel="noreferrer">Photoshop</a>
@@ -324,7 +348,7 @@
                             <i class="fas fa-film"></i> <span data-i18n="skills-3d">Animations e.g. with</span> <a href="https://www.adobe.com/products/aftereffects.html" target="_blank" rel="noreferrer">After Effects</a>, <a href="https://www.vegascreativesoftware.com/int/vegas-pro" target="_blank" rel="noreferrer">Vegas Pro</a>, <a href="https://www.blender.org" target="_blank" rel="noreferrer">Blender</a>
                         </div>
                         <div class="col-12 col-sm-6 col-md-12 col-lg-6">
-                            <i class="fas fa-file-alt"></i> <span data-i18n="skills-web">Knowledge of </span><a href="https://wordpress.com" target="_blank" rel="noreferrer">Wordpress</a> (<a href="https://wpbakery.com" target="_blank" rel="noreferrer">WP-Bakery</a>, <a href="https://elementor.com" target="_blank" rel="noreferrer">Elementor</a>), <a href="https://cakephp.org" target="_blank" rel="noreferrer">Cakephp 4</a>, <a href="https://nodejs.org" target="_blank" rel="noreferrer">Node.js</a>, <a href="https://angular.io" target="_blank" rel="noreferrer">Angular</a>
+                            <i class="fas fa-file-alt"></i> <span data-i18n="skills-web">Knowledge of </span><a href="https://wordpress.com" target="_blank" rel="noreferrer">WordPress</a> (<a href="https://wpbakery.com" target="_blank" rel="noreferrer">WP-Bakery</a>, <a href="https://elementor.com" target="_blank" rel="noreferrer">Elementor</a>), <a href="https://cakephp.org" target="_blank" rel="noreferrer">Cakephp 4</a>, <a href="https://nodejs.org" target="_blank" rel="noreferrer">Node.js</a>, <a href="https://angular.io" target="_blank" rel="noreferrer">Angular</a>
                         </div>
                         <div class="col-12 col-sm-6 col-md-12 col-lg-6">
                             <i class="fas fa-users"></i> <span data-i18n="skills-team">Team leading and project organisation</span>, <a href="https://www.scrum.org/resources/what-is-scrum" target="_blank" rel="noreferrer">SCRUM</a>, Kanban
@@ -333,19 +357,19 @@
                             <i class="fas fa-cog"></i> <span data-i18n="skills-circuit">Knowledge of electrical engineering e.g. with <a href="https://www.arduino.cc" target="_blank" rel="noreferrer">Arduino</a> and <a href="https://www.raspberrypi.org" target="_blank" rel="noreferrer">Raspberry Pi</a></span>
                         </div>
                         <div class="col-12 col-sm-6 col-md-12 col-lg-6">
-                            <i class="fab fa-ubuntu"></i> Windows 7-11, Linux (<a href="https://linuxmint.com" target="_blank" rel="noreferrer">Linuxmint</a>), <a href="https://www.docker.com" target="_blank" rel="noreferrer">Docker</a>, <a href="https://www.portainer.io" target="_blank" rel="noreferrer">Portainer</a>, <a href="https://kubernetes.io" target="_blank" rel="noreferrer">Kubernetes</a>
+                            <i class="fab fa-ubuntu"></i> Windows 7-11, Linux (<a href="https://linuxmint.com" target="_blank" rel="noreferrer">Linuxmint</a>, <a href="https://ubuntu.com/"  target="_blank" rel="noreferrer">Ubuntu</a>, <a href="https://www.raspberrypi.com/software/" target="_blank" rel="noreferrer">Raspberry Pi OS</a>)
                         </div>
                         <div class="col-12 col-sm-6 col-md-12 col-lg-6">
                             <i class="fab fa-unity"></i> <a href="https://unity.com" target="_blank" rel="noreferrer">Unity 2022</a>, <a href="https://www.unrealengine.com" target="_blank" rel="noreferrer">Unreal-Engine 5</a>, <a href="https://godotengine.org" target="_blank" rel="noreferrer">Godot-Engine 4</a>
                         </div>
                         <div class="col-12 col-sm-6 col-md-12 col-lg-6">
-                            <i class="fas fa-users-cog me-1"></i> <a href="https://git-scm.com" target="_blank" rel="noreferrer">Git</a>, <a href="https://www.atlassian.com/software/jira" target="_blank" rel="noreferrer">Jira</a>, <a href="https://about.gitlab.com" target="_blank" rel="noreferrer">Gitlab CLI</a>, <a href="https://nvie.com/posts/a-successful-git-branching-model" target="_blank" rel="noreferrer">Git-Flow</a>, <a href="https://docs.gitlab.com/ee/topics/gitlab_flow.html" target="_blank" rel="noreferrer">Gitlab-Flow</a>, <a href="https://www.jetbrains.com/youtrack" target="_blank" rel="noreferrer">YouTrack</a>
+                            <i class="fas fa-users-cog me-1"></i> <a href="https://git-scm.com" target="_blank" rel="noreferrer">Git</a>, <a href="https://www.atlassian.com/software/jira" target="_blank" rel="noreferrer">Jira</a>, <a href="https://nvie.com/posts/a-successful-git-branching-model" target="_blank" rel="noreferrer">Git-Flow</a>, <a href="https://docs.gitlab.com/ee/topics/gitlab_flow.html" target="_blank" rel="noreferrer">Gitlab-Flow</a>, <a href="https://www.jetbrains.com/youtrack" target="_blank" rel="noreferrer">YouTrack</a>, <a href="https://trello.com/" target="_blank" rel="noreferrer">Trello</a>
                         </div>
                         <div class="col-12 col-sm-6 col-md-12 col-lg-6">
                             <i class="fas fa-project-diagram"></i> Machine learning, Transfer learning, <a href="https://github.com/ultralytics/ultralytics" target="_blank" rel="noreferrer">YoloV8</a>, <a href="https://stablediffusionweb.com/StableDiffusionXL" target="_blank" rel="noreferrer">Stable Diffusion</a>, <a href="https://pytorch.org" target="_blank" rel="noreferrer">Pytorch</a>, <a href="https://learn.microsoft.com/dotnet/machine-learning/" target="_blank" rel="noreferrer">ML.NET</a>
                         </div>
                         <div class="col-12 col-sm-6 col-md-12 col-lg-6">
-
+                            <i class="fas fa-server"></i> <a href="https://www.docker.com" target="_blank" rel="noreferrer">Docker</a>, <a href="https://www.portainer.io" target="_blank" rel="noreferrer">Portainer</a>, <a href="https://kubernetes.io" target="_blank" rel="noreferrer">Kubernetes</a>, <a href="https://docs.github.com/en/actions" target="_blank" rel="noreferrer">Github CI/CD - Actions</a>, <a href="https://docs.gitlab.com/ee/ci/" target="_blank" rel="noreferrer">Gitlab CI/CD</a>
                         </div>
                     </div>
                     <div class="">
@@ -353,85 +377,114 @@
                             <h2 data-i18n="projects-title" class="text-uppercase font-weight-bold text-center">Projects</h2>
                         </div>
                         <div id="projects">
-                            <noscript>
+                            <div class="nojs d-none">
                                 <div class="row g-0">
-                                    <div class="col-xl-6 col-lg-3 col-sm-3 col-2 text-end"><i class="fas fa-fan"></i></div>
-                                    <div class="col-xl-6 col-lg-9 col-sm-9 col-10 primary-dark-bg">
+                                    <div class="col-xl-4 col-lg-3 col-sm-3 col-2 text-end"><i class="fas fa-fan"></i></div>
+                                    <div class="col-xl-8 col-lg-9 col-sm-9 col-10 primary-dark-bg">
                                         <a href="https://github.com/poetter-sebastian/pi-fan-controll"><span data-i18n="projects-fan">Raspberry Pi fan control</span></a>
                                     </div>
                                 </div>
                                 <div class="row g-0">
-                                    <div class="col-xl-6 col-lg-3 col-sm-3 col-2 text-end"><i class="fas fa-mobile-alt"></i></div>
-                                    <div class="col-xl-6 col-lg-9 col-sm-9 col-10 primary-dark-bg">
+                                    <div class="col-xl-4 col-lg-3 col-sm-3 col-2 text-end"><i class="fas fa-mobile-alt"></i></div>
+                                    <div class="col-xl-8 col-lg-9 col-sm-9 col-10 primary-dark-bg">
                                         <a data-i18n="projects-notes" href="https://github.com/poetter-sebastian/Notes">Notes App (PWA)</a>
                                     </div>
                                 </div>
                                 <div class="row g-0">
-                                    <div class="col-xl-6 col-lg-3 col-sm-3 col-2 text-end"><i class="fas fa-list-ol"></i></div>
-                                    <div class="col-xl-6 col-lg-9 col-sm-9 col-10 primary-dark-bg">
+                                    <div class="col-xl-4 col-lg-3 col-sm-3 col-2 text-end"><i class="fas fa-list-ol"></i></div>
+                                    <div class="col-xl-8 col-lg-9 col-sm-9 col-10 primary-dark-bg">
                                         <a data-i18n="projects-prio" href="https://github.com/poetter-sebastian/concurrent-priority-list">Concurrent priority list</a>
                                     </div>
                                 </div>
                                 <div class="row g-0">
-                                    <div class="col-xl-6 col-lg-3 col-sm-3 col-2 text-end"><i class="fas fa-cloud-sun"></i></div>
-                                    <div class="col-xl-6 col-lg-9 col-sm-9 col-10 primary-dark-bg">
+                                    <div class="col-xl-4 col-lg-3 col-sm-3 col-2 text-end"><i class="fas fa-cloud-sun"></i></div>
+                                    <div class="col-xl-8 col-lg-9 col-sm-9 col-10 primary-dark-bg">
                                         <a data-i18n="projects-weather" href="https://github.com/poetter-sebastian/solar-weatherstation">Weather station (IoT)</a>
                                     </div>
                                 </div>
                                 <div class="row g-0">
-                                    <div class="col-xl-6 col-lg-3 col-sm-3 col-2 text-end"><i class="fas fa-robot"></i></div>
-                                    <div class="col-xl-6 col-lg-9 col-sm-9 col-10 primary-dark-bg">
+                                    <div class="col-xl-4 col-lg-3 col-sm-3 col-2 text-end"><i class="fas fa-robot"></i></div>
+                                    <div class="col-xl-8 col-lg-9 col-sm-9 col-10 primary-dark-bg">
                                         <a data-i18n="projects-yolo" href="https://github.com/poetter-sebastian/TeamFortress2-YoloV5">YoloV5 Neural network</a>
                                     </div>
                                 </div>
                                 <div class="row g-0">
-                                    <div class="col-xl-6 col-lg-3 col-sm-3 col-2 text-end"><i class="fas fa-satellite"></i></div>
-                                    <div class="col-xl-6 col-lg-9 col-sm-9 col-10 primary-dark-bg">
+                                    <div class="col-xl-4 col-lg-3 col-sm-3 col-2 text-end"><i class="fas fa-satellite"></i></div>
+                                    <div class="col-xl-8 col-lg-9 col-sm-9 col-10 primary-dark-bg">
                                         <a data-i18n="projects-satellite" href="https://github.com/poetter-sebastian/WorldSatelite">Satellite movement visualisation</a>
                                     </div>
                                 </div>
                                 <div class="row g-0">
-                                    <div class="col-xl-6 col-lg-3 col-sm-3 col-2 text-end"><i class="far fa-calendar-alt"></i></div>
-                                    <div class="col-xl-6 col-lg-9 col-sm-9 col-10 primary-dark-bg">
+                                    <div class="col-xl-4 col-lg-3 col-sm-3 col-2 text-end"><i class="far fa-calendar-alt"></i></div>
+                                    <div class="col-xl-8 col-lg-9 col-sm-9 col-10 primary-dark-bg">
                                         <a data-i18n="projects-table" href="https://gitlab.imn.htwk-leipzig.de/spoetter/bachelor-task">Timetable creator</a>
                                     </div>
                                 </div>
                                 <div class="row g-0">
-                                    <div class="col-xl-6 col-lg-3 col-sm-3 col-2 text-end"><i class="fas fa-leaf"></i></div>
-                                    <div class="col-xl-6 col-lg-9 col-sm-9 col-10 primary-dark-bg">
+                                    <div class="col-xl-4 col-lg-3 col-sm-3 col-2 text-end"><i class="fas fa-leaf"></i></div>
+                                    <div class="col-xl-8 col-lg-9 col-sm-9 col-10 primary-dark-bg">
                                         <a data-i18n="projects-master" href="https://github.com/poetter-sebastian/Simulation">Simulation of an ecosystem</a>
                                     </div>
                                 </div>
-                            </noscript>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 mb-4">
+                        <h2 class="text-uppercase font-weight-bold" data-i18n="service-title">Services</h2>
+                    </div>
+                    <div id="services">
+                        <div class="row g-0">
+                            <div class="col-xl-8 col-lg-9 col-sm-9 col-10 text-end pe-0 primary-dark-bg">
+                                <span data-i18n="services-web">SEO and responsive optimized web-development</span>
+                            </div>
+                            <div class="col-xl-1 col-lg-3 col-sm-3 col-2 text-start primary-dark-bg"><i class="fas fa-pager"></i></div>
+                        </div>
+                        <div class="row g-0">
+                            <div class="col-xl-8 col-lg-9 col-sm-9 col-10 text-end pe-0 primary-dark-bg">
+                                <span data-i18n="services-dev">Server and client development</span>
+                            </div>
+                            <div class="col-xl-1 col-lg-3 col-sm-3 col-2 text-start primary-dark-bg"><i class="fas fa-server"></i></div>
+                        </div>
+                        <div class="row g-0">
+                            <div class="col-xl-8 col-lg-9 col-sm-9 col-10 text-end pe-0 primary-dark-bg">
+                                <span data-i18n="services-team">Team leading and team analytics</span>
+                            </div>
+                            <div class="col-xl-1 col-lg-3 col-sm-3 col-2 text-start primary-dark-bg"><i class="fas fa-user-friends"></i></div>
+                        </div>
+                        <div class="row g-0">
+                            <div class="col-xl-8 col-lg-9 col-sm-9 col-10 text-end pe-0 primary-dark-bg">
+                                <span data-i18n="services-digi">Digitization of your business processes</span>
+                            </div>
+                            <div class="col-xl-1 col-lg-3 col-sm-3 col-2 text-start primary-dark-bg"><i class="fas fa-industry"></i></div>
                         </div>
                     </div>
                     <div class="mt-4 mb-4">
                         <h2 class="text-uppercase font-weight-bold" data-i18n="hobbies-title">Hobbies</h2>
                     </div>
-                    <div class="ms-sm-3 text-start">
+                    <div class="ms-sm-3 text-start mb-4">
                         <div class="row g-0 hobbies">
-                            <div class="col-md-6 col-sm-4 col-6">
+                            <div class="col-md-6 col-sm-4 col-12 ps-sm-0 ps-5">
                                 <i class="p-3 primary-dark-bg fas fa-tv"></i> <span data-i18n="hobbies-programming">Programming</span>
                             </div>
-                            <div class="col-md-6 col-sm-4 col-6">
+                            <div class="col-md-6 col-sm-4 col-12 ps-sm-0 ps-5">
                                 <i class="p-3 primary-dark-bg fas fa-swimmer"></i> <span data-i18n="hobbies-swimming">Swimming</span>
                             </div>
-                            <div class="col-md-6 col-sm-4 col-6">
+                            <div class="col-md-6 col-sm-4 col-12 ps-sm-0 ps-5">
                                 <i class="p-3-5 primary-dark-bg fas fa-hiking"></i> <span data-i18n="hobbies-hiking">Hiking</span>
                             </div>
-                            <div class="col-md-6 col-sm-4 col-6">
+                            <div class="col-md-6 col-sm-4 col-12 ps-sm-0 ps-5">
                                 <i class="p-3-5 primary-dark-bg fab fa-unity"></i> <span data-i18n="hobbies-game">Game Developing</span>
                             </div>
-                            <div class="col-md-6 col-sm-4 col-6">
+                            <div class="col-md-6 col-sm-4 col-12 ps-sm-0 ps-5">
                                 <i class="p-3-5 primary-dark-bg fas fa-seedling"></i> <span data-i18n="hobbies-planting">Gardening</span>
                             </div>
-                            <div class="col-md-6 col-sm-4 col-6">
+                            <div class="col-md-6 col-sm-4 col-12 ps-sm-0 ps-5">
                                 <i class="p-3-5 primary-dark-bg fab fa-raspberry-pi"></i> <span data-i18n="hobbies-circuit">IoT tinkering</span>
                             </div>
-                            <div class="col-md-6 col-sm-4 col-6">
+                            <div class="col-md-6 col-sm-4 col-12 ps-sm-0 ps-5">
                                 <i class="p-3-4 primary-dark-bg fas fa-gamepad"></i> <span data-i18n="hobbies-gaming">Gaming</span>
                             </div>
-                            <div class="col-md-6 col-sm-4 col-6">
+                            <div class="col-md-6 col-sm-4 col-12 ps-sm-0 ps-5">
                                 <i class="p-3-5 primary-dark-bg fas fa-cube"></i> <span data-i18n="hobbies-modeling">3D Modeling</span>
                             </div>
                         </div>
@@ -456,9 +509,9 @@
                     </a>
                 </div>
             </div>
-            <div id="rightSide" class="col-md-8 pe-0 secondary-bg ps-0 ps-lg-3">
-                <div class="mt-md-3 mt-sm-5">
-                    <h1 class="text-uppercase right-title row g-0 mb-sm-3">
+            <div id="rightSide" class="col-md-8 secondary-bg ps-lg-3 p-0">
+                <div class="mt-md-3 mt-sm-0">
+                    <h1 class="text-uppercase right-title row g-0 mb-md-3">
                         <i class="col-md-4 pe-2 fas fa-user d-none d-md-block"></i>
                         <span class="col-md-8 text-md-start text-sm-center ps-md-4 text-md-start text-center" data-i18n="profile-title">Profile</span>
                     </h1>
@@ -524,8 +577,8 @@
                             <li>
                                 <h2 class="mt-c" data-i18n="education-master-title">University: Master of Science - 2023</h2>
                                 <p data-i18n="education-master-text">
-                                    I want to improve the skills I have learned and want to learn more.
-                                    So I thought that the master degree is the best way for it.
+                                    I want to improve the skills I have learned and want to learn more, especially in areas of team management.
+                                    So I thought that the master's degree is the best way for it.
                                 </p>
                                 <p class="mb-0">
                                     <span data-i18n="education-master-subjects">Some of my chosen subjects were</span>:
@@ -539,6 +592,7 @@
                                     <li><i class="far fa-circle t-list-l"></i> <span data-i18n="education-master-ivra">Innovative computer architectures</span> <i class="far fa-circle t-list-r"></i></li>
                                     <li><i class="far fa-circle t-list-l"></i> <span data-i18n="education-master-cry">Cryptography</span> <i class="far fa-circle t-list-r"></i></li>
                                     <li><i class="far fa-circle t-list-l"></i> <span data-i18n="education-master-oagr">Object and gesture recognition</span> <i class="far fa-circle t-list-r"></i></li>
+                                    <li><i class="far fa-circle t-list-l"></i> <span data-i18n="education-master-team">Team management internship (SCRUM-team leader for an eight-person team)</span> <i class="far fa-circle t-list-r"></i></li>
                                     <li><i class="far fa-circle t-list-l"></i> <span data-i18n="education-master-th">My master thesis: <a href="https://github.com/poetter-sebastian/Simulation" rel="noreferrer" target="_blank">Development of an environmental simulation in Unity</a></span> <i class="far fa-circle t-list-r"></i></li>
                                 </ul>
                             </li>
@@ -561,84 +615,35 @@
                             <li data-i18n="experience-aktiv">Created a website for the company <a href="https://www.aktiv-oase.de/" rel="noreferrer" target="_blank">EB Gesundheitsstudio GmbH</a> - 2021</li>
                             <li data-i18n="experience-sanit">Revised the homepage of <a href="https://san-rosenau.de/Start.html" rel="noreferrer" target="_blank">Sanitätshaus Rosenau GmbH</a> - 2021</li>
                             <li data-i18n="experience-saxony">Commission of an award-page for <a href="https://www.games-innovation-award-saxony.de/" rel="noreferrer" target="_blank">Games innovation award saxony</a> - 2021</li>
+                            <li data-i18n="experience-team">Team management internship (SCRUM-team leader for an eight-person team) - 2021-2022</li>
                             <li data-i18n="experience-ovrlab">Rework <a href="https://www.lefx.de/" rel="noreferrer" target="_blank">LeFx</a>, <a href="https://www.vrbits.de/" rel="noreferrer" target="_blank">VrBits</a> and <a href="https://www.Ovrlab.de/" rel="noreferrer" target="_blank">Ovrlab</a> - 2022</li>
                             <li data-i18n="experience-up-lefx">Design upgrade of <a href="https://www.lefx.de/" rel="noreferrer" target="_blank">LeFx</a> - 2023</li>
-                            <li data-i18n="experience-overall">Eight years of work experience - 2015 until now</li>
+                            <li data-i18n="experience-overall">Nine years of work experience - 2015 until now</li>
                         </ol>
                     </div>
                 </div>
                 <div>
                     <h1 class="text-uppercase right-title row g-0">
                         <i class="col-md-4 pe-2 fas fa-address-book d-none d-md-block"></i>
-                        <span class="col-md-8 text-md-start text-sm-center ps-md-4 text-md-start text-center" data-i18n="commissions-title">Who commissioned me</span>
+                        <span class="col-md-8 text-md-start text-sm-center ps-md-4 text-md-start text-center" data-i18n="commissions-title">Who employed/commissioned me</span>
                     </h1>
-					<div id="commissions" class="row me-0 px-lg-0 px-2">
-						<div class="col-lg-3 col-md-6 col-12">
-							<div class="card">
-								<a href="https://www.profesco.de" target="_blank" rel="noreferrer">
-									<img class="card-img-top" src="src/img/logo-profesco.webp" alt="Card image" loading="lazy">
-									<div class="card-body">
-										<h2 class="card-title text-center font-weight-bold font-smaller">Profesco</h2>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-6 col-12">
-							<div class="card">
-								<a href="https://www.LeFx.de" target="_blank" rel="noreferrer">
-									<img class="card-img-top" src="src/img/logo-lefx.webp" alt="Card image" loading="lazy">
-									<div class="card-body">
-										<h2 class="card-title text-center font-weight-bold font-smaller">LeFx</h2>
-									</div>
-								</a>
-							</div>
-						</div>
+                    <div id="commissions" class="row me-0 px-lg-0 px-2">
                         <div class="col-lg-3 col-md-6 col-12">
                             <div class="card">
-                                <a href="https://www.velomotion.de/" target="_blank" rel="noreferrer">
-                                    <img class="card-img-top" src="src/img/logo-velomotion.webp" alt="Card image" loading="lazy">
+                                <a href="https://www.profesco.de" target="_blank" rel="noreferrer">
+                                    <img class="card-img-top" src="src/img/logo-profesco.webp" alt="Profesco logo" loading="lazy">
                                     <div class="card-body">
-                                        <h2 class="card-title text-center font-weight-bold font-smaller">Velomotion</h2>
+                                        <h2 class="card-title text-center font-weight-bold font-smaller">Profesco</h2>
                                     </div>
                                 </a>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 col-12">
                             <div class="card">
-                                <a href="https://www.games-innovation-award-saxony.de/" target="_blank" rel="noreferrer">
-                                    <img class="card-img-top" src="src/img/logo-gias.webp" alt="Card image" loading="lazy">
+                                <a href="https://www.LeFx.de" target="_blank" rel="noreferrer">
+                                    <img class="card-img-top" src="src/img/logo-lefx.webp" alt="Lefx logo" loading="lazy">
                                     <div class="card-body">
-                                        <h2 class="card-title text-center font-weight-bold font-smaller">GIAS</h2>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-12">
-                            <div class="card">
-                                <a href="https://www.aktiv-oase.de/" target="_blank" rel="noreferrer">
-                                    <img class="card-img-top" src="src/img/logo-aktivoase.webp" alt="Card image" loading="lazy">
-                                    <div class="card-body">
-                                        <h2 class="card-title text-center font-weight-bold font-smaller">Aktiv Oase</h2>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-12">
-                            <div class="card">
-                                <a href="https://www.adhoc-mn.de/" target="_blank" rel="noreferrer">
-                                    <img class="card-img-top" src="src/img/logo-adhoc.webp" alt="Ad hoc marketing network" loading="lazy">
-                                    <div class="card-body">
-                                        <h2 class="card-title text-center font-weight-bold font-smaller">Ad hoc marketing network</h2>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-12">
-                            <div class="card">
-                                <a href="https://san-rosenau.de/Start.html" target="_blank" rel="noreferrer">
-                                    <img class="card-img-top" src="src/img/logo-rosenau.webp" alt="Card image" loading="lazy">
-                                    <div class="card-body">
-                                        <h2 class="card-title text-center font-weight-bold font-smaller">Sanitätshaus Rosenau</h2>
+                                        <h2 class="card-title text-center font-weight-bold font-smaller">LeFx</h2>
                                     </div>
                                 </a>
                             </div>
@@ -646,7 +651,7 @@
                         <div class="col-lg-3 col-md-6 col-12">
                             <div class="card">
                                 <a href="https://ovrlab.de/" target="_blank" rel="noreferrer">
-                                    <img class="card-img-top" src="src/img/logo-ovrlab.webp" alt="Card image" loading="lazy">
+                                    <img class="card-img-top" src="src/img/logo-ovrlab.webp" alt="Ovrlab logo" loading="lazy">
                                     <div class="card-body">
                                         <h2 class="card-title text-center font-weight-bold font-smaller">OVRLAB</h2>
                                     </div>
@@ -656,7 +661,7 @@
                         <div class="col-lg-3 col-md-6 col-12">
                             <div class="card">
                                 <a href="https://vrbits.de/" target="_blank" rel="noreferrer">
-                                    <img class="card-img-top" src="src/img/logo-vrbits.webp" alt="Card image" loading="lazy">
+                                    <img class="card-img-top" src="src/img/logo-vrbits.webp" alt="VR bits logo" loading="lazy">
                                     <div class="card-body">
                                         <h2 class="card-title text-center font-weight-bold font-smaller">VR Bits</h2>
                                     </div>
@@ -665,15 +670,75 @@
                         </div>
                         <div class="col-lg-3 col-md-6 col-12">
                             <div class="card">
+                                <a href="https://www.games-innovation-award-saxony.de/" target="_blank" rel="noreferrer">
+                                    <img class="card-img-top" src="src/img/logo-gias.webp" alt="Games innovation Award Saxony logo" loading="lazy">
+                                    <div class="card-body">
+                                        <h2 class="card-title text-center font-weight-bold font-smaller">GIAS</h2>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="card">
+                                <a href="https://www.vintagestory.at/" target="_blank" rel="noreferrer">
+                                    <img class="card-img-top " src="src/img/logo-anego-studios.webp" alt="Anego studios logo" loading="lazy">
+                                    <div class="card-body">
+                                        <h2 class="card-title text-center font-weight-bold font-smaller">Anego Studios</h2>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="card">
                                 <a href="https://estudios.ch/" target="_blank" rel="noreferrer">
-                                    <img class="card-img-top" src="src/img/logo-estudios.webp" alt="Card image" loading="lazy">
+                                    <img class="card-img-top" src="src/img/logo-estudios.webp" alt="Estudios logo" loading="lazy">
                                     <div class="card-body">
                                         <h2 class="card-title text-center font-weight-bold font-smaller">E-STUDIOS</h2>
                                     </div>
                                 </a>
                             </div>
                         </div>
-					</div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="card">
+                                <a href="https://www.aktiv-oase.de/" target="_blank" rel="noreferrer">
+                                    <img class="card-img-top" src="src/img/logo-aktivoase.webp" alt="Aktiv oase logo" loading="lazy">
+                                    <div class="card-body">
+                                        <h2 class="card-title text-center font-weight-bold font-smaller">Aktiv Oase</h2>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="card">
+                                <a href="https://www.adhoc-mn.de/" target="_blank" rel="noreferrer">
+                                    <img class="card-img-top" src="src/img/logo-adhoc.webp" alt="Ad hoc marketing network logo" loading="lazy">
+                                    <div class="card-body">
+                                        <h2 class="card-title text-center font-weight-bold font-smaller">Ad hoc marketing network</h2>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="card">
+                                <a href="https://san-rosenau.de/Start.html" target="_blank" rel="noreferrer">
+                                    <img class="card-img-top" src="src/img/logo-rosenau.webp" alt="San rosenau logo" loading="lazy">
+                                    <div class="card-body">
+                                        <h2 class="card-title text-center font-weight-bold font-smaller">Sanitätshaus Rosenau</h2>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="card">
+                                <a href="https://www.velomotion.de/" target="_blank" rel="noreferrer">
+                                    <img class="card-img-top" src="src/img/logo-velomotion.webp" alt="Velomotion logo" loading="lazy">
+                                    <div class="card-body">
+                                        <h2 class="card-title text-center font-weight-bold font-smaller">Velomotion</h2>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="footer d-sm-block d-md-none">
                     <h1 class="text-uppercase right-title row g-0">
@@ -681,7 +746,7 @@
                         <span class="col-md-8 text-md-start text-center ps-md-4 pt-4 pb-3" data-i18n="footer-title">Imprint</span>
                     </h1>
                     <div class="pt-4 pb-3">
-                        <p class="text-uppercase font-weight-bold text-center"><i class="fas fa-copyright"></i> 2019-<span class="year">2022</span> <span data-i18n="footer-copyright">by Sebastian Poetter</span></p>
+                        <p class="text-uppercase font-weight-bold text-center"><i class="fas fa-copyright"></i> 2019-<span class="year">2024</span> <span data-i18n="footer-copyright">by Sebastian Poetter</span></p>
                     </div>
                     <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">
                         <div class="pt-4 pb-3 primary-dark-bg">
@@ -699,19 +764,15 @@
     </div>
     <!-- slow css -->
     <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
           integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
     <!-- javascript -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
             integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"
             async defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
             integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"
             async defer></script>
-    <script async src="src/js/main.min.js" defer></script>
     <script async src="src/js/pwa.min.js" defer></script>
 
     <!-- Modal -->
