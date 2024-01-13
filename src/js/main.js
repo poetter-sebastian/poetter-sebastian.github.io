@@ -114,16 +114,27 @@ const langJson = {
         "footer-policy":"PRIVACY POLICY",
         "footer-library":"USED LIBRARIES",
         "profile-title":"PROFILE",
-        "profile-begin":"My name is Sebastian Pötter. I recently completed my master's degree in computer science and now have the title Master of Science. I can quickly get to grips with new projects and enjoy solving tough problems.",
-        "profile-other":"I am interested in a wide range of topics in the field of computer science, such as web development, app development and server applications. However, computers are not my only interest, but also other areas such as biology, chemistry, physics and electrical engineering.",
+        "profile-begin":"My name is Sebastian Pötter. I recently completed my master's degree in computer science and am looking for new problems to solve and projects to work on.",
+        "profile-other":"I am interested in a wide range of topics in the field of computer science, such as web development, app development, and server applications. " +
+            "I did a lot of private projects and also commissions for my customers.<br><br> I was a freelancer for web development (WordPress, PHP8, Javascript), project " +
+            "management and software developer (dotnetCore, Java) during my time at the university and before. I got used to open source technology, business process digitization " +
+            "and modern development management (like SCRUM or Kanban). With the theoretical knowledge gained at university and practical applied skills gained at my freelance work, " +
+            "I'm able to familiarize myself quickly with new projects, <br><br>So I independently planned and completed commissions and introduced them to my customers. " +
+            "Managing of software requirements and transparent communication with my clients to get change requests, but also feedback on the finished tasks or projects, " +
+            "belong to my skills. However, computers and information technology are not my only interest, other areas such as biology, chemistry, physics, and electrical " +
+            "engineering are very interesting too.",
 
         "education-title":"EDUCATION",
         "education-secondary-title":"Secondary school (Realschule)",
-        "education-secondary-text":"I graduated from secondary school in 2014. In Germany the Secondary school is called Realschule and leads to either apprenticeships or on my case to higher education comparable to high schools. Here I started getting interested in Computer and started building simple websites as a hobby.",
+        "education-secondary-text":"I graduated from secondary school in 2014. In Germany the Secondary school is called Realschule and leads to either apprenticeships or " +
+            "on my case to higher education comparable to high schools. Here I started getting interested in Computer and started building simple websites as a hobby.",
         "education-high-title":"High School (Abitur)",
-        "education-high-text":"I made my higher education entrance qualification with focus on computer science in 2017. During this time I worked on some simple projects and made free website designs. Here I started to work with the game-development engine Unity and made some smaller 3D-applications.",
+        "education-high-text":"I made my higher education entrance qualification with focus on computer science in 2017. During this time I worked on some simple projects " +
+            "and made free website designs. Here I started to work with the game-development engine Unity and made some smaller 3D-applications.",
         "education-bachelor-title":"University: Bachelor of Science",
-        "education-bachelor-text":"I started studying informatics with a focus on software technology and programming techniques in 2017. I got way better at programming, algorithm engineering and software planning. After the course 'principles of mobile robotics' I started experimenting with arduino and raspberry pi boards to create hardware like a weather-station for my home-sever.",
+        "education-bachelor-text":"I started studying informatics with a focus on software technology and programming techniques in 2017. I got way better at programming, " +
+            "algorithm engineering and software planning. After the course 'principles of mobile robotics' I started experimenting with arduino and raspberry pi boards to " +
+            "create hardware like a weather-station for my home-sever.",
         "education-bachelor-subjects":"Some of my subjects were",
         "education-bachelor-subject-ads":"Algorithms and data structures",
         "education-bachelor-math":"Mathematics for computer scientists",
@@ -242,8 +253,15 @@ const langJson = {
         "footer-policy":"Datenschutzerklärung",
         "footer-library":"Benutze Frameworks",
         "profile-title":"Profil",
-        "profile-begin":"Mein Name ist Sebastian Pötter. Ich habe kürzlich meinen Master in Informatik abgeschlossen und habe jetzt den Titel Master of Science. Ich kann mich schnell in neue Projekte einarbeiten und löse gern hartnäckige Probleme.",
-        "profile-other":"Dabei interessiere ich mich für eine vielzahl an Themen im Informatik Bereich, wie Webentwicklung, App-Entwicklung und Serveranwendungen. Aber Nicht nur Computer gehören zu meinen Interessen, sondern auch andere Themen, wie Biologie, Chemie, Physik und Elektrotechnik.",
+        "profile-begin":"Mein Name ist Sebastian Pötter. Ich habe kürzlich meinen Master in Informatik abgeschlossen und habe jetzt den Titel Master of Science erworben. Ich bin immer auf der Suche nach spannenden Projekten.",
+        "profile-other":"Ich bin an vielen IT-Themengebieten interessiert, wie zum Beispiel Entwicklung von Webseiten, Desktop- und Serverprogramme. " +
+            "Ich habe bereits zahlreiche Projekte umgesetzt, dazu gehören viele private aber auch von Kunden geforderte Projekte. <br><br>Ich wurde schon während meiner Zeit an der Universität von Kunden im " +
+            "Gebieten der Webentwicklung (WordPress, PHP8, Javascript), des Projektmanagement und der Softwareentwicklung (dotnetCore, Java) beauftragt. " +
+            "Dabei konnte ich Erfahrung mit Open-Source Systemen, Unternehmensdigitalisierung und agiler Softwareentwicklung wie SCRUM oder Kanban kennenlernen. " +
+            "Mit den theoretischen Kenntnissen, die ich an der Universität erworben habe, und den praktischen Fähigkeiten, die ich bei meiner freiberuflichen Tätigkeit erworben habe, " +
+            "kann ich mich schnell in neue Projekte einarbeiten oder diese planen. <br><br>Damit konnte ich selbstständig Aufträge durchgeführt und meinen Kunden vorstellen. " +
+            "Das Erstellen von Software-Anforderungen (Lastenheft) und eine transparente Kommunikation mit meinen Kunden, um Änderungswünsche, aber auch Feedback zu den abgeschlossenen Aufgaben oder Projekten zu erhalten, gehören zu meinen Fähigkeiten. " +
+            "Nicht nur Informatikthemen gehören zu meinen Interessen, auch andere Bereiche wie Biologie, Chemie, Physik und Elektrotechnik sind für mich sehr interessant.",
         "education-title":"Bildungsweg",
         "education-secondary-title":"Realschule",
         "education-secondary-text":"2014 habe ich meinen Realschulabschluss gemacht. Danach entschied ich mich, noch das Abitur zu versuchen. In der Realschulzeit fing ich an, mich für Computer zu interessieren und begann, einfache Webseiten zu erstellen.",
