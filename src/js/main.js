@@ -50,7 +50,7 @@ function changeLang(lang) {
             console.log('"' + currentObj + '" in language json not found!')
         }
     });
-
+    document.getElementById('toNow').innerText = (new Date().getFullYear() - new Date(2015, 0).getFullYear()).toString();
 }
 
 function toggleMode() {
@@ -158,7 +158,7 @@ const langJson = {
         "education-master-team":"Team management internship (SCRUM-team leader for an eight-person team)",
 
         "education-master-th":"My master thesis: <a href=\"https://github.com/poetter-sebastian/Simulation\" rel=\"noreferrer\" target=\"_blank\">Development of an environmental simulation in Unity</a>",
-        "experience-title":"EXPERIENCE",
+        "experience-title":"Experience (<span id=\"toNow\">9</span> years)",
         "experience-small-com":"Multiple commissions of one-page-websites for smaller companies - 2014-2017",
         "experience-landing-page":"Commission of a landing-page for a company in Dresden - 2017",
         "experience-profesco":"Commission of a wordpress-website for the <a href=\"https://www.profesco.de\" rel=\"noreferrer\" target=\"_blank\">Profesco GmbH</a> (creation and administration) - 2019-2021",
@@ -171,7 +171,7 @@ const langJson = {
         "experience-saxony":"Commission of an award-page for <a href=\"https://www.games-innovation-award-saxony.de/\" rel=\"noreferrer\" target=\"_blank\">Games innovation award saxony</a> - 2021",
         "experience-ovrlab":"Improvement of <a href=\"https://www.lefx.de/\" rel=\"noreferrer\" target=\"_blank\">LeFx</a>, <a href=\"https://www.vrbits.de/\" rel=\"noreferrer\" target=\"_blank\">VrBits</a> and <a href=\"https://www.Ovrlab.de/\" rel=\"noreferrer\" target=\"_blank\">Ovrlab</a> - 2022",
         "experience-up-lefx":"Design upgrade of <a href=\"https://www.lefx.de/\" rel=\"noreferrer\" target=\"_blank\">LeFx</a> - 2023",
-        "experience-overall":"Nine years of work experience - 2015 until now",
+        "experience-hotwire":"Created a one-page for the VR Game <a href=\"https://www.hotwirevr.com/\" rel=\"noreferrer\" target=\"_blank\">HotWireVR</a> - 2024",
         "commissions-title":"WHO EMPLOYED/COMMISSIONED ME",
 
         "project-rasp-name":"Raspberry Pi fan control",
@@ -291,7 +291,7 @@ const langJson = {
         "education-master-oagr":"Objekt- und Gestenerkennung",
         "education-master-team":"Team management Praktikum (SCRUM-Teamleiter für ein acht personen Team)",
         "education-master-th":"Meine Masterarbeit: <a href=\"https://github.com/poetter-sebastian/Simulation\" rel=\"noreferrer\" target=\"_blank\">Entwicklung einer Umweltsimulation in Unity</a>",
-        "experience-title":"Erfahrung",
+        "experience-title":"Erfahrung  (<span id=\"toNow\">9</span> jahre)",
         "experience-small-com":"Beauftragungen von kleineren One-Page-Webseiten für Unternehmen wie IKD-Training - 2014-2017",
         "experience-landing-page":"Erstellung einer Webseite für ein Unternehmen in Dresden - 2017",
         "experience-profesco":"Beauftragung einer Wordpress-Seite für die <a href=\"https://www.profesco.de/\" rel=\"noreferrer\">Profesco GmbH</a> (Erstellung und Wartung) - 2019-2021",
@@ -304,7 +304,7 @@ const langJson = {
         "experience-team":"Team management Praktikum (SCRUM-Teamleiter für ein acht personen Team) - 2021-2022",
         "experience-ovrlab": "Überarbeitung der Seiten <a href=\"https://www.lefx.de/\" rel=\"noreferrer\" target=\"_blank\">LeFx</a>, <a href=\"https://www.vrbits.de/\" rel=\"noreferrer\" target=\"_blank\">VrBits</a> und <a href=\"https://www.Ovrlab.de/\" rel=\"noreferrer\" target=\"_blank\">Ovrlab</a> - 2022",
         "experience-up-lefx":"Update des Designs der Webseite <a href=\"https://www.lefx.de/\" rel=\"noreferrer\" target=\"_blank\">LeFx</a> - 2023",
-        "experience-overall":"Neun Jahre Berufserfahrung - 2015 bis jetzt",
+        "experience-hotwire":"Erstellung einer Webseite für das VR Spiel <a href=\"https://www.hotwirevr.com/\" rel=\"noreferrer\" target=\"_blank\">HotWireVR</a> - 2024",
         "commissions-title":"Arbeits-/Auftragsgeber",
         "modal-close": "Schließen",
     },
@@ -392,7 +392,7 @@ const langJson = {
         "education-master-oagr":"Reconnaissance d'objets et de gestes",
         "education-master-team":"Stage en gestion d'équipe (chef d'équipe SCRUM pour une équipe de huit personnes)",
         "education-master-th":"Mon sujet de thèse de master: <a href=\"https://github.com/poetter-sebastian/Simulation\" rel=\"noreferrer\" target=\"_blank\">Développement d'une simulation environnementale en Unity</a>",
-        "experience-title":"EXPÉRIENCE",
+        "experience-title":"EXPÉRIENCE (<span id=\"toNow\">9</span> ans)",
         "experience-small-com":"Commissions multiples de sites web d'une page pour les petites entreprises par exemple IKD-Training - 2014-2017",
         "experience-landing-page":"Commande d'une page d'atterrissage pour une entreprise à Dresden - 2017",
         "experience-profesco":"Commande d'un site wordpress-website pour la société Profesco GmbH (création et administration) - 2019",
@@ -406,6 +406,7 @@ const langJson = {
         "experience-ovrlab": "Révision des pages <a href=\"https://www.lefx.de/\" rel=\"noreferrer\" target=\"_blank\">LeFx</a>, <a href=\"https://www.vrbits.de/\" rel=\"noreferrer\" target=\"_blank\">VrBits</a> et <a href=\"https://www.Ovrlab.de/\" rel=\"noreferrer\" target=\"_blank\">Ovrlab</a> - 2022",
         "experience-up-lefx":"Mise à jour de la conception du site <a href=\"https://www.lefx.de/\" rel=\"noreferrer\" target=\"_blank\">LeFx</a> - 2023",
         "experience-overall":"Neuf ans d'expérience professionnelle - de 2015 à aujourd'hui",
+        "experience-hotwire":"Création d'un site web pour le jeu VR <a href=\"https://www.hotwirevr.com/\" rel=\"noreferrer\" target=\"_blank\">HotWireVR</a> - 2024",
         "commissions-title":"Mandant et employeur",
         "modal-close" : "fermer",
     }
