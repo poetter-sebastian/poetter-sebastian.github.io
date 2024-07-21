@@ -6,19 +6,24 @@ let langElements;
 $(document).ready(function() {
     langElements = $('[data-i18n]');
 
-    if(bl !== 'en'){
-        changeLang(bl);
+    if(!bl.includes('en')){
+        switch (bl) {
+            case bl.includes('de'):
+                changeLang('de');
+                break;
+            case bl.includes('fr'):
+                changeLang('fr');
+                break;
+        }
     }
 
-    $('.year').each(function() {
-        this.innerText = new Date().getFullYear();
-    });
+    $('.year').innerText = new Date().getFullYear();
 
-    if ((prefersDarkScheme && currentTheme === undefined) || currentTheme === "dark") {
-        document.body.classList.add("dark-theme");
-        $('#darkMode').prop( "checked", true);
-    } else if (currentTheme === "light") {
-        document.body.classList.add("light-theme");
+    if ((prefersDarkScheme && currentTheme === undefined) || currentTheme === 'dark') {
+        document.body.classList.add('dark-theme');
+        $('#darkMode').prop( 'checked', true);
+    } else if (currentTheme === 'light') {
+        document.body.classList.add('light-theme');
     }
 });
 
@@ -30,16 +35,6 @@ function logElements() {
 }
 
 function changeLang(lang) {
-    switch (lang) {
-        case "en":
-            break;
-        case "de":
-            break;
-        case "fr":
-            break;
-        default:
-            return;
-    }
     document.documentElement.lang = lang;
     bl = lang;
     $.each(langElements, function(index, value) {
@@ -47,36 +42,37 @@ function changeLang(lang) {
         if(typeof langJson[lang][currentObj] !== 'undefined') {
             value.innerHTML = langJson[lang][currentObj];
         } else {
+            //debug purpose only
             console.log('"' + currentObj + '" in language json not found!')
         }
     });
-    document.getElementById('toNow').innerText = (new Date().getFullYear() - new Date(2015, 0).getFullYear()).toString();
+    document.getElementById('to-now').innerText = (new Date().getFullYear() - new Date(2015, 0).getFullYear()).toString();
 }
 
 function toggleMode() {
-    document.body.classList.toggle("dark-theme");
-    document.body.classList.toggle("light-theme");
+    document.body.classList.toggle('dark-theme');
+    document.body.classList.toggle('light-theme');
     let theme
     if (prefersDarkScheme) {
-        theme = document.body.classList.contains("light-theme")
-            ? "light"
-            : "dark";
+        theme = document.body.classList.contains('light-theme')
+            ? 'light'
+            : 'dark';
     } else {
-        theme = document.body.classList.contains("dark-theme")
-            ? "dark"
-            : "light";
+        theme = document.body.classList.contains('dark-theme')
+            ? 'dark'
+            : 'light';
     }
-    localStorage.setItem("theme", theme);
+    localStorage.setItem('theme', theme);
 }
 
 const langJson = {
-    "en": {
+    'en': {
         "page-title":"Curriculum-vitae of Sebastian Poetter",
         "owner-name":"SEBASTIAN POETTER",
         "owner-job-name":"FULL STACK DEVELOPER",
         "contact-title":"CONTACT",
-        "contact-email":"<span class=\"d-none\"><a href=\"mailto:email@domain.com\"></a>email@domain.com</span>\n" +
-            "<a href=\"&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#101;&#98;&#45;&#112;&#111;&#101;&#116;%74%65%72%40%67%6D%78%2E%64%65\">Send me a mail</a>",
+        "contact-email":"<span class=\'d-none\'><a href=\'mailto:email@domain.com\'></a>email@domain.com</span>\n" +
+            "<a href=\'&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#101;&#98;&#45;&#112;&#111;&#101;&#116;%74%65%72%40%67%6D%78%2E%64%65\'>Send me a mail</a>",
         "contact-github":"My Github page",
         "contact-linkedin":"Find me on LinkedIn",
         "contact-itchio":"Look on my Itch.io page",
@@ -116,13 +112,17 @@ const langJson = {
         "footer-library":"USED LIBRARIES",
         "profile-title":"PROFILE",
         "profile-begin":"My name is Sebastian Pötter. I recently completed my master's degree in computer science and am looking for new problems to solve and projects to work on.",
-        "profile-other":"I am interested in a wide range of topics in the field of computer science, such as web development, app development, and server applications. " +
-            "I did a lot of private projects and also commissions for my customers.<br><br> I was a freelancer for web development (WordPress, PHP8, Javascript), project " +
-            "management and software developer (dotnetCore, Java) during my time at the university and before. I got used to open source technology, business process digitization " +
-            "and modern development management (like SCRUM or Kanban). With the theoretical knowledge gained at university and practical applied skills gained at my freelance work, " +
-            "I'm able to familiarize myself quickly with new projects, <br><br>So I independently planned and completed commissions and introduced them to my customers. " +
-            "Managing of software requirements and transparent communication with my clients to get change requests, but also feedback on the finished tasks or projects, " +
-            "belong to my skills. However, computers and information technology are not my only interest, other areas such as biology, chemistry, physics, and electrical " +
+        "profile-other":"I am interested in a wide range of topics in the field of computer science, such as web development, app development, and server applications.\n" +
+            "I did a lot of private projects and also commissions for my customers.\n" +
+            "<br><br>\n" +
+            "I'm a freelancer for web development (WordPress, PHP8, Javascript), project\n" +
+            "management and software developer (dotnetCore, Java) during my time at the university and before. I got used to open source technology, business process digitization\n" +
+            "and modern development management (like SCRUM or Kanban). With the theoretical knowledge gained at university and practical applied skills gained at my freelance work,\n" +
+            "I'm able to familiarize myself quickly with new projects.\n" +
+            "<br><br>\n" +
+            "I independently planned and completed commissions and introduced them to my customers.\n" +
+            "Managing of software requirements and transparent communication with my clients to get change requests, but also feedback on the finished tasks or projects,\n" +
+            "belong to my skills. However, computers and information technology are not my only interest, other areas such as biology, chemistry, physics, and electrical\n" +
             "engineering are very interesting too.",
 
         "education-title":"EDUCATION",
@@ -159,7 +159,7 @@ const langJson = {
         "education-master-team":"Team management internship (SCRUM-team leader for an eight-person team)",
 
         "education-master-th":"My master thesis: <a href=\"https://github.com/poetter-sebastian/Simulation\" rel=\"noreferrer\" target=\"_blank\">Development of an environmental simulation in Unity</a>",
-        "experience-title":"Experience (<span id=\"toNow\">9</span> years)",
+        "experience-title":"Experience (<span id=\"to-now\">9</span> years)",
         "experience-small-com":"Multiple commissions of one-page-websites for smaller companies - 2014-2017",
         "experience-landing-page":"Commission of a landing-page for a company in Dresden - 2017",
         "experience-profesco":"Commission of a wordpress-website for the <a href=\"https://www.profesco.de\" rel=\"noreferrer\" target=\"_blank\">Profesco GmbH</a> (creation and administration) - 2019-2021",
@@ -293,7 +293,7 @@ const langJson = {
         "education-master-oagr":"Objekt- und Gestenerkennung",
         "education-master-team":"Team management Praktikum (SCRUM-Teamleiter für ein acht personen Team)",
         "education-master-th":"Meine Masterarbeit: <a href=\"https://github.com/poetter-sebastian/Simulation\" rel=\"noreferrer\" target=\"_blank\">Entwicklung einer Umweltsimulation in Unity</a>",
-        "experience-title":"Erfahrung  (<span id=\"toNow\">9</span> jahre)",
+        "experience-title":"Erfahrung  (<span id=\"to-now\">9</span> jahre)",
         "experience-small-com":"Beauftragungen von kleineren One-Page-Webseiten für Unternehmen wie IKD-Training - 2014-2017",
         "experience-landing-page":"Erstellung einer Webseite für ein Unternehmen in Dresden - 2017",
         "experience-profesco":"Beauftragung einer Wordpress-Seite für die <a href=\"https://www.profesco.de/\" rel=\"noreferrer\">Profesco GmbH</a> (Erstellung und Wartung) - 2019-2021",
@@ -395,7 +395,7 @@ const langJson = {
         "education-master-oagr":"Reconnaissance d'objets et de gestes",
         "education-master-team":"Stage en gestion d'équipe (chef d'équipe SCRUM pour une équipe de huit personnes)",
         "education-master-th":"Mon sujet de thèse de master: <a href=\"https://github.com/poetter-sebastian/Simulation\" rel=\"noreferrer\" target=\"_blank\">Développement d'une simulation environnementale en Unity</a>",
-        "experience-title":"EXPÉRIENCE (<span id=\"toNow\">9</span> ans)",
+        "experience-title":"EXPÉRIENCE (<span id=\"to-now\">9</span> ans)",
         "experience-small-com":"Commissions multiples de sites web d'une page pour les petites entreprises par exemple IKD-Training - 2014-2017",
         "experience-landing-page":"Commande d'une page d'atterrissage pour une entreprise à Dresden - 2017",
         "experience-profesco":"Commande d'un site wordpress-website pour la société Profesco GmbH (création et administration) - 2019",
