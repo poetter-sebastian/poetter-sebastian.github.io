@@ -123,12 +123,15 @@ const langJson = {
             "I independently planned and completed commissions and introduced them to my customers.\n" +
             "Managing of software requirements and transparent communication with my clients to get change requests, but also feedback on the finished tasks or projects,\n" +
             "belong to my skills. However, computers and information technology are not my only interest, other areas such as biology, chemistry, physics, and electrical\n" +
-            "engineering are very interesting too.",
+            "engineering are very fascinating too.",
 
         "education-title":"EDUCATION",
         "education-secondary-title":"Secondary school (Realschule)",
-        "education-secondary-text":"I graduated from secondary school in 2014. In Germany the Secondary school is called Realschule and leads to either apprenticeships or " +
-            "on my case to higher education comparable to high schools. Here I started getting interested in Computer and started building simple websites as a hobby.",
+        "education-secondary-text":"I graduated from secondary school in 2014.\n" +
+            "In Germany the Secondary school is called Realschule and leads to either\n" +
+            "apprenticeships or, in my case, to higher education comparable to high schools.\n" +
+            "Here I started getting interested in Computer and started building simple websites\n" +
+            "as a hobby.",
         "education-high-title":"High School (Abitur)",
         "education-high-text":"I made my higher education entrance qualification with focus on computer science in 2017. During this time I worked on some simple projects " +
             "and made free website designs. Here I started to work with the game-development engine Unity and made some smaller 3D-applications.",
@@ -210,6 +213,7 @@ const langJson = {
             "<a href=\"&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#101;&#98;&#45;&#112;&#111;&#101;&#116;%74%65%72%40%67%6D%78%2E%64%65\">Senden Sie mir eine E-Mail</a>",
         "contact-github":"Meine Github-Seite",
         "contact-linkedin":"Schau bei LinkedIn vorbei",
+        "contact-mastodon":"Mein Mastodon Account",
         "contact-itchio": "Besuche mich auf Itch.io",
         "hobbies-title":"Hobbys",
         "hobbies-programming":"Programmieren",
@@ -320,6 +324,7 @@ const langJson = {
         "contact-github":"Retrouvez-moi sur Github",
         "contact-itchio": "Retrouvez-moi sur Itch.io",
         "contact-linkedin":"LinkedIn",
+        "contact-mastodon":"Mastodon",
         "hobbies-title":"hobbies",
         "hobbies-programming":"Programmer",
         "hobbies-swimming":"Nager",
