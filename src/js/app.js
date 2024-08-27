@@ -5,16 +5,10 @@ let langElements;
 
 $(document).ready(function() {
     langElements = $('[data-i18n]');
-
-    if(!bl.includes('en')){
-        switch (bl) {
-            case bl.includes('de'):
-                changeLang('de');
-                break;
-            case bl.includes('fr'):
-                changeLang('fr');
-                break;
-        }
+    if (bl.includes('de')) {
+        changeLang('de');
+    } else if (bl.includes('fr')) {
+        changeLang('fr');
     }
 
     $('.year').innerText = new Date().getFullYear();
