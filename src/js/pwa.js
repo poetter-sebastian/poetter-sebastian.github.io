@@ -45,9 +45,10 @@ self.addEventListener("install", (event) => {
                     '/src/img/en.webp',
                     '/src/img/fr.webp',
                     'https://code.jquery.com/jquery-3.7.1.slim.min.js',
-                    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css',
+                    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/fontawesome.min.css',
+                    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/brands.css',
+                    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/solid.css',
                     'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.cs',
-                    'https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js',
                     'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js'
                 ]),
             ),

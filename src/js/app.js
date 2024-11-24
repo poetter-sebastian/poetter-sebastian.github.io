@@ -11,7 +11,13 @@ $(document).ready(function() {
         changeLang('fr');
     }
 
-    $('.year').innerText = new Date().getFullYear();
+    document.getElementById('to-now').innerText = (new Date().getFullYear() - new Date(2015, 0).getFullYear()).toString();
+
+    let currentYear = new Date().getFullYear().toString();
+
+    document.querySelectorAll('.year').forEach(function(e) {
+        e.innerHTML = currentYear;
+    });
 
     if ((prefersDarkScheme && currentTheme === undefined) || currentTheme === 'dark') {
         document.body.classList.add('dark-theme');
@@ -40,7 +46,6 @@ function changeLang(lang) {
             console.log('"' + currentObj + '" in language json not found!')
         }
     });
-    document.getElementById('to-now').innerText = (new Date().getFullYear() - new Date(2015, 0).getFullYear()).toString();
 }
 
 function toggleMode() {
@@ -63,11 +68,12 @@ const langJson = {
     'en': {
         "page-title":"Curriculum-vitae of Sebastian Poetter",
         "owner-name":"SEBASTIAN POETTER",
-        "owner-job-name":"FULL STACK DEVELOPER",
+        "owner-job-name":"full stack developer",
         "contact-title":"CONTACT",
         "contact-email":"<span class=\'d-none\'><a href=\'mailto:email@domain.com\'></a>email@domain.com</span>\n" +
             "<a href=\'&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#101;&#98;&#45;&#112;&#111;&#101;&#116;%74%65%72%40%67%6D%78%2E%64%65\'>Send me a mail</a>",
         "contact-github":"My Github page",
+        "contact-mastodon":"Tell me a joke on Mastodon",
         "contact-linkedin":"Find me on LinkedIn",
         "contact-itchio":"Look on my Itch.io page",
         "hobbies-title":"HOBBIES",
@@ -105,20 +111,20 @@ const langJson = {
         "footer-policy":"PRIVACY POLICY",
         "footer-library":"USED LIBRARIES",
         "profile-title":"PROFILE",
-        "profile-begin":"My name is Sebastian Pötter. I recently completed my master's degree in computer science and am looking for new problems to solve and projects to work on.",
-        "profile-other":"I am interested in a wide range of topics in the field of computer science, such as web development, app development, and server applications.\n" +
-            "I did a lot of private projects and also commissions for my customers.\n" +
-            "<br><br>\n" +
-            "I'm a freelancer for web development (WordPress, PHP8, Javascript), project\n" +
-            "management and software developer (dotnetCore, Java) during my time at the university and before. I got used to open source technology, business process digitization\n" +
-            "and modern development management (like SCRUM or Kanban). With the theoretical knowledge gained at university and practical applied skills gained at my freelance work,\n" +
-            "I'm able to familiarize myself quickly with new projects.\n" +
-            "<br><br>\n" +
-            "I independently planned and completed commissions and introduced them to my customers.\n" +
-            "Managing of software requirements and transparent communication with my clients to get change requests, but also feedback on the finished tasks or projects,\n" +
-            "belong to my skills. However, computers and information technology are not my only interest, other areas such as biology, chemistry, physics, and electrical\n" +
-            "engineering are very fascinating too.",
-
+        "profile-begin":"My name is Sebastian Pötter. I got my master's degree of computer science in 2023 and looking for new opportunities to work on or get involved in projects.<br><br>\n" +
+            "With over a decade of expertise in web and software development, I offer comprehensive knowledge and hands-on experience in crafting robust,\n" +
+            "user-friendly solutions or provide consulting business partners on their planned and ongoing projects.\n" +
+            "As a seasoned full-stack developer, I specialise in both client and server-side technologies, ensuring seamless and dynamic web experiences.",
+        "profile-other": "I take great pride in maintaining transparent and professional communication with business partners and clients.\n" +
+            " I foster a collaborative atmosphere to ensure project goals are aligned and met efficiently.\n" +
+            " My ability to work cooperatively with team members and stakeholders is a cornerstone of my approach, facilitating a transparent and\n" +
+            " productive workflow. With the theoretical knowledge gained at university and practical applied skills gained at my freelance work,\n" +
+            " I'm able to familiarize myself quickly with new or existing projects.\n" +
+            " <br><br>\n" +
+            " I am dedicated to providing high-quality solutions and continuously developing my skills to ensure I remain up-to-date with the latest\n" +
+            " industry trends and technologies. My approach is collaborative and detail-oriented, ensuring every project meets the highest standards of excellence.\n" +
+            " However, computers and information technology are not my only interest, other areas such as biology, chemistry, physics, and electrical\n" +
+            " engineering are fascinating too.",
         "education-title":"EDUCATION",
         "education-secondary-title":"Secondary school (Realschule)",
         "education-secondary-text":"I graduated from secondary school in 2014.\n" +
@@ -172,7 +178,9 @@ const langJson = {
         "experience-hotwire":"Created a one-page for the VR Game <a href=\"https://www.hotwirevr.com/\" rel=\"noreferrer\" target=\"_blank\">HotWireVR</a> - 2024",
         "experience-saxonq":"Created a WordPress website with custom design for the company SaxonQ <a href=\"https://www.saxonq.com/\" rel=\"noreferrer\" target=\"_blank\">SaxonQ</a> - 2024",
         "experience-mindport":"Fixed-term contract to work on specific projects at the Startup <a href=\"https://www.mindport.co/\" rel=\"noreferrer\" target=\"_blank\">Mindport GmbH</a> - 2024-2025",
-        "commissions-title":"WHO EMPLOYED/COMMISSIONED ME",
+
+        "commissions-title":"Who employed/commissioned me",
+        "customerprojects-title":"Projects I am involved in",
 
         "project-rasp-name":"Raspberry Pi fan control",
         "project-rasp-desc":"",
@@ -208,8 +216,8 @@ const langJson = {
         "contact-email":"<span class=\"d-none\"><a href=\"mailto:email@domain.com\"></a>email@domain.com</span>\n" +
             "<a href=\"&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#101;&#98;&#45;&#112;&#111;&#101;&#116;%74%65%72%40%67%6D%78%2E%64%65\">Senden Sie mir eine E-Mail</a>",
         "contact-github":"Meine Github-Seite",
-        "contact-linkedin":"Schau bei LinkedIn vorbei",
         "contact-mastodon":"Mein Mastodon Account",
+        "contact-linkedin":"Schau bei LinkedIn vorbei",
         "contact-itchio": "Besuche mich auf Itch.io",
         "hobbies-title":"Hobbys",
         "hobbies-programming":"Programmieren",
@@ -255,15 +263,8 @@ const langJson = {
         "footer-policy":"Datenschutzerklärung",
         "footer-library":"Benutze Frameworks",
         "profile-title":"Profil",
-        "profile-begin":"Mein Name ist Sebastian Pötter. Ich habe kürzlich meinen Master in Informatik abgeschlossen und habe jetzt den Titel Master of Science erworben. Ich bin immer auf der Suche nach spannenden Projekten.",
-        "profile-other":"Ich bin an vielen IT-Themengebieten interessiert, wie zum Beispiel Entwicklung von Webseiten, Desktop- und Serverprogramme. " +
-            "Ich habe bereits zahlreiche Projekte umgesetzt, dazu gehören viele private aber auch von Kunden geforderte Projekte. <br><br>Ich wurde schon während meiner Zeit an der Universität von Kunden im " +
-            "Gebieten der Webentwicklung (WordPress, PHP8, Javascript), des Projektmanagement und der Softwareentwicklung (dotnetCore, Java) beauftragt. " +
-            "Dabei konnte ich Erfahrung mit Open-Source Systemen, Unternehmensdigitalisierung und agiler Softwareentwicklung wie SCRUM oder Kanban kennenlernen. " +
-            "Mit den theoretischen Kenntnissen, die ich an der Universität erworben habe, und den praktischen Fähigkeiten, die ich bei meiner freiberuflichen Tätigkeit erworben habe, " +
-            "kann ich mich schnell in neue Projekte einarbeiten oder diese planen. <br><br>Damit konnte ich selbstständig Aufträge durchgeführt und meinen Kunden vorstellen. " +
-            "Das Erstellen von Software-Anforderungen (Lastenheft) und eine transparente Kommunikation mit meinen Kunden, um Änderungswünsche, aber auch Feedback zu den abgeschlossenen Aufgaben oder Projekten zu erhalten, gehören zu meinen Fähigkeiten. " +
-            "Nicht nur Informatikthemen gehören zu meinen Interessen, auch andere Bereiche wie Biologie, Chemie, Physik und Elektrotechnik sind für mich sehr interessant.",
+        "profile-begin":"Mein Name ist Sebastian Pötter. Ich habe 2023 meinen Master in Informatik erworben und bin auf der Suche nach neuen Projekten oder an laufenden mitzuwirken.<br><br>Mit mehr als einem Jahrzehnt Erfahrung in der Web- und Softwareentwicklung biete ich umfassendes Wissen und praktische Erfahrung bei der Erstellung robuster, benutzerfreundlicher Lösungen oder berate Geschäftspartner bei ihren geplanten oder laufenden Projekten.<br><br> Als erfahrener Full-Stack-Entwickler bin ich sowohl auf client- als auch auf serverseitige Technologien spezialisiert, um nahtlose und dynamische Web-Erlebnisse sicherzustellen.",
+        "profile-other":"Ich lege großen Wert darauf, eine transparente und professionelle Kommunikation mit Geschäftspartnern und Kunden zu pflegen. Ich fördere eine kooperative Atmosphäre, um sicherzustellen, dass Projektziele aufeinander abgestimmt und effizient erreicht werden. Meine Fähigkeit, kooperativ mit Teammitgliedern und Stakeholdern zusammenzuarbeiten, ermöglicht einen transparenten und produktiven Arbeitsablauf für alle Projektpartner. Mit dem theoretischen Wissen, welches ich an der Universität erworben habe, und den praktischen angewandten Fähigkeiten, die ich bei meiner freiberuflichen Tätigkeit erworben habe, kann ich mich schnell in neue oder bestehende Projekte einarbeiten.<br><br>Ich bin bestrebt, qualitativ hochwertige Lösungen zu entwickeln und meine Fähigkeiten kontinuierlich weiterzuentwickeln, um sicherzustellen, dass ich über die neuesten Branchentrends und Technologien auf dem Laufenden bleibe. Mein Ansatz ist kooperativ und detailorientiert und stellt sicher, dass jedes Projekt den höchsten Qualitätsstandards entspricht. Computer und Informationstechnologie sind jedoch nicht meine einzigen Interessen, andere Bereiche wie Biologie, Chemie, Physik und Elektrotechnik sind für mich ebenfalls faszinierend.",
         "education-title":"Bildungsweg",
         "education-secondary-title":"Realschule",
         "education-secondary-text":"2014 habe ich meinen Realschulabschluss gemacht. Danach entschied ich mich, noch das Abitur zu versuchen. In der Realschulzeit fing ich an, mich für Computer zu interessieren und begann, einfache Webseiten zu erstellen.",
@@ -293,7 +294,7 @@ const langJson = {
         "education-master-oagr":"Objekt- und Gestenerkennung",
         "education-master-team":"Team management Praktikum (SCRUM-Teamleiter für ein acht personen Team)",
         "education-master-th":"Meine Masterarbeit: <a href=\"https://github.com/poetter-sebastian/Simulation\" rel=\"noreferrer\" target=\"_blank\">Entwicklung einer Umweltsimulation in Unity</a>",
-        "experience-title":"Erfahrung  (<span id=\"to-now\">9</span> jahre)",
+        "experience-title":"Erfahrung (<span id=\"to-now\">9</span> jahre)",
         "experience-small-com":"Beauftragungen von kleineren One-Page-Webseiten für Unternehmen wie IKD-Training - 2014-2017",
         "experience-landing-page":"Erstellung einer Webseite für ein Unternehmen in Dresden - 2017",
         "experience-profesco":"Beauftragung einer Wordpress-Seite für die <a href=\"https://www.profesco.de/\" rel=\"noreferrer\">Profesco GmbH</a> (Erstellung und Wartung) - 2019-2021",
@@ -309,7 +310,10 @@ const langJson = {
         "experience-hotwire":"Erstellung einer Webseite für das VR Spiel <a href=\"https://www.hotwirevr.com/\" rel=\"noreferrer\" target=\"_blank\">HotWireVR</a> - 2024",
         "experience-saxonq":"Erstellung einer benutzerdefinierten Wordpress Webseite für <a href=\"https://www.saxonq.com/\" rel=\"noreferrer\" target=\"_blank\">SaxonQ GmbH</a> - 2024",
         "experience-mindport":"Befristete Anstellung beim Startup <a href=\"https://www.mindport.co/\" rel=\"noreferrer\" target=\"_blank\">Mindport GmbH</a> für verschiedene Projekte - 2024-2025",
+
         "commissions-title":"Arbeits-/Auftragsgeber",
+        "customerprojects-title":"Projekte, an denen ich beteiligt bin",
+
         "modal-close": "Schließen",
     },
     "fr": {
@@ -367,8 +371,8 @@ const langJson = {
         "footer-policy":"POLITIQUE DE PROTECTION DE LA VIE PRIVÉE",
         "footer-library":"BIBLIOTHÈQUES UTILISÉES",
         "profile-title":"PROFIL",
-        "profile-begin":"Je m'appelle Sebastian Pötter. J'ai récemment terminé mon master en informatique et j'ai maintenant le titre de Master of Science. Je peux m'adapter rapidement à de nouveaux projets et j'aime résoudre les problèmes persistants.",
-        "profile-other":"Je suis intéressé par un large éventail de sujets dans le domaine de l'informatique. Cependant, l'informatique n'est pas mon seul centre d'intérêt, je m'intéresse également à d'autres sujets tels que la biologie, la chimie, la physique et l'électrotechnique.",
+        "profile-begin":"Je m'appelle Sebastian Pötter. J'ai obtenu mon master en informatique en 2023 et je recherche de nouvelles opportunités pour travailler ou m'impliquer dans des projets.<br><br>Avec plus d'une décennie d'expertise dans le développement Web et logiciel, j'offre des connaissances complètes et une expérience pratique dans l'élaboration de solutions robustes et conviviales ou je conseille des partenaires commerciaux sur leurs projets prévus et en cours. En tant que développeur full-stack chevronné, je me spécialise dans les technologies côté client et côté serveur, garantissant des expériences Web fluides et dynamiques.",
+        "profile-other":"Je suis très fier de maintenir une communication transparente et professionnelle avec mes partenaires commerciaux et mes clients. Je favorise une atmosphère de collaboration pour garantir que les objectifs du projet sont alignés et atteints efficacement. Ma capacité à travailler en coopération avec les membres de l'équipe et les parties prenantes est la pierre angulaire de mon approche, facilitant un flux de travail transparent et productif. Grâce aux connaissances théoriques acquises à l'université et aux compétences pratiques appliquées acquises dans le cadre de mon travail indépendant, je suis capable de me familiariser rapidement avec des projets nouveaux ou existants.<br><br>Je m'engage à fournir des solutions de haute qualité et à développer continuellement mes compétences pour m'assurer de rester à jour avec les dernières tendances et technologies de l'industrie. Mon approche est collaborative et axée sur les détails, garantissant que chaque projet répond aux normes d'excellence les plus élevées. Cependant, les ordinateurs et les technologies de l'information ne sont pas mes seuls intérêts, d'autres domaines tels que la biologie, la chimie, la physique et l'électrotechnique sont également fascinants.",
         "education-title":"ÉDUCATION",
         "education-secondary-title":"L'école secondaire (Realschule)",
         "education-secondary-text":"En 2017, j'ai obtenu mon diplôme de bachelor en informatique avec une spécialisation en ingénierie logicielle et en techniques de programmation. En Allemagne, l'école secondaire s'appelle Realschule et mène soit à un apprentissage, soit, dans mon cas, à un enseignement supérieur comparable aux lycées. C'est là que j'ai commencé à m'intéresser à l'informatique et que j'ai commencé à construire des sites web simples comme passe-temps.",
@@ -415,7 +419,10 @@ const langJson = {
         "experience-hotwire":"Création d'un site web pour le jeu VR <a href=\"https://www.hotwirevr.com/\" rel=\"noreferrer\" target=\"_blank\">HotWireVR</a> - 2024",
         "experience-saxonq":"Création d'un site web pour le jeu <a href=\"https://www.saxonq.com/\" rel=\"noreferrer\" target=\"_blank\">SaxonQ GmbH</a> - 2024",
         "experience-mindport":"Contrat à durée déterminée pour travailler sur des projets spécifiques à la startup <a href=\"https://www.mindport.co/\" rel=\"noreferrer\" target=\"_blank\">Mindport GmbH</a> - 2024-2025",
+
         "commissions-title":"Mandant et employeur",
+        "customerprojects-title":"Projets auxquels je participe",
+
         "modal-close" : "fermer",
     }
 };
