@@ -110,7 +110,7 @@ async function getCachedData(cacheName, url) {
         return false;
     }
 
-    return await cachedResponse.json() ?? { Success: false };
+    return await cachedResponse ?? {};
 }
 
 
