@@ -3,6 +3,7 @@
  * Copyright © 2020 Sebastian P. All Rights Reserved - 2024
  *
  * ====================================================================================================================*/
+@import font.sass
 @import color.sass
 @import timeline.sass
 @import line.sass
@@ -12,16 +13,21 @@
  * sebastian.github.io - default
  *
  * ====================================================================================================================*/
+:root
+    --bs-body-font-family : 'system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"'
+
 body
     hyphens: auto
 \:root
     color-scheme: light dark
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6
-    line-height: 1.4 !important
-    font-family: Calibri, Arial, sans-serif
 
-p, span
-    font-family: Calibri, Arial, sans-serif
+p, span, p, ul, li, a
+    font-family: OpenSans, sans-serif
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6, h1 span, h2 span
+    line-height: 1.4 !important
+    font-family: SpaceGrotesk, sans-serif
+
 /* ====================================================================================================================
  *
  * sebastian.github.io - Main
@@ -32,6 +38,7 @@ p, span
     position: absolute
     top: 0
     left: 0
+    flex-flow: row wrap
     img
         height: 45px
         width: 45px

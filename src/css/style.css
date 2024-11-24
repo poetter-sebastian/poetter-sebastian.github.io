@@ -4,6 +4,14 @@
  * * Copyright © 2020 Sebastian P. All Rights Reserved - 2024
  * *
  * * ====================================================================================================================*/
+@font-face {
+  font-family: OpenSans;
+  src: url("font/OpenSans-Regular.ttf");
+}
+@font-face {
+  font-family: SpaceGrotesk;
+  src: url("font/SpaceGrotesk-Regular.ttf");
+}
 /* ==================================================================================================================
  * *
  * * poetter-sebastian.github.io - color - 2024
@@ -232,6 +240,10 @@ body.dark-theme a:hover span {
  * * sebastian.github.io - default
  * *
  * * ====================================================================================================================*/
+:root {
+  --bs-body-font-family: 'system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"';
+}
+
 body {
   hyphens: auto;
 }
@@ -240,13 +252,13 @@ body {
   color-scheme: light dark;
 }
 
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-  line-height: 1.4 !important;
-  font-family: Calibri, Arial, sans-serif;
+p, span, p, ul, li, a {
+  font-family: OpenSans, sans-serif;
 }
 
-p, span {
-  font-family: Calibri, Arial, sans-serif;
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6, h1 span, h2 span {
+  line-height: 1.4 !important;
+  font-family: SpaceGrotesk, sans-serif;
 }
 
 /* ====================================================================================================================
@@ -259,6 +271,7 @@ p, span {
   position: absolute;
   top: 0;
   left: 0;
+  flex-flow: row wrap;
 }
 .lang-select img {
   height: 45px;

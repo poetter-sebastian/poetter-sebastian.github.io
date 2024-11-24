@@ -349,6 +349,8 @@
             integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
     <script src="src/js/app.min.js"></script>
     <!-- fast css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="src/css/style.min.css">
     <script>
         let bl = (typeof window.navigator.language === undefined) ? 'en' : window.navigator.language;
@@ -373,12 +375,14 @@
                     <a href="#" onclick="changeLang('de')"><img src="src/img/de.webp" alt="DE" title="Deutsch" role="link"></a>
                     <a href="#" onclick="changeLang('en')"><img src="src/img/en.webp" alt="EN" title="English" role="link"></a>
                     <a href="#" onclick="changeLang('fr')"><img src="src/img/fr.webp" alt="FR" title="Français" role="link"></a>
-                    <i class="fas fa-sun ms-2"></i>
-                    <div class="form-check form-check-inline form-switch ms-2 me-1">
-                        <label class="form-check-label" for="darkMode">
-                            <input class="form-check-input" type="checkbox" role="switch" id="darkMode" onchange="toggleMode()" aria-label='Dark/Light-mode input'>
-                            <i class="fas fa-moon mt-1"></i>
-                        </label>
+                    <div>
+                        <i class="fas fa-sun ms-2"></i>
+                        <div class="form-check form-check-inline form-switch ms-2 me-1">
+                            <label class="form-check-label" for="darkMode">
+                                <input class="form-check-input" type="checkbox" role="switch" id="darkMode" onchange="toggleMode()" aria-label='Dark/Light-mode input'>
+                                <i class="fas fa-moon mt-1"></i>
+                            </label>
+                        </div>
                     </div>
                 </div>
                 <div class="mx-auto mt-5 primary-text text-center mb-md-0 mb-sm-4">
@@ -428,40 +432,64 @@
                     </div>
                     <div id="skills" class="row">
                         <div class="col-12 col-sm-6 col-md-12 col-lg-6">
-                            <i class="fas fa-keyboard"></i> <a href="https://learn.microsoft.com/cpp" target="_blank" rel="noreferrer">C++ (C)</a>, <a href="https://learn.microsoft.com/dotnet/csharp" target="_blank" rel="noreferrer">C# (.NETcore)</a>, <a href="https://openjdk.org" target="_blank" rel="noreferrer">Java 20</a>, <a href="https://www.python.org" target="_blank" rel="noreferrer">Python 3</a>, <a href="https://www.haskell.org" target="_blank" rel="noreferrer">Haskell</a>, <a href="https://go.dev" target="_blank" rel="noreferrer">Go 1.2</a>, <a href="https://www.php.net" target="_blank" rel="noreferrer">PHP 8.3</a>, SQL, NoSQL, <a href="https://www.rust-lang.org" target="_blank" rel="noreferrer">Rust</a>,
+                            <span>
+                                <i class="fas fa-keyboard"></i> <a href="https://learn.microsoft.com/cpp" target="_blank" rel="noreferrer">C++ (C)</a>, <a href="https://learn.microsoft.com/dotnet/csharp" target="_blank" rel="noreferrer">C# (.NETcore)</a>, <a href="https://openjdk.org" target="_blank" rel="noreferrer">Java 20</a>, <a href="https://www.python.org" target="_blank" rel="noreferrer">Python 3</a>, <a href="https://www.haskell.org" target="_blank" rel="noreferrer">Haskell</a>, <a href="https://go.dev" target="_blank" rel="noreferrer">Go 1.2</a>, <a href="https://www.php.net" target="_blank" rel="noreferrer">PHP 8.3</a>, SQL, NoSQL, <a href="https://www.rust-lang.org" target="_blank" rel="noreferrer">Rust</a>,
+                            </span>
                         </div>
                         <div class="col-12 col-sm-6 col-md-12 col-lg-6">
-                            <i class="fab fa-firefox-browser"></i> HTML 5, CSS 3, <a href="https://sass-lang.com" target="_blank" rel="noreferrer">SASS</a>, <a href="https://www.typescriptlang.org" target="_blank" rel="noreferrer">Typescript</a>, <a href="https://jquery.com" target="_blank" rel="noreferrer">Jquery 3.6</a>, <a href="https://getbootstrap.com" target="_blank" rel="noreferrer">Bootstrap 5</a>, <a href="https://webpack.js.org" target="_blank" rel="noreferrer">Webpack</a>, <a href="https://developer.mozilla.org/en-US/docs/Glossary/SEO" target="_blank" rel="noreferrer">SEO</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/Performance" target="_blank" rel="noreferrer">WPO</a>
+                            <span>
+                                <i class="fab fa-firefox-browser"></i> HTML 5, CSS 3, <a href="https://sass-lang.com" target="_blank" rel="noreferrer">SASS</a>, <a href="https://www.typescriptlang.org" target="_blank" rel="noreferrer">Typescript</a>, <a href="https://jquery.com" target="_blank" rel="noreferrer">Jquery 3.6</a>, <a href="https://getbootstrap.com" target="_blank" rel="noreferrer">Bootstrap 5</a>, <a href="https://webpack.js.org" target="_blank" rel="noreferrer">Webpack</a>, <a href="https://developer.mozilla.org/en-US/docs/Glossary/SEO" target="_blank" rel="noreferrer">SEO</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/Performance" target="_blank" rel="noreferrer">WPO</a>
+                            </span>
                         </div>
                         <div class="col-12 col-sm-6 col-md-12 col-lg-6">
-                            <i class="fas fa-paint-brush"></i> <span data-i18n="skills-gfx">Image editing e.g. with</span> <a href="https://www.gimp.org" target="_blank" rel="noreferrer">GIMP</a>, <a href="https://inkscape.org" target="_blank" rel="noreferrer">Inkscape</a>, <a href="https://www.adobe.com/products/photoshop.html" target="_blank" rel="noreferrer">Photoshop</a>
+                            <span>
+                                <i class="fas fa-paint-brush"></i> <span data-i18n="skills-gfx">Image editing e.g. with</span> <a href="https://www.gimp.org" target="_blank" rel="noreferrer">GIMP</a>, <a href="https://inkscape.org" target="_blank" rel="noreferrer">Inkscape</a>, <a href="https://www.adobe.com/products/photoshop.html" target="_blank" rel="noreferrer">Photoshop</a>
+                            </span>
                         </div>
                         <div class="col-12 col-sm-6 col-md-12 col-lg-6">
-                            <i class="fas fa-film"></i> <span data-i18n="skills-3d">Animations e.g. with</span> <a href="https://www.adobe.com/products/aftereffects.html" target="_blank" rel="noreferrer">After Effects</a>, <a href="https://www.vegascreativesoftware.com/int/vegas-pro" target="_blank" rel="noreferrer">Vegas Pro</a>, <a href="https://www.blender.org" target="_blank" rel="noreferrer">Blender</a>
+                            <span>
+                                <i class="fas fa-film"></i> <span data-i18n="skills-3d">Animations e.g. with</span> <a href="https://www.adobe.com/products/aftereffects.html" target="_blank" rel="noreferrer">After Effects</a>, <a href="https://www.vegascreativesoftware.com/int/vegas-pro" target="_blank" rel="noreferrer">Vegas Pro</a>, <a href="https://www.blender.org" target="_blank" rel="noreferrer">Blender</a>
+                            </span>
                         </div>
                         <div class="col-12 col-sm-6 col-md-12 col-lg-6">
-                            <i class="fas fa-file-alt"></i> <span data-i18n="skills-web">Knowledge of </span><a href="https://wordpress.com" target="_blank" rel="noreferrer">WordPress</a> (<a href="https://wpbakery.com" target="_blank" rel="noreferrer">WP-Bakery</a>, <a href="https://elementor.com" target="_blank" rel="noreferrer">Elementor</a>), <a href="https://cakephp.org" target="_blank" rel="noreferrer">Cakephp 4</a>, <a href="https://nodejs.org" target="_blank" rel="noreferrer">Node.js</a>, <a href="https://angular.io" target="_blank" rel="noreferrer">Angular</a>
+                            <span>
+                                <i class="fas fa-file-alt"></i> <span data-i18n="skills-web">Knowledge of </span><a href="https://wordpress.com" target="_blank" rel="noreferrer">WordPress</a> (<a href="https://wpbakery.com" target="_blank" rel="noreferrer">WP-Bakery</a>, <a href="https://elementor.com" target="_blank" rel="noreferrer">Elementor</a>), <a href="https://cakephp.org" target="_blank" rel="noreferrer">Cakephp 4</a>, <a href="https://nodejs.org" target="_blank" rel="noreferrer">Node.js</a>, <a href="https://angular.io" target="_blank" rel="noreferrer">Angular</a>
+                            </span>
                         </div>
                         <div class="col-12 col-sm-6 col-md-12 col-lg-6">
-                            <i class="fas fa-users"></i> <span data-i18n="skills-team">Team leading and project organisation</span>, <a href="https://www.scrum.org/resources/what-is-scrum" target="_blank" rel="noreferrer">SCRUM</a>, Kanban
+                            <span>
+                                <i class="fas fa-users"></i> <span data-i18n="skills-team">Team leading and project organisation</span>, <a href="https://www.scrum.org/resources/what-is-scrum" target="_blank" rel="noreferrer">SCRUM</a>, Kanban
+                            </span>
                         </div>
                         <div class="col-12 col-sm-6 col-md-12 col-lg-6">
-                            <i class="fas fa-cog"></i> <span data-i18n="skills-circuit">Knowledge of electrical engineering e.g. with <a href="https://www.arduino.cc" target="_blank" rel="noreferrer">Arduino</a> and <a href="https://www.raspberrypi.org" target="_blank" rel="noreferrer">Raspberry Pi</a></span>
+                            <span>
+                                <i class="fas fa-cog"></i> <span data-i18n="skills-circuit">Knowledge of electrical engineering e.g. with <a href="https://www.arduino.cc" target="_blank" rel="noreferrer">Arduino</a> and <a href="https://www.raspberrypi.org" target="_blank" rel="noreferrer">Raspberry Pi</a></span>
+                            </span>
                         </div>
                         <div class="col-12 col-sm-6 col-md-12 col-lg-6">
-                            <i class="fab fa-ubuntu"></i> Windows 7-11, Linux (<a href="https://linuxmint.com" target="_blank" rel="noreferrer">Linuxmint</a>, <a href="https://ubuntu.com/"  target="_blank" rel="noreferrer">Ubuntu</a>, <a href="https://www.raspberrypi.com/software/" target="_blank" rel="noreferrer">Raspberry Pi OS</a>)
+                            <span>
+                                <i class="fab fa-ubuntu"></i> Windows 7-11, Linux (<a href="https://linuxmint.com" target="_blank" rel="noreferrer">Linuxmint</a>, <a href="https://ubuntu.com/"  target="_blank" rel="noreferrer">Ubuntu</a>, <a href="https://www.raspberrypi.com/software/" target="_blank" rel="noreferrer">Raspberry Pi OS</a>)
+                            </span>
                         </div>
                         <div class="col-12 col-sm-6 col-md-12 col-lg-6">
-                            <i class="fab fa-unity"></i> <a href="https://unity.com" target="_blank" rel="noreferrer">Unity 2022</a>, <a href="https://www.unrealengine.com" target="_blank" rel="noreferrer">Unreal-Engine 5</a>, <a href="https://godotengine.org" target="_blank" rel="noreferrer">Godot-Engine 4</a>
+                            <span>
+                                <i class="fab fa-unity"></i> <a href="https://unity.com" target="_blank" rel="noreferrer">Unity 2022</a>, <a href="https://www.unrealengine.com" target="_blank" rel="noreferrer">Unreal-Engine 5</a>, <a href="https://godotengine.org" target="_blank" rel="noreferrer">Godot-Engine 4</a>
+                            </span>
                         </div>
                         <div class="col-12 col-sm-6 col-md-12 col-lg-6">
-                            <i class="fas fa-users-cog me-1"></i> <a href="https://git-scm.com" target="_blank" rel="noreferrer">Git</a>, <a href="https://www.atlassian.com/software/jira" target="_blank" rel="noreferrer">Jira</a>, <a href="https://nvie.com/posts/a-successful-git-branching-model" target="_blank" rel="noreferrer">Git-Flow</a>, <a href="https://docs.gitlab.com/ee/topics/gitlab_flow.html" target="_blank" rel="noreferrer">Gitlab-Flow</a>, <a href="https://www.jetbrains.com/youtrack" target="_blank" rel="noreferrer">YouTrack</a>, <a href="https://trello.com/" target="_blank" rel="noreferrer">Trello</a>
+                            <span>
+                                <i class="fas fa-users-cog me-1"></i> <a href="https://git-scm.com" target="_blank" rel="noreferrer">Git</a>, <a href="https://www.atlassian.com/software/jira" target="_blank" rel="noreferrer">Jira</a>, <a href="https://nvie.com/posts/a-successful-git-branching-model" target="_blank" rel="noreferrer">Git-Flow</a>, <a href="https://docs.gitlab.com/ee/topics/gitlab_flow.html" target="_blank" rel="noreferrer">Gitlab-Flow</a>, <a href="https://www.jetbrains.com/youtrack" target="_blank" rel="noreferrer">YouTrack</a>, <a href="https://trello.com/" target="_blank" rel="noreferrer">Trello</a>
+                            </span>
                         </div>
                         <div class="col-12 col-sm-6 col-md-12 col-lg-6">
-                            <i class="fas fa-project-diagram"></i> Machine learning, Transfer learning, <a href="https://github.com/ultralytics/ultralytics" target="_blank" rel="noreferrer">YoloV8</a>, <a href="https://stablediffusionweb.com/StableDiffusionXL" target="_blank" rel="noreferrer">Stable Diffusion</a>, <a href="https://pytorch.org" target="_blank" rel="noreferrer">Pytorch</a>, <a href="https://learn.microsoft.com/dotnet/machine-learning/" target="_blank" rel="noreferrer">ML.NET</a>
+                            <span>
+                                <i class="fas fa-project-diagram"></i> Machine learning, Transfer learning, <a href="https://github.com/ultralytics/ultralytics" target="_blank" rel="noreferrer">YoloV8</a>, <a href="https://stablediffusionweb.com/StableDiffusionXL" target="_blank" rel="noreferrer">Stable Diffusion</a>, <a href="https://pytorch.org" target="_blank" rel="noreferrer">Pytorch</a>, <a href="https://learn.microsoft.com/dotnet/machine-learning/" target="_blank" rel="noreferrer">ML.NET</a>
+                            </span>
                         </div>
                         <div class="col-12 col-sm-6 col-md-12 col-lg-6">
-                            <i class="fas fa-server"></i> <a href="https://www.docker.com" target="_blank" rel="noreferrer">Docker</a>, <a href="https://www.portainer.io" target="_blank" rel="noreferrer">Portainer</a>, <a href="https://kubernetes.io" target="_blank" rel="noreferrer">Kubernetes</a>, <a href="https://docs.github.com/en/actions" target="_blank" rel="noreferrer">Github CI/CD - Actions</a>, <a href="https://docs.gitlab.com/ee/ci/" target="_blank" rel="noreferrer">Gitlab CI/CD</a>
+                            <span>
+                                <i class="fas fa-server"></i> <a href="https://www.docker.com" target="_blank" rel="noreferrer">Docker</a>, <a href="https://www.portainer.io" target="_blank" rel="noreferrer">Portainer</a>, <a href="https://kubernetes.io" target="_blank" rel="noreferrer">Kubernetes</a>, <a href="https://docs.github.com/en/actions" target="_blank" rel="noreferrer">Github CI/CD - Actions</a>, <a href="https://docs.gitlab.com/ee/ci/" target="_blank" rel="noreferrer">Gitlab CI/CD</a>
+                            </span>
                         </div>
                     </div>
                     <div class="">
@@ -939,13 +967,11 @@
           integrity="sha512-nnXdb3HF69w8voQ09SKw5op0vE2izLVpMWBJQK4+4rzM7QoP0ACQgnZci5HIg9jQWdgwrDw0QKtCX+w5xKy8eA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/brands.css"
           integrity="sha512-5uHmUitBq3RTEHpeaxERv+9u9KNIywIeMatGMvNOTXLG3pzK2t5BfvHPlYWdO+jfZG6UJdjxngiJftm2Km6M4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- javascript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
             integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"
             async defer></script>
-    <script async src="src/js/pwa.min.js" defer></script>
+    <script async src="src/js/pwa.js" defer></script>
 
     <!-- Modal -->
     <div id="privacyModal" class="modal fade" tabindex="-1" aria-labelledby="privacyModalLabel">

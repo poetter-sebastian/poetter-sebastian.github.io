@@ -14,7 +14,6 @@ window.addEventListener('beforeinstallprompt', (event) => {
 
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.min.js', { scope: '/' }).then(function(reg) {
-
         if(reg.installing) {
             console.log('Service worker installing');
         } else if(reg.waiting) {
@@ -111,7 +110,7 @@ async function getCachedData(cacheName, url) {
         return false;
     }
 
-    return await cachedResponse.json();
+    return await cachedResponse.json() ?? { Success: false };
 }
 
 
@@ -130,7 +129,7 @@ async function deleteOldCaches(currentCache) {
 
 try {
     let data = getData();
-    console.log({ data });
+    //console.log({ data });
 } catch (error) {
     console.error({ error });
 }
