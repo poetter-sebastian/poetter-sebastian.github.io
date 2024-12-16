@@ -298,7 +298,7 @@ const langJson = {
         "experience-title":"Erfahrung (<span id=\"to-now\">9</span> jahre)",
         "experience-small-com":"Beauftragungen von kleineren One-Page-Webseiten für Unternehmen wie IKD-Training - 2014-2017",
         "experience-landing-page":"Erstellung einer Webseite für ein Unternehmen in Dresden - 2017",
-        "experience-profesco-1":"Beauftragung einer Wordpress-Seite für die <a href=\"https://www.profesco.de/\" rel=\"noreferrer\">Profesco GmbH</a> (Erstellung und Wartung) - 2019-2021",
+        "experience-profesco-1":"Beauftragung einer Wordpress-Seite für die <a href=\"https://www.profesco.de/\" rel=\"noreferrer\">Profesco GmbH</a> (Erstellung und Wartung) - 2019-2023",
         "experience-profesco-2":"Dienstleistungsvertrag über die Entwicklung eines CMS und CRM für die <a href=\"https://www.profesco.de\" rel=\"noreferrer\" target=\"_blank\">Profesco GmbH</a> (Projektleitung und -entwicklung) 2019-2023",
         "experience-internship":"12 Wochen Praktikum bei <a href=\"https://www.profesco.de/\" rel=\"noreferrer\">Profesco GmbH</a> in der IT-Abteilung - 2020",
         "experience-velomotion":"Aktualisierungen von Funktionalitäten der Webseite <a href=\"https://www.velomotion.de/\" rel=\"noreferrer\">Velomotion GmbH</a> - 2020",
