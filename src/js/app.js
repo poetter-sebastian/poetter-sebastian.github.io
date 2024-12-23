@@ -3,8 +3,8 @@ const currentTheme = localStorage.getItem("theme") ?? undefined;
 
 let langElements;
 
-$(document).ready(function() {
-    langElements = $('[data-i18n]');
+document.addEventListener("DOMContentLoaded", (event) => {
+    langElements = document.querySelectorAll('[data-i18n]');
     if (bl.includes('de')) {
         changeLang('de');
     } else if (bl.includes('fr')) {
@@ -21,23 +21,22 @@ $(document).ready(function() {
 
     if ((prefersDarkScheme && currentTheme === undefined) || currentTheme === 'dark') {
         document.body.classList.add('dark-theme');
-        $('#darkMode').prop( 'checked', true);
+        document.getElementById('darkMode').checked = true;
     } else if (currentTheme === 'light') {
         document.body.classList.add('light-theme');
     }
 });
 
 function logElements() {
-    $.each(langElements, function(index, value) {
+    langElements.forEach(function(value) {
         console.log('"'+value.getAttribute('data-i18n')+ '":"'+value.innerText+'",');
-        //console.log('"'+value.getAttribute('data-i18n')+ '":"",');
     });
 }
 
 function changeLang(lang) {
     document.documentElement.lang = lang;
     bl = lang;
-    $.each(langElements, function(index, value) {
+    langElements.forEach(function(value) {
         let currentObj = value.getAttribute('data-i18n');
         if(typeof langJson[lang][currentObj] !== 'undefined') {
             value.innerHTML = langJson[lang][currentObj];
@@ -90,7 +89,7 @@ const langJson = {
         "skills-3d":"Animations e.g. with ",
         "skills-web":"Knowledge of ",
         "skills-team":"Team leading and Project organisation",
-        "skills-circuit":"Knowledge of electrical engineering e.g. with <a href=\"https://www.arduino.cc/\" target=\"_blank\" rel=\"noreferrer\">Arduino</a> and <a href=\"https://wordpress.com/\" target=\"_blank\" rel=\"noreferrer\">Raspberry Pi</a>",
+        "skills-circuit":"Knowledge of electrical engineering e.g., with <a href=\"https://www.arduino.cc/\" target=\"_blank\" rel=\"noreferrer\">Arduino</a> and <a href=\"https://wordpress.com/\" target=\"_blank\" rel=\"noreferrer\">Raspberry Pi</a>",
         "projects-title":"Projects",
         "projects-fan":"Raspberry Pi fan control",
         "projects-notes":"Notes App (PWA)",
