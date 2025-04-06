@@ -3,6 +3,15 @@
  * poetter-sebastian.github.io - color - 2024
  *
  * ==================================================================================================================*/
+.box  //bleibt unverändert
+    padding: 10px
+
+ 
+.box-mit-rahmen 
+    @extend .box
+    border: 1px solid red
+
+
 body
     --primary-bg: #2e6d6a
     --primary-bg-transpararent: #0c3c3a0a
@@ -11,7 +20,7 @@ body
     --primary-dark-bg: #0c3c3a
     --primary-light-text: #0c3c3a
     --primary-light-bg: #ffeff7
-
+    
     --secondary-bg: #fff2f4
     --secondary-text: #0c3c3a
     --secondary-dark-text: #ffeff7
