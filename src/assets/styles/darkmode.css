@@ -1,0 +1,16 @@
+/* ==================================================================================================================
+ * *
+ * * poetter-sebastian.github.io - dark mode - 2024
+ * *
+ * * ==================================================================================================================*/
+body.dark-theme .card-img-top {
+  filter: brightness(1.2) contrast(0.9);
+}
+body.dark-theme a:hover {
+  color: var(--secondary-dark-text) !important;
+}
+body.dark-theme a:hover span {
+  color: var(--secondary-dark-text) !important;
+}
+
+/*# sourceMappingURL=darkmode.css.map */

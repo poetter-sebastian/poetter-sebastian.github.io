@@ -1,0 +1,18 @@
+#skills
+    margin-right: 0
+    margin-left: 0
+    width: 100%
+    font-size: 1.1rem
+    app-skill-container, div
+        padding: 1.5rem 1.5rem 1.5rem 1.5rem !important
+    @media ((min-width: 576px) and (max-width: 767px)) , (min-width: 992px)
+        >app-skill-container:nth-child(4n), >div:nth-child(4n)
+            background-color: var(--primary-dark-bg)
+            color: var(--primary-dark-text)
+        >app-skill-container:nth-child(4n-3), >div:nth-child(4n-3)
+            background-color: var(--primary-dark-bg)
+            color: var(--primary-dark-text)
+    @media (max-width: 575px) , ((min-width: 768px) and (max-width: 991px))
+        >app-skill-container:nth-child(2n), >div:nth-child(2n)
+            background-color: var(--primary-dark-bg)
+            color: var(--primary-dark-text)

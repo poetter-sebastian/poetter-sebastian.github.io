@@ -1,0 +1,732 @@
+<div class="container-fluid">
+    <div class="row">
+        <div id="leftSide" class="col-lg-4 primary-bg p-0 m-0">
+            <div class="lang-select d-flex align-items-center" role="navigation">
+                <a href="#" (click)="changeLang('de')"><img alt="DE" role="link" src="/img/de.webp" title="Deutsch"></a>
+                <a href="#" (click)="changeLang('en')"><img alt="EN" role="link" src="/img/en.webp" title="English"></a>
+                <a href="#" (click)="changeLang('fr')"><img alt="FR" role="link" src="/img/fr.webp" title="Français"></a>
+                <div>
+                    <fa-icon [icon]="faSun" class="ms-2"></fa-icon>
+                    <div class="form-check form-check-inline form-switch ms-2 me-1">
+                        <label class="form-check-label" for="darkMode">
+                            <input [(ngModel)]="isDark" class="form-check-input" type="checkbox" role="switch" id="darkMode" (change)="toggleMode($event)" aria-label='Dark/Light-mode input'>
+                            <fa-icon [icon]="faMoon" class="mt-1"></fa-icon>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="mx-auto mt-5 primary-text text-center mb-md-0 mb-sm-4">
+                <img ngSrc="/img/avatar.webp" title="Sebastian P. - FULL STACK DEVELOPER" alt="picture from www.w3schools.com " class="rounded-circle image" height="498" width="499" priority>
+                <div class="mt-4">
+                    <h1 data-i18n="owner-name" class="text-uppercase">Sebastian Poetter</h1>
+                </div>
+                <div class="mt-4 primary-dark-bg p-2 d-flex align-items-center justify-content-center">
+                    <fa-icon [icon]="faLayerGroup" class="me-2"></fa-icon>
+                    <h2 data-i18n="owner-job-name" class="text-uppercase font-italic">Full stack developer</h2>
+                    <fa-icon [icon]="faLaptopCode" class="ms-2"></fa-icon>
+                </div>
+                <app-left-title dataI18n="contact-title" text="Contact"></app-left-title>
+                <div id="contact">
+                    <app-contact-item
+                        [icon]="faEnvelope"
+                        dataI18n="contact-email"
+                        text="Send me a mail"
+                        [isHiddenEmail]="true"
+                        hrefString="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#101;&#98;&#45;&#112;&#111;&#101;&#116;%74%65%72%40%67%6D%78%2E%64%65"
+                    ></app-contact-item>
+                    <app-contact-item
+                        [icon]="faGithub"
+                        dataI18n="contact-github"
+                        text="My GitHub page"
+                        hrefString="https://github.com/poetter-sebastian"
+                    ></app-contact-item>
+                    <app-contact-item
+                        [icon]="faLinkedinIn"
+                        dataI18n="contact-linkedin"
+                        text="Find me on LinkedIn"
+                        hrefString="https://www.linkedin.com/in/sebastian-p-17a94721b"
+                    ></app-contact-item>
+                    <app-contact-item
+                        [icon]="faMastodon"
+                        dataI18n="contact-mastodon"
+                        text="Tell me a joke on Mastodon"
+                        hrefString="https://social.tchncs.de/@Seb"
+                        relString="me"
+                    ></app-contact-item>
+                    <app-contact-item
+                        [icon]="faItchIo"
+                        dataI18n="contact-itchio"
+                        text="Look on my Itch.io page"
+                        hrefString="https://poetter-sebastian.itch.io/"
+                    ></app-contact-item>
+                    <app-contact-item
+                        [icon]="faGlobe"
+                        text="Poetter-Sebastian.Github.io"
+                        hrefString="https://poetter-sebastian.github.io/"
+                    ></app-contact-item>
+                </div>
+                <app-left-title dataI18n="skills-title" text="Skills"></app-left-title>
+                <div id="skills" class="row">
+                    <app-skill-container
+                        [icon]=faKeyboard
+                        iconClass="me-1"
+                        text='<a href="https://learn.microsoft.com/cpp" target="_blank" rel="noreferrer">C++ (C)</a>, <a href="https://learn.microsoft.com/dotnet/csharp" target="_blank" rel="noreferrer">C# (.NETcore)</a>, <a href="https://openjdk.org" target="_blank" rel="noreferrer">Java 20</a>, <a href="https://www.python.org" target="_blank" rel="noreferrer">Python 3</a>, <a href="https://www.haskell.org" target="_blank" rel="noreferrer">Haskell</a>, <a href="https://go.dev" target="_blank" rel="noreferrer">Go 1.2</a>, <a href="https://www.php.net" target="_blank" rel="noreferrer">PHP 8.3</a>, SQL, NoSQL, <a href="https://www.rust-lang.org" target="_blank" rel="noreferrer">Rust</a>'
+                    ></app-skill-container>
+                    <app-skill-container
+                        [icon]=faFirefoxBrowser
+                        text='HTML 5, CSS 3, <a href="https://sass-lang.com" target="_blank" rel="noreferrer">SASS</a>, <a href="https://www.typescriptlang.org" target="_blank" rel="noreferrer">Typescript</a>, <a href="https://jquery.com" target="_blank" rel="noreferrer">Jquery 3.6</a>, <a href="https://getbootstrap.com" target="_blank" rel="noreferrer">Bootstrap 5</a>, <a href="https://webpack.js.org" target="_blank" rel="noreferrer">Webpack</a>, <a href="https://developer.mozilla.org/en-US/docs/Glossary/SEO" target="_blank" rel="noreferrer">SEO</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/Performance" target="_blank" rel="noreferrer">WPO</a>'
+                    ></app-skill-container>
+                    <app-skill-container
+                        [icon]=faPaintBrush
+                        iconClass='me-1'
+                        text='<span data-i18n="skills-gfx">Image editing e.g. with</span> <a href="https://www.gimp.org" target="_blank" rel="noreferrer">GIMP</a>, <a href="https://inkscape.org" target="_blank" rel="noreferrer">Inkscape</a>, <a href="https://www.adobe.com/products/photoshop.html" target="_blank" rel="noreferrer">Photoshop</a>'
+                    ></app-skill-container>
+                    <app-skill-container
+                        [icon]=faFilm
+                        iconClass='me-1'
+                        text='<span data-i18n="skills-3d">Animations e.g. with</span> <a href="https://www.adobe.com/products/aftereffects.html" target="_blank" rel="noreferrer">After Effects</a>, <a href="https://www.vegascreativesoftware.com/int/vegas-pro" target="_blank" rel="noreferrer">Vegas Pro</a>, <a href="https://www.blender.org" target="_blank" rel="noreferrer">Blender</a>, <a href="https://www.blackmagicdesign.com/products/davinciresolve" target="_blank" rel="noreferrer">Davinci Resolve</a>'
+                    ></app-skill-container>
+                    <app-skill-container
+                        [icon]=faFileAlt
+                        iconClass='me-1'
+                        text='<span data-i18n="skills-web">Knowledge of </span><a href="https://wordpress.com" target="_blank" rel="noreferrer">WordPress</a> (<a href="https://wpbakery.com" target="_blank" rel="noreferrer">WP-Bakery</a>, <a href="https://elementor.com" target="_blank" rel="noreferrer">Elementor</a>), <a href="https://cakephp.org" target="_blank" rel="noreferrer">Cakephp 5</a>, <a href="https://nodejs.org" target="_blank" rel="noreferrer">Node.js</a>, <a href="https://angular.io" target="_blank" rel="noreferrer">Angular</a>, <a href="https://vite.dev" target="_blank" rel="noreferrer">Vite</a>, <a href="https://vuejs.org/" target="_blank" rel="noreferrer">Vue</a>, <a href="https://nextjs.org/" target="_blank" rel="noreferrer">NextJS</a>'
+                    ></app-skill-container>
+                    <app-skill-container
+                        [icon]=faUsers
+                        iconClass='me-1'
+                        text='<span data-i18n="skills-team">Team leading and project organisation</span>, <a href="https://www.scrum.org/resources/what-is-scrum" target="_blank" rel="noreferrer">SCRUM</a>, Kanban, Requirement Engineering'
+                    ></app-skill-container>
+                    <app-skill-container
+                        [icon]=faMicrochip
+                        iconClass='me-1'
+                        text='<span data-i18n="skills-circuit">Knowledge of electrical engineering e.g. with <a href="https://www.arduino.cc" target="_blank" rel="noreferrer">Arduino</a> and <a href="https://www.raspberrypi.org" target="_blank" rel="noreferrer">Raspberry Pi</a></span>'
+                    ></app-skill-container>
+                    <app-skill-container
+                        [icon]=faUbuntu
+                        text='Windows 7-11, Linux (<a href="https://linuxmint.com" target="_blank" rel="noreferrer">Linuxmint</a>, <a href="https://ubuntu.com/"  target="_blank" rel="noreferrer">Ubuntu</a>, <a href="https://www.raspberrypi.com/software/" target="_blank" rel="noreferrer">Raspberry Pi OS</a>)'
+                    ></app-skill-container>
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-6">
+                        <span>
+                            <i class="ng-fa-icon me-4">
+                                <svg class="svg-inline--fa" role="img" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="server" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path d="m0 0s-.325 1.994-.515 1.976l-36.182-3.491c-2.879-.278-5.115-2.574-5.317-5.459l-.994-14.247L-71-23.218l-1.904 12.912c-.424 2.872-2.932 5.037-5.835 5.037h-38.188c-2.902.0-5.41-2.165-5.834-5.037l-1.905-12.912-27.992 1.997-.994 14.247c-.202 2.886-2.438 5.182-5.317 5.46l-36.2 3.49c-.187.018-.324-1.978-.511-1.978l-.049-7.83 30.658-4.944 1.004-14.374c.203-2.91 2.551-5.263 5.463-5.472l38.551-2.75c.146-.01.29-.016.434-.016 2.897.0 5.401 2.166 5.825 5.038l1.959 13.286h28.005l1.959-13.286c.423-2.871 2.93-5.037 5.831-5.037.142.0.284.005.423.015l38.556 2.75c2.911.209 5.26 2.562 5.463 5.472l1.003 14.374 30.645 4.966z" fill="#fff" transform="matrix(4.162611 0 0 -4.162611 919.24059 673.152141)"/><path d="m0 0v-47.514-6.035-5.492c.108-.001.216-.005.323-.015l36.196-3.49c1.896-.183 3.382-1.709 3.514-3.609l1.116-15.978 31.574-2.253 2.175 14.747c.282 1.912 1.922 3.329 3.856 3.329h38.188c1.933.0 3.573-1.417 3.855-3.329l2.175-14.747 31.575 2.253 1.115 15.978c.133 1.9 1.618 3.425 3.514 3.609l36.182 3.49c.107.01.214.014.322.015v4.711l.015.005v54.325c5.09692 6.4164715 9.92323 13.494208 13.621 19.449-5.651 9.62-12.575 18.217-19.976 26.182-6.864-3.455-13.531-7.369-19.828-11.534-3.151 3.132-6.7 5.694-10.186 8.372-3.425 2.751-7.285 4.768-10.946 7.118 1.09 8.117 1.629 16.108 1.846 24.448-9.446 4.754-19.519 7.906-29.708 10.17-4.068-6.837-7.788-14.241-11.028-21.479-3.842.642-7.702.88-11.567.926v.006c-.027.0-.052-.006-.075-.006-.024.0-.049.006-.073.006v-.006c-3.872-.046-7.729-.284-11.572-.926-3.238 7.238-6.956 14.642-11.03 21.479-10.184-2.264-20.258-5.416-29.703-10.17.216-8.34.755-16.331 1.848-24.448-3.668-2.35-7.523-4.367-10.949-7.118-3.481-2.678-7.036-5.24-10.188-8.372-6.297 4.165-12.962 8.079-19.828 11.534-7.401-7.965-14.321-16.562-19.974-26.182 4.4426579-6.973692 9.2079702-13.9828876 13.621-19.449z" fill="#478cbf" transform="matrix(4.162611 0 0 -4.162611 104.69892 427.387251)"/><path d="m0 0-1.121-16.063c-.135-1.936-1.675-3.477-3.611-3.616l-38.555-2.751c-.094-.007-.188-.01-.281-.01-1.916.0-3.569 1.406-3.852 3.33l-2.211 14.994H-81.09l-2.211-14.994c-.297-2.018-2.101-3.469-4.133-3.32l-38.555 2.751c-1.936.139-3.476 1.68-3.611 3.616L-130.721.0l-32.547 3.138c.015-3.498.06-7.33.06-8.093.0-34.374 43.605-50.896 97.781-51.086h.066.067c54.176.19 97.766 16.712 97.766 51.086.0.777.047 4.593.063 8.093z" fill="#478cbf" transform="matrix(4.162611 0 0 -4.162611 784.07144 718.723121)"/><path d="m0 0c0-12.052-9.765-21.815-21.813-21.815-12.042.0-21.81 9.763-21.81 21.815.0 12.044 9.768 21.802 21.81 21.802C-9.765 21.802.0 12.044.0.0" fill="#fff" transform="matrix(4.162611 0 0 -4.162611 389.21484 527.151321)"/><path d="m0 0c0-7.994-6.479-14.473-14.479-14.473-7.996.0-14.479 6.479-14.479 14.473s6.483 14.479 14.479 14.479C-6.479 14.479.0 7.994.0.0" fill="#414042" transform="matrix(4.162611 0 0 -4.162611 367.36686 532.537071)"/><path d="m0 0c-3.878.0-7.021 2.858-7.021 6.381v20.081c0 3.52 3.143 6.381 7.021 6.381s7.028-2.861 7.028-6.381V6.381c0-3.523-3.15-6.381-7.028-6.381" fill="#fff" transform="matrix(4.162611 0 0 -4.162611 511.99336 626.219821)"/><path d="m0 0c0-12.052 9.765-21.815 21.815-21.815 12.041.0 21.808 9.763 21.808 21.815.0 12.044-9.767 21.802-21.808 21.802-12.05.0-21.815-9.758-21.815-21.802" fill="#fff" transform="matrix(4.162611 0 0 -4.162611 634.78706 527.151321)"/><path d="m0 0c0-7.994 6.477-14.473 14.471-14.473C22.473-14.473 28.95-7.994 28.95.0s-6.477 14.479-14.479 14.479C6.477 14.479.0 7.994.0.0" fill="#414042" transform="matrix(4.162611 0 0 -4.162611 656.64056 532.537071)"/>
+                                </svg>
+                            </i>
+                             <a href="https://godotengine.org" target="_blank" rel="noreferrer">Godot-Engine 4.4</a>, <a href="https://unity.com" target="_blank" rel="noreferrer">Unity 6</a>, <a href="https://www.unrealengine.com" target="_blank" rel="noreferrer">Unreal-Engine 5</a>
+                        </span>
+                    </div>
+                    <app-skill-container
+                        [icon]=faUsersCog
+                        iconClass='me-1'
+                        text='<a href="https://git-scm.com" target="_blank" rel="noreferrer">Git</a>, <a href="https://www.atlassian.com/software/jira" target="_blank" rel="noreferrer">Jira</a>, <a href="https://nvie.com/posts/a-successful-git-branching-model" target="_blank" rel="noreferrer">Git-Flow</a>, <a href="https://docs.gitlab.com/ee/topics/gitlab_flow.html" target="_blank" rel="noreferrer">Gitlab-Flow</a>, <a href="https://www.jetbrains.com/youtrack" target="_blank" rel="noreferrer">YouTrack</a>, <a href="https://trello.com/" target="_blank" rel="noreferrer">Trello</a>'
+                    ></app-skill-container>
+                    <app-skill-container
+                        [icon]=faServer
+                        iconClass='me-1'
+                        text='<a href="https://www.docker.com" target="_blank" rel="noreferrer">Docker</a>, <a href="https://www.portainer.io" target="_blank" rel="noreferrer">Portainer</a>, <a href="https://kubernetes.io" target="_blank" rel="noreferrer">Kubernetes</a>, <a href="https://docs.github.com/en/actions" target="_blank" rel="noreferrer">Github CI/CD - Actions</a>, <a href="https://docs.gitlab.com/ee/ci/" target="_blank" rel="noreferrer">Gitlab CI/CD</a>'
+                    ></app-skill-container>
+                    <app-skill-container
+                        [icon]=faProjectDiagram
+                        iconClass='me-1'
+                        text='Machine learning, Fine-Tuning, Prompt Engineering, Vector based prompt enhancing, <a href="https://pytorch.org" target="_blank" rel="noreferrer">Pytorch</a>, <a href="https://learn.microsoft.com/dotnet/machine-learning/" target="_blank" rel="noreferrer">ML.NET</a>, <a href="https://www.langchain.com/" target="_blank" rel="noreferrer">LangChain</a>,  <a href="https://jupyter.org/" target="_blank" rel="noreferrer">Jupyter</a>'
+                    ></app-skill-container>
+                    <app-skill-container
+                        [icon]=faChartDiagram
+                        iconClass='me-1'
+                        text='<a href="https://github.com/ultralytics/ultralytics" target="_blank" rel="noreferrer">YoloV11</a>, <a href="https://stablediffusionweb.com/StableDiffusionXL" target="_blank" rel="noreferrer">Stable Diffusion</a>, <a href="https://mistral.ai/" target="_blank" rel="noreferrer">Mistral</a>, <a href="https://www.deepseek.com/" target="_blank" rel="noreferrer">DeepSeek</a>, <a href="https://www.sbert.net/" target="_blank" rel="noreferrer">all-MiniLM-L6-v2</a>, <a href="https://github.com/openai/whisper" target="_blank" rel="noreferrer">Whisper</a>, <a href="https://ai.meta.com/research/no-language-left-behind/?_fb_noscript=1" target="_blank" rel="noreferrer">nllb-200</a>, <a href="https://github.com/facebookresearch/fairseq/tree/main/examples/m2m_100" target="_blank" rel="noreferrer">M2M100</a>, ...'
+                    ></app-skill-container>
+                </div>
+                <div class="">
+                    <app-left-title dataI18n="projects-title" text="Projects"></app-left-title>
+                    <div id="projects">
+                        <app-project-item
+                            [icon]="faFan"
+                            dataI18n="project-rasp-name"
+                            text="Raspberry Pi fan control"
+                            href="https://github.com/poetter-sebastian/pi-fan-controll"
+                        ></app-project-item>
+                        <app-project-item
+                            [icon]="faMobileAlt"
+                            dataI18n="project-note-name"
+                            text="Notes App (PWA)"
+                            href="https://github.com/poetter-sebastian/Notes"
+                        ></app-project-item>
+                        <app-project-item
+                            [icon]="faListOl"
+                            dataI18n="project-priority-name"
+                            text="Concurrent priority list"
+                            href="https://github.com/poetter-sebastian/concurrent-priority-list"
+                        ></app-project-item>
+                        <app-project-item
+                            [icon]="faCloudSun"
+                            dataI18n="project-weather-name"
+                            text="Wetterstation (IoT)"
+                            href="https://github.com/poetter-sebastian/solar-weatherstation"
+                        ></app-project-item>
+                        <app-project-item
+                            [icon]="faRobot"
+                            dataI18n="project-yolo-name"
+                            text="YoloV5 Neural network"
+                            href="https://github.com/poetter-sebastian/TeamFortress2-YoloV5"
+                        ></app-project-item>
+                        <app-project-item
+                            [icon]="faSatellite"
+                            dataI18n="project-sat-name"
+                            text="Satellite movement visualisation"
+                            href="https://github.com/poetter-sebastian/WorldSatelite"
+                        ></app-project-item>
+                        <app-project-item
+                            [icon]="faCalendarAlt"
+                            dataI18n="project-time-name"
+                            text="Timetable creator"
+                            href="https://gitlab.imn.htwk-leipzig.de/spoetter/bachelor-task"
+                        ></app-project-item>
+                        <app-project-item
+                            [icon]="faLeaf"
+                            dataI18n="project-simulation-name"
+                            text="Simulation of an ecosystem"
+                            href="https://github.com/poetter-sebastian/Simulation"
+                        ></app-project-item>
+                        <app-project-item
+                            [icon]="faKey"
+                            text="OTP Authenticator"
+                            href="https://github.com/poetter-sebastian/SimpleThenticator"
+                        ></app-project-item>
+                    </div>
+                </div>
+                <app-left-title text="Services"></app-left-title>
+                <div id="services">
+                    <app-service-item
+                        [icon]="faPager"
+                        dataI18n="services-web"
+                        text="SEO and responsive optimized web-development"
+                    ></app-service-item>
+                    <app-service-item
+                        [icon]="faServer"
+                        dataI18n="services-dev"
+                        text="Server and client development"
+                    ></app-service-item>
+                    <app-service-item
+                        [icon]="faUserFriends"
+                        dataI18n="services-team"
+                        text="Team leading and team analytics"
+                    ></app-service-item>
+                    <app-service-item
+                        [icon]="faIndustry"
+                        dataI18n="services-digi"
+                        text="Digitization of your business processes"
+                    ></app-service-item>
+                </div>
+                <app-left-title dataI18n="hobbies-title" text="Hobbies"></app-left-title>
+                <div class="ms-sm-3 text-start mb-4">
+                    <div class="row g-0 hobbies">
+                        <app-hobby-item
+                            class="col-md-6 col-sm-4 col-12"
+                            [icon]="faTv"
+                            iconClass="p-3"
+                            dataI18n="hobbies-programming"
+                            text="Programming"
+                        ></app-hobby-item>
+                        <app-hobby-item
+                            class="col-md-6 col-sm-4 col-12"
+                            [icon]="faSwimmer"
+                            iconClass="p-3"
+                            dataI18n="hobbies-swimming"
+                            text="Swimming"
+                        ></app-hobby-item>
+
+                        <app-hobby-item
+                            class="col-md-6 col-sm-4 col-12"
+                            [icon]="faHiking"
+                            iconClass="p-3-5"
+                            dataI18n="hobbies-hiking"
+                            text="Hiking"
+                        ></app-hobby-item>
+
+                        <app-hobby-item
+                            [icon]="faUnity"
+                            class="col-md-6 col-sm-4 col-12"
+                            iconClass="p-3-5"
+                            dataI18n="hobbies-game"
+                            text="Game Developing"
+                        ></app-hobby-item>
+
+                        <app-hobby-item
+                            [icon]="faSeedling"
+                            class="col-md-6 col-sm-4 col-12"
+                            iconClass="p-3-5"
+                            dataI18n="hobbies-planting"
+                            text="Gardening"
+                        ></app-hobby-item>
+
+                        <app-hobby-item
+                            [icon]="faRaspberryPi"
+                            class="col-md-6 col-sm-4 col-12"
+                            iconClass="p-3-5"
+                            dataI18n="hobbies-circuit"
+                            text="IoT tinkering"
+                        ></app-hobby-item>
+
+                        <app-hobby-item
+                            [icon]="faGamepad"
+                            class="col-md-6 col-sm-4 col-12"
+                            iconClass="p-3-4"
+                            dataI18n="hobbies-gaming"
+                            text="Gaming"
+                        ></app-hobby-item>
+
+                        <app-hobby-item
+                            [icon]="faCube"
+                            class="col-md-6 col-sm-4 col-12"
+                            iconClass="p-3-5"
+                            dataI18n="hobbies-modeling"
+                            text="3D Modeling"
+                        ></app-hobby-item>
+                    </div>
+                </div>
+                <app-footer [isDesktop]="true"></app-footer>
+            </div>
+        </div>
+        <div id="rightSide" class="col-lg-8 secondary-bg ps-lg-3 p-0">
+            <section class="mt-md-3 mt-sm-0">
+                <app-right-title [icon]="faUser" dataI18n="profile-title" text="Profile"></app-right-title>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xxl-10 col-12">
+                            <p data-i18n="profile-begin">
+                                My name is Sebastian Pötter. I got my master's degree of computer science in 2023 and looking for new opportunities to work on or get involved in projects.
+                                <br><br>
+                                With over a decade of expertise in web and software development, I offer comprehensive knowledge and hands-on experience in crafting robust,
+                                user-friendly solutions or provide consulting business partners on their planned and ongoing projects.
+                                As a seasoned full-stack developer, I specialise in both client and server-side technologies, ensuring seamless and dynamic web experiences.
+                            </p>
+                            <p data-i18n="profile-other">
+                                I take great pride in maintaining transparent and professional communication with business partners and clients.
+                                I foster a collaborative atmosphere to ensure project goals are aligned and met efficiently.
+                                My ability to work cooperatively with team members and stakeholders is a cornerstone of my approach, facilitating a transparent and
+                                productive workflow. With the theoretical knowledge gained at university and practical applied skills gained at my freelance work,
+                                I'm able to familiarize myself quickly with new or existing projects.
+                                <br><br>
+                                I am dedicated to providing high-quality solutions and continuously developing my skills to ensure I remain up-to-date with the latest
+                                industry trends and technologies. My approach is collaborative and detail-oriented, ensuring every project meets the highest standards of excellence.
+                                However, computers and information technology are not my only interest, other areas such as biology, chemistry, physics, and electrical
+                                engineering are fascinating too.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <app-right-title [icon]="faGraduationCap" dataI18n="education-title" text="Education"></app-right-title>
+                <div class="container">
+                    <ol class="list-unstyled timeline">
+                        <li>
+                            <h2><span data-i18n="education-secondary-title">Secondary school (Realschule)</span> - 2014</h2>
+                            <p data-i18n="education-secondary-text">
+                                I graduated from secondary school in 2014.
+                                In Germany the Secondary school is called Realschule and leads to either
+                                apprenticeships or, in my case, to higher education comparable to high schools.
+                                Here I started getting interested in Computer and started building simple websites
+                                as a hobby.
+                            </p>
+                        </li>
+                        <li>
+                            <h2><span data-i18n="education-high-title">High School (Abitur)</span> - 2017</h2>
+                            <p data-i18n="education-high-text">
+                                I made my higher education entrance qualification with focus on computer science in 2017.
+                                During this time I worked on some simple projects and made free website designs.
+                                Here I started to work with the game-development engine Unity and made some smaller 3D-applications.
+                            </p>
+                        </li>
+                        <li>
+                            <h2><span data-i18n="education-bachelor-title">University: Bachelor of Science</span> - 2020</h2>
+                            <p data-i18n="education-bachelor-text">
+                                I started studying informatics with a focus on software technology and programming techniques in 2017.
+                                I got way better at programming, algorithm engineering and software planning.
+                                After the course 'principles of mobile robotics' I started experimenting with arduino
+                                and raspberry pi boards to create hardware like a weather-station for my home-sever.
+                            </p>
+                            <p class="mb-0">
+                                <span data-i18n="education-bachelor-subjects">Some of my subjects were</span>:
+                            </p>
+                            <ul class="lul">
+                                <li>
+                                    <fa-icon [icon]="faCircle"></fa-icon> <span data-i18n="education-bachelor-subject-ads">Algorithms and data structures</span>
+                                </li>
+                                <li>
+                                    <fa-icon [icon]="faCircle"></fa-icon> <span data-i18n="education-bachelor-math">Mathematics for computer scientists</span>
+                                </li>
+                                <li>
+                                    <fa-icon [icon]="faCircle"></fa-icon> <span data-i18n="education-bachelor-programming">Application-/system-/parallel oriented programming</span>
+                                </li>
+                                <li>
+                                    <fa-icon [icon]="faCircle"></fa-icon> <span data-i18n="education-bachelor-fp">Functional programming</span>
+                                </li>
+                                <li>
+                                    <fa-icon [icon]="faCircle"></fa-icon> <span data-i18n="education-bachelor-afl">Automata and formal languages</span>
+                                </li>
+                                <li>
+                                    <fa-icon [icon]="faCircle"></fa-icon> <span data-i18n="education-bachelor-ai">Principles of artificial Intelligence</span>
+                                </li>
+                                <li>
+                                    <fa-icon [icon]="faCircle"></fa-icon> <span data-i18n="education-bachelor-mr">Principles of mobile robotics</span>
+                                </li>
+                                <li>
+                                    <fa-icon [icon]="faCircle"></fa-icon> <span data-i18n="education-bachelor-th">My Bachelor thesis: <a href="https://nbn-resolving.org/urn:nbn:de:bsz:l189-qucosa2-753784" rel="noreferrer" target="_blank">Algorithmically Supported Scheduling</a></span></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h2 class="mt-c" data-i18n="education-master-title">University: Master of Science - 2023</h2>
+                            <p data-i18n="education-master-text">
+                                I want to improve the skills I have learned and want to learn more, especially in areas of team management.
+                                So I thought that the master's degree is the best way for it.
+                            </p>
+                            <p class="mb-0">
+                                <span data-i18n="education-master-subjects">Some of my chosen subjects were</span>:
+                            </p>
+                            <ul class="lur">
+                                <li><fa-icon [icon]="faCircle" class="t-list-l"></fa-icon> <span data-i18n="education-master-3d">3D Capture, Design and Dynamics</span> <fa-icon [icon]="faCircle" class="t-list-r"></fa-icon></li>
+                                <li><fa-icon [icon]="faCircle" class="t-list-l"></fa-icon> <span data-i18n="education-master-alg">Algorithm Engineering</span> <fa-icon [icon]="faCircle" class="t-list-r"></fa-icon></li>
+                                <li><fa-icon [icon]="faCircle" class="t-list-l"></fa-icon> <span data-i18n="education-master-prog">Progressive Web Apps</span> <fa-icon [icon]="faCircle" class="t-list-r"></fa-icon></li>
+                                <li><fa-icon [icon]="faCircle" class="t-list-l"></fa-icon> <span data-i18n="education-master-mr">Mixed Reality & AI</span> <fa-icon [icon]="faCircle" class="t-list-r"></fa-icon></li>
+                                <li><fa-icon [icon]="faCircle" class="t-list-l"></fa-icon> <span data-i18n="education-master-visu">Visualization in NaturalSciences and Engineering</span> <fa-icon [icon]="faCircle" class="t-list-r"></fa-icon></li>
+                                <li><fa-icon [icon]="faCircle" class="t-list-l"></fa-icon> <span data-i18n="education-master-ivra">Innovative computer architectures</span> <fa-icon [icon]="faCircle" class="t-list-r"></fa-icon></li>
+                                <li><fa-icon [icon]="faCircle" class="t-list-l"></fa-icon> <span data-i18n="education-master-cry">Cryptography</span> <fa-icon [icon]="faCircle" class="t-list-r"></fa-icon></li>
+                                <li><fa-icon [icon]="faCircle" class="t-list-l"></fa-icon> <span data-i18n="education-master-oagr">Object and gesture recognition</span> <fa-icon [icon]="faCircle" class="t-list-r"></fa-icon></li>
+                                <li><fa-icon [icon]="faCircle" class="t-list-l"></fa-icon> <span data-i18n="education-master-team">Team management internship (SCRUM-team leader for an eight-person team)</span> <fa-icon [icon]="faCircle" class="t-list-r"></fa-icon></li>
+                                <li><fa-icon [icon]="faCircle" class="t-list-l"></fa-icon> <span data-i18n="education-master-th">My master thesis: <a href="https://github.com/poetter-sebastian/Simulation" rel="noreferrer" target="_blank">Development of an environmental simulation in Unity</a></span> <fa-icon [icon]="faCircle" class="t-list-r"></fa-icon></li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+            <section>
+                <app-right-title [icon]="faAddressBook" dataI18n="commissions-title" text="Who employed/commissioned me"></app-right-title>
+                <div id="commissions" class="row me-0 px-lg-0 px-2">
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="card">
+                            <a href="https://www.saxonq.com/" title="SaxonQ GmbH" target="_blank" rel="noreferrer">
+                                <img class="card-img-top" src="/img/logo/logo-saxonq.webp" alt="SaxonQ GmbH logo" loading="lazy">
+                                <div class="card-body">
+                                    <h2 class="card-title text-center font-weight-bold font-smaller">SaxonQ</h2>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="card">
+                            <a href="https://www.mindport.co/" title="MindPort GmbH" target="_blank" rel="noreferrer">
+                                <img class="card-img-top" src="/img/logo/logo-mindport.webp" alt="MindPort GmbH logo" loading="lazy">
+                                <div class="card-body">
+                                    <h2 class="card-title text-center font-weight-bold font-smaller">MindPort</h2>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="card">
+                            <a href="https://www.hotwirevr.com/" title="HotWire VR" target="_blank" rel="noreferrer">
+                                <img class="card-img-top" src="/img/logo/logo-hotwire.webp" alt="HotWire VR logo" loading="lazy">
+                                <div class="card-body">
+                                    <h2 class="card-title text-center font-weight-bold font-smaller">HotWire VR</h2>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="card">
+                            <a href="https://www.profesco.de" title="Profesco GmbH" target="_blank" rel="noreferrer">
+                                <img class="card-img-top" src="/img/logo/logo-profesco.webp" alt="Profesco GmbH logo" loading="lazy">
+                                <div class="card-body">
+                                    <h2 class="card-title text-center font-weight-bold font-smaller">Profesco</h2>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="card">
+                            <a href="https://www.LeFx.de" title="LeFx GmbH" target="_blank" rel="noreferrer">
+                                <img class="card-img-top" src="/img/logo/logo-lefx.webp" alt="LeFx GmbH logo" loading="lazy">
+                                <div class="card-body">
+                                    <h2 class="card-title text-center font-weight-bold font-smaller">LeFx</h2>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="card">
+                            <a href="https://ovrlab.de/" title="Ovrlab GmbH" target="_blank" rel="noreferrer">
+                                <img class="card-img-top" src="/img/logo/logo-ovrlab.webp" alt="Ovrlab GmbH logo" loading="lazy">
+                                <div class="card-body">
+                                    <h2 class="card-title text-center font-weight-bold font-smaller">OVRLAB</h2>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="card">
+                            <a href="https://vrbits.de/" title="VR bits GmbH" target="_blank" rel="noreferrer">
+                                <img class="card-img-top" src="/img/logo/logo-vrbits.webp" alt="VR bits GmbH logo" loading="lazy">
+                                <div class="card-body">
+                                    <h2 class="card-title text-center font-weight-bold font-smaller">VR Bits</h2>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="card">
+                            <a href="https://www.games-innovation-award-saxony.de/" title="Games innovation Award Saxony EV" target="_blank" rel="noreferrer">
+                                <img class="card-img-top" src="/img/logo/logo-gias.webp" alt="Games innovation Award Saxony EV logo" loading="lazy">
+                                <div class="card-body">
+                                    <h2 class="card-title text-center font-weight-bold font-smaller">GIAS</h2>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="card">
+                            <a href="https://www.vintagestory.at/" title="Anego Studios SIA" target="_blank" rel="noreferrer">
+                                <img class="card-img-top " src="/img/logo/logo-anego-studios.webp" alt="Anego Studios SIA logo" loading="lazy">
+                                <div class="card-body">
+                                    <h2 class="card-title text-center font-weight-bold font-smaller">Anego Studios</h2>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="card">
+                            <a href="https://estudios.ch/" title="Estudios AG" target="_blank" rel="noreferrer">
+                                <img class="card-img-top" src="/img/logo/logo-estudios.webp" alt="Estudios AG logo" loading="lazy">
+                                <div class="card-body">
+                                    <h2 class="card-title text-center font-weight-bold font-smaller">E-STUDIOS</h2>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="card">
+                            <a href="https://www.aktiv-oase.de/" title="Aktiv oase GmbH" target="_blank" rel="noreferrer">
+                                <img class="card-img-top" src="/img/logo/logo-aktivoase.webp" alt="Aktiv oase GmbH logo" loading="lazy">
+                                <div class="card-body">
+                                    <h2 class="card-title text-center font-weight-bold font-smaller">Aktiv Oase</h2>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="card">
+                            <a href="https://www.adhoc-mn.de/" title="Ad hoc marketing network GmbH" target="_blank" rel="noreferrer">
+                                <img class="card-img-top" src="/img/logo/logo-adhoc.webp" alt="Ad hoc marketing network GmbH logo" loading="lazy">
+                                <div class="card-body">
+                                    <h2 class="card-title text-center font-weight-bold font-smaller">Ad hoc marketing network</h2>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="card">
+                            <a href="https://san-rosenau.de/Start.html" title="San Rosenau GmbH" target="_blank" rel="noreferrer">
+                                <img class="card-img-top" src="/img/logo/logo-rosenau.webp" alt="San Rosenau GmbH logo" loading="lazy">
+                                <div class="card-body">
+                                    <h2 class="card-title text-center font-weight-bold font-smaller">Sanitätshaus Rosenau</h2>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="card">
+                            <a href="https://www.velomotion.de/" title="Velomotion GmbH" target="_blank" rel="noreferrer">
+                                <img class="card-img-top" src="/img/logo/logo-velomotion.webp" alt="Velomotion GmbH logo" loading="lazy">
+                                <div class="card-body">
+                                    <h2 class="card-title text-center font-weight-bold font-smaller">Velomotion</h2>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <app-right-title [icon]="faProjectDiagram" dataI18n="customerprojects-title" text="Projects I am involved in"></app-right-title>
+                <div class="row me-0 px-lg-0 px-2">
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="card">
+                            <a href="https://voxreality.eu/aixtra/" title="AIxtra Open Call Project" target="_blank" rel="noreferrer">
+                                <img class="card-img-top" src="/img/logo/logo-voxreality.webp" alt="Vox reality logo" loading="lazy">
+                                <div class="card-body">
+                                    <h2 class="card-title text-center font-weight-bold font-smaller">AIxtra</h2>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="card">
+                            <a href="https://www.master-xr.eu/oc-project/reach/" title="Master XR Open Call 1" target="_blank" rel="noreferrer">
+                                <img class="card-img-top" src="/img/logo/logo-reach.webp" alt="Master XR" loading="lazy">
+                                <div class="card-body">
+                                    <h2 class="card-title text-center font-weight-bold font-smaller">Reach</h2>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="card">
+                            <a href="https://github.com/MindPort-GmbH/VR-Builder" title="VR-Builder" target="_blank" rel="noreferrer">
+                                <img class="card-img-top" src="/img/logo/logo-vrbuilder.webp" alt="VR-Builder logo" loading="lazy">
+                                <div class="card-body">
+                                    <h2 class="card-title text-center font-weight-bold font-smaller">VR-Builder</h2>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <app-right-title [icon]="faLaptopCode" dataI18n="experience-title" text='Experience (<span id="to-now">9</span> years)'></app-right-title>
+                <div class="ms-4 mt-md-0 mt-4">
+                    <ol class="line">
+                        <li data-i18n="experience-small-com">Multiple commissions of one-page-websites for smaller companies - 2014-2017</li>
+                        <li data-i18n="experience-landing-page">Commission of a landing-page for a company in Dresden - 2017</li>
+                        <li data-i18n="experience-profesco-1">Commission wordpress-website for the <a href="https://www.profesco.de" rel="noreferrer" target="_blank">Profesco GmbH</a> (creation and administration) - 2019-2023</li>
+                        <li data-i18n="experience-profesco-2">Service contract for a development of a company management system for the <a href="https://www.profesco.de" rel="noreferrer" target="_blank">Profesco GmbH</a> (project management and development) 2019-2023</li>
+                        <li data-i18n="experience-internship">Twelve weeks internship at <a href="https://www.profesco.de" rel="noreferrer" target="_blank">Profesco GmbH</a> in the IT department - 2020</li>
+                        <li data-i18n="experience-velomotion">Updated parts of <a href="https://www.velomotion.de/" rel="noreferrer" target="_blank">Velomotion GmbH</a> - 2020</li>
+                        <li data-i18n="experience-lefx">Reworked and updated the WordPress website of the company <a href="https://www.LeFx.de" rel="noreferrer" target="_blank">LeFx GmbH</a> - 2020-2021</li>
+                        <li data-i18n="experience-aktiv">Created a website for the company <a href="https://www.aktiv-oase.de/" rel="noreferrer" target="_blank">EB Gesundheitsstudio GmbH</a> - 2021</li>
+                        <li data-i18n="experience-sanit">Revised the homepage of <a href="https://san-rosenau.de/Start.html" rel="noreferrer" target="_blank">Sanitätshaus Rosenau GmbH</a> - 2021</li>
+                        <li data-i18n="experience-saxony">Commission of an award-page for <a href="https://www.games-innovation-award-saxony.de/" rel="noreferrer" target="_blank">Games innovation award saxony</a> - 2021</li>
+                        <li data-i18n="experience-team">Team management internship (SCRUM-team leader for an eight-person team) - 2021-2022</li>
+                        <li data-i18n="experience-ovrlab">Rework <a href="https://www.lefx.de/" rel="noreferrer" target="_blank">LeFx</a>, <a href="https://www.vrbits.de/" rel="noreferrer" target="_blank">VrBits</a> and <a href="https://www.Ovrlab.de/" rel="noreferrer" target="_blank">Ovrlab</a> - 2022</li>
+                        <li data-i18n="experience-up-lefx">Design upgrade of <a href="https://www.lefx.de/" rel="noreferrer" target="_blank">LeFx</a> - 2023</li>
+                        <li data-i18n="experience-hotwire">Created a one-page for the VR Game <a href="https://www.hotwirevr.com/" rel="noreferrer" target="_blank">HotWireVR</a> - 2024</li>
+                        <li data-i18n="experience-ul-gpm2">Visiting lecturer at business process management 2 (GPM2) for master of business informatics at <a href="https://www.uni-leipzig.de/" rel="noreferrer" target="_blank">University Leipzig</a> - 2024</li>
+                        <li data-i18n="experience-saxonq">Created a WordPress website with custom design for the company SaxonQ <a href="https://www.saxonq.com/" rel="noreferrer" target="_blank">SaxonQ GmbH</a> - 2024</li>
+                        <li data-i18n="experience-htwk-mmwp">Visiting lecturer at multimedia web development (MMWP) for bachelor of information technology at <a href="https://www.htwk-leipzig.de/" rel="noreferrer" target="_blank">HTWK</a> - 2024-2025</li>
+                        <li data-i18n="experience-mindport">Fixed-term contract to work on specific research projects at the VR startup <a href="https://www.mindport.co/" rel="noreferrer" target="_blank">Mindport GmbH</a> - 2024-2025</li>
+                    </ol>
+                </div>
+            </section>
+            <app-footer [isDesktop]="false"></app-footer>
+        </div>
+    </div>
+</div>
+<!-- slow css -->
+<link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/fontawesome.min.css"
+      integrity="sha512-lauN4D/0AgFUGvmMR+knQnbOADyD/XuQ8VF18I8Ll0+TLvsujshyxvU+uzogmQbSq6qJd5jnUdYtK8ShxXMlSg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/solid.css"
+      integrity="sha512-nnXdb3HF69w8voQ09SKw5op0vE2izLVpMWBJQK4+4rzM7QoP0ACQgnZci5HIg9jQWdgwrDw0QKtCX+w5xKy8eA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/brands.css"
+      integrity="sha512-5uHmUitBq3RTEHpeaxERv+9u9KNIywIeMatGMvNOTXLG3pzK2t5BfvHPlYWdO+jfZG6UJdjxngiJftm2Km6M4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- javascript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"
+        async defer></script>
+
+<!-- Modal -->
+<div id="privacyModal" class="modal fade" tabindex="-1" aria-labelledby="privacyModalLabel">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="privacyModalLabel">Privacy policy</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Sebastian Pötter <br>
+                    &#x44;&ouml;&#x72;&#x69;&#x6e;&#x67;&#x73;&#x74;&#x72;&#x61;&szlig;&#x65;&#x20;&#x31;&#x38; <br>
+                    &#x30;&#x34;&#x33;&#x35;&#x37;&#x20;&#x4c;&#x65;&#x69;&#x70;&#x7a;&#x69;&#x67;
+                </p>
+                <p>
+                    Profile image from <a target="_blank" rel="noreferrer" href="https://www.w3schools.com/bootstrap4/img_avatar1.webp">w3schools.com</a>
+                </p>
+                <p>We will only process personal data (usually referred to just as "data" below) to the extent necessary and to provide a functional and user-friendly website, including its contents, and the services offered there.</p>
+                <p>Per Art. 4 No. 1 of Regulation (EU) 2016/679, i.e. the General Data Protection Regulation (hereinafter referred to as the "GDPR"), "processing" refers to any operation or set of operations such as collection, recording, organization, structuring, storage, adaptation, alteration, retrieval, consultation, use, disclosure by transmission, dissemination, or otherwise making available, alignment, or combination, restriction, erasure, or destruction performed on personal data, whether by automated means or not.</p>
+                <p>The following privacy policy is intended to inform you in particular about the type, scope, purpose, duration, and legal basis for the processing of such data either under our own control or in conjunction with others. We also inform you below about the third-party components we use to optimize our website and improve the user experience which may result in said third parties also processing data they collect and control.</p>
+                <p>Our privacy policy is structured as follows:</p>
+                <p>I. Information about us as controllers of your data<br>II. The rights of users and data subjects<br>III. Information about the data processing</p>
+                <h3>I. The rights of users and data subjects</h3>
+                <p>With regard to the data processing to be described in more detail below, users and data subjects have the right</p>
+                <ul>
+                    <li>to confirmation of whether data concerning them is being processed, information about the data being processed, further information about the nature of the data processing, and copies of the data (cf. also Art. 15 GDPR);</li>
+                    <li>to correct or complete incorrect or incomplete data (cf. also Art. 16 GDPR);</li>
+                    <li>to the immediate deletion of data concerning them (cf. also Art. 17 DSGVO), or, alternatively, if further processing is necessary as stipulated in Art. 17 Para. 3 GDPR, to restrict said processing per Art. 18 GDPR;</li>
+                    <li>to receive copies of the data concerning them and/or provided by them and to have the same transmitted to other providers/controllers (cf. also Art. 20 GDPR);</li>
+                    <li>to file complaints with the supervisory authority if they believe that data concerning them is being processed by the controller in breach of data protection provisions (see also Art. 77 GDPR).</li>
+                </ul>
+                <p>In addition, the controller is obliged to inform all recipients to whom it discloses data of any such corrections, deletions, or restrictions placed on processing the same per Art. 16, 17 Para. 1, 18 GDPR. However, this obligation does not apply if such notification is impossible or involves a disproportionate effort. Nevertheless, users have a right to information about these recipients.</p>
+                <p><strong>Likewise, under Art. 21 GDPR, users and data subjects have the right to object to the controller's future processing of their data pursuant to Art. 6 Para. 1 lit. f) GDPR. In particular, an objection to data processing for the purpose of direct advertising is permissible.</strong></p>
+                <h3>II. Information about the data processing</h3>
+                <p>Your data processed when using our website will be deleted or blocked as soon as the purpose for its storage ceases to apply, provided the deletion of the same is not in breach of any statutory storage obligations or unless otherwise stipulated below.</p>
+
+                <h4>Cookies</h4>
+                <h5>a) Session cookies</h5>
+                <p>We use cookies on our website. Cookies are small text files or other storage technologies stored on your computer by your browser. These cookies process certain specific information about you, such as your browser, location data, or IP address. &nbsp;</p>
+                <p>This processing makes our website more user-friendly, efficient, and secure, allowing us, for example, to display our website in different languages or to offer a shopping cart function.</p>
+                <p>The legal basis for such processing is Art. 6 Para. 1 lit. b) GDPR, insofar as these cookies are used to collect data to initiate or process contractual relationships.</p>
+                <p>If the processing does not serve to initiate or process a contract, our legitimate interest lies in improving the functionality of our website. The legal basis is then Art. 6 Para. 1 lit. f) GDPR.</p>
+                <p>When you close your browser, these session cookies are deleted.</p>
+                <h5>b) Third-party cookies</h5>
+                <p>If necessary, our website may also use cookies from companies with whom we cooperate for the purpose of advertising, analyzing, or improving the features of our website.</p>
+                <p>Please refer to the following information for details, in particular for the legal basis and purpose of such third-party collection and processing of data collected through cookies.</p>
+                <h5>c) Disabling cookies</h5>
+                <p>You can refuse the use of cookies by changing the settings on your browser. Likewise, you can use the browser to delete cookies that have already been stored. However, the steps and measures required vary, depending on the browser you use. If you have any questions, please use the help function or consult the documentation for your browser or contact its maker for support. Browser settings cannot prevent so-called flash cookies from being set. Instead, you will need to change the setting of your Flash player. The steps and measures required for this also depend on the Flash player you are using. If you have any questions, please use the help function or consult the documentation for your Flash player or contact its maker for support.</p>
+                <p>If you prevent or restrict the installation of cookies, not all the functions on our site may be fully usable.</p>
+
+                <h4>Google-Maps</h4>
+                <p>Our website uses Google Maps to display our location and to provide directions. This is a service provided by Google Inc., 1600 Amphitheatre Parkway, Mountain View, CA 94043 (hereinafter: Google).</p>
+                <p>Through certification according to the EU-US Privacy Shield</p>
+                <p><a href="https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&amp;status=Active" target="_blank" rel="noreferrer noopener">https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&amp;status=Active</a></p>
+                <p>Google guarantees that it will follow the EU's data protection regulations when processing data in the United States.</p>
+                <p>To enable the display of certain fonts on our website, a connection to the Google server in the USA is established whenever our website is accessed.</p>
+                <p>If you access the Google Maps components integrated into our website, Google will store a cookie on your device via your browser. Your user settings and data are processed to display our location and create a route description. We cannot prevent Google from using servers in the USA.</p>
+                <p>The legal basis is Art. 6 Para. 1 lit. f) GDPR. Our legitimate interest lies in optimizing the functionality of our website.</p>
+                <p>By connecting to Google in this way, Google can determine from which website your request has been sent and to which IP address the directions are transmitted.</p>
+                <p>If you do not agree to this processing, you have the option of preventing the installation of cookies by making the appropriate settings in your browser. Further details can be found in the section about cookies above.</p>
+                <p>In addition, the use of Google Maps and the information obtained via Google Maps is governed by the <a href="https://www.google.de/accounts/TOS" target="_blank" rel="noreferrer noopener">Google Terms of Use</a> <a href="https://policies.google.com/terms?gl=DE&amp;hl=de" target="_blank" rel="noreferrer noopener">https://policies.google.com/terms?gl=DE&amp;hl=en</a> and the <a href="https://www.google.com/intl/de_de/help/terms_maps.html" target="_blank" rel="noreferrer noopener">Terms and Conditions for Google Maps</a> https://www.google.com/intl/de_de/help/terms_maps.html.</p>
+                <p>Google also offers further information at</p>
+                <p><a href="https://adssettings.google.com/authenticated" target="_blank" rel="noreferrer noopener">https://adssettings.google.com/authenticated</a></p>
+                <p><a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer noopener">https://policies.google.com/privacy</a></p>
+
+                <h4>Google Fonts</h4>
+                <p>Our website uses Google Fonts to display external fonts. This is a service provided by Google Inc., 1600 Amphitheatre Parkway, Mountain View, CA 94043 (hereinafter: Google).</p>
+                <p>Through certification according to the EU-US Privacy Shield</p>
+                <p><a href="https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&amp;status=Active" target="_blank" rel="noreferrer noopener">https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&amp;status=Active</a></p>
+                <p>Google guarantees that it will follow the EU's data protection regulations when processing data in the United States.</p>
+                <p>To enable the display of certain fonts on our website, a connection to the Google server in the USA is established whenever our website is accessed.</p>
+                <p>The legal basis is Art. 6 Para. 1 lit. f) GDPR. Our legitimate interest lies in the optimization and economic operation of our site.</p>
+                <p>When you access our site, a connection to Google is established from which Google can identify the site from which your request has been sent and to which IP address the fonts are being transmitted for display.</p>
+                <p>Google offers detailed information at</p>
+                <p><a href="https://adssettings.google.com/authenticated" target="_blank" rel="noreferrer noopener">https://adssettings.google.com/authenticated</a></p>
+                <p><a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer noopener">https://policies.google.com/privacy</a></p>
+                <p>in particular on options for preventing the use of data.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-i18n="modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="libraryModal" class="modal fade" tabindex="-1" aria-labelledby="library-label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="library-label">Used libraries</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h3>Bootstrap</h3>
+                <p><a href="https://getbootstrap.com" target="_blank" rel="noreferrer">Bootstrap 5.3</a> - The Bootstrap Authors released under <a href="https://github.com/twbs/bootstrap/blob/v4-dev/LICENSE" target="_blank" rel="noreferrer">MIT license</a>.</p>
+                <h3>Fontawesome 6</h3>
+                <p><a href="https://fontawesome.com/" target="_blank" rel="noreferrer">Fontawesome 6.7</a> - Fontawesome released under <a href="https://github.com/FortAwesome/Font-Awesome/blob/master/LICENSE.txt" target="_blank" rel="noreferrer">MIT license</a>.</p>
+                <h3>SpaceGrotesk-Regular</h3>
+                <p><a href="https://floriankarsten.github.io/space-grotesk/" target="_blank" rel="noreferrer">SpaceGrotesk-Regular</a> - released under <a href="https://github.com/floriankarsten/space-grotesk?tab=OFL-1.1-1-ov-file" target="_blank" rel="noreferrer">OFL-1.1</a></p>
+                <h3>OpenSans-Regular</h3>
+                <p><a href="https://github.com/googlefonts/opensans" target="_blank" rel="noreferrer">OpenSans-Regular</a> - released under <a href="https://github.com/googlefonts/opensans?tab=License-1-ov-file" target="_blank" rel="noreferrer">OFL-1.1</a></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-i18n="modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<router-outlet/>
