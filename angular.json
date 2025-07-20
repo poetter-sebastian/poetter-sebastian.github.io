@@ -19,7 +19,7 @@
                     "options": {
                         "baseHref": "/",
                         "outputPath": {
-                            "base": "dist/poetter-sebastian.github.io",
+                            "base": "dist",
                             "browser": ""
                         },
                         "index": "src/index.html",
@@ -102,6 +102,9 @@
                         ],
                         "scripts": []
                     }
+                },
+                "deploy": {
+                  "builder": "angular-cli-ghpages:deploy"
                 }
             }
         }
