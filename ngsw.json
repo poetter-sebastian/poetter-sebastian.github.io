@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1753003562457,
+  "timestamp": 1753008994936,
   "index": "/poetter-sebastian.github.io/index.csr.html",
   "assetGroups": [
     {
@@ -16,7 +16,7 @@
         "/poetter-sebastian.github.io/main-VHID3FSO.js",
         "/poetter-sebastian.github.io/manifest.webmanifest",
         "/poetter-sebastian.github.io/polyfills-B6TNHZQ6.js",
-        "/poetter-sebastian.github.io/styles-HEIJJSTI.css"
+        "/poetter-sebastian.github.io/styles-VELC2JLU.css"
       ],
       "patterns": []
     },
@@ -67,9 +67,7 @@
         "/poetter-sebastian.github.io/img/logo/logo-velomotion.webp",
         "/poetter-sebastian.github.io/img/logo/logo-voxreality.webp",
         "/poetter-sebastian.github.io/img/logo/logo-vrbits.webp",
-        "/poetter-sebastian.github.io/img/logo/logo-vrbuilder.webp",
-        "/poetter-sebastian.github.io/media/OpenSans-Regular-UHVE43X5.ttf",
-        "/poetter-sebastian.github.io/media/SpaceGrotesk-Regular-WFDHGPHV.ttf"
+        "/poetter-sebastian.github.io/img/logo/logo-vrbuilder.webp"
       ],
       "patterns": []
     }
@@ -116,14 +114,12 @@
     "/poetter-sebastian.github.io/img/logo/logo-voxreality.webp": "d7f99511d4265372958393f692b2f370bd02e2b0",
     "/poetter-sebastian.github.io/img/logo/logo-vrbits.webp": "6aa18cf982e65892afd81f12b2e4d442b59c13e7",
     "/poetter-sebastian.github.io/img/logo/logo-vrbuilder.webp": "cfb0dda51a15cbd7589bf961ad3e5cf4f05a31a2",
-    "/poetter-sebastian.github.io/index.csr.html": "659eb3ec9413773b04ea9e02e1ac27bbc3b51dd4",
-    "/poetter-sebastian.github.io/index.html": "d7afe38c7e4340a093b8ba922f06924967977a24",
+    "/poetter-sebastian.github.io/index.csr.html": "9919eede990b3eb7dd0bd7206477bad04838f486",
+    "/poetter-sebastian.github.io/index.html": "ed413687d6c7d3838c008aed661b0cae8ec1a702",
     "/poetter-sebastian.github.io/main-VHID3FSO.js": "c43a0f3f0bb8d784b963f63513c769ac5a53d245",
     "/poetter-sebastian.github.io/manifest.webmanifest": "47a9d5140c358aac9767bbca68f37c017b949fa9",
-    "/poetter-sebastian.github.io/media/OpenSans-Regular-UHVE43X5.ttf": "76ea5d4c70539ad9b0e7faf7e4fbe3bae8a961c7",
-    "/poetter-sebastian.github.io/media/SpaceGrotesk-Regular-WFDHGPHV.ttf": "d1666e3605d713802650ab26c0914238ca124274",
     "/poetter-sebastian.github.io/polyfills-B6TNHZQ6.js": "bf76ac291d7f51c1139b7edcf86b359a30c08c64",
-    "/poetter-sebastian.github.io/styles-HEIJJSTI.css": "b5473b6346abf951dde33f96362b7958c09e5120"
+    "/poetter-sebastian.github.io/styles-VELC2JLU.css": "5d1c8d0999d575d93c42ff4757a98cd772197b2e"
   },
   "navigationUrls": [
     {
