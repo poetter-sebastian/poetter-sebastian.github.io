@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
-    "deploy": "ng deploy --configuration production --base-href=/poetter-sebastian.github.io/",
+    "deploy": "ng build --configuration production --base-href=/poetter-sebastian.github.io/",
     "test": "ng test"
   },
   "private": true,
