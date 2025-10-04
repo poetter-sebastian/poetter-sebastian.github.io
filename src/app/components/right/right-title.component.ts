@@ -18,7 +18,7 @@ import {DomSanitizer, SafeHtml} from '@angular/platform-browser';
     `,
 })
 
-export class RightTitle {
+export class RightTitleComponent {
     @Input() icon!: IconDefinition;
     @Input() text!: string;
     @Input() dataI18n!: string;
