@@ -1,2 +1,8 @@
-:host > div
-    max-width: 1280px
+:host
+    @media (min-width: 1921px)
+        width: 50%
+        max-width: unset !important
+    > div
+        @media (max-width: 1920px)
+        max-width: 1280px
+

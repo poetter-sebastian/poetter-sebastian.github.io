@@ -13,6 +13,11 @@
 :host > div a:hover {
   color: var(--secondary-bg);
 }
+@media (min-width: 1921px) {
+  :host {
+    width: 50%;
+  }
+}
 
 .lang-select {
   width: 100%;
@@ -25,7 +30,7 @@
   height: 45px;
   width: 45px;
 }
-@media (max-width: 575px) {
+@media all and (max-width: 575px) {
   .lang-select img {
     height: 72px;
     width: 72px;
