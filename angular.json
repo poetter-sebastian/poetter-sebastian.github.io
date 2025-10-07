@@ -18,10 +18,7 @@
                     "builder": "@angular-devkit/build-angular:application",
                     "options": {
                         "baseHref": "/",
-                        "outputPath": {
-                            "base": "dist",
-                            "browser": ""
-                        },
+                        "outputPath": "dist",
                         "index": "src/index.html",
                         "browser": "src/main.ts",
                         "polyfills": [
@@ -40,7 +37,10 @@
                         ],
                         "scripts": [],
                         "server": "src/main.server.ts",
-                        "prerender": true
+                        "prerender": true,
+                        "ssr": {
+                            "entry": "src/server.ts"
+                        }
                     },
                     "configurations": {
                         "production": {
@@ -57,7 +57,10 @@
                                 }
                             ],
                             "outputHashing": "all",
-                            "serviceWorker": "ngsw-config.json"
+                            "serviceWorker": "ngsw-config.json",
+                            "optimization": true,
+                            "sourceMap": false,
+                            "namedChunks": false
                         },
                         "development": {
                             "optimization": false,
@@ -104,7 +107,7 @@
                     }
                 },
                 "deploy": {
-                  "builder": "angular-cli-ghpages:deploy"
+                    "builder": "angular-cli-ghpages:deploy"
                 }
             }
         }

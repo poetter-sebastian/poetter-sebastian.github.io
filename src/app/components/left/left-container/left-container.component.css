@@ -1,0 +1,51 @@
+:host {
+  display: flex;
+  justify-content: right;
+}
+:host > div {
+  max-width: 640px;
+  color: var(--primary-text);
+}
+:host > div a {
+  color: var(--primary-text);
+  text-decoration: underline;
+}
+:host > div a:hover {
+  color: var(--secondary-bg);
+}
+@media (min-width: 1921px) {
+  :host {
+    width: 50%;
+  }
+}
+
+.lang-select {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  flex-flow: row wrap;
+}
+.lang-select img {
+  height: 45px;
+  width: 45px;
+}
+@media all and (max-width: 575px) {
+  .lang-select img {
+    height: 72px;
+    width: 72px;
+  }
+}
+.lang-select a {
+  margin: 0 5px 0 5px;
+}
+@media all and (min-width: 1920px) {
+  .lang-select {
+    display: none;
+    width: auto;
+    top: 0;
+    left: auto;
+  }
+}
+
+/*# sourceMappingURL=left-container.component.css.map */

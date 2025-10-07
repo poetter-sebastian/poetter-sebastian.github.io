@@ -1,0 +1,33 @@
+:host
+    display: flex
+    justify-content: right
+    > div
+        max-width: 640px
+        color: var(--primary-text)
+        a
+            color: var(--primary-text)
+            text-decoration: underline
+            &:hover
+                color: var(--secondary-bg)
+    @media (min-width: 1921px)
+        width: 50%
+.lang-select
+    width: 100%
+    position: absolute
+    top: 0
+    left: 0
+    flex-flow: row wrap
+    img
+        height: 45px
+        width: 45px
+    @media all and (max-width: 575px)
+        img
+            height: 72px
+            width: 72px
+    a
+        margin: 0 5px 0 5px
+    @media all and (min-width: 1920px)
+        display: none
+        width: auto
+        top: 0
+        left: auto

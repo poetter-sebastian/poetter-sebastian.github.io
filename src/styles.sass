@@ -23,7 +23,7 @@
 body
     hyphens: auto
 
-p, span, p, ul, li, a
+p, span, p, ul, li, a, .btn
     font-family: OpenSans, sans-serif
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6, h1 span, h2 span
@@ -35,28 +35,6 @@ p, span, p, ul, li, a
  * sebastian.github.io - Main
  *
  * ====================================================================================================================*/
-.lang-select
-    width: 100%
-    position: absolute
-    top: 0
-    left: 0
-    flex-flow: row wrap
-    img
-        height: 45px
-        width: 45px
-    @media (max-width: 575px)
-        img
-            height: 72px
-            width: 72px
-    a
-        margin: 0 5px 0 5px
-#leftSide
-    color: var(--primary-text)
-    a
-        color: var(--primary-text)
-        text-decoration: underline
-        &:hover
-            color: var(--secondary-bg)
 #contact
     padding: 0
     margin: 0
@@ -151,9 +129,10 @@ p, span, p, ul, li, a
     background-color: var(--secondary-light-bg)
     color: var(--secondary-light-text)
 .card
+    background-image: linear-gradient(var(--primary-bg-transpararent) 0, var(--secondary-bg-transparent) 100%)
     background-color: transparent !important
     border: none !important
-    min-height: 150px !important
+    min-height: 200px !important
     margin: 20px 0 24px 0 !important
     img
         width: 100%

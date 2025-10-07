@@ -2,13 +2,16 @@
 import {Component, Input} from '@angular/core';
 import {IconDefinition} from '@fortawesome/fontawesome-svg-core';
 import {FaIconComponent} from '@fortawesome/angular-fontawesome';
-import {LeftTitle} from './left-title';
+import {LeftTitle} from './left/left-title';
 import {
     faCopyright,
     faBook,
     faThumbsUp,
     faAddressCard
 } from '@fortawesome/free-solid-svg-icons';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import {ModalImprintComponent} from './modal-content/modal-imprint.component';
+import {ModalPrivacyComponent} from './modal-content/modal-privacy.component';
 
 @Component({
     selector: 'app-footer',
@@ -38,22 +41,20 @@ import {
             </div>
 
             <!-- Privacy policy section -->
-            <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">
-                <div class="pt-4 pb-3" [class.primary-dark-bg]="!isDesktop">
-                    <p class="text-uppercase font-weight-bold text-center">
-                        <fa-icon [icon]="privacyIcon"></fa-icon> <span data-i18n="footer-policy"> privacy policy</span>
-                    </p>
-                </div>
-            </a>
+            <div class="pt-4 pb-3" [class.primary-dark-bg]="!isDesktop">
+                <p class="text-uppercase font-weight-bold text-center">
+                    <fa-icon [icon]="privacyIcon"></fa-icon>
+                    <span class="ps-1" data-i18n="footer-policy" (click)="openPrivacyModal()" style="cursor:pointer;">privacy policy</span>
+                </p>
+            </div>
 
             <!-- Libraries section -->
-            <a href="#" data-bs-toggle="modal" data-bs-target="#libraryModal">
-                <div class="pt-4 pb-3" [class.primary-dark-bg]="isDesktop">
-                    <p class="text-uppercase font-weight-bold text-center">
-                        <fa-icon [icon]="libraryIcon"></fa-icon> <span data-i18n="footer-library"> Used libraries</span>
-                    </p>
-                </div>
-            </a>
+            <div class="pt-4 pb-3" [class.primary-dark-bg]="isDesktop">
+                <p class="text-uppercase font-weight-bold text-center">
+                    <fa-icon [icon]="libraryIcon"></fa-icon>
+                    <span class="ps-1" data-i18n="footer-library" (click)="openLibraryModal()" style="cursor:pointer;">Used libraries</span>
+                </p>
+            </div>
         </div>
     `,
 })
@@ -67,4 +68,24 @@ export class FooterComponent {
     mobileHeaderIcon: IconDefinition = faAddressCard;
 
     currentYear: string = new Date().getFullYear().toString();
+
+
+    constructor(private modalService: NgbModal) {}
+
+    openPrivacyModal() {
+        const modalRef = this.modalService.open(ModalPrivacyComponent, {
+            size: 'lg',
+            centered: true,
+        });
+        modalRef.componentInstance.title = 'Privacy Policy';
+    }
+
+    openLibraryModal() {
+        const modalRef = this.modalService.open(ModalImprintComponent, {
+            size: 'lg',
+            centered: true,
+        });
+        modalRef.componentInstance.title = 'Used Libraries';
+    }
+
 }
