@@ -75,10 +75,10 @@ I am dedicated to providing high-quality solutions and continuously developing m
 I graduated from secondary school in 2014. In Germany the Secondary school is called Realschule and leads to either apprenticeships or, in my case, to higher education comparable to high schools. Here I started getting interested in Computer and started building simple websites as a hobby.
 
 ### High School (Abitur) - 2017
-I made my higher education entrance qualification with focus on computer science in 2017. During this time I worked on some simple projects and made free website designs. Here I started to work with the game-development engine Unity and made some smaller 3D-applications.
+I made my higher education entrance qualification with a focus on computer science in 2017. During this time I worked on some simple projects and made free website designs. Here I started to work with the game-development engine Unity and made some smaller 3D-applications.
 
 ### University: Bachelor of Science - 2020
-I started studying informatics with a focus on software technology and programming techniques in 2017. I got way better at programming, algorithm engineering and software planning. After the course 'principles of mobile robotics' I started experimenting with arduino and raspberry pi boards to create hardware like a weather-station for my home-server.
+I started studying informatics with a focus on software technology and programming techniques in 2017. I got way better at programming, algorithm engineering, and software planning. After the course 'principles of mobile robotics' I started experimenting with arduino and raspberry pi boards to create hardware like a weather-station for my home-server.
 
 #### Bachelor Subjects:
 - Algorithms and data structures
@@ -108,6 +108,7 @@ I want to improve the skills I have learned and want to learn more, especially i
 ## Professional Experience & Clients
 
 ### Companies I've worked with:
+- Bildung in Widerspruch e.V. (KiBa) - https://kiba-toolkit.de/
 - Bildung in Widerspruch e.V. (Akadas) - https://akadas.de/
 - SaxonQ GmbH - https://www.saxonq.com/
 - MindPort GmbH - https://www.mindport.co/

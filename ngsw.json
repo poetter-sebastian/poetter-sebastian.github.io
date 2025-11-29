@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1759871954573,
+  "timestamp": 1764445970749,
   "index": "/index.csr.html",
   "assetGroups": [
     {
@@ -13,10 +13,10 @@
       "urls": [
         "/index.csr.html",
         "/index.html",
-        "/main-YWLAFVKA.js",
+        "/main-R7GI4TZ6.js",
         "/manifest.webmanifest",
-        "/polyfills-B6TNHZQ6.js",
-        "/styles-H3WCR7Y3.css"
+        "/polyfills-6ISPNSXF.js",
+        "/styles-P5DEMQXN.css"
       ],
       "patterns": []
     },
@@ -57,11 +57,11 @@
         "/img/logo/logo-estudios.webp",
         "/img/logo/logo-gias.webp",
         "/img/logo/logo-hotwire.webp",
+        "/img/logo/logo-kiba.webp",
         "/img/logo/logo-lefx.webp",
         "/img/logo/logo-mindport.webp",
         "/img/logo/logo-ovrlab.webp",
         "/img/logo/logo-profesco.webp",
-        "/img/logo/logo-reach.png",
         "/img/logo/logo-reach.webp",
         "/img/logo/logo-rosenau.webp",
         "/img/logo/logo-saxonq.webp",
@@ -87,7 +87,7 @@
     "/icons/icon-512x512.png": "b6f5b8d5623e67a891621a16fc4fc6fda7a4a4e4",
     "/icons/icon-72x72.png": "927edeb6d2a41071069f6c6a973b31f3eb1f046d",
     "/icons/icon-96x96.png": "e6692f489c67f056fb7f245fa8cb7effdbcdfb19",
-    "/img/avatar.webp": "2bdfd024fb6bc59454356e330349e719b8329508",
+    "/img/avatar.webp": "6ec42c0e04bf2e1019b24278ec9f282c65d467c5",
     "/img/de.png": "85dc0af4f89c75da83f7795930f461b70930cf2e",
     "/img/de.webp": "68c8a5dbeadc33609e4f767edff0324880a0b1a1",
     "/img/en.png": "758859d5b6de0b081a5af3e874d2ff2338aa6397",
@@ -106,11 +106,11 @@
     "/img/logo/logo-estudios.webp": "9d0ffc13f40bac6e039e22f08c5128590a721362",
     "/img/logo/logo-gias.webp": "ab5fee972e1800cbf46be834f546bd0f545914bc",
     "/img/logo/logo-hotwire.webp": "5bf6c72bddf5c3b5386c62630dcd3b3f360f9804",
+    "/img/logo/logo-kiba.webp": "b4226e49a1a501d139bf65e1fa2845729cbc5ae4",
     "/img/logo/logo-lefx.webp": "f8f21caf749470002a1c56abd82ae0d344704571",
     "/img/logo/logo-mindport.webp": "11a1e169c47d524cfb67d2319ae75a188a53f1ed",
     "/img/logo/logo-ovrlab.webp": "093a0c9de15af1f0a2eecff1245f51fb0cdb815d",
     "/img/logo/logo-profesco.webp": "97f31c348b67ad86f098e16267e1812bc5410d74",
-    "/img/logo/logo-reach.png": "5159aa677a2d190a5c78b212f3e73bf4ced07471",
     "/img/logo/logo-reach.webp": "b7743924539d75094a236fa45609d8001ff8ce09",
     "/img/logo/logo-rosenau.webp": "eed13555288b6b3501ae2cd38ad9b72db7399eb9",
     "/img/logo/logo-saxonq.webp": "d401fa1b0b96baa1979e5b51c72058052ceb6482",
@@ -120,12 +120,12 @@
     "/img/projects/reach.webp": "b7743924539d75094a236fa45609d8001ff8ce09",
     "/img/projects/voxreality.webp": "d7f99511d4265372958393f692b2f370bd02e2b0",
     "/img/projects/vrbuilder.webp": "2b4d6d4edb59c94af1c3ed9cf50c36ec92e24107",
-    "/index.csr.html": "5b92eda39f4ed60e71f9bfbb412e255be278d63c",
-    "/index.html": "0ad49ee11e3a2950ccaab747355d4d50d17d7d55",
-    "/main-YWLAFVKA.js": "674ddb5c5f4634193024af732709147f03de5409",
+    "/index.csr.html": "ef5cb138095452d3f548fffa210cc38586350f23",
+    "/index.html": "706498a0691fa63368ac0b4c8f5de22357b48360",
+    "/main-R7GI4TZ6.js": "4979034acb4c0f4676f5f296d82ae0e552de2792",
     "/manifest.webmanifest": "47a9d5140c358aac9767bbca68f37c017b949fa9",
-    "/polyfills-B6TNHZQ6.js": "bf76ac291d7f51c1139b7edcf86b359a30c08c64",
-    "/styles-H3WCR7Y3.css": "4894414121f8fa33e6c8323ccce884164a07b399"
+    "/polyfills-6ISPNSXF.js": "b15ba4d1036f2db285649ff775f184bcdcd0b08a",
+    "/styles-P5DEMQXN.css": "7ec5d004d09829e74eed3a14ba5dd66e537fcb09"
   },
   "navigationUrls": [
     {
