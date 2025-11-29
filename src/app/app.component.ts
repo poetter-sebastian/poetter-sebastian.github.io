@@ -22,7 +22,6 @@ import {ThemeService} from './services/theme.service';
 export class AppComponent implements AfterViewInit {
     title: string = 'poetter-sebastian.github.io';
     currentLanguage: string;
-    langElements!: NodeListOf<HTMLElement>;
 
     currentTheme?: string | null;
     prefersDarkScheme: boolean;
@@ -59,7 +58,6 @@ export class AppComponent implements AfterViewInit {
                 e.innerHTML = currentYear;
             })
 
-            this.langElements = document.querySelectorAll('[data-i18n]');
             this.changeLang(this.currentLanguage);
         }
     }
@@ -78,7 +76,9 @@ export class AppComponent implements AfterViewInit {
         document.documentElement.lang = lang
         this.currentLanguage = lang
         let selectedLang = (i18n.find(lang => lang.language === this.currentLanguage)?.translations ?? {}) as Record<string, string>
-        this.langElements?.forEach(function (value) {
+
+
+        document.querySelectorAll('[data-i18n]')?.forEach(function (value) {
             let currentObj = value.getAttribute('data-i18n') ?? '';
             if (typeof selectedLang[currentObj] !== 'undefined') {
                 value.innerHTML = selectedLang[currentObj];
@@ -90,20 +90,22 @@ export class AppComponent implements AfterViewInit {
     }
 
     private logElements(): void {
-        this.langElements.forEach(function (value) {
-            console.log('"' + value.getAttribute('data-i18n') + '":"' + value.innerText + '",');
+        document.querySelectorAll('[data-i18n]')?.forEach(function (value) {
+            console.log('"' + value.getAttribute('data-i18n') + '":"' + value.innerHTML + '",');
         });
     }
 
     private applyTheme() {
-        if (this.darkMode) {
-            document.body.classList.add('dark-theme');
-            document.body.classList.remove('light-theme');
-            this.theme.current = 'dark';
-        } else {
-            document.body.classList.add('light-theme');
-            document.body.classList.remove('dark-theme');
-            this.theme.current = 'light';
+        if(typeof document !== 'undefined') {
+            if (this.darkMode) {
+                document.body.classList.add('dark-theme');
+                document.body.classList.remove('light-theme');
+                this.theme.current = 'dark';
+            } else {
+                document.body.classList.add('light-theme');
+                document.body.classList.remove('dark-theme');
+                this.theme.current = 'light';
+            }
         }
     }
 

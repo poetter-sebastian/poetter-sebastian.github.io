@@ -6,18 +6,19 @@ import {LeftTitle} from './left/left-title';
 import {
     faCopyright,
     faBook,
-    faThumbsUp,
-    faAddressCard
+    faThumbsUp
 } from '@fortawesome/free-solid-svg-icons';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import {ModalImprintComponent} from './modal-content/modal-imprint.component';
 import {ModalPrivacyComponent} from './modal-content/modal-privacy.component';
+import {RightTitleComponent} from './right/right-title.component';
 
 @Component({
     selector: 'app-footer',
     imports: [
         FaIconComponent,
         LeftTitle,
+        RightTitleComponent,
     ],
     template: `
         <div class="footer" [class]="isDesktop ? 'd-none d-md-block' : 'd-sm-block d-md-none'">
@@ -26,11 +27,7 @@ import {ModalPrivacyComponent} from './modal-content/modal-privacy.component';
                 <app-left-title dataI18n="footer-title" text="Imprint"></app-left-title>
             } @else {
                 <!-- Mobile title -->
-                <h1 class="text-uppercase right-title row g-0">
-                    <fa-icon [icon]="mobileHeaderIcon"></fa-icon>
-                    <i class="col-md-4 pe-2 fas fa-address-card d-none d-md-block"></i>
-                    <span class="col-md-8 text-md-start text-center ps-md-4 pt-4 pb-3" data-i18n="footer-title">Imprint</span>
-                </h1>
+                <app-right-title dataI18n="footer-title" text="Imprint" [icon]="copyrightIcon"></app-right-title>
             }
 
             <!-- Copyright section -->
@@ -65,7 +62,6 @@ export class FooterComponent {
     copyrightIcon: IconDefinition = faCopyright;
     privacyIcon: IconDefinition = faBook;
     libraryIcon: IconDefinition = faThumbsUp;
-    mobileHeaderIcon: IconDefinition = faAddressCard;
 
     currentYear: string = new Date().getFullYear().toString();
 

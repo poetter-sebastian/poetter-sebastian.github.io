@@ -163,63 +163,61 @@
                 text='<a href="https://github.com/ultralytics/ultralytics" target="_blank" rel="noreferrer">YoloV11</a>, <a href="https://stablediffusionweb.com/StableDiffusionXL" target="_blank" rel="noreferrer">Stable Diffusion</a>, <a href="https://mistral.ai/" target="_blank" rel="noreferrer">Mistral</a>, <a href="https://www.deepseek.com/" target="_blank" rel="noreferrer">DeepSeek</a>, <a href="https://www.sbert.net/" target="_blank" rel="noreferrer">all-MiniLM-L6-v2</a>, <a href="https://github.com/openai/whisper" target="_blank" rel="noreferrer">Whisper</a>, <a href="https://ai.meta.com/research/no-language-left-behind/?_fb_noscript=1" target="_blank" rel="noreferrer">nllb-200</a>, <a href="https://github.com/facebookresearch/fairseq/tree/main/examples/m2m_100" target="_blank" rel="noreferrer">M2M100</a>, ...'
             ></app-skill-container>
         </div>
-        <div class="">
-            <app-left-title dataI18n="projects-title" text="Projects"></app-left-title>
-            <div id="projects">
-                <app-project-item
-                    [icon]="faFan"
-                    dataI18n="project-rasp-name"
-                    text="Raspberry Pi fan control"
-                    href="https://github.com/poetter-sebastian/pi-fan-controll"
-                ></app-project-item>
-                <app-project-item
-                    [icon]="faMobileAlt"
-                    dataI18n="project-note-name"
-                    text="Notes App (PWA)"
-                    href="https://github.com/poetter-sebastian/Notes"
-                ></app-project-item>
-                <app-project-item
-                    [icon]="faListOl"
-                    dataI18n="project-priority-name"
-                    text="Concurrent priority list"
-                    href="https://github.com/poetter-sebastian/concurrent-priority-list"
-                ></app-project-item>
-                <app-project-item
-                    [icon]="faCloudSun"
-                    dataI18n="project-weather-name"
-                    text="Wetterstation (IoT)"
-                    href="https://github.com/poetter-sebastian/solar-weatherstation"
-                ></app-project-item>
-                <app-project-item
-                    [icon]="faRobot"
-                    dataI18n="project-yolo-name"
-                    text="YoloV5 Neural network"
-                    href="https://github.com/poetter-sebastian/TeamFortress2-YoloV5"
-                ></app-project-item>
-                <app-project-item
-                    [icon]="faSatellite"
-                    dataI18n="project-sat-name"
-                    text="Satellite movement visualisation"
-                    href="https://github.com/poetter-sebastian/WorldSatelite"
-                ></app-project-item>
-                <app-project-item
-                    [icon]="faCalendarAlt"
-                    dataI18n="project-time-name"
-                    text="Timetable creator"
-                    href="https://gitlab.imn.htwk-leipzig.de/spoetter/bachelor-task"
-                ></app-project-item>
-                <app-project-item
-                    [icon]="faLeaf"
-                    dataI18n="project-simulation-name"
-                    text="Simulation of an ecosystem"
-                    href="https://github.com/poetter-sebastian/Simulation"
-                ></app-project-item>
-                <app-project-item
-                    [icon]="faKey"
-                    text="OTP Authenticator"
-                    href="https://github.com/poetter-sebastian/SimpleThenticator"
-                ></app-project-item>
-            </div>
+        <app-left-title dataI18n="projects-title" text="Hobby Projects"></app-left-title>
+        <div id="hobby-projects">
+            <app-hobby-project-item
+                [icon]="faFan"
+                dataI18n="project-rasp-name"
+                text="Raspberry Pi fan control"
+                href="https://github.com/poetter-sebastian/pi-fan-controll"
+            ></app-hobby-project-item>
+            <app-hobby-project-item
+                [icon]="faMobileAlt"
+                dataI18n="project-note-name"
+                text="Notes App (PWA)"
+                href="https://github.com/poetter-sebastian/Notes"
+            ></app-hobby-project-item>
+            <app-hobby-project-item
+                [icon]="faListOl"
+                dataI18n="project-priority-name"
+                text="Concurrent priority list"
+                href="https://github.com/poetter-sebastian/concurrent-priority-list"
+            ></app-hobby-project-item>
+            <app-hobby-project-item
+                [icon]="faCloudSun"
+                dataI18n="project-weather-name"
+                text="Wetterstation (IoT)"
+                href="https://github.com/poetter-sebastian/solar-weatherstation"
+            ></app-hobby-project-item>
+            <app-hobby-project-item
+                [icon]="faRobot"
+                dataI18n="project-yolo-name"
+                text="YoloV5 Neural network"
+                href="https://github.com/poetter-sebastian/TeamFortress2-YoloV5"
+            ></app-hobby-project-item>
+            <app-hobby-project-item
+                [icon]="faSatellite"
+                dataI18n="project-sat-name"
+                text="Satellite movement visualisation"
+                href="https://github.com/poetter-sebastian/WorldSatelite"
+            ></app-hobby-project-item>
+            <app-hobby-project-item
+                [icon]="faCalendarAlt"
+                dataI18n="project-time-name"
+                text="Timetable creator"
+                href="https://gitlab.imn.htwk-leipzig.de/spoetter/bachelor-task"
+            ></app-hobby-project-item>
+            <app-hobby-project-item
+                [icon]="faLeaf"
+                dataI18n="project-simulation-name"
+                text="Simulation of an ecosystem"
+                href="https://github.com/poetter-sebastian/Simulation"
+            ></app-hobby-project-item>
+            <app-hobby-project-item
+                [icon]="faKey"
+                text="OTP Authenticator"
+                href="https://github.com/poetter-sebastian/SimpleThenticator"
+            ></app-hobby-project-item>
         </div>
         <app-left-title text="Services"></app-left-title>
         <div id="services">
@@ -250,56 +248,48 @@
                 <app-hobby-item
                     class="col-md-6 col-sm-4 col-12"
                     [icon]="faTv"
-                    iconClass="p-3"
                     dataI18n="hobbies-programming"
                     text="Programming"
                 ></app-hobby-item>
                 <app-hobby-item
                     class="col-md-6 col-sm-4 col-12"
                     [icon]="faSwimmer"
-                    iconClass="p-3"
                     dataI18n="hobbies-swimming"
                     text="Swimming"
                 ></app-hobby-item>
                 <app-hobby-item
                     class="col-md-6 col-sm-4 col-12"
                     [icon]="faHiking"
-                    iconClass="p-3-5"
                     dataI18n="hobbies-hiking"
                     text="Hiking"
                 ></app-hobby-item>
                 <app-hobby-item
                     [icon]="faUnity"
                     class="col-md-6 col-sm-4 col-12"
-                    iconClass="p-3-5"
                     dataI18n="hobbies-game"
                     text="Game Developing"
                 ></app-hobby-item>
                 <app-hobby-item
                     [icon]="faSeedling"
                     class="col-md-6 col-sm-4 col-12"
-                    iconClass="p-3-5"
                     dataI18n="hobbies-planting"
                     text="Gardening"
                 ></app-hobby-item>
                 <app-hobby-item
                     [icon]="faRaspberryPi"
                     class="col-md-6 col-sm-4 col-12"
-                    iconClass="p-3-5"
                     dataI18n="hobbies-circuit"
                     text="IoT tinkering"
                 ></app-hobby-item>
                 <app-hobby-item
                     [icon]="faGamepad"
                     class="col-md-6 col-sm-4 col-12"
-                    iconClass="p-3-4"
                     dataI18n="hobbies-gaming"
                     text="Gaming"
                 ></app-hobby-item>
                 <app-hobby-item
                     [icon]="faCube"
                     class="col-md-6 col-sm-4 col-12"
-                    iconClass="p-3-5"
                     dataI18n="hobbies-modeling"
                     text="3D Modeling"
                 ></app-hobby-item>

@@ -6,9 +6,7 @@
 @use "assets/styles/font"
 @use "assets/styles/color"
 @use "assets/styles/timeline"
-@use "assets/styles/line"
 @use "assets/styles/darkmode"
-
 @use "assets/styles/components/app-skill-container"
 @use "assets/styles/components/app-right-title"
 /* ====================================================================================================================
@@ -50,11 +48,13 @@ p, span, p, ul, li, a, .btn
             padding: 0.6rem 1rem
             a
                 color: var(--primary-text)
-    @media (min-width: 1300px)
+
 .hobbies
     div
         padding: 0.5rem 0 0.5rem 0
         font-size: 1.5rem
+        display: flex
+        align-items: center
     fa-icon
         width: 3.8rem
         height: 3.5rem
@@ -62,20 +62,16 @@ p, span, p, ul, li, a, .btn
     span
         font-size: 1rem
 
-.p-3-5
-    padding: 1rem 2rem 1rem 1.1rem !important
-    font-size: 1.7rem
-.p-3-4
-    padding: 1rem 2rem 1rem 0.9rem !important
-    font-size: 1.7rem
 .text-uppercase > fa-icon
     align-self: center
 
+.dark-theme .card-title
+    color: var(--primary-text)
 
-#projects, #services
+#hobby-projects, #services
     padding: 0
     margin: 0
-    div
+    .item
         margin-bottom: 0.5rem
         > div:first-child
             padding: 0.6rem 1rem
@@ -87,9 +83,6 @@ p, span, p, ul, li, a, .btn
                 color: var(--primary-text)
             fa-icon
                 font-size: 1.3rem
-#commissions
-    a
-        text-decoration: none !important
 
 .primary-text
     color: var(--primary-text)
@@ -129,7 +122,7 @@ p, span, p, ul, li, a, .btn
     background-color: var(--secondary-light-bg)
     color: var(--secondary-light-text)
 .card
-    background-image: linear-gradient(var(--primary-bg-transpararent) 0, var(--secondary-bg-transparent) 100%)
+    background-image: linear-gradient(var(--primary-bg-transpararent) 0, var(--secondary-bg-transparent) 80%)
     background-color: transparent !important
     border: none !important
     min-height: 200px !important
@@ -138,6 +131,16 @@ p, span, p, ul, li, a, .btn
         width: 100%
         object-fit: scale-down
         height: 6rem
+
+.card-title
+    text-decoration: none !important
+    color: var(--secondary-text)
+
+.btn-secondary
+    background-color: var(--primary-bg)
+    &:hover
+        background-color: var(--secondary-dark-bg)
+
 .image
     width: 200px
     height: 200px
