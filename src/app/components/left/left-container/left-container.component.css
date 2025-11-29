@@ -13,6 +13,14 @@
 :host > div a:hover {
   color: var(--secondary-bg);
 }
+@media (max-width: 991px) {
+  :host {
+    max-width: 100%;
+  }
+  :host #leftSide {
+    max-width: 100%;
+  }
+}
 @media (min-width: 1921px) {
   :host {
     width: 50%;

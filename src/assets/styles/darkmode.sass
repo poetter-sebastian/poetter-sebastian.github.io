@@ -4,10 +4,16 @@
  *
  * ==================================================================================================================*/
 body.dark-theme
-    .card-img-top
-        filter: brightness(1.2) contrast(0.9)
     a:hover
         span
             color: var(--secondary-dark-text) !important
         color: var(--secondary-dark-text) !important
 
+    .modal-content
+        background-color: var(--secondary-bg)
+        color: var(--primary-text) !important
+
+    .btn-close
+        background-color: var(--primary-bg)
+        &:hover
+            background-color: var(--secondary-dark-bg)

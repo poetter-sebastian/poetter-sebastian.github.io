@@ -52,7 +52,7 @@ import {
 import {ContactItem} from '../contact-item';
 import {LeftTitle} from '../left-title';
 import {SkillContainer} from '../skill-container';
-import {ProjectItem} from '../project-item';
+import {HobbyProjectListComponent} from '../hobby-project-list-component';
 import {ServiceItem} from '../../right/service-item';
 import {HobbyItem} from '../hobby-item';
 import {FooterComponent} from '../../footer';
@@ -65,7 +65,7 @@ import {FooterComponent} from '../../footer';
         ContactItem,
         LeftTitle,
         SkillContainer,
-        ProjectItem,
+        HobbyProjectListComponent,
         ServiceItem,
         HobbyItem,
         FooterComponent,

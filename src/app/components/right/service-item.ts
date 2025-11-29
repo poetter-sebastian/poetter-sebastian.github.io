@@ -9,7 +9,7 @@ import {FaIconComponent} from '@fortawesome/angular-fontawesome';
         FaIconComponent,
     ],
     template: `
-        <div class="row g-0">
+        <div class="row g-0 item">
             <div class="col-xxl-8 col-sm-9 col-10 text-end pe-0 primary-dark-bg">
                 <span [attr.data-i18n]="dataI18n">{{text}}</span>
             </div>

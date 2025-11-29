@@ -15,7 +15,7 @@ import {faEnvelope} from '@fortawesome/free-solid-svg-icons';
             <div class="col-md-3 col-sm-6 col-2 primary-dark-bg">
                 <fa-icon [icon]="icon"></fa-icon>
             </div>
-            <div class="col-md-9 col-sm-6 col-10">
+            <div class="col-md-9 col-sm-6 col-10 d-flex align-items-center">
                 @if (isHiddenEmail) {
                     <span class="d-none">
                         <a [href]="'mailto:email&#64;domain.com'"></a>email&#64;domain.com
