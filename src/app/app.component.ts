@@ -1,8 +1,4 @@
-import {AfterViewInit, Component} from '@angular/core';
-import {RouterOutlet} from '@angular/router';
-import { isPlatformBrowser } from '@angular/common';
-import { Inject, PLATFORM_ID } from '@angular/core';
-import {i18n} from './lang/i18n';
+import {AfterViewInit, Component, inject} from '@angular/core';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
@@ -10,11 +6,12 @@ import {LeftContainerComponent} from './components/left/left-container/left-cont
 import {RightContainerComponent} from './components/right/right-container/right-container.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {ThemeService} from './services/theme.service';
-
+import {i18n} from './lang/i18n';
+import {ActivatedRoute, RouterOutlet} from '@angular/router';
 
 @Component({
     selector: 'app-root',
-    imports: [NgbModule,CommonModule, RouterOutlet, FontAwesomeModule, FormsModule, LeftContainerComponent, LeftContainerComponent, LeftContainerComponent, RightContainerComponent],
+    imports: [NgbModule, CommonModule, FontAwesomeModule, FormsModule, LeftContainerComponent, LeftContainerComponent, LeftContainerComponent, RightContainerComponent, RouterOutlet],
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.sass']
 })
@@ -25,12 +22,15 @@ export class AppComponent implements AfterViewInit {
 
     currentTheme?: string | null;
     prefersDarkScheme: boolean;
-    darkMode: boolean = true
+    darkMode: boolean = true;
 
-    constructor(private theme: ThemeService, @Inject(PLATFORM_ID) private platformId: Object) {
+    private activatedRoute = inject(ActivatedRoute);
+
+    constructor(private theme: ThemeService) {
         this.prefersDarkScheme = (typeof window !== 'undefined' && window.matchMedia)
             ? window.matchMedia("(prefers-color-scheme: dark)").matches
             : false;
+
         this.currentLanguage = (typeof navigator === 'undefined' || !navigator.language) ? 'en' : navigator.language;
     }
 
@@ -38,6 +38,17 @@ export class AppComponent implements AfterViewInit {
         const stored = this.theme.current;
         this.darkMode = stored === 'dark';
         this.applyTheme();
+
+        this.activatedRoute.queryParamMap.subscribe(params => {
+            const langParam = params.get('lang');
+            if (langParam) {
+                const tempLang = i18n.find(lang => lang.language.includes(langParam))?.language;
+                if (tempLang) {
+                    this.currentLanguage = tempLang;
+                    this.changeLang(this.currentLanguage);
+                }
+            }
+        });
     }
 
     ngAfterViewInit(): void {
@@ -73,10 +84,10 @@ export class AppComponent implements AfterViewInit {
     }
 
     changeLang = (lang: string): void => {
-        document.documentElement.lang = lang
         this.currentLanguage = lang
-        let selectedLang = (i18n.find(lang => lang.language === this.currentLanguage)?.translations ?? {}) as Record<string, string>
+        document.documentElement.lang = lang
 
+        let selectedLang = (i18n.find(lang => this.currentLanguage.includes(lang.language))?.translations ?? {}) as Record<string, string>
 
         document.querySelectorAll('[data-i18n]')?.forEach(function (value) {
             let currentObj = value.getAttribute('data-i18n') ?? '';
