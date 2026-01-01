@@ -1,10 +1,11 @@
-import {AfterViewInit, Component, inject} from '@angular/core';
+import {AfterViewInit, Component, inject, Renderer2} from '@angular/core';
+import {DOCUMENT} from '@angular/common';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {LeftContainerComponent} from './components/left/left-container/left-container.component';
 import {RightContainerComponent} from './components/right/right-container/right-container.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {ThemeService} from './services/theme.service';
 import {i18n} from './lang/i18n';
 import {ActivatedRoute, RouterOutlet} from '@angular/router';
@@ -25,6 +26,8 @@ export class AppComponent implements AfterViewInit {
     darkMode: boolean = true;
 
     private activatedRoute = inject(ActivatedRoute);
+    private document = inject(DOCUMENT);
+    private renderer = inject(Renderer2);
 
     constructor(private theme: ThemeService) {
         this.prefersDarkScheme = (typeof window !== 'undefined' && window.matchMedia)
@@ -53,21 +56,23 @@ export class AppComponent implements AfterViewInit {
 
     ngAfterViewInit(): void {
         if (this.theme.current === 'dark') {
-            document.body.classList.add('dark-theme');
+            this.renderer.addClass(this.document.body, 'dark-theme');
         } else if (this.currentTheme === 'light') {
-            document.body.classList.add('light-theme');
+            this.renderer.addClass(this.document.body, 'light-theme');
         }
 
         if (typeof window !== 'undefined') {
-            let toNow = document.getElementById('to-now') ?? null;
+            let toNow = this.document.getElementById('to-now') ?? null;
+
             if (toNow !== null) {
-                toNow.innerText = (new Date().getFullYear() - new Date(2015, 0).getFullYear()).toString()
+                this.renderer.setProperty(toNow, 'innerText', (new Date().getFullYear() - new Date(2015, 0).getFullYear()).toString());
             }
 
             let currentYear = new Date().getFullYear().toString()
-            document.querySelectorAll('.year').forEach(function (e) {
-                e.innerHTML = currentYear;
-            })
+
+            this.document.querySelectorAll('.year').forEach(e => {
+                this.renderer.setProperty(e, 'innerHTML', currentYear);
+            });
 
             this.changeLang(this.currentLanguage);
         }
@@ -77,47 +82,52 @@ export class AppComponent implements AfterViewInit {
         const inputElement = e.target as HTMLInputElement;
         if (inputElement) {
             this.darkMode = !this.darkMode;
-            document.body.classList.toggle('dark-theme', this.darkMode);
-            document.body.classList.toggle('light-theme', !this.darkMode);
+
+            if (this.darkMode) {
+                this.renderer.addClass(this.document.body, 'dark-theme');
+                this.renderer.removeClass(this.document.body, 'light-theme');
+            } else {
+                this.renderer.addClass(this.document.body, 'light-theme');
+                this.renderer.removeClass(this.document.body, 'dark-theme');
+            }
+
             this.theme.current = this.darkMode ? 'dark' : 'light';
         }
     }
 
     changeLang = (lang: string): void => {
         this.currentLanguage = lang
-        document.documentElement.lang = lang
+        this.document.documentElement.lang = lang
 
         let selectedLang = (i18n.find(lang => this.currentLanguage.includes(lang.language))?.translations ?? {}) as Record<string, string>
 
-        document.querySelectorAll('[data-i18n]')?.forEach(function (value) {
+        this.document.querySelectorAll('[data-i18n]')?.forEach(value => {
             let currentObj = value.getAttribute('data-i18n') ?? '';
             if (typeof selectedLang[currentObj] !== 'undefined') {
-                value.innerHTML = selectedLang[currentObj];
+                this.renderer.setProperty(value, 'innerHTML', selectedLang[currentObj]);
             } else {
-                //debug purpose only
-                console.log('"' + currentObj + '" in language json not found!')
+                console.log('"' + currentObj + '" in language json not found!');
             }
         });
     }
 
     private logElements(): void {
-        document.querySelectorAll('[data-i18n]')?.forEach(function (value) {
+        this.document.querySelectorAll('[data-i18n]')?.forEach(function (value) {
             console.log('"' + value.getAttribute('data-i18n') + '":"' + value.innerHTML + '",');
         });
     }
 
     private applyTheme() {
-        if(typeof document !== 'undefined') {
+        if (typeof this.document !== 'undefined') {
             if (this.darkMode) {
-                document.body.classList.add('dark-theme');
-                document.body.classList.remove('light-theme');
+                this.document.body.classList.add('dark-theme');
+                this.document.body.classList.remove('light-theme');
                 this.theme.current = 'dark';
             } else {
-                document.body.classList.add('light-theme');
-                document.body.classList.remove('dark-theme');
+                this.document.body.classList.add('light-theme');
+                this.document.body.classList.remove('dark-theme');
                 this.theme.current = 'light';
             }
         }
     }
-
 }
