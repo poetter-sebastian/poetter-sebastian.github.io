@@ -213,6 +213,10 @@ body.dark-theme .btn-close:hover {
   background-color: var(--secondary-dark-bg);
 }
 
+app-project-list {
+  --border-width: 2px;
+}
+
 #skills {
   margin-right: 0;
   margin-left: 0;
