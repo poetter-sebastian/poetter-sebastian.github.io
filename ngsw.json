@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1764445970749,
+  "timestamp": 1767475179503,
   "index": "/index.csr.html",
   "assetGroups": [
     {
@@ -13,16 +13,16 @@
       "urls": [
         "/index.csr.html",
         "/index.html",
-        "/main-R7GI4TZ6.js",
+        "/main-DAOB5TAS.js",
         "/manifest.webmanifest",
         "/polyfills-6ISPNSXF.js",
-        "/styles-P5DEMQXN.css"
+        "/styles-BUP2QDYB.css"
       ],
       "patterns": []
     },
     {
       "name": "assets",
-      "installMode": "lazy",
+      "installMode": "prefetch",
       "updateMode": "prefetch",
       "cacheQueryOptions": {
         "ignoreVary": true
@@ -120,12 +120,12 @@
     "/img/projects/reach.webp": "b7743924539d75094a236fa45609d8001ff8ce09",
     "/img/projects/voxreality.webp": "d7f99511d4265372958393f692b2f370bd02e2b0",
     "/img/projects/vrbuilder.webp": "2b4d6d4edb59c94af1c3ed9cf50c36ec92e24107",
-    "/index.csr.html": "ef5cb138095452d3f548fffa210cc38586350f23",
-    "/index.html": "706498a0691fa63368ac0b4c8f5de22357b48360",
-    "/main-R7GI4TZ6.js": "4979034acb4c0f4676f5f296d82ae0e552de2792",
+    "/index.csr.html": "ba2bdf67bdda482f24017ea567a3a21db1af8687",
+    "/index.html": "e1cf70cbead6d0a1611244e80ced887c2a8ba220",
+    "/main-DAOB5TAS.js": "d73e95d772351768c24cee24baee5c9fedc4758e",
     "/manifest.webmanifest": "47a9d5140c358aac9767bbca68f37c017b949fa9",
     "/polyfills-6ISPNSXF.js": "b15ba4d1036f2db285649ff775f184bcdcd0b08a",
-    "/styles-P5DEMQXN.css": "7ec5d004d09829e74eed3a14ba5dd66e537fcb09"
+    "/styles-BUP2QDYB.css": "6b7ff213cecf7a1d8a0a4108fab57d024d3893b5"
   },
   "navigationUrls": [
     {
