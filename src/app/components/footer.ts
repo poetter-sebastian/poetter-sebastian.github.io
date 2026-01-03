@@ -33,7 +33,7 @@ import {RightTitleComponent} from './right/right-title.component';
             <!-- Copyright section -->
             <div class="pt-4 pb-3" [class.primary-dark-bg]="isDesktop">
                 <p class="text-uppercase font-weight-bold text-center">
-                    <fa-icon [icon]="copyrightIcon"></fa-icon> 2019-<span class="year">{{currentYear}}</span> <span data-i18n="footer-copyright"> by Sebastian Poetter</span>
+                    <fa-icon [icon]="copyrightIcon"></fa-icon> 2019-<span class="year">{{currentYear}}</span> – <span data-i18n="footer-copyright"> by Sebastian Poetter</span>
                 </p>
             </div>
 
