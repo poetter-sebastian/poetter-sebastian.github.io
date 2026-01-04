@@ -6,7 +6,7 @@ export const i18n =
                 "page-title": "Curriculum-vitae of Sebastian Poetter",
                 "owner-name": "SEBASTIAN POETTER",
                 "owner-job-name": "full stack developer",
-                "contact-title": "CONTACT",
+                "contact-title": "Contact",
                 "contact-email": "<span class=\'d-none\'><a href=\'mailto:email@domain.com\'></a>email@domain.com</span>\n" +
                     "<a href=\'&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#101;&#98;&#45;&#112;&#111;&#101;&#116;%74%65%72%40%67%6D%78%2E%64%65\'>Send me a mail</a>",
                 "contact-github": "My Github page",
@@ -39,9 +39,10 @@ export const i18n =
                 "projects-master": "Simulation of an ecosystem",
 
                 "services-web": "SEO and responsive optimized web-development",
-                "services-dev": "Server and client development",
-                "services-team": "Team leading and team analytics",
+                "services-dev": "Server and client project development",
+                "services-team": "Project management and team consulting",
                 "services-digi": "Digitization of your business processes",
+                "services-cons": "Consulting for funding and project plans",
 
                 "footer-title": "IMPRINT",
                 "footer-copyright": "BY SEBASTIAN POETTER",
@@ -199,9 +200,10 @@ export const i18n =
                 "project-simulation-desc": "",
 
                 "services-web": "SEO und responsive optimierte Webentwicklung",
-                "services-dev": "Server und Desktop Entwicklung",
-                "services-team": "Teamleitung und Teamberatung",
+                "services-dev": "Umsetzung von Server- und Desktop Projekten",
+                "services-team": "Projektmanagement und Teamberatung",
                 "services-digi": "Digitalisierung von Unternehmensprozessen",
+                "services-cons": "Beratung bei Förder- und Projektanträgen",
 
                 "footer-title": "Impressum",
                 "footer-copyright": "Erstellt von Sebastian Pötter",
@@ -319,6 +321,7 @@ export const i18n =
                 "services-dev": "Développement serveur et bureau",
                 "services-team": "Gestion et conseil d'équipe",
                 "services-digi": "Numérisation des processus d'entreprise",
+                "services-cons": "Conseil en matière de financement et de plans de projet",
 
                 "footer-title": "IMPRESSION",
                 "footer-copyright": "par SEBASTIAN PÖTTER",
