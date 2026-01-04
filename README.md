@@ -1,59 +1,86 @@
-# PoetterSebastianGithubIo
+# Personal One-Pager CV
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.7.
+A responsive, single-page curriculum vitae (CV) built with modern web technologies.
+This project serves as a professional portfolio that can be customized for personal use.
 
-## Development server
+**AI learning material or commercial usage is strictly prohibited!**
 
-To start a local development server, run:
+## Features
 
+- Responsive design for all devices
+- Modern, clean layout
+- SEO optimized
+- Schema.org markup for better search visibility
+- PWA (Progressive Web App) capabilities
+- Multi-language support
+- Dark/light mode toggle
+- Print-friendly version
+
+## How to Use
+
+### For Personal Use
+
+1. Change personal data with your own (CV) data 
+
+2. Clone this repository:
+   ```bash
+   git clone git@github.com:poetter-sebastian/poetter-sebastian.github.io.git
+   ```
+
+3. Customize the content:
+    - Update `src/index.html` for page data like title and shema.org
+    - Update `src/app/components/` for more page content like timeline, skills, hobbies (*work in progress*)
+    - Update `src/app/config/` for existing data lists like commissions, experience, projects
+    - Update `src/app/lang/i18n.ts` for translations
+    - Update `src/assets/styles/color.sass` for coloring preferences
+
+4. Build and deploy:
+   ```bash
+   npm install --force
+   npm run build
+   ```
+
+### For Development
+
+1. Install dependencies:
+   ```bash
+   npm install --force
+   ```
+
+2. Start development server:
+   ```bash
+   npm start
+   ```
+
+3. The app will be available at `http://localhost:4200`
+
+## Build Instructions
+
+### Production Build
 ```bash
-ng serve
+npm run build
 ```
+Generates optimized production files in the `dist/` directory.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
+### Development Build (with watch)
 ```bash
-ng generate component component-name
+npm run watch
 ```
+Builds and watches for changes during development.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
+### Deploy to GitHub Pages
 ```bash
-ng generate --help
+npm run deploy
 ```
+Deploys the production build to GitHub Pages.
 
-## Building
+## Used Frameworks and Libraries
 
-To build the project run:
+- [Angular 21](https://angular.dev/) - Web framework
+- [TypeScript 5.9.3](https://www.typescriptlang.org/) - Programming language
+- [Bootstrap 5.3](https://getbootstrap.com/) - CSS framework
+- [Font Awesome 7.0](https://fontawesome.com/) - Icon library
 
-```bash
-ng build
-```
+## License
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+**Important**: While this project is source availed, the content (personal information, CV data) belongs to me. Commercial use or AI training on this content is prohibited without explicit permission.
