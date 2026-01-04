@@ -24,15 +24,7 @@
  * * poetter-sebastian.github.io - color - 2025
  * *
  * * ==================================================================================================================*/
-.box, .box-mit-rahmen {
-  padding: 10px;
-}
-
-.box-mit-rahmen {
-  border: 1px solid red;
-}
-
-body {
+:root {
   --primary-bg: #2e6d6a;
   --primary-bg-transpararent: rgba(12, 60, 58, 0.15);
   --primary-text: #ffeff7;
@@ -50,6 +42,25 @@ body {
   --secondary-light-bg-trans: rgba(255, 239, 247, 0.25);
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-bg: #441f34;
+    --primary-bg-transpararent: rgba(56, 20, 40, 0.15);
+    --primary-text: #c4d3e1;
+    --primary-dark-text: #adbac7;
+    --primary-dark-bg: #381428;
+    --primary-light-text: #0c3c3a;
+    --primary-light-bg: #2e6d6a;
+    --secondary-bg: #1c2128;
+    --secondary-bg-transparent: rgba(28, 33, 40, 0.15);
+    --secondary-text: #adbac7;
+    --secondary-dark-text: #f8f8f8;
+    --secondary-dark-bg: #313d4f;
+    --secondary-light-text: #347d39;
+    --secondary-light-bg: #4d243b;
+    --secondary-light-bg-trans: rgba(77, 36, 59, 0.25);
+  }
+}
 body.dark-theme {
   --primary-bg: #441f34;
   --primary-bg-transpararent: rgba(56, 20, 40, 0.15);
@@ -66,6 +77,24 @@ body.dark-theme {
   --secondary-light-text: #347d39;
   --secondary-light-bg: #4d243b;
   --secondary-light-bg-trans: rgba(77, 36, 59, 0.25);
+}
+
+body.light-theme {
+  --primary-bg: #2e6d6a;
+  --primary-bg-transpararent: rgba(12, 60, 58, 0.15);
+  --primary-text: #ffeff7;
+  --primary-dark-text: #ffeff7;
+  --primary-dark-bg: #0c3c3a;
+  --primary-light-text: #0c3c3a;
+  --primary-light-bg: #ffeff7;
+  --secondary-bg: #fff2f4;
+  --secondary-bg-transparent: rgba(255, 242, 244, 0.15);
+  --secondary-text: #0c3c3a;
+  --secondary-dark-text: #ffeff7;
+  --secondary-dark-bg: #0c3c3a;
+  --secondary-light-text: #ffeff7;
+  --secondary-light-bg: #ffeff7;
+  --secondary-light-bg-trans: rgba(255, 239, 247, 0.25);
 }
 
 /* ==================================================================================================================

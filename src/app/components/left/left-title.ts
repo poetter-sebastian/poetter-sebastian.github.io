@@ -6,7 +6,7 @@ import {DomSanitizer, SafeHtml} from '@angular/platform-browser';
     selector: 'app-left-title',
     template: `
         <div class="mt-4 mb-4">
-            <h2 class="">
+            <h2 class="text-uppercase">
                 <span class="col-md-8 text-md-start text-sm-center ps-md-4 text-md-start text-center"
                       [attr.data-i18n]="dataI18n" [innerHTML]="sanitizedText"></span>
             </h2>

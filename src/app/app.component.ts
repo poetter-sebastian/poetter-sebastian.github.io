@@ -20,8 +20,6 @@ import {ActivatedRoute, RouterOutlet} from '@angular/router';
 export class AppComponent implements AfterViewInit {
     title: string = 'poetter-sebastian.github.io';
     currentLanguage: string;
-
-    currentTheme?: string | null;
     prefersDarkScheme: boolean;
     darkMode: boolean = true;
 
@@ -38,9 +36,10 @@ export class AppComponent implements AfterViewInit {
     }
 
     ngOnInit() {
+        this.theme.applyTheme(this.document);
+
         const stored = this.theme.current;
         this.darkMode = stored === 'dark';
-        this.applyTheme();
 
         this.activatedRoute.queryParamMap.subscribe(params => {
             const langParam = params.get('lang');
@@ -55,12 +54,6 @@ export class AppComponent implements AfterViewInit {
     }
 
     ngAfterViewInit(): void {
-        if (this.theme.current === 'dark') {
-            this.renderer.addClass(this.document.body, 'dark-theme');
-        } else if (this.currentTheme === 'light') {
-            this.renderer.addClass(this.document.body, 'light-theme');
-        }
-
         if (typeof window !== 'undefined') {
             let toNow = this.document.getElementById('to-now') ?? null;
 
@@ -86,12 +79,12 @@ export class AppComponent implements AfterViewInit {
             if (this.darkMode) {
                 this.renderer.addClass(this.document.body, 'dark-theme');
                 this.renderer.removeClass(this.document.body, 'light-theme');
+                this.theme.current = 'dark';
             } else {
                 this.renderer.addClass(this.document.body, 'light-theme');
                 this.renderer.removeClass(this.document.body, 'dark-theme');
+                this.theme.current = 'light';
             }
-
-            this.theme.current = this.darkMode ? 'dark' : 'light';
         }
     }
 
@@ -115,19 +108,5 @@ export class AppComponent implements AfterViewInit {
         this.document.querySelectorAll('[data-i18n]')?.forEach(function (value) {
             console.log('"' + value.getAttribute('data-i18n') + '":"' + value.innerHTML + '",');
         });
-    }
-
-    private applyTheme() {
-        if (typeof this.document !== 'undefined') {
-            if (this.darkMode) {
-                this.document.body.classList.add('dark-theme');
-                this.document.body.classList.remove('light-theme');
-                this.theme.current = 'dark';
-            } else {
-                this.document.body.classList.add('light-theme');
-                this.document.body.classList.remove('dark-theme');
-                this.theme.current = 'light';
-            }
-        }
     }
 }

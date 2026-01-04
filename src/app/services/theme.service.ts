@@ -7,17 +7,34 @@ export class ThemeService {
 
     constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
-    get current(): 'dark' | 'light' {
+    get current(): 'dark' | 'light' | null {
         if (isPlatformBrowser(this.platformId)) {
-            return (localStorage.getItem(this.key) as 'dark' | 'light') ?? 'light';
+            return localStorage.getItem(this.key) as 'dark' | 'light' | null;
         }
-        // During SSR, default to light theme (or any safe fallback)
-        return 'light';
+        return null;
     }
 
-    set current(theme: 'dark' | 'light') {
+    set current(theme: 'dark' | 'light' | null) {
         if (isPlatformBrowser(this.platformId)) {
-            localStorage.setItem(this.key, theme);
+            if (theme) {
+                localStorage.setItem(this.key, theme);
+            } else {
+                localStorage.removeItem(this.key);
+            }
+        }
+    }
+
+    applyTheme(document: Document): void {
+        if (isPlatformBrowser(this.platformId)) {
+            const storedTheme = this.current;
+            if (storedTheme) {
+                // User has explicitly chosen a theme
+                document.body.classList.add(storedTheme + '-theme');
+                document.body.classList.remove(storedTheme === 'dark' ? 'light-theme' : 'dark-theme');
+            } else {
+                // Let the system preference take over
+                document.body.classList.remove('dark-theme', 'light-theme');
+            }
         }
     }
 }

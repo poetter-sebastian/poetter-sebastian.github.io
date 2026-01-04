@@ -37,7 +37,7 @@ import {
     faSwimmer,
     faSeedling,
     faGamepad,
-    faCube,
+    faCube, faFileLines,
 } from '@fortawesome/free-solid-svg-icons';
 import {
     faGithub,
@@ -110,6 +110,7 @@ export class LeftContainerComponent {
     faPager: IconDefinition = faPager;
     faUserFriends: IconDefinition = faUserFriends;
     faIndustry: IconDefinition = faIndustry;
+    faFileLines: IconDefinition = faFileLines;
     faTv: IconDefinition = faTv;
     faHiking: IconDefinition = faHiking;
     faSwimmer: IconDefinition = faSwimmer;
