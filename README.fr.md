@@ -1,4 +1,14 @@
-# CV personnel d'une page
+<h1 align="center">Personal One-Pager CV</h1>
+
+<p align="center">
+    <a href="https://github.com/poetter-sebastian/poetter-sebastian.github.io/actions/workflows/test-build.yml" title="Deployed" target="_blank"><img alt="GH Action Tests" src="https://github.com/poetter-sebastian/poetter-sebastian.github.io/actions/workflows/test-build.yml/badge.svg"></a>
+    <a href="https://github.com/poetter-sebastian/poetter-sebastian.github.io/actions/workflows/build-deploy.yml" title="Deployed" target="_blank"><img alt="GH Action Deployed" src="https://github.com/poetter-sebastian/poetter-sebastian.github.io/actions/workflows/build-deploy.yml/badge.svg"></a>
+</p>
+
+<p align="center">
+    <a href="https://github.com/poetter-sebastian/poetter-sebastian.github.io" title="English Readme" target="_blank"></a>
+    <a href="https://github.com/poetter-sebastian/poetter-sebastian.github.io/blob/main/README.de.md" title="German Readme" target="_blank"></a>
+</p>
 
 Un CV réactif d'une page, créé à l'aide des technologies web modernes.
 Ce projet sert de portfolio professionnel pouvant être personnalisé pour un usage personnel.

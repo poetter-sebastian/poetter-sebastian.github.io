@@ -1,4 +1,14 @@
-# Persönlicher Ein-Seiten-Lebenslauf
+<h1 align="center">Persönlicher Lebenslauf als One-Pager</h1>
+
+<p align="center">
+    <a href="https://github.com/poetter-sebastian/poetter-sebastian.github.io/actions/workflows/test-build.yml" title="Deployed" target="_blank"><img alt="GH Action Tests" src="https://github.com/poetter-sebastian/poetter-sebastian.github.io/actions/workflows/test-build.yml/badge.svg"></a>
+    <a href="https://github.com/poetter-sebastian/poetter-sebastian.github.io/actions/workflows/build-deploy.yml" title="Deployed" target="_blank"><img alt="GH Action Deployed" src="https://github.com/poetter-sebastian/poetter-sebastian.github.io/actions/workflows/build-deploy.yml/badge.svg"></a>
+</p>
+
+<p align="center">
+    <a href="https://github.com/poetter-sebastian/poetter-sebastian.github.io" title="English Readme" target="_blank"></a>
+    <a href="https://github.com/poetter-sebastian/poetter-sebastian.github.io/blob/main/README.fr.md" title="French Readme" target="_blank"></a>
+</p>
 
 Ein responsiver, einseitiger Lebenslauf (CV), der mit modernen Webtechnologien erstellt wurde.
 Dieses Projekt dient als professionelles Portfolio, das für den persönlichen Gebrauch angepasst werden kann.
