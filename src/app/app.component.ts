@@ -14,6 +14,7 @@ import {ActivatedRoute, RouterOutlet} from '@angular/router';
     selector: 'app-root',
     imports: [NgbModule, CommonModule, FontAwesomeModule, FormsModule, LeftContainerComponent, LeftContainerComponent, LeftContainerComponent, RightContainerComponent, RouterOutlet],
     templateUrl: './app.component.html',
+    standalone: true,
     styleUrls: ['./app.component.sass']
 })
 
@@ -40,17 +41,6 @@ export class AppComponent implements AfterViewInit {
 
         const stored = this.theme.current;
         this.darkMode = stored === 'dark';
-
-        this.activatedRoute.queryParamMap.subscribe(params => {
-            const langParam = params.get('lang');
-            if (langParam) {
-                const tempLang = i18n.find(lang => lang.language.includes(langParam))?.language;
-                if (tempLang) {
-                    this.currentLanguage = tempLang;
-                    this.changeLang(this.currentLanguage);
-                }
-            }
-        });
     }
 
     ngAfterViewInit(): void {
@@ -67,7 +57,23 @@ export class AppComponent implements AfterViewInit {
                 this.renderer.setProperty(e, 'innerHTML', currentYear);
             });
 
-            this.changeLang(this.currentLanguage);
+            this.activatedRoute.queryParamMap.subscribe(params => {
+                const langParam = params.get('lang');
+                if (langParam) {
+                    const tempLang = i18n.find(lang => lang.language.includes(langParam))?.language;
+                    if (tempLang) {
+                        this.currentLanguage = tempLang;
+                        this.changeLang(this.currentLanguage);
+                    }
+                }
+                else
+                {
+                    this.changeLang(this.currentLanguage);
+                }
+            });
+            setTimeout(()=>{
+                this.changeLang(this.currentLanguage)
+            }, 200);
         }
     }
 

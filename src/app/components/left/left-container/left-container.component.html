@@ -32,46 +32,7 @@
             <h2 data-i18n="owner-job-name" class="text-uppercase font-italic">Full stack developer</h2>
             <fa-icon [icon]="faLaptopCode" class="ms-2"></fa-icon>
         </div>
-        <app-left-title dataI18n="contact-title" text="Contact"></app-left-title>
-        <div id="contact">
-            <app-contact-item
-                [icon]="faEnvelope"
-                dataI18n="contact-email"
-                text="Send me a mail"
-                [isHiddenEmail]="true"
-                hrefString="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#101;&#98;&#45;&#112;&#111;&#101;&#116;%74%65%72%40%67%6D%78%2E%64%65"
-            ></app-contact-item>
-            <app-contact-item
-                [icon]="faGithub"
-                dataI18n="contact-github"
-                text="My GitHub page"
-                hrefString="https://github.com/poetter-sebastian"
-            ></app-contact-item>
-            <app-contact-item
-                [icon]="faLinkedinIn"
-                dataI18n="contact-linkedin"
-                text="Find me on LinkedIn"
-                hrefString="https://www.linkedin.com/in/sebastian-p-17a94721b"
-            ></app-contact-item>
-            <app-contact-item
-                [icon]="faMastodon"
-                dataI18n="contact-mastodon"
-                text="Tell me a joke on Mastodon"
-                hrefString="https://social.tchncs.de/@Seb"
-                relString="me"
-            ></app-contact-item>
-            <app-contact-item
-                [icon]="faItchIo"
-                dataI18n="contact-itchio"
-                text="Look on my Itch.io page"
-                hrefString="https://poetter-sebastian.itch.io/"
-            ></app-contact-item>
-            <app-contact-item
-                [icon]="faGlobe"
-                text="Poetter-Sebastian.Github.io"
-                hrefString="https://poetter-sebastian.github.io/"
-            ></app-contact-item>
-        </div>
+        <app-contact-list [currentLanguage]="currentLanguage"></app-contact-list>
         <app-left-title dataI18n="skills-title" text="Skills"></app-left-title>
         <div id="skills" class="row">
             <app-skill-container

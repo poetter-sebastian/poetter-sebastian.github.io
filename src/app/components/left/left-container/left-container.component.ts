@@ -8,8 +8,6 @@ import {
     faMoon,
     faLayerGroup,
     faLaptopCode,
-    faEnvelope,
-    faGlobe,
     faKeyboard,
     faPaintBrush,
     faFilm,
@@ -40,16 +38,12 @@ import {
     faCube, faFileLines,
 } from '@fortawesome/free-solid-svg-icons';
 import {
-    faGithub,
-    faLinkedinIn,
-    faMastodon,
-    faItchIo,
     faFirefoxBrowser,
     faUbuntu,
     faUnity,
     faRaspberryPi
 } from '@fortawesome/free-brands-svg-icons';
-import {ContactItem} from '../contact-item';
+import {ContactList} from '../contact-list';
 import {LeftTitle} from '../left-title';
 import {SkillContainer} from '../skill-container';
 import {HobbyProjectListComponent} from '../hobby-project-list-component';
@@ -59,10 +53,10 @@ import {FooterComponent} from '../../footer';
 
 @Component({
     selector: 'app-left-container',
-    host: { 'class': 'col-lg-4 primary-bg p-0 m-0' },
+    host: {'class': 'col-lg-4 primary-bg p-0 m-0'},
     imports: [
         FontAwesomeModule,
-        ContactItem,
+        ContactList,
         LeftTitle,
         SkillContainer,
         HobbyProjectListComponent,
@@ -73,6 +67,7 @@ import {FooterComponent} from '../../footer';
         FormsModule
     ],
     templateUrl: './left-container.component.html',
+    standalone: true,
     styleUrl: './left-container.component.sass'
 })
 
@@ -81,13 +76,12 @@ export class LeftContainerComponent {
     @Input() toggleMode!: (value: Event) => void;
     @Input() darkMode = false;
     @Output() darkModeChange = new EventEmitter<boolean>();
+    @Input() currentLanguage: string = "";
 
     faSun: IconDefinition = faSun;
     faMoon: IconDefinition = faMoon;
     faLayerGroup: IconDefinition = faLayerGroup;
     faLaptopCode: IconDefinition = faLaptopCode;
-    faEnvelope: IconDefinition = faEnvelope;
-    faGlobe: IconDefinition = faGlobe;
     faKeyboard: IconDefinition = faKeyboard;
     faPaintBrush: IconDefinition = faPaintBrush;
     faFilm: IconDefinition = faFilm;
@@ -119,10 +113,6 @@ export class LeftContainerComponent {
     faGamepad: IconDefinition = faGamepad;
     faCube: IconDefinition = faCube;
 
-    faGithub: IconDefinition = faGithub;
-    faLinkedinIn: IconDefinition = faLinkedinIn;
-    faMastodon: IconDefinition = faMastodon;
-    faItchIo: IconDefinition = faItchIo;
     faFirefoxBrowser: IconDefinition = faFirefoxBrowser;
     faUbuntu: IconDefinition = faUbuntu;
     faUnity: IconDefinition = faUnity;
