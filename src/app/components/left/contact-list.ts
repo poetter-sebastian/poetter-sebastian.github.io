@@ -1,31 +1,32 @@
-import {Component, Input} from '@angular/core';
+import {Component} from '@angular/core';
 import {DomSanitizer} from '@angular/platform-browser';
 import {FaIconComponent} from '@fortawesome/angular-fontawesome';
 import {LeftTitle} from './left-title';
 import {ContactConfig, CONTACTS_CONFIG} from '../../config/contact.config';
+import {I18nPipe} from '../../pipes/i18n.pipe';
+import {I18nHtmlPipe} from '../../pipes/i18n-html.pipe';
 
 @Component({
     selector: 'app-contact-list',
     imports: [
         FaIconComponent,
         LeftTitle,
+        I18nPipe,
+        I18nHtmlPipe,
     ],
     template: `
         <app-left-title dataI18n="contact-title" text="Contact"></app-left-title>
         <div id="contact">
             @for (contact of CONTACTS_CONFIG; track contact.href) {
                 <div class="row g-0 item">
-                    <div class="col-md-3 col-sm-6 col-2 primary-dark-bg">
+                    <div class="col-fullhd-6 col-md-3 col-sm-6 col-2 primary-dark-bg">
                         <fa-icon [icon]="contact.icon"></fa-icon>
                     </div>
-                    <div class="col-md-9 col-sm-6 col-10 d-flex align-items-center">
+                    <div class="col-fullhd-6 col-md-9 col-sm-6 col-10 d-flex align-items-center">
                         @if (contact.isHiddenEmail) {
-                            <span class="d-none">
-                                <a [href]="'mailto:email&#64;domain.com'"></a>email&#64;domain.com
-                            </span>
-                            <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#101;&#98;&#45;&#112;&#111;&#101;&#116;%74%65%72%40%67%6D%78%2E%64%65" target="_blank" [rel]="contact.relString ?? 'noreferrer'" [attr.data-i18n]="contact.dataI18n || null">{{contact.text}}</a>
+                            <span [innerHTML]="contact.dataI18n | i18nHtml"></span>
                         } @else {
-                            <a [href]="getBypassedURL(contact)" target="_blank" [rel]="contact.relString ?? 'noreferrer'" [attr.data-i18n]="contact.dataI18n || null">{{contact.text}}</a>
+                            <a [href]="getBypassedURL(contact)" target="_blank" [rel]="contact.relString ?? 'noreferrer'">{{ contact.dataI18n | i18n }}</a>
                         }
                     </div>
                 </div>
@@ -35,8 +36,6 @@ import {ContactConfig, CONTACTS_CONFIG} from '../../config/contact.config';
 })
 
 export class ContactList{
-    @Input() currentLanguage: string = "";
-
     protected CONTACTS_CONFIG = CONTACTS_CONFIG;
 
     constructor(private sanitizer: DomSanitizer) {}

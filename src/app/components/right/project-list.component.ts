@@ -15,9 +15,9 @@ import {faProjectDiagram,} from '@fortawesome/free-solid-svg-icons';
             <div class="row me-0 px-lg-0 px-2">
                 @for (project of PROJECTS_CONFIG; track project.href) {
                     <div class="col-md-6 col-lg-3 mb-4">
-                        <a [href]="project.href" class="text-decoration-none">
+                        <a [href]="project.href" class="text-decoration-none" title="{{ project.title }}" target="_blank">
                             <div class="card h-100">
-                                <img [src]="project.imgSrc" [alt]="project.imgAlt" class="card-img-top">
+                                <img [src]="'/img/projects/'+project.imgSrc" [alt]="project.imgAlt" class="card-img-top">
                                 <div class="card-body text-center">
                                     <h5 class="card-title">{{ project.title }}</h5>
                                 </div>

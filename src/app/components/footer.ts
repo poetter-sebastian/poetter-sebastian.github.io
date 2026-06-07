@@ -12,6 +12,7 @@ import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import {ModalImprintComponent} from './modal-content/modal-imprint.component';
 import {ModalPrivacyComponent} from './modal-content/modal-privacy.component';
 import {RightTitleComponent} from './right/right-title.component';
+import {I18nPipe} from '../pipes/i18n.pipe';
 
 @Component({
     selector: 'app-footer',
@@ -19,21 +20,22 @@ import {RightTitleComponent} from './right/right-title.component';
         FaIconComponent,
         LeftTitle,
         RightTitleComponent,
+        I18nPipe,
     ],
     template: `
         <div class="footer" [class]="isDesktop ? 'd-none d-md-block' : 'd-sm-block d-md-none'">
             <!-- Desktop title -->
             @if (isDesktop) {
-                <app-left-title dataI18n="footer-title" text="Imprint"></app-left-title>
+                <app-left-title dataI18n="footer-title"></app-left-title>
             } @else {
                 <!-- Mobile title -->
-                <app-right-title dataI18n="footer-title" text="Imprint" [icon]="copyrightIcon"></app-right-title>
+                <app-right-title dataI18n="footer-title" [icon]="copyrightIcon"></app-right-title>
             }
 
             <!-- Copyright section -->
             <div class="pt-4 pb-3" [class.primary-dark-bg]="isDesktop">
                 <p class="text-uppercase font-weight-bold text-center">
-                    <fa-icon [icon]="copyrightIcon"></fa-icon> 2019-<span class="year">{{currentYear}}</span> – <span data-i18n="footer-copyright"> by Sebastian Poetter</span>
+                    <fa-icon [icon]="copyrightIcon"></fa-icon> 2019-<span class="year">{{currentYear}}</span> – {{ 'footer-copyright' | i18n }}
                 </p>
             </div>
 
@@ -41,7 +43,7 @@ import {RightTitleComponent} from './right/right-title.component';
             <div class="pt-4 pb-3" [class.primary-dark-bg]="!isDesktop">
                 <p class="text-uppercase font-weight-bold text-center">
                     <fa-icon [icon]="privacyIcon"></fa-icon>
-                    <span class="ps-1" data-i18n="footer-policy" (click)="openPrivacyModal()" style="cursor:pointer;">privacy policy</span>
+                    <span class="ps-1" (click)="openPrivacyModal()" style="cursor:pointer;">{{ 'footer-policy' | i18n }}</span>
                 </p>
             </div>
 
@@ -49,7 +51,7 @@ import {RightTitleComponent} from './right/right-title.component';
             <div class="pt-4 pb-3" [class.primary-dark-bg]="isDesktop">
                 <p class="text-uppercase font-weight-bold text-center">
                     <fa-icon [icon]="libraryIcon"></fa-icon>
-                    <span class="ps-1" data-i18n="footer-library" (click)="openLibraryModal()" style="cursor:pointer;">Used libraries</span>
+                    <span class="ps-1" (click)="openLibraryModal()" style="cursor:pointer;">{{ 'footer-library' | i18n }}</span>
                 </p>
             </div>
         </div>
