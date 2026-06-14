@@ -5,23 +5,25 @@ import {IconDefinition} from '@fortawesome/fontawesome-svg-core';
 import {
     faLaptopCode,
 } from '@fortawesome/free-solid-svg-icons';
+import {I18nHtmlPipe} from '../../pipes/i18n-html.pipe';
 
 @Component({
     selector: 'app-experience-list',
     template: `
         <section>
-            <app-right-title [icon]="faLaptopCode" dataI18n="experience-title" text='Experience (<span id="to-now">9</span> years)'></app-right-title>
+            <app-right-title [icon]="faLaptopCode" dataI18n="experience-title"></app-right-title>
             <div class="ms-4 mt-md-0 mt-4">
                 <ol class="line">
                     @for (item of experienceConfig; track item.id) {
-                        <li [attr.data-i18n]="item.id" [innerHTML]="item.text"></li>
+                        <li [innerHTML]="item.id | i18nHtml"></li>
                     }
                 </ol>
             </div>
         </section>
     `,
     imports: [
-        RightTitleComponent
+        RightTitleComponent,
+        I18nHtmlPipe,
     ],
     styles: [`
         div

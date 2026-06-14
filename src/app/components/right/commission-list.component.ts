@@ -11,14 +11,13 @@ import {faAddressBook,} from '@fortawesome/free-solid-svg-icons';
     ],
     template: `
         <section>
-            <app-right-title [icon]="faAddressBook" dataI18n="commissions-title"
-                             text="Who employed/commissioned me"></app-right-title>
+            <app-right-title [icon]="faAddressBook" dataI18n="commissions-title" text="Who employed/commissioned me"></app-right-title>
             <div id="commissions" class="row me-0 px-lg-0 px-2">
                 @for (commission of COMMISSIONS_CONFIG; track commission.href) {
                     <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-4">
-                        <a [href]="commission.href" class="text-decoration-none">
+                        <a [href]="commission.href" class="text-decoration-none" title="{{ commission.cardTitle }}">
                             <div class="card h-100">
-                                <img [src]="commission.imgSrc" [alt]="commission.imgAlt" class="card-img-top p-2">
+                                <img [src]="'/img/logo/'+commission.imgSrc" [alt]="commission.imgAlt" class="card-img-top p-2">
                                 <div class="card-body text-center">
                                     <h5 class="card-title">{{ commission.cardTitle }}</h5>
                                 </div>
@@ -32,6 +31,8 @@ import {faAddressBook,} from '@fortawesome/free-solid-svg-icons';
 })
 export class CommissionItemComponent {
     @Input() commission!: CommissionConfig;
-    faAddressBook: IconDefinition = faAddressBook;
+
     protected readonly COMMISSIONS_CONFIG = COMMISSIONS_CONFIG;
+
+    faAddressBook: IconDefinition = faAddressBook;
 }
