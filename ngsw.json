@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1767541543242,
+  "timestamp": 1781455341302,
   "index": "/index.csr.html",
   "assetGroups": [
     {
@@ -13,10 +13,10 @@
       "urls": [
         "/index.csr.html",
         "/index.html",
-        "/main-CHUUKXGP.js",
+        "/main-HGIRNQTM.js",
         "/manifest.webmanifest",
-        "/polyfills-6ISPNSXF.js",
-        "/styles-S6FBY56W.css"
+        "/polyfills-RV3JTMEC.js",
+        "/styles-WMI7YH44.css"
       ],
       "patterns": []
     },
@@ -60,6 +60,7 @@
         "/img/logo/logo-kiba.webp",
         "/img/logo/logo-lefx.webp",
         "/img/logo/logo-mindport.webp",
+        "/img/logo/logo-natur-leipzig.webp",
         "/img/logo/logo-ovrlab.webp",
         "/img/logo/logo-profesco.webp",
         "/img/logo/logo-reach.webp",
@@ -69,6 +70,7 @@
         "/img/logo/logo-vrbits.webp",
         "/img/projects/genaivatar.webp",
         "/img/projects/reach.webp",
+        "/img/projects/tinkerflow.webp",
         "/img/projects/voxreality.webp",
         "/img/projects/vrbuilder.webp"
       ],
@@ -90,8 +92,8 @@
     "/img/avatar.webp": "6ec42c0e04bf2e1019b24278ec9f282c65d467c5",
     "/img/de.png": "85dc0af4f89c75da83f7795930f461b70930cf2e",
     "/img/de.webp": "68c8a5dbeadc33609e4f767edff0324880a0b1a1",
-    "/img/en.png": "758859d5b6de0b081a5af3e874d2ff2338aa6397",
-    "/img/en.webp": "73b311ab781e2293ddb227f6762fcf233cb579ac",
+    "/img/en.png": "73156e9ae26241a47b0ed3f1fd0734716ec9520e",
+    "/img/en.webp": "190dc7fe4168cabab63c69134adb1c9ae69dc5f5",
     "/img/fr.png": "32b50db5c1e2e046ec4103e07f5c9dd5335c0023",
     "/img/fr.webp": "bafc60ca555c829f579e1e6233829e24d86b0f82",
     "/img/logo-192.png": "3ecb0c27f45fe7fea226094cb8efb97c483ccf3c",
@@ -109,6 +111,7 @@
     "/img/logo/logo-kiba.webp": "b4226e49a1a501d139bf65e1fa2845729cbc5ae4",
     "/img/logo/logo-lefx.webp": "f8f21caf749470002a1c56abd82ae0d344704571",
     "/img/logo/logo-mindport.webp": "11a1e169c47d524cfb67d2319ae75a188a53f1ed",
+    "/img/logo/logo-natur-leipzig.webp": "b7e2b9b06c986839ef0c34770243bdf1f29faa22",
     "/img/logo/logo-ovrlab.webp": "093a0c9de15af1f0a2eecff1245f51fb0cdb815d",
     "/img/logo/logo-profesco.webp": "97f31c348b67ad86f098e16267e1812bc5410d74",
     "/img/logo/logo-reach.webp": "b7743924539d75094a236fa45609d8001ff8ce09",
@@ -116,16 +119,17 @@
     "/img/logo/logo-saxonq.webp": "d401fa1b0b96baa1979e5b51c72058052ceb6482",
     "/img/logo/logo-velomotion.webp": "864929d5868ef057ecaeff96af9a9a8fbdc61bf9",
     "/img/logo/logo-vrbits.webp": "6aa18cf982e65892afd81f12b2e4d442b59c13e7",
-    "/img/projects/genaivatar.webp": "fb6091a16897ada126515b1805f02b4a18e6dd32",
+    "/img/projects/genaivatar.webp": "0dbea7bdb28d59736d449a6785bbfae5d61bc15b",
     "/img/projects/reach.webp": "b7743924539d75094a236fa45609d8001ff8ce09",
+    "/img/projects/tinkerflow.webp": "f7956972b8a4d662b7b145ac3a8547c2c4bc0206",
     "/img/projects/voxreality.webp": "d7f99511d4265372958393f692b2f370bd02e2b0",
     "/img/projects/vrbuilder.webp": "2b4d6d4edb59c94af1c3ed9cf50c36ec92e24107",
-    "/index.csr.html": "cd9644effff302f503d39525c51cd5ade78cb511",
-    "/index.html": "ec0809dc9171a897a19bfd5e40664f2f192050c1",
-    "/main-CHUUKXGP.js": "2226ca4f8ba08eeedf63c8edda4c2e0ab4ec6ea4",
+    "/index.csr.html": "52dd12507a54baf2b685fa7dba8dce3315adfd9e",
+    "/index.html": "867e112c375acdb360777a5098f199444f7ed2ca",
+    "/main-HGIRNQTM.js": "4dd59476654df63c2e138e22b5e42629a9ccf3c4",
     "/manifest.webmanifest": "47a9d5140c358aac9767bbca68f37c017b949fa9",
-    "/polyfills-6ISPNSXF.js": "b15ba4d1036f2db285649ff775f184bcdcd0b08a",
-    "/styles-S6FBY56W.css": "d16636fb98bf4b06baef5d914b3208ecb9fa7df1"
+    "/polyfills-RV3JTMEC.js": "e83dcd401293cfb45ad0988a17d1815b3bb09c33",
+    "/styles-WMI7YH44.css": "ca8c74397b0379c94011c5de96fee7c0688ee5a5"
   },
   "navigationUrls": [
     {
