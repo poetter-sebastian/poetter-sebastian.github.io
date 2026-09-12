@@ -5,7 +5,7 @@ export interface ProjectConfig {
     title: string;
 }
 
-export const PROJECTS_CONFIG: ProjectConfig[] = [
+export const PROJECT_CONFIG: ProjectConfig[] = [
     {
         href: 'https://voxreality.eu/aixtra/',
         imgSrc: 'voxreality.webp',

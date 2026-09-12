@@ -1,16 +1,5 @@
 import {IconDefinition} from '@fortawesome/fontawesome-svg-core';
-import {
-    faKeyboard,
-    faPaintBrush,
-    faFilm,
-    faFileAlt,
-    faUsers,
-    faMicrochip,
-    faUsersCog,
-    faServer,
-    faProjectDiagram,
-    faChartDiagram
-} from '@fortawesome/free-solid-svg-icons';
+import {faKeyboard, faPaintBrush, faFilm, faFileAlt, faUsers, faMicrochip, faUsersCog, faServer, faProjectDiagram, faChartDiagram} from '@fortawesome/free-solid-svg-icons';
 import {faFirefoxBrowser, faUbuntu} from '@fortawesome/free-brands-svg-icons';
 
 export interface SkillConfig {
@@ -20,7 +9,7 @@ export interface SkillConfig {
     i18nPrefix?: string;
 }
 
-export const SKILLS_CONFIG: SkillConfig[] = [
+export const SKILL_CONFIG: SkillConfig[] = [
     {
         icon: faKeyboard,
         iconClass: 'me-1',

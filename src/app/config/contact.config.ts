@@ -12,7 +12,7 @@ export interface ContactConfig {
     dataI18n: string;
 }
 
-export const CONTACTS_CONFIG: ContactConfig[] = [
+export const CONTACT_CONFIG: ContactConfig[] = [
     {
         href: 'mailto:&#x73;&#x65;&#x62;&#x2D;&#x70;&#x6F;&#x65;&#x74;%74%65%72%40%67%6D%78%2E%64%65',
         title: 'Send me a mail',

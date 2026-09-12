@@ -1,0 +1,26 @@
+// Firefox fallback — solid, no gradient support
+*
+	scrollbar-width: auto
+	scrollbar-color: var(--primary-bg) var(--secondary-bg)
+
+// Webkit — all scrolls, 12px wide
+*::-webkit-scrollbar
+	width: 12px
+	height: 12px
+
+*::-webkit-scrollbar-track
+	background: var(--secondary-bg)
+
+*::-webkit-scrollbar-thumb
+	background: linear-gradient(var(--primary-bg), var(--secondary-dark-bg))
+	border-radius: 8px
+	border: 2px solid var(--secondary-bg)
+
+*::-webkit-scrollbar-thumb:hover
+	background: linear-gradient(var(--secondary-dark-bg), var(--primary-bg))
+
+*::-webkit-scrollbar-thumb:active
+	background: var(--primary-dark-bg)
+
+*::-webkit-scrollbar-corner
+	background: var(--secondary-bg)

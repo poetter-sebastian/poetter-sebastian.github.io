@@ -7,7 +7,7 @@ export interface HobbyConfig {
     dataI18n: string;
 }
 
-export const HOBBIES_CONFIG: HobbyConfig[] = [
+export const HOBBY_CONFIG: HobbyConfig[] = [
     { icon: faTv, dataI18n: 'hobbies-programming' },
     { icon: faSwimmer, dataI18n: 'hobbies-swimming' },
     { icon: faHiking, dataI18n: 'hobbies-hiking' },

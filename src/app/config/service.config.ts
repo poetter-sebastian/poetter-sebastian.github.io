@@ -6,7 +6,7 @@ export interface ServiceConfig {
     dataI18n: string;
 }
 
-export const SERVICES_CONFIG: ServiceConfig[] = [
+export const SERVICE_CONFIG: ServiceConfig[] = [
     { icon: faPager, dataI18n: 'services-web' },
     { icon: faServer, dataI18n: 'services-dev' },
     { icon: faUserFriends, dataI18n: 'services-team' },

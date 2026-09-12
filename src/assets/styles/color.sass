@@ -5,7 +5,7 @@
  * ==================================================================================================================*/
 @mixin darkmode
     --primary-bg: #441f34
-    --primary-bg-transpararent: rgba(56, 20, 40, 0.15)
+    --primary-bg-transpararent: rgba(56, 20, 40, 0.35)
     --primary-text: #c4d3e1
     --primary-dark-text: #adbac7
     --primary-dark-bg: #381428
@@ -13,7 +13,7 @@
     --primary-light-bg: #2e6d6a
 
     --secondary-bg: #1c2128
-    --secondary-bg-transparent: rgba(28, 33, 40, 0.15)
+    --secondary-bg-transparent: rgba(28, 33, 40, 0.35)
     --secondary-text: #adbac7
     --secondary-dark-text: #f8f8f8
     --secondary-dark-bg: #313d4f
@@ -23,7 +23,7 @@
 
 @mixin lightmode
     --primary-bg: #2e6d6a
-    --primary-bg-transpararent: rgba(12, 60, 58, 0.15)
+    --primary-bg-transpararent: rgba(12, 60, 58, 0.35)
     --primary-text: #ffeff7
     --primary-dark-text: #ffeff7
     --primary-dark-bg: #0c3c3a
@@ -31,7 +31,7 @@
     --primary-light-bg: #ffeff7
 
     --secondary-bg: #fff2f4
-    --secondary-bg-transparent: rgba(255, 242, 244, 0.15)
+    --secondary-bg-transparent: rgba(255, 242, 244, 0.35)
     --secondary-text: #0c3c3a
     --secondary-dark-text: #ffeff7
     --secondary-dark-bg: #0c3c3a
@@ -44,10 +44,10 @@
 
 @media (prefers-color-scheme: dark)
     :root
-        @include  darkmode
+        @include darkmode
 
 body.dark-theme
-    @include  darkmode
+    @include darkmode
 
 body.light-theme
-    @include  lightmode
+    @include lightmode
