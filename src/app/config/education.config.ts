@@ -10,7 +10,7 @@ export interface EducationEntry {
     textKey: string;
     subjectsTitleKey?: string;
     subjects?: EducationSubject[];
-    subjectListClass?: string; // 'lul' for bachelor, 'lur' for master
+    subjectListClass?: 'lul' | 'lur'; // 'lul' for bachelor, 'lur' for master
 }
 
 export const EDUCATION_CONFIG: EducationEntry[] = [

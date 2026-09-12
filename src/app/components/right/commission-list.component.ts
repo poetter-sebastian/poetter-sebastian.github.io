@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {CommissionConfig, COMMISSIONS_CONFIG} from '../../config/commissions.config';
+import {CommissionConfig, COMMISSION_CONFIG} from '../../config/commission.config';
 import {RightTitleComponent} from './right-title.component';
 import {IconDefinition} from '@fortawesome/fontawesome-svg-core';
 import {faAddressBook,} from '@fortawesome/free-solid-svg-icons';
@@ -16,7 +16,7 @@ import {faAddressBook,} from '@fortawesome/free-solid-svg-icons';
                 @for (commission of COMMISSIONS_CONFIG; track commission.href) {
                     <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-4">
                         <a [href]="commission.href" class="text-decoration-none" title="{{ commission.cardTitle }}">
-                            <div class="card h-100">
+                            <div class="card h-100 pt-3">
                                 <img [src]="'/img/logo/'+commission.imgSrc" [alt]="commission.imgAlt" class="card-img-top p-2">
                                 <div class="card-body text-center">
                                     <h5 class="card-title">{{ commission.cardTitle }}</h5>
@@ -30,9 +30,6 @@ import {faAddressBook,} from '@fortawesome/free-solid-svg-icons';
     `
 })
 export class CommissionItemComponent {
-    @Input() commission!: CommissionConfig;
-
-    protected readonly COMMISSIONS_CONFIG = COMMISSIONS_CONFIG;
-
-    faAddressBook: IconDefinition = faAddressBook;
+    protected readonly COMMISSIONS_CONFIG = COMMISSION_CONFIG;
+	protected readonly faAddressBook: IconDefinition = faAddressBook;
 }

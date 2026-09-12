@@ -40,7 +40,6 @@ import {I18nHtmlPipe} from '../../pipes/i18n-html.pipe';
             bottom: 0
             left: -20px
 
-
         /*Circle*/
         li::after
             text-align: center
@@ -56,7 +55,6 @@ import {I18nHtmlPipe} from '../../pipes/i18n-html.pipe';
             border-radius: 50%
             top: 0
             left: -43px
-
 
         /*Content*/
         li
@@ -76,11 +74,10 @@ import {I18nHtmlPipe} from '../../pipes/i18n-html.pipe';
 
         li:nth-last-child(1)::before
             width: 0
-
     `]
 })
 
 export class ExperienceListComponent {
-    experienceConfig = EXPERIENCE_CONFIG;
-    faLaptopCode: IconDefinition = faLaptopCode;
+	protected readonly experienceConfig = EXPERIENCE_CONFIG;
+	protected readonly faLaptopCode: IconDefinition = faLaptopCode;
 }

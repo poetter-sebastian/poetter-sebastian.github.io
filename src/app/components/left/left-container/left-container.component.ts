@@ -14,9 +14,9 @@ import {HobbyItem} from '../hobby-item';
 import {FooterComponent} from '../../footer';
 import {I18nPipe} from '../../../pipes/i18n.pipe';
 import {HOBBY_PROJECTS_CONFIG} from '../../../config/hobby-projects.config';
-import {SKILLS_CONFIG, SkillConfig} from '../../../config/skills.config';
-import {HOBBIES_CONFIG} from '../../../config/hobbies.config';
-import {SERVICES_CONFIG} from '../../../config/services.config';
+import {SKILL_CONFIG, SkillConfig} from '../../../config/skill.config';
+import {HOBBY_CONFIG} from '../../../config/hobby.config';
+import {SERVICE_CONFIG} from '../../../config/service.config';
 
 @Component({
     selector: 'app-left-container',
@@ -45,9 +45,9 @@ export class LeftContainerComponent {
     @Output() darkModeChange = new EventEmitter<boolean>();
 
     protected readonly HOBBY_PROJECTS_CONFIG = HOBBY_PROJECTS_CONFIG;
-    protected readonly SKILLS_CONFIG = SKILLS_CONFIG;
-    protected readonly HOBBIES_CONFIG = HOBBIES_CONFIG;
-    protected readonly SERVICES_CONFIG = SERVICES_CONFIG;
+    protected readonly SKILLS_CONFIG = SKILL_CONFIG;
+    protected readonly HOBBIES_CONFIG = HOBBY_CONFIG;
+    protected readonly SERVICES_CONFIG = SERVICE_CONFIG;
 
     private i18n = inject(I18nService);
 

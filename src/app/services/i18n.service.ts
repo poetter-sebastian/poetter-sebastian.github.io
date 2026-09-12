@@ -15,19 +15,6 @@ export class I18nService {
         this.detectBrowserLanguage();
     }
 
-    private detectBrowserLanguage(): void {
-        if (isPlatformBrowser(this.platformId)) {
-            const navLang = navigator.language?.split('-')[0] ?? '';
-            if (this.isSupported(navLang)) {
-                this.currentLang.set(navLang as SupportedLanguage);
-            }
-        }
-    }
-
-    private isSupported(lang: string): lang is SupportedLanguage {
-        return lang in this.allTranslations;
-    }
-
     translate(key: string): string {
 		const lang = this.currentLang();
 		let ret = this.allTranslations[lang]?.[key];
@@ -49,4 +36,17 @@ export class I18nService {
             }
         }
     }
+
+	private detectBrowserLanguage(): void {
+		if (isPlatformBrowser(this.platformId)) {
+			const navLang = navigator.language?.split('-')[0] ?? '';
+			if (this.isSupported(navLang)) {
+				this.currentLang.set(navLang as SupportedLanguage);
+			}
+		}
+	}
+
+	private isSupported(lang: string): lang is SupportedLanguage {
+		return lang in this.allTranslations;
+	}
 }

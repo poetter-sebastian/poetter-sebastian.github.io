@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {DomSanitizer} from '@angular/platform-browser';
 import {FaIconComponent} from '@fortawesome/angular-fontawesome';
 import {LeftTitle} from './left-title';
-import {ContactConfig, CONTACTS_CONFIG} from '../../config/contact.config';
+import {ContactConfig, CONTACT_CONFIG} from '../../config/contact.config';
 import {I18nPipe} from '../../pipes/i18n.pipe';
 import {I18nHtmlPipe} from '../../pipes/i18n-html.pipe';
 
@@ -36,7 +36,7 @@ import {I18nHtmlPipe} from '../../pipes/i18n-html.pipe';
 })
 
 export class ContactList{
-    protected CONTACTS_CONFIG = CONTACTS_CONFIG;
+    protected CONTACTS_CONFIG = CONTACT_CONFIG;
 
     constructor(private sanitizer: DomSanitizer) {}
 

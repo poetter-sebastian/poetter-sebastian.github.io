@@ -6,7 +6,7 @@ export interface CommissionConfig {
     cardTitle: string;
 }
 
-export const COMMISSIONS_CONFIG: CommissionConfig[] = [
+export const COMMISSION_CONFIG: CommissionConfig[] = [
 	{
 		href: 'https://natur-abenteuer-leipzig.de/',
 		title: 'Natur-Abenteuer-Leipzig',

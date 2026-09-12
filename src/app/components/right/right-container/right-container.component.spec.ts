@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import {RightContainerComponent} from '../../../right-container/right-container.component';
+import {RightContainerComponent} from './right-container.component';
 
 
 describe('RightContainerComponent', () => {

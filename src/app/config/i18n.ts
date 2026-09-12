@@ -40,7 +40,7 @@ export const i18n: Record<string, Record<string, string>> = {
 		"projects-satellite": "Satellite movement visualisation",
 		"projects-master": "Simulation of an ecosystem",
 
-		"services-web": "SEO and responsive optimized web-development",
+		"services-web": "SEO/GEO and responsive optimized web-development",
 		"services-dev": "Server and client project development",
 		"services-team": "Project management and team consulting",
 		"services-digi": "Digitization of your business processes",
@@ -52,18 +52,17 @@ export const i18n: Record<string, Record<string, string>> = {
 		"footer-library": "USED LIBRARIES",
 
 		"profile-title": "PROFILE",
-		"profile-begin": "My name is Sebastian Pötter. I got my master's degree of computer science in 2023 and looking for new opportunities to work on or get involved in projects.<br><br>\n" +
-			"With over a decade of expertise in web and software development, I offer comprehensive knowledge and hands-on experience in crafting robust,\n" +
+		"profile-begin": "My name is Sebastian Pötter. I got my master's degree in computer science in 2023 and looking for new opportunities to work on or get involved in projects.<br><br>\n" +
+			"With over a decade of expertise in web and software development, I offer comprehensive knowledge and hands-on experience in crafting\n" +
 			"user-friendly solutions or provide consulting business partners on their planned and ongoing projects.\n" +
 			"As a seasoned full-stack developer, I specialise in both client and server-side technologies, ensuring seamless and dynamic web experiences.",
-		"profile-other": "I take great pride in maintaining transparent and professional communication with business partners and clients.\n" +
+		"profile-other": "Maintaining transparent and professional communication with business partners and clients is one of my target goals.\n" +
 			" I foster a collaborative atmosphere to ensure project goals are aligned and met efficiently.\n" +
-			" My ability to work cooperatively with team members and stakeholders is a cornerstone of my approach, facilitating a transparent and\n" +
+			" My ability to work cooperatively with team members and stakeholders is my approach to facilitating a transparent and\n" +
 			" productive workflow. With the theoretical knowledge gained at university and practical applied skills gained at my freelance work,\n" +
 			" I'm able to familiarize myself quickly with new or existing projects.\n" +
 			" <br><br>\n" +
-			" I am dedicated to providing high-quality solutions and continuously developing my skills to ensure I remain up-to-date with the latest\n" +
-			" industry trends and technologies. My approach is collaborative and detail-oriented, ensuring every project meets the highest standards of excellence.\n" +
+			" Providing high-quality solutions and continuously developing my skills. I ensure to remain up to date with the latest industry trends and technologies.\n" +
 			" However, computers and information technology are not my only interest, other areas such as biology, chemistry, physics, and electrical\n" +
 			" engineering are fascinating too.",
 
@@ -102,6 +101,14 @@ export const i18n: Record<string, Record<string, string>> = {
 		"education-master-cry": "Cryptography",
 		"education-master-oagr": "Object and gesture recognition",
 		"education-master-team": "Team management internship<br>(SCRUM-team leader for an eight-person team)",
+
+	    "scientific-work-title": "Scientific Work",
+	    "science-time-algorithm": "Algorithm based timetable calculation",
+	    "science-time-algorithm-desc": "Bachelor thesis of algorithm engineering for timetable calculation (Main-Author)",
+	    "science-unity-simulation": "Environmental simulation in Unity",
+	    "science-unity-simulation-desc": "Master thesis of an unity based simulation with the main focus on water and temperature cycle (Main-Author)",
+	    "science-virtosha-system": "VIRTOSHA-A VR Training Simulation for Osteosynthesis Procedures with Force Feedback and Tissue Simulation",
+	    "science-virtosha-system-desc": "Responsible for developing the AI integration within the system, in conjunction with the architecture (co-author)",
 
 		"education-master-th": "My master thesis: <a href=\"https://github.com/poetter-sebastian/Simulation\" rel=\"noreferrer\" target=\"_blank\">Development of an environmental simulation in Unity</a>",
 		"experience-title": "Experience (<span id=\"to-now\">X</span> years)",
@@ -199,7 +206,7 @@ export const i18n: Record<string, Record<string, string>> = {
 		"project-simulation-name": "Simulation eines Ökosystems",
 		"project-simulation-desc": "",
 
-		"services-web": "SEO und responsive optimierte Webentwicklung",
+		"services-web": "SEO, GEO und responsive Webentwicklung",
 		"services-dev": "Umsetzung von Server- und Desktop Projekten",
 		"services-team": "Projektmanagement und Teamberatung",
 		"services-digi": "Digitalisierung von Unternehmensprozessen",
@@ -211,9 +218,17 @@ export const i18n: Record<string, Record<string, string>> = {
 		"footer-library": "Benutze Frameworks",
 
 		"profile-title": "Profil",
-		"profile-begin": "Mein Name ist Sebastian Pötter. Ich habe 2023 meinen Master in Informatik erworben und bin auf der Suche nach neuen Projekten oder an laufenden mitzuwirken.<br><br>Mit mehr als zehn Jahren Erfahrung in der Web- und Softwareentwicklung biete ich umfassendes Wissen und praktische Erfahrung bei der Erstellung robuster, benutzerfreundlicher Lösungen oder berate Geschäftspartner bei ihren geplanten oder laufenden Projekten.<br><br> Als erfahrener Full-Stack-Entwickler bin ich sowohl auf client- als auch auf serverseitige Technologien angesiedelt, um nahtlose und dynamische Web-Erlebnisse sicherzustellen.",
-		"profile-other": "Ich lege Wert auf eine transparente und professionelle Kommunikation mit Geschäftspartnern und Kunden. Ich fördere eine kooperative Atmosphäre, um sicherzustellen, dass die Projektziele koordiniert und effizient erreicht werden. Meine Fähigkeit, kooperativ mit Teammitgliedern und Stakeholdern zusammenzuarbeiten, ermöglicht einen transparenten und produktiven Arbeitsablauf für alle Projektpartner. Mit dem theoretischen Wissen, das ich an der Universität erworben habe, und den praktischen Fähigkeiten, die ich mir während meiner freiberuflichen Tätigkeit angeeignet habe, kann ich mich schnell in neue oder bestehende Projekte einarbeiten. <br><br>\n" +
-			"Ich entwickle hochwertige Lösungen und bilde mich ständig fort, um über Branchentrends und Technologien auf dem Laufenden zu bleiben. Weitere Interessensgebiete sind Themen in der Biologie, der Chemie, Physik und der Elektrotechnik.",
+		"profile-begin": "Mein Name ist Sebastian Pötter. Ich habe 2023 meinen Master in Informatik erworben und bin auf der Suche nach neuen Projekten oder an laufenden mitzuwirken.<br><br>" +
+			"Mit mehr als zehn Jahren Erfahrung in der Web- und Softwareentwicklung biete ich umfassendes Wissen und praktische Erfahrung bei der Erstellung robuster, benutzerfreundlicher " +
+			"Lösungen oder berate Geschäftspartner bei ihren geplanten oder laufenden Projekten.<br><br>" +
+			"Als erfahrener Full-Stack-Entwickler bin ich sowohl auf client- als auch auf serverseitige Technologien angesiedelt, um nahtlose und dynamische Web-Erlebnisse sicherzustellen.",
+		"profile-other": "Ich lege Wert auf eine transparente und professionelle Kommunikation mit Geschäftspartnern und Kunden. " +
+			"Eine kooperative Atmosphäre hilft allen, um sicherzustellen, dass die Projektziele koordiniert und effizient erreicht werden. " +
+			"Meine Fähigkeit, kooperativ mit Teammitgliedern und Stakeholdern zusammenzuarbeiten, ermöglicht einen transparenten und produktiven Arbeitsablauf für alle. " +
+			"Mit dem theoretischen Wissen, das ich an der Universität erworben habe, und den praktischen Fähigkeiten, die ich mir während meiner freiberuflichen Tätigkeit angeeignet habe, " +
+			"kann ich mich schnell in neue oder bestehende Projekte einarbeiten. <br><br>\n" +
+			"Fortbildung ist eine meiner Freizeitbeschäftigungen, um über Branchentrends und Technologien auf dem Laufenden zu bleiben. " +
+			"Weitere Interessensgebiete sind Themen in der Biologie, der Chemie, Physik und der Elektrotechnik.",
 		"education-title": "Bildungsweg",
 		"education-secondary-title": "Realschule",
 		"education-secondary-text": "2014 habe ich meinen Realschulabschluss gemacht. Danach entschied ich mich, noch das Abitur zu versuchen. In der Realschulzeit fing ich an, mich für Computer zu interessieren und begann, einfache Webseiten zu erstellen.",
@@ -244,7 +259,15 @@ export const i18n: Record<string, Record<string, string>> = {
 		"education-master-team": "Team management Praktikum<br>(SCRUM-Teamleiter für ein acht personen Team)",
 		"education-master-th": "Meine Masterarbeit: <a href=\"https://github.com/poetter-sebastian/Simulation\" rel=\"noreferrer\" target=\"_blank\">Entwicklung einer Umweltsimulation in Unity</a>",
 
-		"experience-title": "Erfahrung (<span id=\"to-now\">X</span> jahre)",
+	    "scientific-work-title": "Publizierungen",
+	    "science-time-algorithm": "Algorithmisch unterstützte Terminplanung",
+	    "science-time-algorithm-desc": "Bachelorarbeit zum Thema Algorithmenentwicklung für die Zeitplanberechnung (Hauptautor)",
+	    "science-unity-simulation": "Entwicklung einer Umweltsimulation in Unity",
+	    "science-unity-simulation-desc": "Masterarbeit über eine auf Unity basierende Simulation mit Schwerpunkt auf dem Wasser- und Temperaturkreislauf (Hauptautor)",
+	    "science-virtosha-system": "VIRTOSHA, eine VR-Trainingssimulation für Osteosyntheseverfahren mit Haptik- und Gewebesimulation",
+	    "science-virtosha-system-desc": "Verantwortlich für die Entwicklung der KI-Integration innerhalb des Systems zusammen mit Architektur (Co-Autor)",
+
+	    "experience-title": "Erfahrung (<span id=\"to-now\">X</span> jahre)",
 		"experience-small-com": "Beauftragungen von kleineren One-Page-Webseiten für Unternehmen wie IKD-Training - 2014-2017",
 		"experience-landing-page": "Erstellung einer Webseite für ein Unternehmen in Dresden - 2017",
 		"experience-profesco-1": "Beauftragung einer Wordpress-Seite für die <a href=\"https://www.profesco.de/\" rel=\"noreferrer\">Profesco GmbH</a> (Erstellung und Wartung) - 2019-2023",
@@ -323,7 +346,7 @@ export const i18n: Record<string, Record<string, string>> = {
 		"project-simulation-name": "Simulation d'un écosystème",
 		"project-simulation-desc": "",
 
-		"services-web": "SEO et développement web optimisé pour le responsive",
+		"services-web": "SEO/GEO et développement web optimisé pour le responsive",
 		"services-dev": "Développement serveur et bureau",
 		"services-team": "Gestion et conseil d'équipe",
 		"services-digi": "Numérisation des processus d'entreprise",
@@ -367,6 +390,14 @@ export const i18n: Record<string, Record<string, string>> = {
 		"education-master-oagr": "Reconnaissance d'objets et de gestes",
 		"education-master-team": "Stage en gestion d'équipe<br>(chef d'équipe SCRUM pour une équipe de huit personnes)",
 		"education-master-th": "Mon sujet de thèse de master: <a href=\"https://github.com/poetter-sebastian/Simulation\" rel=\"noreferrer\" target=\"_blank\">Développement d'une simulation environnementale en Unity</a>",
+
+	    "scientific-work-title": "Publications",
+	    "science-time-algorithm": "Planification des rendez-vous assistée par des algorithmes",
+	    "science-time-algorithm-desc": "Mémoire de licence sur le développement d'algorithmes pour le calcul des horaires (auteur principal)",
+	    "science-unity-simulation": "Développement d'une simulation environnementale dans Unity",
+	    "science-unity-simulation-desc": "Mémoire de master portant sur une simulation basée sur Unity et axée sur le cycle de l'eau et le cycle thermique (auteur principal)",
+	    "science-virtosha-system": "VIRTOSHA, une simulation de formation en réalité virtuelle dédiée aux techniques d'ostéosynthèse, intégrant une simulation haptique et une simulation des tissus",
+	    "science-virtosha-system-desc": "Responsable du développement de l'intégration de l'IA au sein du système, en collaboration avec l'équipe d'architecture (co-auteur)",
 
 		"experience-title": "EXPÉRIENCE (<span id=\"to-now\">X</span> ans)",
 		"experience-small-com": "Commissions multiples de sites web d'une page pour les petites entreprises par exemple IKD-Training - 2014-2017",
